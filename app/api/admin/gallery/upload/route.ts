@@ -2,12 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import path from 'path'
 import { PrismaClient } from '@prisma/client'
-import sharp from 'sharp'
+
+// Ensure this route always runs on the Node.js runtime and is never statically evaluated
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
 
 const prisma = new PrismaClient()
 
 export async function POST(request: NextRequest) {
   try {
+    // Lazy-load sharp at runtime to avoid bundling/loading during build
+    const sharp = (await import('sharp')).default
     const formData = await request.formData()
     const files = formData.getAll('images') as File[]
     const title = formData.get('title') as string
