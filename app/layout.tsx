@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
+import { Suspense } from 'react'
 import { FloatingButtons } from '@/components/floating-buttons'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -96,7 +97,9 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
           <LanguageProvider>
-            <GlobalLoadingScreen />
+            <Suspense fallback={null}>
+              <GlobalLoadingScreen />
+            </Suspense>
             <div className="min-h-screen flex flex-col">
               <Header />
               <main className="flex-1">
