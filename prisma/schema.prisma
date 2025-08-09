@@ -1,0 +1,151 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Booking {
+  id          String   @id @default(cuid())
+  fullName    String
+  phoneNumber String
+  fromAddress String
+  toAddress   String
+  serviceType String
+  date        DateTime
+  message     String?
+  status      String   @default("pending") // pending, confirmed, completed, cancelled
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String   @db.Text
+  status    String   @default("new") // new, read, replied, archived
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Testimonial {
+  id        String   @id @default(cuid())
+  name      String
+  content   String
+  rating    Int      @default(5)
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  title       String
+  titleAm     String
+  excerpt     String
+  excerptAm   String
+  content     String   @db.Text
+  contentAm   String   @db.Text
+  author      String
+  publishedAt DateTime @default(now())
+  readTime    Int      @default(5)
+  category    String
+  tags        String[] // Array of tags
+  tagsAm      String[] // Array of tags in Amharic
+  slug        String   @unique
+  featuredImage String? // URL to featured image
+  images      String[] // Array of image URLs
+  videos      Video[]  // Related videos
+  status      String   @default("draft") // draft, published, archived
+  views       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Video {
+  id          String   @id @default(cuid())
+  type        String   // "youtube", "tiktok", "vimeo", etc.
+  url         String
+  title       String
+  description String?
+  thumbnail   String?
+  embedCode   String?  // Custom embed code if needed
+  blogPostId  String
+  blogPost    BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model CalendarSlot {
+  id          String   @id @default(cuid())
+  date        DateTime
+  startTime   String   // Format: "09:00"
+  endTime     String   // Format: "17:00"
+  isAvailable Boolean  @default(true)
+  maxBookings Int      @default(3) // Maximum bookings per slot
+  currentBookings Int  @default(0) // Current number of bookings
+  notes       String?  // Admin notes
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([date, startTime])
+}
+
+model CalendarSettings {
+  id                    String   @id @default(cuid())
+  workingHoursStart     String   @default("08:00")
+  workingHoursEnd       String   @default("18:00")
+  slotDuration          Int      @default(60) // in minutes
+  maxBookingsPerSlot    Int      @default(3)
+  advanceBookingDays    Int      @default(30) // How many days in advance customers can book
+  weekendBookings       Boolean  @default(false)
+  holidayBookings       Boolean  @default(false)
+  maintenanceMode       Boolean  @default(false)
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+model Holiday {
+  id          String   @id @default(cuid())
+  name        String
+  date        DateTime
+  isRecurring Boolean  @default(false) // For annual holidays
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GalleryImage {
+  id          String   @id @default(cuid())
+  filename    String   @unique
+  title       String
+  titleAm     String
+  description String?
+  descriptionAm String?
+  category    String
+  categoryAm  String
+  alt         String
+  order       Int      @default(0)
+  fileSize    Int      // File size in bytes
+  dimensions  Json     // { width: number, height: number }
+  uploadedAt  DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+} 
+ 
+ 
+ 
