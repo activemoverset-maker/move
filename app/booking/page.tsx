@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import { BookingPage } from '../../components/pages/booking-page'
 
 export const metadata: Metadata = {
@@ -9,7 +10,9 @@ export const metadata: Metadata = {
 export default function BookingPageRoute() {
   return (
     <div className="pt-16">
-      <BookingPage />
+      <Suspense fallback={null}>
+        <BookingPage />
+      </Suspense>
     </div>
   )
 } 
