@@ -5,13 +5,14 @@ import { BLOG_POSTS } from '@/constants/site'
 import { generateSlug } from '@/lib/utils'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = BLOG_POSTS.find(p => generateSlug(p.title) === params.slug)
+  const { slug } = await params
+  const post = BLOG_POSTS.find(p => generateSlug(p.title) === slug)
   
   if (!post) {
     return {
@@ -33,8 +34,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = BLOG_POSTS.find(p => generateSlug(p.title) === params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+  const post = BLOG_POSTS.find(p => generateSlug(p.title) === slug)
   
   if (!post) {
     notFound()
