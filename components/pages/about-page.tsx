@@ -46,6 +46,52 @@ export function AboutPage() {
     })
   }
 
+  // Animation variants
+  const badgeVariants = {
+    hidden: { 
+      opacity: 0, 
+      scale: 0.8,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 150,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      y: -2,
+      transition: {
+        duration: 0.2,
+        ease: "easeOut",
+      },
+    },
+  }
+
+  const textVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20,
+      filter: "blur(4px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.6,
+        delay: 0.4,
+        ease: "easeOut",
+      },
+    },
+  }
+
   const services = [
     {
       icon: Home,
@@ -124,8 +170,8 @@ export function AboutPage() {
 
   const team = [
     {
-      name: 'Melese Taddese',
-      nameAm: 'መልክት መረርት',
+      name: 'Mulatu Teshome',
+      nameAm: 'ሙሉት ተስኖም',
       role: 'Ethiopian Staff',
       roleAm: 'የሙያ ሰራተኛ',
       description: 'Experienced and friendly Ethiopian staff.',

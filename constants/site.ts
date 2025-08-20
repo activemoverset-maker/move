@@ -139,23 +139,32 @@ export const SERVICES = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: 'Abebe Kebede',
-    nameAm: 'አበበ ከበደ',
+    name: 'Fatima Ahmed',
+    nameAm: 'ፋቲማ አህመድ',
     content: 'Excellent service! The team was professional, careful with our belongings, and completed the move on time. Highly recommended!',
     contentAm: 'በጣም ጥሩ አገልግሎት! ቡድኑ የሙያ ነበር፣ እቃዎቻችንን በጥንቃቄ አያዩ፣ እና መጓጓዣውን በጊዜ አጠናቀቁ። በጣም ይመከራል!',
     rating: 5,
     service: 'Local Moving',
-    serviceAm: 'አካባቢያዊ መጓጓዣ'
+    serviceAm: 'አካባቢያዊ መጓጓዣ',
+    image: '/images/testimonials/fcg1.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-15'
   },
   {
     id: 2,
-    name: 'Fatima Ahmed',
-    nameAm: 'ፋቲማ አህመድ',
+    
+    name: 'Abebe Kebede',
+    nameAm: 'አበበ ከበደ',
     content: 'Very reliable and efficient moving service. They handled our fragile items with extra care. Will definitely use them again.',
     contentAm: 'በጣም አስተማማኝ እና ውጤታማ የመጓጓዣ አገልግሎት። የተሰበሩ እቃዎቻችንን በተለየ ጥንቃቄ አያዩ። በእርግጥ እንደገና እንጠቀማቸዋለን።',
     rating: 5,
     service: 'Packaging',
-    serviceAm: 'የመጠን አገልግሎት'
+    serviceAm: 'የመጠን አገልግሎት',
+    image: '/images/testimonials/fcg2.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-10'
   },
   {
     id: 3,
@@ -165,7 +174,11 @@ export const TESTIMONIALS = [
     contentAm: 'የሙያ ቡድን፣ ውድድር ያለው ዋጋ፣ እና ጥሩ የደንበኛ አገልግሎት። የቢሮ መጓጓዣችንን ያለ ግፍ አደረጉ።',
     rating: 5,
     service: 'Office Relocation',
-    serviceAm: 'የቢሮ መጓጓዣ'
+    serviceAm: 'የቢሮ መጓጓዣ',
+    image: '/images/testimonials/fcg3.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-08'
   },
   {
     id: 4,
@@ -175,17 +188,25 @@ export const TESTIMONIALS = [
     contentAm: 'ከመጠን አገልግሎታቸው ጋር ጥሩ ስራት። ንፁህ ተቋማት፣ ጥሩ ደህንነት፣ እና በጣም ጠቃሚ ሰራተኞች።',
     rating: 5,
     service: 'Storage',
-    serviceAm: 'መጠን'
+    serviceAm: 'መጠን',
+    image: '/images/testimonials/fcg4.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-05'
   },
   {
     id: 5,
-    name: 'Dawit Haile',
-    nameAm: 'ዳዊት ኃይሌ',
+    name: 'Marta Haile',
+    nameAm: 'ማርታ ኃይሌ',
     content: 'Fast, reliable, and professional service. They moved our entire house efficiently and everything arrived safely.',
     contentAm: 'ፈጣን፣ አስተማማኝ፣ እና የሙያ አገልግሎት። ቤታችንን በውጤታማነት አዛውረው እና ሁሉም ነገር በደህንነት ደረሰ።',
     rating: 5,
     service: 'Local Moving',
-    serviceAm: 'አካባቢያዊ መጓጓዣ'
+    serviceAm: 'አካባቢያዊ መጓጓዣ',
+    image: '/images/testimonials/fcg5.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-03'
   },
   {
     id: 6,
@@ -195,7 +216,54 @@ export const TESTIMONIALS = [
     contentAm: 'የተሻለ የደንበኛ አገልግሎት እና ዝርዝር ትኩረት። ዓለም አቀፍ መጓጓዣችንን ለስላሳ እና ያለ ግፍ አደረጉ።',
     rating: 5,
     service: 'International Moving',
-    serviceAm: 'ዓለም አቀፍ መጓጓዣ'
+    serviceAm: 'ዓለም አቀፍ መጓጓዣ',
+    image: '/images/testimonials/fc6.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-01'
+  },
+  {
+    id: 7,
+    name: 'Samson Alemu',
+    nameAm: 'ሳምሶን አለሙ',
+    content: 'Amazing experience! The team was incredibly professional and made our move completely stress-free. Everything was handled with care.',
+    contentAm: 'ድንቅ ስራት! ቡድኑ በጣም የሙያ ነበር እና መጓጓዣችንን ሙሉ በሙሉ ያለ ግፍ አደረገ። ሁሉም ነገር በጥንቃቄ ተያያዘ።',
+    rating: 5,
+    service: 'Local Moving',
+    serviceAm: 'አካባቢያዊ መጓጓዣ',
+    image: '/images/testimonials/fcg7.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-20'
+  },
+  {
+    id: 8,
+    name: 'Tadesse Worku',
+    nameAm: 'ታደሰ ወርቁ',
+    content: 'Professional, reliable, and affordable. They moved our office efficiently with minimal disruption to our business operations.',
+    contentAm: 'የሙያ፣ አስተማማኝ፣ እና ርካሽ። የንግድ ስራችንን ሳያደናቅፉ ቢሮችንን በውጤታማነት አዛውረው።',
+    rating: 5,
+    service: 'Office Relocation',
+    serviceAm: 'የቢሮ መጓጓዣ',
+    image: '/images/testimonials/fcg8.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-18'
+  },
+  {
+    id: 9,
+    
+    name: 'Amina Hassan',
+    nameAm: 'አሚና ሐሰን',
+    content: 'Excellent packaging service! They handled our fragile items with utmost care. Highly recommend their professional approach.',
+    contentAm: 'በጣም ጥሩ የመጠን አገልግሎት! የተሰበሩ እቃዎቻችንን በጣም በጥንቃቄ አያዩ። የሙያ አቀራረታቸውን በጣም እመክራለሁ።',
+    rating: 5,
+    service: 'Packaging',
+    serviceAm: 'የመጠን አገልግሎት',
+    image: '/images/testimonials/fcg9.jpg',
+    location: 'Addis Ababa, Ethiopia',
+    locationAm: 'አዲስ አበባ, ኢትዮጵያ',
+    date: '2024-01-16'
   }
 ]
 

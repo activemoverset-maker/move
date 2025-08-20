@@ -14,11 +14,11 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    // Show initial loading for 2 seconds, then stop
+    // Show initial loading for 3.5 seconds, then stop (gives time to see driving animation)
     const timer = setTimeout(() => {
       console.log('Initial loading complete')
       setIsLoading(false)
-    }, 2000)
+    }, 3500)
 
     return () => clearTimeout(timer)
   }, [])

@@ -19,12 +19,12 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
     offset: ["start end", "end start"]
   })
 
-  // Enhanced 3D transforms - truck moves across entire screen
+  // Enhanced 3D transforms - truck moves across entire screen with better range
   const truckRotateX = useTransform(scrollYProgress, [0, 1], [0, 15])
   const truckRotateY = useTransform(scrollYProgress, [0, 1], [0, 8])
   const truckTranslateZ = useTransform(scrollYProgress, [0, 1], [0, 50])
   const truckScale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.2, 1])
-  const truckX = useTransform(scrollYProgress, [0, 1], [-400, 400]) // Much larger range
+  const truckX = useTransform(scrollYProgress, [0, 1], [-800, 800]) // Much larger range for full screen movement
 
   // Spring animations for smooth transitions
   const springRotateX = useSpring(truckRotateX, { stiffness: 100, damping: 30 })
@@ -63,12 +63,12 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
     >
       {/* Clean Modern Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-gray-800/30 to-black/40">
-        {/* Simple Road */}
+        {/* Enhanced Road Animation */}
         <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
           <motion.div 
             className="flex space-x-16"
-            animate={{ x: [-100, 100] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            animate={{ x: [-200, 200] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           >
             {roadLines.map((line) => (
               <div key={line.id} className="w-16 h-1 bg-yellow-400 rounded-full shadow-lg" />
@@ -88,6 +88,16 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
           scale: springScale,
           x: springX,
           transformStyle: 'preserve-3d'
+        }}
+        animate={{
+          x: [-80, 80, -60, 60, -80],
+          y: [0, -8, 0, -12, 0],
+          rotateZ: [0, 1, -1, 2, -2, 0]
+        }}
+        transition={{
+          x: { duration: 12, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+          rotateZ: { duration: 8, repeat: Infinity, ease: "easeInOut" }
         }}
         whileHover={{ 
           scale: 1.15,
@@ -181,14 +191,17 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
               transition={{ duration: 1, repeat: Infinity, delay: 0.5 }}
             />
 
-            {/* Clean Company Branding */}
+            {/* Company Logo on Truck */}
             <motion.div 
               className="absolute inset-0 flex items-center justify-center"
               style={{ transform: 'translateZ(50px)' }}
             >
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30 text-center">
-                <div className="text-white font-bold text-2xl mb-1">AM</div>
-                <div className="text-white font-semibold text-sm">Active Movers</div>
+              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-2 border border-white/30 text-center shadow-lg">
+                <img 
+                  src="/images/logo.jpg" 
+                  alt="Active Movers Logo" 
+                  className="w-16 h-8 rounded-lg object-cover shadow-md"
+                />
               </div>
             </motion.div>
 
@@ -247,15 +260,15 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
         </div>
       </motion.div>
 
-      {/* Simple Road Elements */}
+      {/* Enhanced Road Elements */}
       <motion.div
         className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 via-gray-800 to-transparent"
         style={{ transform: 'translateZ(5px)' }}
       >
         <motion.div 
           className="flex space-x-8"
-          animate={{ x: [-200, 200] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          animate={{ x: [-300, 300] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
         >
           {roadLines.map((line) => (
             <div key={line.id} className="w-12 h-1 bg-yellow-400 rounded-full shadow-md" />

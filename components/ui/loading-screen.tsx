@@ -117,53 +117,74 @@ export function LoadingScreen({ isLoading, onLoadingComplete }: LoadingScreenPro
           ))}
         </div>
 
-        <div className="relative z-10 text-center">
-          {/* Logo Container with enhanced animation */}
+        <div className="relative z-10 text-center w-full">
+          {/* Driving simulation: logo moves across screen with suspension, speed trails, and shadow */}
           <motion.div
-            initial={{ scale: 0.5, opacity: 0, y: 50 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 0.8, 
-              ease: "easeOut",
-              type: "spring",
-              stiffness: 100,
-              damping: 15
-            }}
-            className="relative mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="relative mb-8 w-full"
           >
+            {/* Moving vehicle container */}
             <motion.div
+              key={windowSize.width}
+              initial={{ x: -Math.max(240, windowSize.width * 0.45), y: 0 }}
               animate={{
-                rotate: [0, 5, -5, 0],
+                x: [
+                  -Math.max(240, windowSize.width * 0.45),
+                  Math.max(240, windowSize.width * 0.45),
+                  -Math.max(240, windowSize.width * 0.45)
+                ],
+                y: [0, -6, 0, -6, 0],
+                rotate: [0, 1.5, 0, -1.5, 0],
               }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto"
+              transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+              className="relative mx-auto"
+              style={{ height: '140px' }}
             >
-              <Image
-                src="/images/logotr.png"
-                alt="Active Movers & Packers"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
+              {/* Speed trails behind the logo */}
+              {[...Array(6)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scaleX: 0, x: -40 - i * 14, y: 40 + i * 4 }}
+                  animate={{ opacity: [0.0, 0.5, 0], scaleX: [0, 1, 0], x: [-40 - i * 14, -80 - i * 18, -120 - i * 22] }}
+                  transition={{ duration: 1.2 + i * 0.1, repeat: Infinity, ease: "easeOut", delay: i * 0.15 }}
+                  className="absolute h-1.5 w-24 origin-left bg-white/50 rounded-full blur-[1px]"
+                />
+              ))}
+
+              {/* Exhaust/dust puffs */}
+              {[...Array(4)].map((_, i) => (
+                <motion.div
+                  key={`dust-${i}`}
+                  initial={{ opacity: 0.3, scale: 0, x: -30 - i * 6, y: 70 + i * 4 }}
+                  animate={{ opacity: [0.3, 0.15, 0], scale: [0, 1, 1.4], x: [-30 - i * 6, -60 - i * 10] }}
+                  transition={{ duration: 1.6 + i * 0.2, repeat: Infinity, ease: "easeOut", delay: 0.2 * i }}
+                  className="absolute w-3 h-3 bg-white/30 rounded-full blur-sm"
+                />
+              ))}
+
+              {/* Vehicle (logo) */}
+              <motion.div
+                animate={{ y: [0, -2, 0, 2, 0] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto"
+              >
+                <Image
+                  src="/images/logotr.png"
+                  alt="Active Movers & Packers"
+                  fill
+                  className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]"
+                  priority
+                />
+                {/* Underbody shadow */}
+                <motion.div
+                  animate={{ scaleX: [0.9, 1.05, 0.9], opacity: [0.35, 0.5, 0.35] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+                  className="absolute left-1/2 -translate-x-1/2 -bottom-2 w-24 h-3 bg-black/40 blur-md rounded-full"
+                />
+              </motion.div>
             </motion.div>
-            
-            {/* Glow effect around logo */}
-            <motion.div
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 0.8, 0.5],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="absolute inset-0 w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 mx-auto bg-green-400 rounded-full blur-xl opacity-50 -z-10"
-            />
           </motion.div>
 
           {/* Enhanced loading text */}

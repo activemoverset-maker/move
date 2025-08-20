@@ -48,6 +48,7 @@ export interface Translations {
       subtitle: string
       learnMore: string
       bookNow: string
+      contactUs: string
     }
     trustIndicators: {
       licensed: string
@@ -230,6 +231,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'Get a free quote and let us handle your relocation with care and professionalism.',
         learnMore: 'Learn More',
         bookNow: 'Book Now',
+        contactUs: 'Contact Us',
       },
       trustIndicators: {
         licensed: 'Licensed & Insured',
@@ -396,6 +398,7 @@ export const translations: Record<Language, Translations> = {
         subtitle: 'ነፃ ዋጋ ያግኙ እና መጓጓዣዎን በጥንቃቄ እና በሙያ እንደምንሰጥ።',
         learnMore: 'ተጨማሪ ይወቁ',
         bookNow: 'አሁን ያስያዙ',
+        contactUs: 'አስተያየቶች እንደምንሰጥ',
       },
       trustIndicators: {
         licensed: 'የተፈቀደ እና የተጣራ',

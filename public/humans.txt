@@ -1,0 +1,29 @@
+/* TEAM */
+    Developer: [Your Name]
+    Contact: [your.email@example.com]
+    From: Addis Ababa, Ethiopia
+
+/* SITE */
+    Last update: 2024/01/15
+    Language: English, Amharic
+    Doctype: HTML5
+    IDE: Visual Studio Code
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: React, Next.js, TypeScript
+    Software: Node.js, Prisma, Tailwind CSS
+
+/* PROJECT */
+    Name: ActiveMovers & Packers
+    Description: Professional moving and packing services in Addis Ababa, Ethiopia
+    URL: https://activemoverset.com
+    Keywords: moving services, packing services, storage solutions, office relocation, Addis Ababa, Ethiopia
+    Author: ActiveMovers & Packers
+
+/* THANKS */
+    Name: Next.js Team
+    Name: Vercel
+    Name: Tailwind CSS
+    Name: ShadCN/UI
+    Name: Framer Motion
+
+
