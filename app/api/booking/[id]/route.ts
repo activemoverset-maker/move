@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     const body = await request.json()
@@ -17,7 +17,7 @@ export async function PATCH(
     }
 
     const booking = await prisma.booking.update({
-      where: { id: params.id },
+      where: { id: context.params.id },
       data: { status }
     })
 
@@ -39,11 +39,11 @@ export async function PATCH(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     await prisma.booking.delete({
-      where: { id: params.id }
+      where: { id: context.params.id }
     })
 
     return NextResponse.json({

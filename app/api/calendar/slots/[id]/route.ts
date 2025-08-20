@@ -3,11 +3,11 @@ import { prisma } from '@/lib/prisma'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     const slot = await prisma.calendarSlot.findUnique({
-      where: { id: params.id }
+      where: { id: context.params.id }
     })
 
     if (!slot) {
@@ -29,14 +29,14 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     const body = await request.json()
     const { date, startTime, endTime, isAvailable, maxBookings, notes } = body
 
     const slot = await prisma.calendarSlot.update({
-      where: { id: params.id },
+      where: { id: context.params.id },
       data: {
         date: date ? new Date(date) : undefined,
         startTime,
@@ -59,11 +59,11 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     await prisma.calendarSlot.delete({
-      where: { id: params.id }
+      where: { id: context.params.id }
     })
 
     return NextResponse.json({ success: true })
