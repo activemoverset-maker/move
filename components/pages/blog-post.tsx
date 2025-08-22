@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
+import { ReadingProgress } from '@/components/ui/reading-progress'
+import { TableOfContents } from '@/components/ui/table-of-contents'
+import { RelatedPosts } from '@/components/ui/related-posts'
 import { 
   Calendar, 
   User, 
@@ -103,6 +106,7 @@ export function BlogPost({ post }: BlogPostProps) {
 
   return (
     <>
+      <ReadingProgress />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-green-600 to-green-700 text-white py-16 sm:py-20">
         <div className="container-max">
@@ -188,7 +192,7 @@ export function BlogPost({ post }: BlogPostProps) {
                   )}
 
                   {/* Blog Content */}
-                  <div className="prose prose-lg max-w-none">
+                  <div className="blog-content">
                     <div 
                       className="text-gray-700 leading-relaxed"
                       dangerouslySetInnerHTML={{ 
@@ -260,6 +264,9 @@ export function BlogPost({ post }: BlogPostProps) {
               className="lg:col-span-1"
             >
               <div className="space-y-6">
+                {/* Table of Contents */}
+                <TableOfContents />
+                
                 {/* Share Card */}
                 <Card className="border-0 shadow-lg bg-white">
                   <CardContent className="p-4">
@@ -323,6 +330,13 @@ export function BlogPost({ post }: BlogPostProps) {
           </div>
         </div>
       </section>
+
+      {/* Related Posts */}
+      <RelatedPosts
+        currentPostId={post.id}
+        category={post.category}
+        tags={language === 'am' ? post.tagsAm : post.tags}
+      />
     </>
   )
 } 

@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation'
 import { BlogPost } from '@/components/pages/blog-post'
 import { BLOG_POSTS } from '@/constants/site'
 import { generateSlug } from '@/lib/utils'
+import { generateSEO } from '@/lib/seo-utils'
+import { BlogSEO } from '@/components/seo/blog-seo'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -21,17 +23,22 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
-  return {
-    title: `${post.title} | Active Movers & Packers Blog`,
+  const postUrl = `/blog/${slug}`
+
+  return generateSEO({
+    title: post.title,
     description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: 'article',
-      publishedTime: post.publishedAt.toISOString(),
-      authors: [post.author],
-    },
-  }
+    keywords: post.tags,
+    author: post.author,
+    url: postUrl,
+    type: 'article',
+    publishedTime: post.publishedAt.toISOString(),
+    modifiedTime: post.publishedAt.toISOString(),
+    section: post.category,
+    tags: post.tags,
+    readTime: post.readTime,
+    canonical: postUrl,
+  })
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -42,10 +49,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
+  const postUrl = `/blog/${slug}`
+
   return (
-    <div className="pt-16">
-      <BlogPost post={post} />
-    </div>
+    <>
+      <BlogSEO
+        title={post.title}
+        description={post.excerpt}
+        author={post.author}
+        publishedTime={post.publishedAt.toISOString()}
+        modifiedTime={post.publishedAt.toISOString()}
+        url={postUrl}
+        section={post.category}
+        tags={post.tags}
+        readTime={post.readTime}
+      />
+      <div className="pt-16">
+        <BlogPost post={post} />
+      </div>
+    </>
   )
 } 
  

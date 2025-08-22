@@ -18,15 +18,15 @@ export const SITE_CONFIG = {
   description: 'Professional moving and packing services in Addis Ababa, Ethiopia',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
   links: {
-    phone: process.env.PHONE_NUMBER || '+251982270000',
-    whatsapp: process.env.WHATSAPP_NUMBER || '+251982270000',
+      phone: process.env.PHONE_NUMBER || '+251982260000',
+  whatsapp: process.env.WHATSAPP_NUMBER || '+251982260000',
     telegram: process.env.TELEGRAM_USERNAME || 'activemovers',
     email: process.env.EMAIL || 'info@activemovers.com',
-    address: 'Yetebaberut CMC, Addis Ababa, Ethiopia',
-    map: 'https://maps.google.com/?q=Yetebaberut+CMC+Addis+Ababa+Ethiopia',
+      address: 'Beka Building, Addis Ababa, Ethiopia',
+  map: 'https://www.google.com/maps/place/Beka+Building/@9.0357937,38.854252,89m/data=!3m1!1e3!4m6!3m5!1s0x164b91000256c8f5:0x57e863a61e58fa35!8m2!3d9.0357937!4d38.8544868!16s%2Fg%2F11lckzr77b?entry=ttu',
   },
   address: {
-    street: 'Yetebaberut CMC',
+    street: 'Beka Building',
     city: 'Addis Ababa',
     country: 'Ethiopia',
   },
@@ -154,8 +154,8 @@ export const TESTIMONIALS = [
   {
     id: 2,
     
-    name: 'Abebe Kebede',
-    nameAm: 'አበበ ከበደ',
+    name: 'Rajesh Patel',
+    nameAm: 'ራጄሽ ፓቴል',
     content: 'Very reliable and efficient moving service. They handled our fragile items with extra care. Will definitely use them again.',
     contentAm: 'በጣም አስተማማኝ እና ውጤታማ የመጓጓዣ አገልግሎት። የተሰበሩ እቃዎቻችንን በተለየ ጥንቃቄ አያዩ። በእርግጥ እንደገና እንጠቀማቸዋለን።',
     rating: 5,

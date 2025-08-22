@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { generateSlug } from '@/lib/utils'
+import { generateSitemap, generateSitemapXML } from '@/lib/sitemap-generator'
+import fs from 'fs/promises'
+import path from 'path'
 
 export async function GET() {
   try {
@@ -95,6 +98,21 @@ export async function POST(request: NextRequest) {
         videos: true
       }
     })
+
+    // Update sitemap after creating new blog post
+    try {
+      const sitemapData = generateSitemap()
+      const xml = generateSitemapXML(sitemapData)
+      
+      // Write sitemap to public directory
+      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml')
+      await fs.writeFile(sitemapPath, xml, 'utf-8')
+      
+      console.log('Sitemap updated successfully')
+    } catch (sitemapError) {
+      console.error('Error updating sitemap:', sitemapError)
+      // Don't fail the blog creation if sitemap update fails
+    }
 
     return NextResponse.json(post, { status: 201 })
   } catch (error) {

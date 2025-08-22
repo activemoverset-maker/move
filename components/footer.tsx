@@ -47,14 +47,14 @@ export function Footer() {
           </div>
           <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.7468!3d9.0320!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOcKwMDEnNTUuMiJOIDM4wrA0NCc0OC41IkU!5e0!3m2!1sen!2set!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.8544868!3d9.0357937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b91000256c8f5%3A0x57e863a61e58fa35!2sBeka%20Building!5e0!3m2!1sen!2set!4v1234567890"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Active Movers & Packers Location"
+              title="Active Movers & Packers Location - Beka Building"
               className="absolute inset-0"
             />
             {/* Map Overlay for better integration */}

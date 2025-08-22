@@ -39,7 +39,7 @@ console.log('');
 
 // Expected image mappings
 const expectedImages = [
-  { id: 1, name: 'Abebe Kebede', image: 'fcg1.jpg' },
+  { id: 1, name: 'Rajesh Patel', image: 'fcg1.jpg' },
   { id: 2, name: 'Fatima Ahmed', image: 'fcg2.jpg' },
   { id: 3, name: 'Yohannes Tekle', image: 'fcg3.jpg' },
   { id: 4, name: 'Sara Mohammed', image: 'fcg4.jpg' },

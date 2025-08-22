@@ -1,109 +1,55 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Download, Share2, Filter, Eye, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
-
-// Enhanced gallery images with more details
-const GALLERY_IMAGES = [
-  {
-    id: '1',
-    src: '/images/gallary/qua1.png',
-    alt: 'Professional moving service with truck and team',
-    title: 'Residential Moving',
-    titleAm: 'የመኖሪያ ቤት መጓጓዣ',
-    category: 'Moving Services',
-    categoryAm: 'የመጓጓዣ አገልግሎቶች',
-    description: 'Professional residential moving services with care and precision',
-    descriptionAm: 'የሙያ የመኖሪያ ቤት መጓጓዣ አገልግሎቶች በጥንቃቄ እና በትክክለኛነት',
-    height: 'tall'
-  },
-  {
-    id: '2',
-    src: '/images/gallary/qua2.png',
-    alt: 'Office furniture being moved by professional team',
-    title: 'Office Relocation',
-    titleAm: 'የቢሮ መጓጓዣ',
-    category: 'Commercial',
-    categoryAm: 'ንግድ',
-    description: 'Complete office relocation services for businesses',
-    descriptionAm: 'ለንግድ ድርጅቶች ሁለገብ የቢሮ መጓጓዣ አገልግሎቶች',
-    height: 'medium'
-  },
-  {
-    id: '3',
-    src: '/images/gallary/qua3.png',
-    alt: 'Professional packaging and crating services',
-    title: 'Packaging Services',
-    titleAm: 'የመጠን አገልግሎቶች',
-    category: 'Packaging',
-    categoryAm: 'መጠን',
-    description: 'Expert packaging and crating for fragile items',
-    descriptionAm: 'ለተሳሳተ እቃዎች የሙያ መጠን እና የመጠን አገልግሎቶች',
-    height: 'short'
-  },
-  {
-    id: '4',
-    src: '/images/gallary/qua4.png',
-    alt: 'Secure storage facility with climate control',
-    title: 'Storage Solutions',
-    titleAm: 'የመጠን መፍትሄዎች',
-    category: 'Storage',
-    categoryAm: 'መጠን',
-    description: 'Secure climate-controlled storage facilities',
-    descriptionAm: 'ደህንነቱ የተጠበቀ የአየር ሁኔታ የተቆጣጠረ መጠን ተቋማት',
-    height: 'tall'
-  },
-  {
-    id: '5',
-    src: '/images/gallary/qua5.png',
-    alt: 'Professional moving team at work',
-    title: 'Professional Team',
-    titleAm: 'የሙያ ቡድን',
-    category: 'Team',
-    categoryAm: 'ቡድን',
-    description: 'Experienced and dedicated moving professionals',
-    descriptionAm: 'የተሞክሩ እና ተሳላሰው የመጓጓዣ ሙያተኞች',
-    height: 'medium'
-  }
-]
+import { getRandomizedGalleryImages, type GalleryImage } from '@/lib/gallery-utils'
 
 const CATEGORIES = [
   { id: 'all', label: 'All', labelAm: 'ሁሉም' },
   { id: 'Moving Services', label: 'Moving', labelAm: 'መጓጓዣ' },
   { id: 'Commercial', label: 'Commercial', labelAm: 'ንግድ' },
   { id: 'Packaging', label: 'Packaging', labelAm: 'መጠን' },
-  { id: 'Storage', label: 'Storage', labelAm: 'መጠን' },
+  { id: 'Storage', label: 'Storage', labelAm: 'የማከማቻ' },
   { id: 'Team', label: 'Team', labelAm: 'ቡድን' }
 ]
 
 export function GallerySection() {
   const { t, language } = useLanguage()
-  const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null)
+  const [galleryImages, setGalleryImages] = useState<GalleryImage[]>([])
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [activeCategory, setActiveCategory] = useState('all')
-  const [filteredImages, setFilteredImages] = useState(GALLERY_IMAGES)
+  const [filteredImages, setFilteredImages] = useState<GalleryImage[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
+  // Load and randomize images on component mount
   useEffect(() => {
+    const randomizedImages = getRandomizedGalleryImages()
+    setGalleryImages(randomizedImages)
+    setFilteredImages(randomizedImages)
+  }, [])
+
+  useEffect(() => {
+    if (galleryImages.length === 0) return
+    
     setIsLoading(true)
     const timer = setTimeout(() => {
       if (activeCategory === 'all') {
-        setFilteredImages(GALLERY_IMAGES)
+        setFilteredImages(galleryImages)
       } else {
-        setFilteredImages(GALLERY_IMAGES.filter(img => img.category === activeCategory))
+        setFilteredImages(galleryImages.filter(img => img.category === activeCategory))
       }
       setIsLoading(false)
     }, 300)
     return () => clearTimeout(timer)
-  }, [activeCategory])
+  }, [activeCategory, galleryImages])
 
-  const openLightbox = (image: typeof GALLERY_IMAGES[0], index: number) => {
+  const openLightbox = (image: GalleryImage, index: number) => {
     setSelectedImage(image)
     setCurrentIndex(index)
     trackEvent({ 
@@ -139,7 +85,7 @@ export function GallerySection() {
     }
   }
 
-  const downloadImage = (image: typeof GALLERY_IMAGES[0]) => {
+  const downloadImage = (image: GalleryImage) => {
     const link = document.createElement('a')
     link.href = image.src
     link.download = `${image.title.toLowerCase().replace(/\s+/g, '-')}.png`
@@ -153,7 +99,7 @@ export function GallerySection() {
     })
   }
 
-  const shareImage = async (image: typeof GALLERY_IMAGES[0]) => {
+  const shareImage = async (image: GalleryImage) => {
     if (navigator.share) {
       try {
         await navigator.share({
@@ -200,7 +146,7 @@ export function GallerySection() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 md:mb-20"
+          className="text-center mb-20"
         >
           <motion.div
             initial={{ scale: 0.8 }}
@@ -214,11 +160,11 @@ export function GallerySection() {
             <div className="w-8 h-px bg-gradient-to-r from-primary/50 to-transparent" />
           </motion.div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-primary to-gray-900 bg-clip-text text-transparent mb-6 md:mb-8">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-gray-900 via-primary to-gray-900 bg-clip-text text-transparent mb-8">
             {language === 'en' ? 'Our Work in Action' : 'የእኛ ስራ በተግባር'}
           </h2>
           
-          <p className="text-base sm:text-lg md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             {language === 'en' 
               ? 'Explore our professional moving services through our stunning photo gallery. See our dedicated team in action, delivering exceptional service with care and precision.'
               : 'የእኛን የሙያ መጓጓዣ አገልግሎቶች በአስደናቂ ፎቶ ጋለሪያችን ውስጥ ያስሱ። ተሳላሰ ቡድናችንን በተግባር ይመልከቱ፣ ልዩ አገልግሎት በጥንቃቄ እና በትክክለኛነት እያቀረቡ።'
@@ -269,7 +215,7 @@ export function GallerySection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 md:mb-20 auto-rows-[180px] sm:auto-rows-[240px] md:auto-rows-[300px]"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-20 auto-rows-[300px]"
             >
               {filteredImages.map((image, index) => (
                 <motion.div
@@ -286,21 +232,19 @@ export function GallerySection() {
                     scale: 1.03,
                     transition: { duration: 0.3 }
                   }}
-                  className={`group relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl hover:shadow-2xl md:hover:shadow-3xl transition-all duration-500 bg-white ${getHeightClass(image.height)}`}
+                  className={`group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 bg-white ${getHeightClass(image.height)}`}
                 >
                   <div className="relative w-full h-full overflow-hidden">
-                    <Image
+                    <img
                       src={image.src}
                       alt={image.alt}
-                      fill
-                      sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                      className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
-                      priority={index < 2}
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                      loading="lazy"
                     />
                     
                     {/* Enhanced Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 text-white">
+                      <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                         <motion.div
                           initial={{ y: 30, opacity: 0 }}
                           whileHover={{ y: 0, opacity: 1 }}
@@ -310,10 +254,10 @@ export function GallerySection() {
                           <Badge variant="secondary" className="bg-white/20 backdrop-blur-sm border-white/30 text-white">
                             {language === 'en' ? image.category : image.categoryAm}
                           </Badge>
-                          <h3 className="text-lg sm:text-xl md:text-3xl font-bold leading-tight">
+                          <h3 className="text-2xl md:text-3xl font-bold leading-tight">
                             {language === 'en' ? image.title : image.titleAm}
                           </h3>
-                          <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
+                          <p className="text-white/90 text-sm leading-relaxed">
                             {language === 'en' ? image.description : image.descriptionAm}
                           </p>
                         </motion.div>
@@ -321,7 +265,7 @@ export function GallerySection() {
                     </div>
 
                     {/* Enhanced Action Buttons */}
-                    <div className="absolute top-4 right-4 md:top-6 md:right-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
                       <motion.div
                         initial={{ scale: 0.8, opacity: 0 }}
                         whileHover={{ scale: 1.1, opacity: 1 }}
@@ -331,7 +275,7 @@ export function GallerySection() {
                         <Button
                           size="sm"
                           variant="secondary"
-                          className="bg-white/95 backdrop-blur-sm hover:bg-white text-gray-800 shadow-md md:shadow-lg hover:shadow-lg md:hover:shadow-xl transition-all duration-300 rounded-full"
+                          className="bg-white/95 backdrop-blur-sm hover:bg-white text-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
                           onClick={() => openLightbox(image, index)}
                         >
                           <Eye className="w-4 h-4" />
@@ -339,7 +283,7 @@ export function GallerySection() {
                         <Button
                           size="sm"
                           variant="secondary"
-                          className="bg-white/95 backdrop-blur-sm hover:bg-white text-gray-800 shadow-md md:shadow-lg hover:shadow-lg md:hover:shadow-xl transition-all duration-300 rounded-full"
+                          className="bg-white/95 backdrop-blur-sm hover:bg-white text-gray-800 shadow-lg hover:shadow-xl transition-all duration-300 rounded-full"
                         >
                           <Heart className="w-4 h-4" />
                         </Button>
@@ -445,32 +389,27 @@ export function GallerySection() {
               </Button>
 
               {/* Image Container */}
-              <div className="relative bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
-                <div className="relative w-full h-[60vh] md:h-[70vh]">
-                  <Image
-                    src={selectedImage.src}
-                    alt={selectedImage.alt}
-                    fill
-                    sizes="100vw"
-                    className="object-contain"
-                    priority
-                  />
-                </div>
+              <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
+                <img
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                  className="w-full h-full max-h-[80vh] object-contain"
+                />
                 
                 {/* Enhanced Image Info */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-6 md:p-10">
-                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between text-white gap-4 md:gap-6">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-10">
+                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between text-white gap-6">
                     <div className="flex-1">
                       <Badge variant="secondary" className="mb-4 bg-white/20 backdrop-blur-sm border-white/30 text-white">
                         {language === 'en' ? selectedImage.category : selectedImage.categoryAm}
                       </Badge>
-                      <h3 className="text-xl sm:text-2xl md:text-4xl font-bold mb-2 md:mb-3 leading-tight">
+                      <h3 className="text-3xl md:text-4xl font-bold mb-3 leading-tight">
                         {language === 'en' ? selectedImage.title : selectedImage.titleAm}
                       </h3>
-                      <p className="text-white/90 text-sm md:text-lg leading-relaxed mb-2">
+                      <p className="text-white/90 text-base md:text-lg leading-relaxed mb-2">
                         {language === 'en' ? selectedImage.description : selectedImage.descriptionAm}
                       </p>
-                      <p className="text-white/70 text-xs md:text-sm">
+                      <p className="text-white/70 text-sm">
                         {currentIndex + 1} / {filteredImages.length} • {language === 'en' ? 'Professional Moving Services' : 'የሙያ መጓጓዣ አገልግሎቶች'}
                       </p>
                     </div>

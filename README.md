@@ -67,8 +67,8 @@ A modern Next.js 14+ website for Active Movers & Packers, a professional moving 
    ADMIN_NAME="Admin"
 
    # Contact Information
-   PHONE_NUMBER="+251982270000"
-   WHATSAPP_NUMBER="+251982270000"
+   PHONE_NUMBER="+251982260000"
+WHATSAPP_NUMBER="+251982260000"
    TELEGRAM_USERNAME="activemovers"
 
    # Site Configuration
@@ -203,5 +203,5 @@ This project is licensed under the MIT License.
 
 ## Support
 
-For support, email admin@activemovers.com or call +251982270000. 
+For support, email admin@activemovers.com or call +251982260000. 
  

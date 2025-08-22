@@ -11,6 +11,7 @@ import { GoogleAnalytics } from '@/components/google-analytics'
 import { LanguageProvider } from '@/contexts/language-context'
 import { LoadingProvider } from '@/contexts/loading-context'
 import { GlobalLoadingScreen } from '@/components/global-loading-screen'
+import { GlobalSEO } from '@/components/seo/global-seo'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -113,6 +114,7 @@ export default function RootLayout({
             <Toaster />
             <GoogleAnalytics />
             <Analytics />
+            <GlobalSEO />
           </LanguageProvider>
         </LoadingProvider>
       </body>

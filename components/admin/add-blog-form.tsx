@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
+import { RichTextEditor } from '@/components/ui/rich-text-editor'
 import { 
   ArrowLeft,
   Save,
@@ -312,33 +313,27 @@ export function AddBlogForm() {
                   </div>
 
                   {/* Content */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  <div className="space-y-6">
                     <div>
                       <Label htmlFor="content" className="text-sm font-medium text-gray-700">
                         Content (English) *
                       </Label>
-                      <Textarea
-                        id="content"
-                        value={formData.content}
-                        onChange={(e) => handleInputChange('content', e.target.value)}
-                        required
-                        placeholder="Enter blog content in HTML format"
+                      <RichTextEditor
+                        content={formData.content}
+                        onChange={(content) => handleInputChange('content', content)}
+                        placeholder="Start writing your blog content in English..."
                         className="mt-1"
-                        rows={8}
                       />
                     </div>
                     <div>
                       <Label htmlFor="contentAm" className="text-sm font-medium text-gray-700">
                         Content (Amharic) *
                       </Label>
-                      <Textarea
-                        id="contentAm"
-                        value={formData.contentAm}
-                        onChange={(e) => handleInputChange('contentAm', e.target.value)}
-                        required
-                        placeholder="የብሎግ ይዘት በHTML ቅርጸት ያስገቡ"
+                      <RichTextEditor
+                        content={formData.contentAm}
+                        onChange={(content) => handleInputChange('contentAm', content)}
+                        placeholder="የብሎግ ይዘትዎን በአማርኛ ይፃፉ..."
                         className="mt-1"
-                        rows={8}
                       />
                     </div>
                   </div>

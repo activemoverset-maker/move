@@ -24,7 +24,7 @@ console.log('');
 console.log('Your testimonial images directory is located at: public/images/testimonials/');
 console.log('');
 console.log('Required testimonial images:');
-console.log('- testimonial-1.jpg (for Abebe Kebede)');
+console.log('- testimonial-1.jpg (for Rajesh Patel)');
 console.log('- testimonial-2.jpg (for Fatima Ahmed)');
 console.log('- testimonial-3.jpg (for Yohannes Tekle)');
 console.log('- testimonial-4.jpg (for Sara Mohammed)');
@@ -92,5 +92,6 @@ console.log('2. Test the testimonials section on your website');
 console.log('3. Customize colors and styling if needed');
 console.log('4. Update testimonial content as needed');
 console.log('');
+
 
 

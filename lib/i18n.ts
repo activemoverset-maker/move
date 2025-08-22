@@ -295,7 +295,7 @@ export const translations: Record<Language, Translations> = {
       ourServices: 'Our Services',
       contactInfo: 'Contact Info',
       followUs: 'Follow Us',
-      businessHours: 'Mon-Fri: 8AM-6PM',
+      businessHours: '24/7 - Available Around the Clock',
       legal: {
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
@@ -462,7 +462,7 @@ export const translations: Record<Language, Translations> = {
       ourServices: 'አገልግሎቶቻችን',
       contactInfo: 'የመገናኛ መረጃ',
       followUs: 'ይከተሉን',
-      businessHours: 'ሰኞ-ዓርብ: 8AM-6PM',
+      businessHours: '24/7 - ሁልጊዜ የሚገኝ',
       legal: {
         privacy: 'የግል መረጃ ፖሊሲ',
         terms: 'የአገልግሎት ውል',
