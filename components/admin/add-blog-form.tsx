@@ -45,6 +45,14 @@ interface BlogFormData {
   images: string[]
   videos: VideoEmbed[]
   status: 'draft' | 'published'
+  // SEO fields
+  seoDescription: string
+  seoDescriptionAm: string
+  seoKeywords: string[]
+  seoKeywordsAm: string[]
+  canonicalUrl: string
+  metaTitle: string
+  metaTitleAm: string
 }
 
 export function AddBlogForm() {
@@ -66,7 +74,15 @@ export function AddBlogForm() {
     featuredImage: '',
     images: [],
     videos: [],
-    status: 'draft'
+    status: 'draft',
+    // SEO fields
+    seoDescription: '',
+    seoDescriptionAm: '',
+    seoKeywords: [],
+    seoKeywordsAm: [],
+    canonicalUrl: '',
+    metaTitle: '',
+    metaTitleAm: ''
   })
   const [newTag, setNewTag] = useState('')
   const [newTagAm, setNewTagAm] = useState('')
@@ -97,6 +113,61 @@ export function AddBlogForm() {
       }
     }
     return { isValid: true, message: '' }
+  }
+
+  // Auto-generate SEO fields
+  const generateSEOFields = () => {
+    if (formData.title && formData.excerpt) {
+      const seoDescription = formData.excerpt.length > 160 
+        ? formData.excerpt.substring(0, 157) + '...' 
+        : formData.excerpt
+      
+      const seoKeywords = [
+        'moving services',
+        'packing services', 
+        'Addis Ababa',
+        'Ethiopia',
+        formData.category,
+        ...formData.tags
+      ].filter(Boolean)
+
+      const canonicalUrl = formData.title 
+        ? `/blog/${formData.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`
+        : ''
+
+      setFormData(prev => ({
+        ...prev,
+        seoDescription: seoDescription,
+        seoKeywords: seoKeywords,
+        canonicalUrl: canonicalUrl,
+        metaTitle: formData.title ? `Active Movers & Packers - ${formData.title}` : ''
+      }))
+    }
+  }
+
+  // Auto-generate Amharic SEO fields
+  const generateAmharicSEOFields = () => {
+    if (formData.titleAm && formData.excerptAm) {
+      const seoDescriptionAm = formData.excerptAm.length > 160 
+        ? formData.excerptAm.substring(0, 157) + '...' 
+        : formData.excerptAm
+      
+      const seoKeywordsAm = [
+        'የመጓጓዣ አገልግሎቶች',
+        'የመጠን አገልግሎቶች',
+        'አዲስ አበባ',
+        'ኢትዮጵያ',
+        formData.category,
+        ...formData.tagsAm
+      ].filter(Boolean)
+
+      setFormData(prev => ({
+        ...prev,
+        seoDescriptionAm: seoDescriptionAm,
+        seoKeywordsAm: seoKeywordsAm,
+        metaTitleAm: formData.titleAm ? `Active Movers & Packers - ${formData.titleAm}` : ''
+      }))
+    }
   }
 
   const titleValidation = validateTitle(formData.title)
@@ -339,6 +410,28 @@ export function AddBlogForm() {
                         </ul>
                       </div>
                     </div>
+                  </div>
+
+                  {/* SEO Auto-Generation Buttons */}
+                  <div className="flex gap-3">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={generateSEOFields}
+                      className="text-xs"
+                    >
+                      {language === 'am' ? 'SEO መስኮች ያመነጩ' : 'Auto-Generate SEO Fields'}
+                    </Button>
+                    <Button
+                      type="button"
+                      variant="outline"
+                      size="sm"
+                      onClick={generateAmharicSEOFields}
+                      className="text-xs"
+                    >
+                      {language === 'am' ? 'የአማርኛ SEO መስኮች ያመነጩ' : 'Auto-Generate Amharic SEO'}
+                    </Button>
                   </div>
 
                   {/* Excerpt */}
@@ -588,6 +681,180 @@ export function AddBlogForm() {
                         <Plus className="w-4 h-4 mr-1" />
                         Add Video
                       </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* SEO Section */}
+              <Card className="border-0 shadow-lg">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    {language === 'am' ? 'SEO ማሳተሚያ' : 'SEO Optimization'}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* Meta Descriptions */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="seoDescription" className="text-sm font-medium text-gray-700">
+                        Meta Description (English)
+                      </Label>
+                      <Textarea
+                        id="seoDescription"
+                        value={formData.seoDescription}
+                        onChange={(e) => handleInputChange('seoDescription', e.target.value)}
+                        placeholder="Enter meta description for search engines (max 160 characters)"
+                        className="mt-1"
+                        rows={3}
+                      />
+                      <div className="text-xs text-gray-500 mt-1">
+                        {formData.seoDescription.length}/160 characters
+                      </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="seoDescriptionAm" className="text-sm font-medium text-gray-700">
+                        Meta Description (Amharic)
+                      </Label>
+                      <Textarea
+                        id="seoDescriptionAm"
+                        value={formData.seoDescriptionAm}
+                        onChange={(e) => handleInputChange('seoDescriptionAm', e.target.value)}
+                        placeholder="የፍለጋ ሞተር ለማሳተሚያ የሚያገለግል መግለጫ ያስገቡ"
+                        className="mt-1"
+                        rows={3}
+                      />
+                      <div className="text-xs text-gray-500 mt-1">
+                        {formData.seoDescriptionAm.length}/160 characters
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SEO Keywords */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div>
+                      <Label className="text-sm font-medium text-gray-700">
+                        SEO Keywords (English)
+                      </Label>
+                      <div className="mt-2 space-y-2">
+                        <div className="flex gap-2">
+                          <Input
+                            value={newTag}
+                            onChange={(e) => setNewTag(e.target.value)}
+                            placeholder="Add SEO keyword"
+                            className="flex-1"
+                          />
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                              if (newTag.trim() && !formData.seoKeywords.includes(newTag.trim())) {
+                                handleInputChange('seoKeywords', [...formData.seoKeywords, newTag.trim()])
+                                setNewTag('')
+                              }
+                            }}
+                            disabled={!newTag.trim()}
+                          >
+                            <Plus className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {formData.seoKeywords.map((keyword, index) => (
+                            <Badge key={index} variant="secondary" className="text-xs">
+                              {keyword}
+                              <button
+                                type="button"
+                                onClick={() => handleInputChange('seoKeywords', formData.seoKeywords.filter((_, i) => i !== index))}
+                                className="ml-1 hover:text-red-500"
+                              >
+                                <X className="w-3 h-3" />
+                              </button>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <Label className="text-sm font-medium text-gray-700">
+                        SEO Keywords (Amharic)
+                      </Label>
+                      <div className="mt-2 space-y-2">
+                        <div className="flex gap-2">
+                          <Input
+                            value={newTagAm}
+                            onChange={(e) => setNewTagAm(e.target.value)}
+                            placeholder="የ SEO ቁልፍ ቃል ያክሉ"
+                            className="flex-1"
+                          />
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="sm"
+                            onClick={() => {
+                              if (newTagAm.trim() && !formData.seoKeywordsAm.includes(newTagAm.trim())) {
+                                handleInputChange('seoKeywordsAm', [...formData.seoKeywordsAm, newTagAm.trim()])
+                                setNewTagAm('')
+                              }
+                            }}
+                            disabled={!newTagAm.trim()}
+                          >
+                            <Plus className="w-4 h-4" />
+                          </Button>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {formData.seoKeywordsAm.map((keyword, index) => (
+                            <Badge key={index} variant="secondary" className="text-xs">
+                              {keyword}
+                              <button
+                                type="button"
+                                onClick={() => handleInputChange('seoKeywordsAm', formData.seoKeywordsAm.filter((_, i) => i !== index))}
+                                className="ml-1 hover:text-red-500"
+                              >
+                                <X className="w-3 h-3" />
+                              </button>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Canonical URL */}
+                  <div>
+                    <Label htmlFor="canonicalUrl" className="text-sm font-medium text-gray-700">
+                      Canonical URL
+                    </Label>
+                    <Input
+                      id="canonicalUrl"
+                      value={formData.canonicalUrl}
+                      onChange={(e) => handleInputChange('canonicalUrl', e.target.value)}
+                      placeholder="https://activemoverset.com/blog/your-post-slug"
+                      className="mt-1"
+                    />
+                    <div className="text-xs text-gray-500 mt-1">
+                      Leave empty to auto-generate from title
+                    </div>
+                  </div>
+
+                  {/* SEO Preview */}
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">
+                      {language === 'am' ? 'SEO ቅድመ ዕይታ' : 'SEO Preview'}
+                    </h4>
+                    <div className="space-y-2 text-sm">
+                      <div>
+                        <strong>Title:</strong> {formData.metaTitle || 'Active Movers & Packers - [Your Title]'}
+                      </div>
+                      <div>
+                        <strong>Description:</strong> {formData.seoDescription || 'Your meta description will appear here...'}
+                      </div>
+                      <div>
+                        <strong>URL:</strong> {formData.canonicalUrl || '/blog/[auto-generated-slug]'}
+                      </div>
                     </div>
                   </div>
                 </CardContent>

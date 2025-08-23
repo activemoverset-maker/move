@@ -96,7 +96,7 @@ export class SitemapManager {
       const sitemapData = generateSitemap()
       
       // Check for required URLs
-      const requiredUrls = ['/', '/about', '/services', '/contact', '/blog']
+      const requiredUrls = ['/', '/about', '/services', '/contact', '/blog', '/booking']
       const existingUrls = sitemapData.urls.map(url => new URL(url.loc).pathname)
       
       requiredUrls.forEach(url => {
@@ -104,6 +104,12 @@ export class SitemapManager {
           errors.push(`Missing required URL: ${url}`)
         }
       })
+
+      // Check for service pages
+      const serviceUrls = sitemapData.urls.filter(url => url.loc.includes('/services/'))
+      if (serviceUrls.length < 4) {
+        warnings.push(`Expected at least 4 service pages, found ${serviceUrls.length}`)
+      }
 
       // Check for blog posts
       const blogUrls = sitemapData.urls.filter(url => url.loc.includes('/blog/'))
@@ -127,6 +133,36 @@ export class SitemapManager {
       sitemapData.urls.forEach(url => {
         if (url.priority < 0 || url.priority > 1) {
           errors.push(`Invalid priority for ${url.loc}: ${url.priority}`)
+        }
+      })
+
+      // Check for valid change frequencies
+      const validFrequencies = ['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never']
+      sitemapData.urls.forEach(url => {
+        if (!validFrequencies.includes(url.changefreq)) {
+          errors.push(`Invalid change frequency for ${url.loc}: ${url.changefreq}`)
+        }
+      })
+
+      // Check for valid lastmod dates
+      sitemapData.urls.forEach(url => {
+        const lastmod = new Date(url.lastmod)
+        if (isNaN(lastmod.getTime())) {
+          errors.push(`Invalid lastmod date for ${url.loc}: ${url.lastmod}`)
+        }
+      })
+
+      // Check for admin pages (should NEVER be in sitemap)
+      sitemapData.urls.forEach(url => {
+        const urlPath = new URL(url.loc).pathname
+        if (urlPath.startsWith('/admin/') || urlPath.startsWith('/api/admin/')) {
+          errors.push(`SECURITY ISSUE: Admin page found in sitemap: ${url.loc}`)
+        }
+        if (urlPath.startsWith('/api/') && !urlPath.match(/\/(sitemap|robots)/)) {
+          errors.push(`API endpoint found in sitemap: ${url.loc}`)
+        }
+        if (urlPath.startsWith('/_next/') || urlPath.startsWith('/_vercel/')) {
+          errors.push(`Internal page found in sitemap: ${url.loc}`)
         }
       })
 

@@ -59,7 +59,7 @@ export function generateOrganizationSchema() {
     "description": "Professional moving and packing services in Addis Ababa, Ethiopia",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Yetebaberut CMC",
+      "streetAddress": "Beka Building",
       "addressLocality": "Addis Ababa",
       "addressCountry": "Ethiopia"
     },

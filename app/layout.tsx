@@ -21,7 +21,13 @@ export const metadata: Metadata = {
     template: '%s | Active Movers & Packers'
   },
   description: 'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
-  keywords: ['moving services', 'packing services', 'storage solutions', 'office relocation', 'Addis Ababa', 'Ethiopia'],
+  keywords: [
+    'moving services', 'packing services', 'storage solutions', 'office relocation', 
+    'Addis Ababa', 'Ethiopia', 'professional movers', 'local moving', 'residential moving',
+    'commercial moving', 'furniture moving', 'safe moving', 'reliable movers', 
+    'moving company', 'packaging services', 'home relocation', 'office moving',
+    'Ethiopian moving services', 'Addis Ababa movers', 'moving and packing'
+  ],
   authors: [{ name: 'Active Movers & Packers' }],
   creator: 'Active Movers & Packers',
   publisher: 'Active Movers & Packers',
@@ -30,21 +36,25 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL('https://activemoverset.com'),
   alternates: {
     canonical: '/',
+    languages: {
+      'en': '/',
+      'am': '/?lang=am',
+    },
   },
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logotr.png', sizes: 'any' },
+      { url: '/images/logotr.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/logotr.png', sizes: '32x32', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/images/logotr.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/images/logotr.png',
   },
   openGraph: {
     type: 'website',
@@ -67,6 +77,8 @@ export const metadata: Metadata = {
     title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
     description: 'Professional moving and packing services in Addis Ababa, Ethiopia.',
     images: ['/og-image.jpg'],
+    creator: '@activemoverset',
+    site: '@activemoverset',
   },
   robots: {
     index: true,
@@ -80,7 +92,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.GOOGLE_VERIFICATION_CODE || '',
   },
 }
 
@@ -92,10 +104,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/logotr.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/logotr.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/logotr.png" />
-        <link rel="shortcut icon" href="/images/logotr.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#16a34a" />
+        <meta name="msapplication-TileColor" content="#16a34a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>

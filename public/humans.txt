@@ -1,6 +1,6 @@
 /* TEAM */
-    Developer: [Your Name]
-    Contact: [your.email@example.com]
+    Developer: ActiveMovers Development Team
+    Contact: activemoverset@gmail.com
     From: Addis Ababa, Ethiopia
 
 /* SITE */
