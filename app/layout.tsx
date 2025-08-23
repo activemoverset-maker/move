@@ -112,23 +112,25 @@ export default function RootLayout({
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
-          <LanguageProvider>
-            <Suspense fallback={null}>
-              <GlobalLoadingScreen />
-            </Suspense>
-            <div className="min-h-screen flex flex-col">
-              <Header />
-              <main className="flex-1">
-                {children}
-              </main>
-              <Footer />
-            </div>
-            <FloatingButtons />
-            <Toaster />
-            <GoogleAnalytics />
-            <Analytics />
-            <GlobalSEO />
-          </LanguageProvider>
+          <Suspense fallback={null}>
+            <LanguageProvider>
+              <Suspense fallback={null}>
+                <GlobalLoadingScreen />
+              </Suspense>
+              <div className="min-h-screen flex flex-col">
+                <Header />
+                <main className="flex-1">
+                  {children}
+                </main>
+                <Footer />
+              </div>
+              <FloatingButtons />
+              <Toaster />
+              <GoogleAnalytics />
+              <Analytics />
+              <GlobalSEO />
+            </LanguageProvider>
+          </Suspense>
         </LoadingProvider>
       </body>
     </html>
