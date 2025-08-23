@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { AdminDashboard } from '@/components/admin/admin-dashboard'
 
 export const metadata: Metadata = {
-  title: 'Admin Dashboard',
-  description: 'Admin dashboard for managing Active Movers & Packers website content.',
+  title: 'Active Movers & Packers - Admin Dashboard | Management Portal',
+  description: 'Admin dashboard for Active Movers & Packers. Manage bookings, calendar, blog posts, gallery, and website analytics.',
 }
 
 export default function AdminPage() {

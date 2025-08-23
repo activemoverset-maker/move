@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
       phone: process.env.PHONE_NUMBER || '+251982260000',
   whatsapp: process.env.WHATSAPP_NUMBER || '+251982260000',
     telegram: process.env.TELEGRAM_USERNAME || 'activemovers',
-    email: process.env.EMAIL || 'info@activemovers.com',
+    email: process.env.EMAIL || 'activemoverset@gmail.com',
       address: 'Beka Building, Addis Ababa, Ethiopia',
   map: 'https://www.google.com/maps/place/Beka+Building/@9.0357937,38.854252,89m/data=!3m1!1e3!4m6!3m5!1s0x164b91000256c8f5:0x57e863a61e58fa35!8m2!3d9.0357937!4d38.8544868!16s%2Fg%2F11lckzr77b?entry=ttu',
   },

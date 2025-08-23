@@ -57,11 +57,11 @@ export function generateTikTokEmbed(videoId: string, title: string): string {
     <div class="video-container my-6">
       <blockquote
         class="tiktok-embed"
-        cite="https://www.tiktok.com/@activemovers/video/${videoId}"
+        cite="https://www.tiktok.com/@activemoverset/video/${videoId}"
         data-video-id="${videoId}"
       >
         <section>
-          <a target="_blank" href="https://www.tiktok.com/@activemovers">@activemovers</a>
+          <a target="_blank" href="https://www.tiktok.com/@activemoverset">@activemoverset</a>
         </section>
       </blockquote>
       <script async src="https://www.tiktok.com/embed.js"></script>

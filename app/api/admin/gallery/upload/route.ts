@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir } from 'fs/promises'
 import path from 'path'
-import { PrismaClient } from '@prisma/client'
+import { prisma } from '@/lib/prisma'
 
 // Ensure this route always runs on the Node.js runtime and is never statically evaluated
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
-
-const prisma = new PrismaClient()
 
 export async function POST(request: NextRequest) {
   try {

@@ -16,7 +16,7 @@ export interface SEOConfig {
   canonical?: string
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://activemovers.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://activemoverset.com'
 const SITE_NAME = 'Active Movers & Packers'
 const DEFAULT_IMAGE = `${SITE_URL}/images/logo.jpg`
 
@@ -37,7 +37,19 @@ export function generateSEO(config: SEOConfig): Metadata {
     canonical
   } = config
 
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
+  // Handle title formatting - if title already includes company name, use as is
+  // Otherwise, add company name based on type
+  let fullTitle = title
+  if (!title.includes(SITE_NAME)) {
+    if (type === 'article') {
+      // For blog posts, use the format already set in the blog page
+      fullTitle = title
+    } else {
+      // For other pages, add company name
+      fullTitle = `${title} | ${SITE_NAME}`
+    }
+  }
+  
   const fullUrl = url ? `${SITE_URL}${url}` : SITE_URL
 
   const metadata: Metadata = {
@@ -70,8 +82,8 @@ export function generateSEO(config: SEOConfig): Metadata {
       title: fullTitle,
       description,
       images: [image],
-      creator: '@activemovers',
-      site: '@activemovers',
+      creator: '@activemoverset',
+      site: '@activemoverset',
     },
     alternates: {
       canonical: canonical || fullUrl,
@@ -160,10 +172,10 @@ export function generateOrganizationSchema() {
     "name": SITE_NAME,
     "url": SITE_URL,
     "logo": DEFAULT_IMAGE,
-    "description": "Professional moving and packing services in Addis Ababa, Ethiopia",
+    "description": "Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, office relocation, packaging, and storage solutions.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Yetebaberut CMC",
+      "streetAddress": "Beka Building",
       "addressLocality": "Addis Ababa",
       "addressCountry": "Ethiopia"
     },
@@ -174,9 +186,9 @@ export function generateOrganizationSchema() {
       "availableLanguage": ["English", "Amharic"]
     },
     "sameAs": [
-      "https://facebook.com/activemovers",
-      "https://instagram.com/activemovers",
-      "https://twitter.com/activemovers"
+      "https://facebook.com/activemoverset",
+      "https://instagram.com/activemoverset",
+      "https://twitter.com/activemoverset"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "10-50",
@@ -231,20 +243,20 @@ export function generateLocalBusinessSchema() {
     "@type": "LocalBusiness",
     "name": SITE_NAME,
     "image": DEFAULT_IMAGE,
-    "description": "Professional moving and packing services in Addis Ababa, Ethiopia",
+    "description": "Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, office relocation, packaging, and storage solutions.",
     "url": SITE_URL,
     "telephone": "+251982260000",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Yetebaberut CMC",
+      "streetAddress": "Beka Building",
       "addressLocality": "Addis Ababa",
       "addressRegion": "Addis Ababa",
       "addressCountry": "Ethiopia"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 9.0320,
-      "longitude": 38.7636
+      "latitude": 9.0357937,
+      "longitude": 38.8544868
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",

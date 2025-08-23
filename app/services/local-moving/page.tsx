@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import { ServiceDetail } from '@/components/pages/service-detail'
 
 export const metadata: Metadata = {
-  title: 'Local Moving Services - Professional Moving in Addis Ababa',
-  description: 'Professional local moving services in Addis Ababa and surrounding areas. Same-day service, licensed & insured, experienced team.',
+  title: 'Active Movers & Packers - Local Moving Services | Professional Moving in Addis Ababa',
+  description: 'Professional local moving services in Addis Ababa by Active Movers & Packers. Reliable, affordable, and stress-free local moves with experienced Ethiopian staff.',
   openGraph: {
-    title: 'Local Moving Services - Professional Moving in Addis Ababa',
+    title: 'Active Movers & Packers - Local Moving Services | Professional Moving in Addis Ababa',
     description: 'Professional local moving services in Addis Ababa and surrounding areas. Same-day service, licensed & insured, experienced team.',
   },
 }

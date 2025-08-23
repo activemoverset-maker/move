@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { AdminBookings } from '@/components/admin/admin-bookings'
 
 export const metadata: Metadata = {
-  title: 'Bookings Management - Active Movers & Packers',
-  description: 'Admin bookings management for Active Movers & Packers.',
+  title: 'Active Movers & Packers - Bookings Management | Admin Portal',
+  description: 'Manage customer bookings and appointments for Active Movers & Packers. View, edit, and organize all moving service bookings.',
 }
 
 export default function AdminBookingsPage() {

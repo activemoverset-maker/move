@@ -26,7 +26,7 @@ export function generateBlogPostSchema(post: BlogPostSchema) {
       "name": "Active Movers & Packers",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://activemovers.com/images/logo.jpg"
+        "url": "https://activemoverset.com/images/logo.jpg"
       }
     },
     "datePublished": post.publishedAt,
@@ -54,8 +54,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Active Movers & Packers",
-    "url": "https://activemovers.com",
-    "logo": "https://activemovers.com/images/logo.jpg",
+    "url": "https://activemoverset.com",
+    "logo": "https://activemoverset.com/images/logo.jpg",
     "description": "Professional moving and packing services in Addis Ababa, Ethiopia",
     "address": {
       "@type": "PostalAddress",
@@ -70,9 +70,9 @@ export function generateOrganizationSchema() {
       "availableLanguage": ["English", "Amharic"]
     },
     "sameAs": [
-      "https://facebook.com/activemovers",
-      "https://instagram.com/activemovers",
-      "https://twitter.com/activemovers"
+      "https://facebook.com/activemoverset",
+      "https://instagram.com/activemoverset",
+      "https://twitter.com/activemoverset"
     ]
   }
 }
@@ -82,11 +82,11 @@ export function generateWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Active Movers & Packers",
-    "url": "https://activemovers.com",
+    "url": "https://activemoverset.com",
     "description": "Professional moving and packing services in Addis Ababa, Ethiopia",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://activemovers.com/search?q={search_term_string}",
+      "target": "https://activemoverset.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }

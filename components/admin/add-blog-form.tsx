@@ -89,6 +89,19 @@ export function AddBlogForm() {
     setFormData(prev => ({ ...prev, [field]: value }))
   }
 
+  const validateTitle = (title: string) => {
+    if (title.toLowerCase().includes('active movers') || title.toLowerCase().includes('active movers & packers')) {
+      return {
+        isValid: false,
+        message: 'Title should not include company name - it will be added automatically for SEO'
+      }
+    }
+    return { isValid: true, message: '' }
+  }
+
+  const titleValidation = validateTitle(formData.title)
+  const titleAmValidation = validateTitle(formData.titleAm)
+
   const handleAddTag = () => {
     if (newTag.trim() && !formData.tags.includes(newTag.trim())) {
       setFormData(prev => ({
@@ -256,27 +269,75 @@ export function AddBlogForm() {
                       <Label htmlFor="title" className="text-sm font-medium text-gray-700">
                         Title (English) *
                       </Label>
-                      <Input
-                        id="title"
-                        value={formData.title}
-                        onChange={(e) => handleInputChange('title', e.target.value)}
-                        required
-                        placeholder="Enter blog title in English"
-                        className="mt-1"
-                      />
+                      <div className="mt-1 space-y-2">
+                        <Input
+                          id="title"
+                          value={formData.title}
+                          onChange={(e) => handleInputChange('title', e.target.value)}
+                          required
+                          placeholder="Enter blog title (without company name)"
+                          className={`w-full ${!titleValidation.isValid ? 'border-red-500' : ''}`}
+                        />
+                        {!titleValidation.isValid && (
+                          <div className="text-xs text-red-600 bg-red-50 p-2 rounded border border-red-200">
+                            {titleValidation.message}
+                          </div>
+                        )}
+                        {formData.title && titleValidation.isValid && (
+                          <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded border">
+                            <strong>SEO Title Preview:</strong><br />
+                            Active Movers & Packers - {formData.title} | Moving Tips & Expert Advice
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <div>
                       <Label htmlFor="titleAm" className="text-sm font-medium text-gray-700">
                         Title (Amharic) *
                       </Label>
-                      <Input
-                        id="titleAm"
-                        value={formData.titleAm}
-                        onChange={(e) => handleInputChange('titleAm', e.target.value)}
-                        required
-                        placeholder="የብሎግ ስም በአማርኛ ያስገቡ"
-                        className="mt-1"
-                      />
+                      <div className="mt-1 space-y-2">
+                        <Input
+                          id="titleAm"
+                          value={formData.titleAm}
+                          onChange={(e) => handleInputChange('titleAm', e.target.value)}
+                          required
+                          placeholder="የብሎግ ስም ያስገቡ (የኩባንያ ስም ሳይሆን)"
+                          className={`w-full ${!titleAmValidation.isValid ? 'border-red-500' : ''}`}
+                        />
+                        {!titleAmValidation.isValid && (
+                          <div className="text-xs text-red-600 bg-red-50 p-2 rounded border border-red-200">
+                            {titleAmValidation.message}
+                          </div>
+                        )}
+                        {formData.titleAm && titleAmValidation.isValid && (
+                          <div className="text-xs text-gray-500 bg-gray-50 p-2 rounded border">
+                            <strong>የ SEO ስም ቅድመ ዕይታ:</strong><br />
+                            Active Movers & Packers - {formData.titleAm} | Moving Tips & Expert Advice
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* SEO Tips */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-5 h-5 text-blue-600 mt-0.5">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-sm font-semibold text-blue-900 mb-2">
+                          {language === 'am' ? 'SEO ምክሮች' : 'SEO Tips for Better Blog Titles'}
+                        </h4>
+                        <ul className="text-xs text-blue-800 space-y-1">
+                          <li>• {language === 'am' ? 'የብሎግ ስም አጭር እና ግልጽ ያድርጉ (50-60 ቁምፊዎች)' : 'Keep titles concise and clear (50-60 characters)'}</li>
+                          <li>• {language === 'am' ? 'የፍለጋ ቃላትን ያካትቱ (moving, packing, storage, Addis Ababa)' : 'Include search keywords (moving, packing, storage, Addis Ababa)'}</li>
+                          <li>• {language === 'am' ? 'የኩባንያ ስም በራስ ሰር ይጨመራል' : 'Company name is automatically added for SEO'}</li>
+                          <li>• {language === 'am' ? 'የተለያዩ ቃላትን ይጠቀሙ (tips, guide, how-to, best practices)' : 'Use action words (tips, guide, how-to, best practices)'}</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
 
@@ -408,7 +469,7 @@ export function AddBlogForm() {
                       id="featuredImage"
                       value={formData.featuredImage}
                       onChange={(e) => handleInputChange('featuredImage', e.target.value)}
-                      placeholder="https://example.com/image.jpg"
+                                              placeholder="https://activemoverset.com/images/blog-image.jpg"
                       className="mt-1"
                     />
                   </div>

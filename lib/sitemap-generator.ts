@@ -13,7 +13,7 @@ export interface SitemapData {
   lastUpdated: string
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://activemovers.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://activemoverset.com'
 
 export function generateSitemap(): SitemapData {
   const now = new Date().toISOString()

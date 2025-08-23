@@ -28,8 +28,11 @@ export function BlogSEO({
   readTime,
   image
 }: BlogSEOProps) {
+  // Ensure title includes company name for SEO
+  const seoTitle = title.includes('Active Movers & Packers') ? title : `Active Movers & Packers - ${title}`
+  
   const articleSchema = generateArticleSchema({
-    title,
+    title: seoTitle,
     description,
     author,
     publishedTime,
@@ -42,9 +45,9 @@ export function BlogSEO({
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://activemovers.com' },
-    { name: 'Blog', url: 'https://activemovers.com/blog' },
-    { name: title, url: `https://activemovers.com${url}` },
+    { name: 'Home', url: 'https://activemoverset.com' },
+    { name: 'Blog', url: 'https://activemoverset.com/blog' },
+    { name: title, url: `https://activemoverset.com${url}` },
   ])
 
   return (

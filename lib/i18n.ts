@@ -76,6 +76,25 @@ export interface Translations {
     badge: string
     title: string
     subtitle: string
+    info: {
+      title: string
+      phone: string
+      call: string
+      email: string
+      sendEmail: string
+      address: string
+      viewMap: string
+      hours: string
+      weekdays: string
+      weekend: string
+    }
+    trust: {
+      title: string
+      rating: string
+      customers: string
+      support: string
+      insured: string
+    }
     form: {
       title: string
       description: string
@@ -85,6 +104,7 @@ export interface Translations {
       subject: string
       message: string
       sendMessage: string
+      submit: string
       sending: string
       success: string
       error: string
@@ -255,37 +275,57 @@ export const translations: Record<Language, Translations> = {
       badge: 'Get in Touch',
       title: 'Contact Us',
       subtitle: 'We would love to hear from you. Whether you have a question or just want to say hello, we are here to help.',
+      info: {
+        title: 'Contact Information',
+        phone: '+251982260000',
+        call: 'Call Now',
+        email: 'activemoverset@gmail.com',
+        sendEmail: 'Send Email',
+        address: 'Beka Building, Addis Ababa, Ethiopia',
+        viewMap: 'View on Map',
+        hours: 'Business Hours',
+        weekdays: '24/7 Service Available',
+        weekend: '24/7 Service Available',
+      },
+      trust: {
+        title: 'Why Trust Us',
+        rating: '5.0',
+        customers: '500+',
+        support: '24/7',
+        insured: '100%',
+      },
       form: {
         title: 'Send Us a Message',
         description: 'Fill out the form below to send us a message and we will get back to you as soon as possible.',
         name: 'Name',
         email: 'Email',
-        phone: 'Phone',
+        phone: 'Phone: +251982260000',
         subject: 'Subject',
         message: 'Message',
         sendMessage: 'Send Message',
+        submit: 'Send Message',
         sending: 'Sending...',
         success: 'Message sent successfully!',
         error: 'Failed to send message. Please try again later.',
       },
       methods: {
         title: 'Contact Methods',
-        phone: 'Phone: +251 911 123 456',
-        whatsapp: 'WhatsApp: +251 911 123 456',
+        phone: 'Phone: +251982260000',
+        whatsapp: 'WhatsApp: +251982260000',
         telegram: 'Telegram: @activemovers',
         address: 'Address: Addis Ababa, Ethiopia',
       },
       hours: {
         title: 'Business Hours',
-        weekdays: 'Mon-Fri: 8AM-6PM',
-        saturday: 'Sat: 9AM-5PM',
-        sunday: 'Sun: Closed',
-        closed: 'Closed',
+        weekdays: '24/7 Service Available',
+        saturday: '24/7 Service Available',
+        sunday: '24/7 Service Available',
+        closed: 'Always Open',
       },
       emergency: {
         title: 'Emergency Service',
         description: 'For urgent assistance, please call our emergency line.',
-        callNow: 'Call Now: +251 911 123 456',
+        callNow: 'Call Now: +251982260000',
       },
     },
     footer: {
@@ -302,7 +342,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     floatingButtons: {
-      callNow: 'Call Now',
+      callNow: 'Call Now: +251982260000',
       whatsapp: 'WhatsApp',
       telegram: 'Telegram',
       quickContact: 'Quick Contact',
@@ -318,7 +358,7 @@ export const translations: Record<Language, Translations> = {
       viewOnTiktok: 'View on TikTok',
       share: 'Share',
       embedTitle: 'Want to embed your TikTok video?',
-      embedDescription: 'Replace the placeholder above with your actual TikTok embed code',
+      embedDescription: 'Add your TikTok video embed code to showcase your moving services',
       embedExample: 'Example TikTok Embed Code:',
       socialStats: {
         likes: 'Likes',
@@ -331,7 +371,7 @@ export const translations: Record<Language, Translations> = {
       title: 'Ready to Move?',
       subtitle: 'Get your free quote today and experience stress-free moving with our professional team.',
       getFreeQuote: 'Get Free Quote',
-      callNow: 'Call Now',
+      callNow: 'Call Now: +251982260000',
       whyChooseUs: 'Why Choose Us?',
       benefits: {
         licensed: 'Licensed & Insured',
@@ -419,40 +459,60 @@ export const translations: Record<Language, Translations> = {
       },
     },
     contact: {
-      badge: 'አስተያየቶች እንደምንሰጥ',
-      title: 'አስተያየቶች እንደምንሰጥ',
-      subtitle: 'እኛን እንደምንመርጥ እና እንደምንመልከቱ እንደምንሰጥ።',
+      badge: 'አድራሻ',
+      title: 'አድራሻ',
+      subtitle: 'እኛን ለመገናኘት ዝግጁ ነን። ጥያቄ ካለዎት ወይም ለማወቅ ከፈለጉ፣ እኛ እዚህ አለን።',
+      info: {
+        title: 'የመገናኛ መረጃ',
+        phone: '+251982260000',
+        call: 'አሁን ይደውሉ',
+        email: 'activemoverset@gmail.com',
+        sendEmail: 'ኢሜይል ይላኩ',
+        address: 'በካ ግንባታ፣ አዲስ አበባ፣ ኢትዮጵያ',
+        viewMap: 'በካርታ ላይ ይመልከቱ',
+        hours: 'የስራ ሰዓቶች',
+        weekdays: '24/7 አገልግሎት ይገኛል',
+        weekend: '24/7 አገልግሎት ይገኛል',
+      },
+      trust: {
+        title: 'ለምን እንደምንመርጥ',
+        rating: '5.0',
+        customers: '500+',
+        support: '24/7',
+        insured: '100%',
+      },
       form: {
-        title: 'እኛን እንደምንመልከቱ',
-        description: 'እኛን እንደምንመልከቱ እና እንደምንመልከቱ እንደምንሰጥ።',
+        title: 'መልእክት ይላኩ',
+        description: 'ከታች ያለውን ቅጽ ያስገቡ እና መልእክት ይላኩ። በተቻለ ፍጹም ፍጹም እንደምንመልስ እንደምንሰጥ።',
         name: 'ስም',
         email: 'ኢሜል',
         phone: 'ስልክ',
-        subject: 'ስም',
+        subject: 'ርዕስ',
         message: 'መልእክት',
-        sendMessage: 'እንደምንመልከቱ',
-        sending: 'እንደምንመልከቱ ላይ...',
-        success: 'እንደምንመልከቱ ተሳካሚ።',
-        error: 'እንደምንመልከቱ ተከስቷል። እንደምንመልከቱ እንደምንሰጥ።',
+        sendMessage: 'መልእክት ይላኩ',
+        submit: 'መልእክት ይላኩ',
+        sending: 'ይላካል...',
+        success: 'መልእክት በተሳካሚ ለላከ።',
+        error: 'መልእክት ለማስተላለፍ አልተሳካምም። እባክዎ እንደገና ይሞክሩ።',
       },
       methods: {
-        title: 'አስተያየቶች እንደምንሰጥ',
-        phone: 'ስልክ: +251 911 123 456',
-        whatsapp: 'ዋትስአፕ: +251 911 123 456',
+        title: 'የመገናኛ መንገዶች',
+        phone: 'ስልክ: +251982260000',
+        whatsapp: 'ዋትስአፕ: +251982260000',
         telegram: 'ቴሌግራም: @activemovers',
-        address: 'አድራሻ: አዲስ አበባ፣ ኢትዮጵያ ውስጥ ያለውን አካባቢችን ይጎብኙ',
+        address: 'አድራሻ: አዲስ አበባ፣ ኢትዮጵያ',
       },
       hours: {
-        title: 'መረጃ እንደምንሰጥ',
-        weekdays: 'ሰኞ-ዓርብ: 8AM-6PM',
-        saturday: 'ሰኞ: 9AM-5PM',
-        sunday: 'ዓርብ: ዝግጁ',
-        closed: 'ዝግጁ',
+        title: 'የስራ ሰዓቶች',
+        weekdays: '24/7 አገልግሎት ይገኛል',
+        saturday: '24/7 አገልግሎት ይገኛል',
+        sunday: '24/7 አገልግሎት ይገኛል',
+        closed: 'ሁልጊዜ ክፍት',
       },
       emergency: {
-        title: 'የመጓጓዣ ስራ',
-        description: 'የመጓጓዣ ስራ ለመጀመር ዝግጁ ነዎት።',
-        callNow: 'አሁን ይደውሉ: +251 911 123 456',
+        title: 'የድንገተኛ አገልግሎት',
+        description: 'ለድንገተኛ እርዳታ፣ እባክዎ የድንገተኛ መስመራችንን ይደውሉ።',
+        callNow: 'አሁን ይደውሉ: +251982260000',
       },
     },
     footer: {
@@ -469,7 +529,7 @@ export const translations: Record<Language, Translations> = {
       },
     },
     floatingButtons: {
-      callNow: 'አሁን ይደውሉ',
+      callNow: 'አሁን ይደውሉ: +251982260000',
       whatsapp: 'ዋትስአፕ',
       telegram: 'ቴሌግራም',
       quickContact: 'ፈጣን መገናኛ',
@@ -485,7 +545,7 @@ export const translations: Record<Language, Translations> = {
       viewOnTiktok: 'በቲክቶክ ላይ ይመልከቱ',
       share: 'ያጋራ',
       embedTitle: 'ቲክቶክ ቪዲዮዎን ማስገባት ይፈልጋሉ?',
-      embedDescription: 'ከላይ ያለውን ምሳሌ በእውነተኛ የቲክቶክ አስገባ ኮድ ይተኩ',
+      embedDescription: 'የመጓጓዣ አገልግሎቶችዎን ለማሳየት የቲክቶክ ቪዲዮ አስገባ ኮድዎን ያክሉ',
       embedExample: 'የቲክቶክ አስገባ ኮድ ምሳሌ:',
       socialStats: {
         likes: 'የወደዱ',
@@ -498,7 +558,7 @@ export const translations: Record<Language, Translations> = {
       title: 'መጓጓዣ ለመጀመር ዝግጁ ነዎት?',
       subtitle: 'ዛሬ ነፃ ዋጋ ያግኙ እና ከሙያ ቡድናችን ጋር ያለ ግፍ የመጓጓዣ ስራ ያድርጉ።',
       getFreeQuote: 'ነፃ ዋጋ ያግኙ',
-      callNow: 'አሁን ይደውሉ',
+      callNow: 'አሁን ይደውሉ: +251982260000',
       whyChooseUs: 'ለምን እንደምንመርጥ?',
       benefits: {
         licensed: 'የተፈቀደ እና የተጣራ',

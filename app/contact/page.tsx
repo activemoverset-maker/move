@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import { ContactPage } from '@/components/pages/contact-page'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Get in touch with Active Movers & Packers for professional moving services in Addis Ababa. Call, WhatsApp, or fill out our contact form.',
+  title: 'Active Movers & Packers - Contact Us | Get Free Quote for Moving Services in Addis Ababa',
+  description: 'Contact Active Movers & Packers for professional moving services in Addis Ababa. Get free quotes, schedule consultations, and book your stress-free move today.',
   openGraph: {
-    title: 'Contact Us',
+    title: 'Active Movers & Packers - Contact Us | Get Free Quote for Moving Services in Addis Ababa',
     description: 'Get in touch with Active Movers & Packers for professional moving services.',
   },
 }

@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { AddBlogForm } from '@/components/admin/add-blog-form'
 
 export const metadata: Metadata = {
-  title: 'Add New Blog Post - Admin | Active Movers & Packers',
-  description: 'Add new blog posts to the Active Movers & Packers website.',
+  title: 'Active Movers & Packers - Add New Blog Post | Content Management',
+  description: 'Create and publish new blog posts for Active Movers & Packers. Rich text editor with SEO optimization and content management tools.',
 }
 
 export default function AddBlogPage() {

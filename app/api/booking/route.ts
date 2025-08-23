@@ -106,7 +106,7 @@ export async function GET(request: NextRequest) {
     })
 
     // Format bookings for admin dashboard
-    const formattedBookings = bookings.map(booking => ({
+    const formattedBookings = bookings.map((booking: any) => ({
       id: booking.id,
       customerName: booking.fullName,
       serviceType: booking.serviceType,

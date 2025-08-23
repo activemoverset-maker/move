@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://activemoverset.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Allow important pages
+Allow: /blog/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /booking/
+
+# Block unnecessary files
+Disallow: /*.json$
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow images and assets
+Allow: /images/
+Allow: /favicon.ico
+Allow: /manifest.json

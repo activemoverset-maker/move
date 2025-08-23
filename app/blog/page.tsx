@@ -2,10 +2,10 @@ import { Metadata } from 'next'
 import { BlogList } from '@/components/pages/blog-list'
 
 export const metadata: Metadata = {
-  title: 'Blog - Moving Tips & News',
-  description: 'Read our latest blog posts about moving tips, packing advice, and industry news. Expert insights from Active Movers & Packers in Addis Ababa.',
+  title: 'Active Movers & Packers - Blog | Moving Tips, News & Expert Advice for Addis Ababa',
+  description: 'Expert moving tips, industry news, and professional advice from Active Movers & Packers. Learn about packing, moving, and storage solutions in Addis Ababa.',
   openGraph: {
-    title: 'Blog - Moving Tips & News',
+    title: 'Active Movers & Packers - Blog | Moving Tips, News & Expert Advice for Addis Ababa',
     description: 'Read our latest blog posts about moving tips, packing advice, and industry news.',
   },
 }

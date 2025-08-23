@@ -283,7 +283,7 @@ export function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      {t('contact.info.phone')}
+                      Phone
                     </h4>
                     <p className="text-gray-600 mb-2">{SITE_CONFIG.links.phone}</p>
                     <div className="flex gap-2">
@@ -317,7 +317,7 @@ export function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      {t('contact.info.email')}
+                      Email
                     </h4>
                     <p className="text-gray-600 mb-2">{SITE_CONFIG.links.email}</p>
                     <Button
@@ -339,7 +339,7 @@ export function ContactPage() {
                   </div>
                   <div className="flex-1">
                     <h4 className="font-semibold text-gray-900 mb-1">
-                      {t('contact.info.address')}
+                      Address
                     </h4>
                     <p className="text-gray-600 mb-2">{SITE_CONFIG.links.address}</p>
                     <Button
@@ -364,8 +364,7 @@ export function ContactPage() {
                       {t('contact.info.hours')}
                     </h4>
                     <p className="text-gray-600">
-                      {t('contact.info.weekdays')}: 8:00 AM - 6:00 PM<br />
-                      {t('contact.info.weekend')}: 9:00 AM - 4:00 PM
+                      {t('contact.info.weekdays')}
                     </p>
                   </div>
                 </div>
@@ -381,30 +380,30 @@ export function ContactPage() {
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <Star className="w-5 h-5 text-yellow-300" />
-                    <span className="font-bold">5.0</span>
+                    <span className="font-bold">{t('contact.trust.rating')}</span>
                   </div>
-                  <p className="text-sm text-green-100">{t('contact.trust.rating')}</p>
+                  <p className="text-sm text-green-100">Rating</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <Users className="w-5 h-5" />
-                    <span className="font-bold">500+</span>
+                    <span className="font-bold">{t('contact.trust.customers')}</span>
                   </div>
-                  <p className="text-sm text-green-100">{t('contact.trust.customers')}</p>
+                  <p className="text-sm text-green-100">Happy Customers</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <Truck className="w-5 h-5" />
-                    <span className="font-bold">24/7</span>
+                    <span className="font-bold">{t('contact.trust.support')}</span>
                   </div>
-                  <p className="text-sm text-green-100">{t('contact.trust.support')}</p>
+                  <p className="text-sm text-green-100">Support</p>
                 </div>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-2">
                     <Shield className="w-5 h-5" />
-                    <span className="font-bold">100%</span>
+                    <span className="font-bold">{t('contact.trust.insured')}</span>
                   </div>
-                  <p className="text-sm text-green-100">{t('contact.trust.insured')}</p>
+                  <p className="text-sm text-green-100">Insured</p>
                 </div>
               </div>
             </div>

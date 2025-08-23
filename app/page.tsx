@@ -9,10 +9,10 @@ import { CalendarSection } from '@/components/sections/calendar-section'
 import { GallerySection } from '@/components/sections/gallery-section'
 
 export const metadata: Metadata = {
-  title: 'Professional Moving Services in Addis Ababa',
-  description: 'Active Movers & Packers provides professional moving, packaging, and storage services in Addis Ababa, Ethiopia. Book your stress-free move today!',
+  title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa, Ethiopia',
+  description: 'Professional moving and packing services in Addis Ababa. Local moving, office relocation, packaging, and storage solutions. Trusted by thousands of customers.',
   openGraph: {
-    title: 'Professional Moving Services in Addis Ababa',
+    title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa, Ethiopia',
     description: 'Active Movers & Packers provides professional moving, packaging, and storage services in Addis Ababa, Ethiopia.',
   },
 }

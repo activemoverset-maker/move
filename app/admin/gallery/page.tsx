@@ -2,8 +2,8 @@ import { Metadata } from 'next'
 import { GalleryManagement } from '../../../components/admin/gallery-management'
 
 export const metadata: Metadata = {
-  title: 'Gallery Management - Active Movers & Packers',
-  description: 'Admin gallery management for Active Movers & Packers.',
+  title: 'Active Movers & Packers - Gallery Management | Photo & Content Management',
+  description: 'Manage gallery images and content for Active Movers & Packers. Upload, organize, and showcase moving services and company photos.',
 }
 
 export default function AdminGalleryPage() {
