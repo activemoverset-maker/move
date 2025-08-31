@@ -6,22 +6,39 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Calendar, Clock, ArrowRight } from 'lucide-react'
-import { BLOG_POSTS } from '@/constants/site'
 import { generateSlug, formatDate } from '@/lib/utils'
 import { useLanguage } from '@/contexts/language-context'
+
+interface BlogPost {
+  id: string
+  title: string
+  titleAm: string
+  slug: string
+  excerpt: string
+  excerptAm: string
+  publishedAt: Date
+  category: string
+  tags: string[]
+  tagsAm: string[]
+  readTime: number
+  featuredImage: string | null
+  views: number
+  author: string
+}
 
 interface RelatedPostsProps {
   currentPostId: string
   category: string
   tags: string[]
+  posts: BlogPost[]
   className?: string
 }
 
-export function RelatedPosts({ currentPostId, category, tags, className }: RelatedPostsProps) {
+export function RelatedPosts({ currentPostId, category, tags, posts, className }: RelatedPostsProps) {
   const { language } = useLanguage()
 
   // Find related posts based on category and tags
-  const relatedPosts = BLOG_POSTS
+  const relatedPosts = posts
     .filter(post => post.id !== currentPostId)
     .filter(post => post.category === category || post.tags.some(tag => tags.includes(tag)))
     .slice(0, 3)
@@ -82,7 +99,7 @@ export function RelatedPosts({ currentPostId, category, tags, className }: Relat
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
             >
-              <Link href={`/blog/${generateSlug(post.title)}`}>
+              <Link href={`/blog/${post.slug}`}>
                 <Card className="h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border-0 shadow-md bg-white overflow-hidden">
                   {/* Cover */}
                   <div className={`relative h-40 bg-gradient-to-br ${categoryGradient(post.category)}`}>
@@ -100,10 +117,10 @@ export function RelatedPosts({ currentPostId, category, tags, className }: Relat
                   
                   <CardContent className="p-4">
                     <h3 className="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 line-clamp-2 mb-2">
-                      {language === 'am' ? post.titleAm : post.title}
+                      {language === 'am' && post.titleAm ? post.titleAm : post.title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-3">
-                      {language === 'am' ? post.excerptAm : post.excerpt}
+                      {language === 'am' && post.excerptAm ? post.excerptAm : post.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-xs text-gray-500">

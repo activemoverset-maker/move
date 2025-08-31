@@ -41,29 +41,49 @@ interface BlogPostProps {
     category: string
     tags: string[]
     tagsAm: string[]
-    featuredImage?: string
-    images?: string[]
+    featuredImage: string | null
+    images: string[]
     videos?: Array<{
       id: string
       type: string
       url: string
       title: string
-      description?: string
-      thumbnail?: string
-      embedCode?: string
+      description: string | null
+      thumbnail: string | null
+      embedCode: string | null
+      order: number
     }>
-    views?: number
+    views: number
+    status: string
+    createdAt: Date
+    updatedAt: Date
   }
+  relatedPosts?: Array<{
+    id: string
+    title: string
+    titleAm: string
+    slug: string
+    excerpt: string
+    excerptAm: string
+    publishedAt: Date
+    category: string
+    tags: string[]
+    tagsAm: string[]
+    readTime: number
+    featuredImage: string | null
+    views: number
+    author: string
+  }>
 }
 
-export function BlogPost({ post }: BlogPostProps) {
+export function BlogPost({ post, relatedPosts }: BlogPostProps) {
   const { language } = useLanguage()
 
   const handleShare = () => {
     if (navigator.share) {
       navigator.share({
-        title: language === 'am' ? post.titleAm : post.title,
-        text: language === 'am' ? post.excerptAm : post.excerpt,
+        title: language === 'am' && post.titleAm ? post.titleAm : post.title,
+        text: language === 'am' && post.excerptAm ? post.excerptAm : post.excerpt,
         url: window.location.href,
       })
     } else {
@@ -134,11 +154,11 @@ export function BlogPost({ post }: BlogPostProps) {
             </Badge>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              {language === 'am' ? post.titleAm : post.title}
+              {language === 'am' && post.titleAm ? post.titleAm : post.title}
             </h1>
             
             <p className="text-lg sm:text-xl text-green-100 max-w-4xl mx-auto leading-relaxed mb-6">
-              {language === 'am' ? post.excerptAm : post.excerpt}
+              {language === 'am' && post.excerptAm ? post.excerptAm : post.excerpt}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-green-100">
@@ -183,7 +203,7 @@ export function BlogPost({ post }: BlogPostProps) {
                     <div className="mb-8">
                       <Image
                         src={post.featuredImage}
-                        alt={language === 'am' ? post.titleAm : post.title}
+                        alt={language === 'am' && post.titleAm ? post.titleAm : post.title}
                         width={800}
                         height={400}
                         className="w-full h-64 sm:h-80 object-cover rounded-lg shadow-md"
@@ -196,7 +216,7 @@ export function BlogPost({ post }: BlogPostProps) {
                     <div 
                       className="text-gray-700 leading-relaxed"
                       dangerouslySetInnerHTML={{ 
-                        __html: language === 'am' ? post.contentAm : post.content 
+                        __html: language === 'am' && post.contentAm ? post.contentAm : post.content 
                       }}
                     />
                   </div>
@@ -212,7 +232,7 @@ export function BlogPost({ post }: BlogPostProps) {
                           <div key={index} className="relative group">
                             <Image
                               src={image}
-                              alt={`${language === 'am' ? post.titleAm : post.title} - Image ${index + 1}`}
+                              alt={`${language === 'am' && post.titleAm ? post.titleAm : post.title} - Image ${index + 1}`}
                               width={400}
                               height={300}
                               className="w-full h-48 object-cover rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
@@ -245,7 +265,7 @@ export function BlogPost({ post }: BlogPostProps) {
                       </span>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {(language === 'am' ? post.tagsAm : post.tags).map((tag, index) => (
+                      {(language === 'am' && post.tagsAm && post.tagsAm.length > 0 ? post.tagsAm : post.tags).map((tag, index) => (
                         <Badge key={index} variant="outline" className="text-xs border-primary text-primary">
                           {tag}
                         </Badge>
@@ -332,11 +352,14 @@ export function BlogPost({ post }: BlogPostProps) {
       </section>
 
       {/* Related Posts */}
-      <RelatedPosts
-        currentPostId={post.id}
-        category={post.category}
-        tags={language === 'am' ? post.tagsAm : post.tags}
-      />
+      {relatedPosts && relatedPosts.length > 0 && (
+        <RelatedPosts
+          currentPostId={post.id}
+          category={post.category}
+          tags={language === 'am' && post.tagsAm && post.tagsAm.length > 0 ? post.tagsAm : post.tags}
+          posts={relatedPosts}
+        />
+      )}
     </>
   )
 } 

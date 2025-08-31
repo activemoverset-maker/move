@@ -68,15 +68,15 @@ export async function POST(request: NextRequest) {
     const post = await prisma.blogPost.create({
       data: {
         title,
-        titleAm,
+        titleAm: titleAm || '',
         excerpt,
-        excerptAm,
+        excerptAm: excerptAm || '',
         content,
-        contentAm,
+        contentAm: contentAm || '',
         author,
         category,
         tags,
-        tagsAm,
+        tagsAm: tagsAm || [],
         readTime: readTime || 5,
         slug,
         featuredImage,
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
 
     // Update sitemap after creating new blog post
     try {
-      const sitemapData = generateSitemap()
+      const sitemapData = await generateSitemap()
       const xml = generateSitemapXML(sitemapData)
       
       // Write sitemap to public directory

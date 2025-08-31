@@ -364,15 +364,14 @@ export function AddBlogForm() {
                     </div>
                     <div>
                       <Label htmlFor="titleAm" className="text-sm font-medium text-gray-700">
-                        Title (Amharic) *
+                        Title (Amharic) <span className="text-gray-400">(Optional)</span>
                       </Label>
                       <div className="mt-1 space-y-2">
                         <Input
                           id="titleAm"
                           value={formData.titleAm}
                           onChange={(e) => handleInputChange('titleAm', e.target.value)}
-                          required
-                          placeholder="የብሎግ ስም ያስገቡ (የኩባንያ ስም ሳይሆን)"
+                          placeholder="የብሎግ ስም ያስገቡ (የኩባንያ ስም ሳይሆን) - አማራጭ"
                           className={`w-full ${!titleAmValidation.isValid ? 'border-red-500' : ''}`}
                         />
                         {!titleAmValidation.isValid && (
@@ -452,14 +451,13 @@ export function AddBlogForm() {
                     </div>
                     <div>
                       <Label htmlFor="excerptAm" className="text-sm font-medium text-gray-700">
-                        Excerpt (Amharic) *
+                        Excerpt (Amharic) <span className="text-gray-400">(Optional)</span>
                       </Label>
                       <Textarea
                         id="excerptAm"
                         value={formData.excerptAm}
                         onChange={(e) => handleInputChange('excerptAm', e.target.value)}
-                        required
-                        placeholder="የብሎግ ማጠቃለያ በአማርኛ ያስገቡ"
+                        placeholder="የብሎግ ማጠቃለያ በአማርኛ ያስገቡ - አማራጭ"
                         className="mt-1"
                         rows={3}
                       />
@@ -481,12 +479,12 @@ export function AddBlogForm() {
                     </div>
                     <div>
                       <Label htmlFor="contentAm" className="text-sm font-medium text-gray-700">
-                        Content (Amharic) *
+                        Content (Amharic) <span className="text-gray-400">(Optional)</span>
                       </Label>
                       <RichTextEditor
                         content={formData.contentAm}
                         onChange={(content) => handleInputChange('contentAm', content)}
-                        placeholder="የብሎግ ይዘትዎን በአማርኛ ይፃፉ..."
+                        placeholder="የብሎግ ይዘትዎን በአማርኛ ይፃፉ... - አማራጭ"
                         className="mt-1"
                       />
                     </div>
@@ -717,13 +715,13 @@ export function AddBlogForm() {
                     </div>
                     <div>
                       <Label htmlFor="seoDescriptionAm" className="text-sm font-medium text-gray-700">
-                        Meta Description (Amharic)
+                        Meta Description (Amharic) <span className="text-gray-400">(Optional)</span>
                       </Label>
                       <Textarea
                         id="seoDescriptionAm"
                         value={formData.seoDescriptionAm}
                         onChange={(e) => handleInputChange('seoDescriptionAm', e.target.value)}
-                        placeholder="የፍለጋ ሞተር ለማሳተሚያ የሚያገለግል መግለጫ ያስገቡ"
+                        placeholder="የፍለጋ ሞተር ለማሳተሚያ የሚያገለግል መግለጫ ያስገቡ - አማራጭ"
                         className="mt-1"
                         rows={3}
                       />
@@ -780,14 +778,14 @@ export function AddBlogForm() {
                     </div>
                     <div>
                       <Label className="text-sm font-medium text-gray-700">
-                        SEO Keywords (Amharic)
+                        SEO Keywords (Amharic) <span className="text-gray-400">(Optional)</span>
                       </Label>
                       <div className="mt-2 space-y-2">
                         <div className="flex gap-2">
                           <Input
                             value={newTagAm}
                             onChange={(e) => setNewTagAm(e.target.value)}
-                            placeholder="የ SEO ቁልፍ ቃል ያክሉ"
+                            placeholder="የ SEO ቁልፍ ቃል ያክሉ - አማራጭ"
                             className="flex-1"
                           />
                           <Button
@@ -908,7 +906,9 @@ export function AddBlogForm() {
 
                   {/* Amharic Tags */}
                   <div>
-                    <Label className="text-sm font-medium text-gray-700">Tags (Amharic)</Label>
+                    <Label className="text-sm font-medium text-gray-700">
+                      Tags (Amharic) <span className="text-gray-400">(Optional)</span>
+                    </Label>
                     <div className="mt-2 flex flex-wrap gap-2">
                       {formData.tagsAm.map((tag, index) => (
                         <Badge key={index} variant="secondary" className="flex items-center gap-1 bg-primary/10 text-primary border-primary/20">
@@ -927,7 +927,7 @@ export function AddBlogForm() {
                       <Input
                         value={newTagAm}
                         onChange={(e) => setNewTagAm(e.target.value)}
-                        placeholder="መለያ ያክሉ"
+                        placeholder="መለያ ያክሉ - አማራጭ"
                         className="flex-1"
                         onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), handleAddTagAm())}
                       />

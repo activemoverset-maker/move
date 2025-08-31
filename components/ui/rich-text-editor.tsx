@@ -6,6 +6,7 @@ import Link from '@tiptap/extension-link'
 import Image from '@tiptap/extension-image'
 import YouTube from '@tiptap/extension-youtube'
 import Placeholder from '@tiptap/extension-placeholder'
+import CodeBlock from '@tiptap/extension-code-block'
 import { Button } from '@/components/ui/button'
 import { 
   Bold, 
@@ -20,7 +21,8 @@ import {
   Image as ImageIcon,
   Youtube,
   Undo,
-  Redo
+  Redo,
+  Code
 } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
@@ -61,6 +63,11 @@ export function RichTextEditor({ content, onChange, placeholder, className }: Ri
       YouTube.configure({
         HTMLAttributes: {
           class: 'w-full aspect-video rounded-lg',
+        },
+      }),
+      CodeBlock.configure({
+        HTMLAttributes: {
+          class: 'bg-gray-900 text-white p-4 rounded-lg overflow-x-auto',
         },
       }),
       Placeholder.configure({
@@ -189,6 +196,15 @@ export function RichTextEditor({ content, onChange, placeholder, className }: Ri
       >
         <Quote className="w-4 h-4" />
       </Button>
+      
+      <Button
+        variant={editor.isActive('codeBlock') ? 'default' : 'outline'}
+        size="sm"
+        onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+        className="h-8 w-8 p-0"
+      >
+        <Code className="w-4 h-4" />
+      </Button>
 
       <div className="w-px h-6 bg-gray-300 mx-1" />
 
@@ -315,7 +331,7 @@ export function RichTextEditor({ content, onChange, placeholder, className }: Ri
 
       <EditorContent 
         editor={editor} 
-        className="p-4 min-h-[300px] prose prose-sm max-w-none focus:outline-none"
+        className="p-4 min-h-[300px] focus:outline-none"
       />
     </div>
   )

@@ -3,7 +3,7 @@ import { generateNewsSitemap } from '@/lib/sitemap-generator'
 
 export async function GET() {
   try {
-    const xml = generateNewsSitemap()
+    const xml = await generateNewsSitemap()
     
     return new NextResponse(xml, {
       headers: {

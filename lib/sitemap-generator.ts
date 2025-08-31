@@ -1,11 +1,20 @@
-import { BLOG_POSTS } from '@/constants/site'
 import { generateSlug } from '@/lib/utils'
+import { prisma } from '@/lib/prisma'
+import { getAllBlogPosts } from '@/lib/blog-data'
 
 export interface SitemapUrl {
   loc: string
   lastmod: string
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority: number
+}
+
+export interface NewsSitemapUrl {
+  loc: string
+  lastmod: string
+  title: string
+  publication_name: string
+  publication_language: string
 }
 
 export interface SitemapData {
@@ -25,218 +34,150 @@ function escapeXml(text: string): string {
     .replace(/'/g, '&apos;')
 }
 
-export function generateSitemap(): SitemapData {
-  const now = new Date().toISOString()
+export async function generateSitemap(): Promise<SitemapUrl[]> {
+  const baseUrl = 'https://activemoverset.com'
   
-  // IMPORTANT: Never include admin pages (/admin/*, /api/admin/*) in sitemap
-  // They are blocked in robots.txt and should remain private
-  const urls: SitemapUrl[] = [
-    // Main pages (High Priority)
+  // Get blog posts from database
+  const dbBlogPosts = await prisma.blogPost.findMany({
+    where: { status: 'published' },
+    select: { slug: true, updatedAt: true, publishedAt: true }
+  })
+
+  // Get blog posts from JSON files
+  const jsonBlogPosts = getAllBlogPosts()
+
+  const sitemap: SitemapUrl[] = [
     {
-      loc: `${SITE_URL}`,
-      lastmod: now,
+      loc: `${baseUrl}`,
+      lastmod: new Date().toISOString(),
       changefreq: 'daily',
       priority: 1.0
     },
     {
-      loc: `${SITE_URL}/services`,
-      lastmod: now,
-      changefreq: 'weekly',
-      priority: 0.9
+      loc: `${baseUrl}/about`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8
     },
     {
-      loc: `${SITE_URL}/booking`,
-      lastmod: now,
-      changefreq: 'weekly',
-      priority: 0.9
+      loc: `${baseUrl}/services`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8
     },
     {
-      loc: `${SITE_URL}/blog`,
-      lastmod: now,
+      loc: `${baseUrl}/blog`,
+      lastmod: new Date().toISOString(),
       changefreq: 'daily',
-      priority: 0.8
-    },
-    
-    // Service pages (Medium-High Priority)
-    {
-      loc: `${SITE_URL}/services/local-moving`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.8
+      priority: 0.9
     },
     {
-      loc: `${SITE_URL}/services/office-relocation`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      loc: `${SITE_URL}/services/packaging`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      loc: `${SITE_URL}/services/storage`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    
-    // Information pages (Medium Priority)
-    {
-      loc: `${SITE_URL}/about`,
-      lastmod: now,
+      loc: `${baseUrl}/contact`,
+      lastmod: new Date().toISOString(),
       changefreq: 'monthly',
       priority: 0.7
     },
     {
-      loc: `${SITE_URL}/contact`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    
-    // Legal pages (Medium Priority)
-    {
-      loc: `${SITE_URL}/privacy-policy`,
-      lastmod: now,
-      changefreq: 'yearly',
-      priority: 0.5
-    },
-    {
-      loc: `${SITE_URL}/terms-of-service`,
-      lastmod: now,
-      changefreq: 'yearly',
-      priority: 0.5
-    },
-    
-    // SEO pages (Low Priority)
-    {
-      loc: `${SITE_URL}/sitemap.xml`,
-      lastmod: now,
+      loc: `${baseUrl}/gallery`,
+      lastmod: new Date().toISOString(),
       changefreq: 'weekly',
-      priority: 0.3
-    },
-    {
-      loc: `${SITE_URL}/robots.txt`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.1
-    },
-    {
-      loc: `${SITE_URL}/humans.txt`,
-      lastmod: now,
-      changefreq: 'yearly',
-      priority: 0.1
+      priority: 0.6
     }
   ]
 
-  // Add blog posts
-  BLOG_POSTS.forEach(post => {
-    urls.push({
-      loc: `${SITE_URL}/blog/${generateSlug(post.title)}`,
-      lastmod: post.publishedAt.toISOString(),
+  // Add database blog posts
+  dbBlogPosts.forEach(post => {
+    sitemap.push({
+      loc: `${baseUrl}/blog/${post.slug}`,
+      lastmod: post.updatedAt.toISOString(),
       changefreq: 'monthly',
       priority: 0.7
     })
   })
 
-  // Add Amharic language alternatives for main pages
-  const amharicUrls: SitemapUrl[] = [
-    {
-      loc: `${SITE_URL}/?lang=am`,
-      lastmod: now,
-      changefreq: 'daily',
-      priority: 0.9
-    },
-    {
-      loc: `${SITE_URL}/about?lang=am`,
-      lastmod: now,
+  // Add JSON blog posts
+  jsonBlogPosts.forEach(post => {
+    sitemap.push({
+      loc: `${baseUrl}/blog/${post.slug}`,
+      lastmod: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
       changefreq: 'monthly',
-      priority: 0.6
-    },
-    {
-      loc: `${SITE_URL}/services?lang=am`,
-      lastmod: now,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      loc: `${SITE_URL}/contact?lang=am`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.6
-    },
-    {
-      loc: `${SITE_URL}/booking?lang=am`,
-      lastmod: now,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      loc: `${SITE_URL}/blog?lang=am`,
-      lastmod: now,
-      changefreq: 'daily',
       priority: 0.7
-    }
-  ]
+    })
+  })
 
-  // Add Amharic service pages
-  const amharicServiceUrls: SitemapUrl[] = [
-    {
-      loc: `${SITE_URL}/services/local-moving?lang=am`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      loc: `${SITE_URL}/services/office-relocation?lang=am`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      loc: `${SITE_URL}/services/packaging?lang=am`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      loc: `${SITE_URL}/services/storage?lang=am`,
-      lastmod: now,
-      changefreq: 'monthly',
-      priority: 0.7
-    }
-  ]
-
-  // Combine all URLs
-  urls.push(...amharicUrls, ...amharicServiceUrls)
-
-  return {
-    urls,
-    lastUpdated: now
-  }
+  return sitemap
 }
 
-export function generateSitemapXML(sitemapData: SitemapData): string {
-  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>'
-  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-  const urlsetClose = '</urlset>'
+export async function generateNewsSitemap(): Promise<NewsSitemapUrl[]> {
+  const baseUrl = 'https://activemoverset.com'
+  
+  // Get blog posts from database
+  const dbBlogPosts = await prisma.blogPost.findMany({
+    where: { status: 'published' },
+    select: { slug: true, title: true, updatedAt: true, publishedAt: true }
+  })
 
-  const urlEntries = sitemapData.urls.map(url => {
-    return `  <url>
+  // Get blog posts from JSON files
+  const jsonBlogPosts = getAllBlogPosts()
+
+  const newsSitemap: NewsSitemapUrl[] = []
+
+  // Add database blog posts
+  dbBlogPosts.forEach(post => {
+    newsSitemap.push({
+      loc: `${baseUrl}/blog/${post.slug}`,
+      lastmod: post.updatedAt.toISOString(),
+      title: post.title,
+      publication_name: 'Active Movers & Packers Blog',
+      publication_language: 'en'
+    })
+  })
+
+  // Add JSON blog posts
+  jsonBlogPosts.forEach(post => {
+    newsSitemap.push({
+      loc: `${baseUrl}/blog/${post.slug}`,
+      lastmod: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
+      title: post.title,
+      publication_name: 'Active Movers & Packers Blog',
+      publication_language: 'en'
+    })
+  })
+
+  return newsSitemap
+}
+
+export function generateSitemapXML(sitemap: SitemapUrl[]): string {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemap.map(url => `  <url>
     <loc>${url.loc}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
-  </url>`
-  }).join('\n')
+  </url>`).join('\n')}
+</urlset>`
+  return xml
+}
 
-  return `${xmlHeader}
-${urlsetOpen}
-${urlEntries}
-${urlsetClose}`
+export function generateNewsSitemapXML(newsSitemap: NewsSitemapUrl[]): string {
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+${newsSitemap.map(url => `  <url>
+    <loc>${url.loc}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <news:news>
+      <news:publication>
+        <news:name>${url.publication_name}</news:name>
+        <news:language>${url.publication_language}</news:language>
+      </news:publication>
+      <news:publication_date>${url.lastmod}</news:publication_date>
+      <news:title>${url.title}</news:title>
+    </news:news>
+  </url>`).join('\n')}
+</urlset>`
+  return xml
 }
 
 export function generateImageSitemap(): string {
@@ -507,34 +448,6 @@ ${imageElements}
   return `${xmlHeader}
 ${urlsetOpen}
 ${imageEntries}
-${urlsetClose}`
-}
-
-export function generateNewsSitemap(): string {
-  const now = new Date().toISOString()
-  
-  const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>'
-  const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">'
-  const urlsetClose = '</urlset>'
-
-  const newsEntries = BLOG_POSTS.map(post => {
-    return `  <url>
-    <loc>${SITE_URL}/blog/${generateSlug(post.title)}</loc>
-    <news:news>
-      <news:publication>
-        <news:name>${escapeXml('Active Movers & Packers Blog')}</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>${post.publishedAt.toISOString()}</news:publication_date>
-      <news:title>${escapeXml(post.title)}</news:title>
-      <news:keywords>${escapeXml(post.tags.join(', '))}</news:keywords>
-    </news:news>
-  </url>`
-  }).join('\n')
-
-  return `${xmlHeader}
-${urlsetOpen}
-${newsEntries}
 ${urlsetClose}`
 }
 

@@ -16,12 +16,32 @@ import {
   ArrowRight,
   Filter
 } from 'lucide-react'
-import { BLOG_POSTS } from '@/constants/site'
 import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
 import { formatDate, generateSlug } from '@/lib/utils'
 
-export function BlogList() {
+interface BlogPost {
+  id: string
+  title: string
+  titleAm: string
+  slug: string
+  excerpt: string
+  excerptAm: string
+  publishedAt: Date
+  category: string
+  tags: string[]
+  tagsAm: string[]
+  readTime: number
+  featuredImage: string | null
+  views: number
+  author: string
+}
+
+interface BlogListProps {
+  posts: BlogPost[]
+}
+
+export function BlogList({ posts }: BlogListProps) {
   const { t, language } = useLanguage()
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -34,10 +54,12 @@ export function BlogList() {
     { id: 'company-news', name: 'Company News', nameAm: 'የኩባንያ ዜናዎች' },
   ]
 
-  const filteredPosts = BLOG_POSTS.filter(post => {
+  const filteredPosts = posts.filter(post => {
     const matchesSearch = language === 'am' 
-      ? post.titleAm.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.excerptAm.toLowerCase().includes(searchTerm.toLowerCase())
+      ? (post.titleAm && post.titleAm.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (post.excerptAm && post.excerptAm.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
       : post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
     
@@ -189,7 +211,7 @@ export function BlogList() {
                         <span>{featuredPost.readTime} {language === 'am' ? 'ደቂቃ' : 'min read'}</span>
                       </div>
                       <Button asChild onClick={() => handleBlogClick(featuredPost.title)}>
-                        <Link href={`/blog/${generateSlug(featuredPost.title)}`} className="flex items-center gap-2">
+                        <Link href={`/blog/${featuredPost.slug}`} className="flex items-center gap-2">
                           {language === 'am' ? 'ያንብቡ' : 'Read Article'}
                           <ArrowRight className="w-4 h-4" />
                         </Link>
@@ -210,7 +232,7 @@ export function BlogList() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <Link href={`/blog/${generateSlug(post.title)}`} onClick={() => handleBlogClick(post.title)}>
+                <Link href={`/blog/${post.slug}`} onClick={() => handleBlogClick(post.title)}>
                   <Card className="h-full hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group border-0 shadow-md bg-white overflow-hidden">
                     {/* Cover */}
                     <div className={`relative h-36 sm:h-40 bg-gradient-to-br ${categoryGradient(post.category)}`}>
@@ -227,10 +249,10 @@ export function BlogList() {
                     </div>
                     <CardContent className="pt-4">
                       <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300 line-clamp-2 mb-2">
-                        {language === 'am' ? post.titleAm : post.title}
+                        {language === 'am' && post.titleAm ? post.titleAm : post.title}
                       </h3>
                       <p className="text-sm text-gray-600 mb-4 leading-relaxed line-clamp-3">
-                        {language === 'am' ? post.excerptAm : post.excerpt}
+                        {language === 'am' && post.excerptAm ? post.excerptAm : post.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-xs text-gray-500">
