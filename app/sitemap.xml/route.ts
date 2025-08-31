@@ -3,8 +3,8 @@ import { generateSitemap, generateSitemapXML } from '@/lib/sitemap-generator'
 
 export async function GET() {
   try {
-    const sitemapData = await generateSitemap()
-    const xml = generateSitemapXML(sitemapData)
+    const sitemap = await generateSitemap()
+    const xml = generateSitemapXML(sitemap)
     
     return new NextResponse(xml, {
       headers: {

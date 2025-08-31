@@ -11,14 +11,14 @@ export class SitemapManager {
    */
   static async updateSitemap(): Promise<{ success: boolean; message: string }> {
     try {
-      const sitemapData = generateSitemap()
+      const sitemapData = await generateSitemap()
       const xml = generateSitemapXML(sitemapData)
       
       await fs.writeFile(this.sitemapPath, xml, 'utf-8')
       
       return {
         success: true,
-        message: `Sitemap updated successfully with ${sitemapData.urls.length} URLs`
+        message: `Sitemap updated successfully with ${sitemapData.length} URLs`
       }
     } catch (error) {
       console.error('Error updating sitemap:', error)
@@ -60,13 +60,13 @@ export class SitemapManager {
     staticPages: number
   }> {
     try {
-      const sitemapData = generateSitemap()
-      const blogPosts = sitemapData.urls.filter(url => url.loc.includes('/blog/')).length
-      const staticPages = sitemapData.urls.length - blogPosts
+      const sitemapData = await generateSitemap()
+      const blogPosts = sitemapData.filter(url => url.loc.includes('/blog/')).length
+      const staticPages = sitemapData.length - blogPosts
 
       return {
-        totalUrls: sitemapData.urls.length,
-        lastUpdated: sitemapData.lastUpdated,
+        totalUrls: sitemapData.length,
+        lastUpdated: new Date().toISOString(),
         blogPosts,
         staticPages
       }
@@ -93,11 +93,11 @@ export class SitemapManager {
     const warnings: string[] = []
 
     try {
-      const sitemapData = generateSitemap()
+      const sitemapData = await generateSitemap()
       
       // Check for required URLs
       const requiredUrls = ['/', '/about', '/services', '/contact', '/blog', '/booking']
-      const existingUrls = sitemapData.urls.map(url => new URL(url.loc).pathname)
+      const existingUrls = sitemapData.map(url => new URL(url.loc).pathname)
       
       requiredUrls.forEach(url => {
         if (!existingUrls.includes(url)) {
@@ -106,19 +106,19 @@ export class SitemapManager {
       })
 
       // Check for service pages
-      const serviceUrls = sitemapData.urls.filter(url => url.loc.includes('/services/'))
+      const serviceUrls = sitemapData.filter(url => url.loc.includes('/services/'))
       if (serviceUrls.length < 4) {
         warnings.push(`Expected at least 4 service pages, found ${serviceUrls.length}`)
       }
 
       // Check for blog posts
-      const blogUrls = sitemapData.urls.filter(url => url.loc.includes('/blog/'))
+      const blogUrls = sitemapData.filter(url => url.loc.includes('/blog/'))
       if (blogUrls.length === 0) {
         warnings.push('No blog posts found in sitemap')
       }
 
       // Check for duplicate URLs
-      const urlCounts = sitemapData.urls.reduce((acc, url) => {
+      const urlCounts = sitemapData.reduce((acc, url) => {
         acc[url.loc] = (acc[url.loc] || 0) + 1
         return acc
       }, {} as Record<string, number>)
@@ -130,7 +130,7 @@ export class SitemapManager {
       })
 
       // Check for valid priorities
-      sitemapData.urls.forEach(url => {
+      sitemapData.forEach(url => {
         if (url.priority < 0 || url.priority > 1) {
           errors.push(`Invalid priority for ${url.loc}: ${url.priority}`)
         }
@@ -138,14 +138,14 @@ export class SitemapManager {
 
       // Check for valid change frequencies
       const validFrequencies = ['always', 'hourly', 'daily', 'weekly', 'monthly', 'yearly', 'never']
-      sitemapData.urls.forEach(url => {
+      sitemapData.forEach(url => {
         if (!validFrequencies.includes(url.changefreq)) {
           errors.push(`Invalid change frequency for ${url.loc}: ${url.changefreq}`)
         }
       })
 
       // Check for valid lastmod dates
-      sitemapData.urls.forEach(url => {
+      sitemapData.forEach(url => {
         const lastmod = new Date(url.lastmod)
         if (isNaN(lastmod.getTime())) {
           errors.push(`Invalid lastmod date for ${url.loc}: ${url.lastmod}`)
@@ -153,7 +153,7 @@ export class SitemapManager {
       })
 
       // Check for admin pages (should NEVER be in sitemap)
-      sitemapData.urls.forEach(url => {
+      sitemapData.forEach(url => {
         const urlPath = new URL(url.loc).pathname
         if (urlPath.startsWith('/admin/') || urlPath.startsWith('/api/admin/')) {
           errors.push(`SECURITY ISSUE: Admin page found in sitemap: ${url.loc}`)

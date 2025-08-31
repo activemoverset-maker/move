@@ -1,9 +1,10 @@
 import { NextResponse } from 'next/server'
-import { generateNewsSitemap } from '@/lib/sitemap-generator'
+import { generateNewsSitemap, generateNewsSitemapXML } from '@/lib/sitemap-generator'
 
 export async function GET() {
   try {
-    const xml = await generateNewsSitemap()
+    const newsSitemap = await generateNewsSitemap()
+    const xml = generateNewsSitemapXML(newsSitemap)
     
     return new NextResponse(xml, {
       headers: {
