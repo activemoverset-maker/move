@@ -15,7 +15,7 @@
 /* PROJECT */
     Name: ActiveMovers & Packers
     Description: Professional moving and packing services in Addis Ababa, Ethiopia
-    URL: https://activemoverset.com
+    URL: https://www.activemoverset.com
     Keywords: moving services, packing services, storage solutions, office relocation, Addis Ababa, Ethiopia
     Author: ActiveMovers & Packers
 

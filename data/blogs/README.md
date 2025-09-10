@@ -31,10 +31,10 @@ To create a new blog post using JSON:
   "tags": ["tag1", "tag2", "tag3"],
   "tagsAm": ["መለያ1", "መለያ2", "መለያ3"],
   "readTime": 8,
-  "featuredImage": "https://activemoverset.com/images/gallary/image.jpg",
+  "featuredImage": "https://www.activemoverset.com/images/gallary/image.jpg",
   "images": [
-    "https://activemoverset.com/images/gallary/image1.jpg",
-    "https://activemoverset.com/images/gallary/image2.jpg"
+    "https://www.activemoverset.com/images/gallary/image1.jpg",
+    "https://www.activemoverset.com/images/gallary/image2.jpg"
   ],
   "status": "published",
   "publishedAt": "2024-01-20T00:00:00.000Z",

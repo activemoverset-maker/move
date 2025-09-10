@@ -27,7 +27,7 @@
 ## 🔧 **Technical SEO Improvements**
 
 ### **1. Domain Consistency**
-- Updated all URLs to use `https://activemoverset.com`
+- Updated all URLs to use `https://www.activemoverset.com`
 - Fixed metadata base URL
 - Corrected social media handles
 

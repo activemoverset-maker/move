@@ -3,7 +3,7 @@
 ## ✅ **COMPREHENSIVE SEO CHECKLIST - ALL COMPLETED**
 
 ### 📊 **Technical SEO Foundation**
-- ✅ **Domain Consistency**: All URLs use `https://activemoverset.com`
+- ✅ **Domain Consistency**: All URLs use `https://www.activemoverset.com`
 - ✅ **SSL Certificate**: HTTPS implemented
 - ✅ **Mobile Optimization**: Responsive design with proper viewport
 - ✅ **Page Speed**: Optimized with Next.js static generation

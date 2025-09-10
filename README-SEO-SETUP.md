@@ -18,7 +18,7 @@ This document outlines the SEO-related files that have been created for the Acti
   - Proper XML structure with all main pages
   - Includes `<lastmod>`, `<changefreq>`, and `<priority>` tags
   - Covers all service pages, blog, booking, and contact pages
-  - Uses production URL: `https://activemoverset.com`
+  - Uses production URL: `https://www.activemoverset.com`
 
 ### 3. `public/humans.txt`
 - **Purpose**: Provides information about the website developers and technology
@@ -108,8 +108,8 @@ The layout has been updated to reference proper favicon files, but you need to g
 3. **Add Google Search Console verification**:
    - Replace `your-google-verification-code` in layout.tsx
 4. **Submit sitemap to search engines**:
-   - Google Search Console: `https://activemoverset.com/sitemap.xml`
-   - Bing Webmaster Tools: `https://activemoverset.com/sitemap.xml`
+   - Google Search Console: `https://www.activemoverset.com/sitemap.xml`
+   - Bing Webmaster Tools: `https://www.activemoverset.com/sitemap.xml`
 
 ## 📝 Maintenance
 
@@ -133,7 +133,7 @@ The layout has been updated to reference proper favicon files, but you need to g
 
 ---
 
-**Note**: All files are configured for the production domain `https://activemoverset.com`. Update URLs if using a different domain.
+**Note**: All files are configured for the production domain `https://www.activemoverset.com`. Update URLs if using a different domain.
 
 
 

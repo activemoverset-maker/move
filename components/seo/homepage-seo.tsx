@@ -41,7 +41,7 @@ export function HomepageSEO() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://activemoverset.com"
+        "item": "https://www.activemoverset.com"
       }
     ]
   }

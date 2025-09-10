@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://activemoverset.com'),
+  metadataBase: new URL('https://www.activemoverset.com'),
   alternates: {
     canonical: '/',
     languages: {

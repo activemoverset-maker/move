@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa, Ethiopia',
     description: 'Active Movers & Packers provides professional moving, packaging, and storage services in Addis Ababa, Ethiopia.',
     type: 'website',
-    url: 'https://activemoverset.com',
+    url: 'https://www.activemoverset.com',
     images: [
       {
         url: '/og-image.jpg',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     site: '@activemoverset',
   },
   alternates: {
-    canonical: 'https://activemoverset.com',
+    canonical: 'https://www.activemoverset.com',
   },
 }
 

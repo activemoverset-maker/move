@@ -16,7 +16,7 @@ import {
 export const SITE_CONFIG = {
   name: 'Active Movers & Packers',
   description: 'Professional moving and packing services in Addis Ababa, Ethiopia',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.activemoverset.com',
   links: {
       phone: process.env.PHONE_NUMBER || '+251982260000',
   whatsapp: process.env.WHATSAPP_NUMBER || '+251982260000',

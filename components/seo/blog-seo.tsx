@@ -45,9 +45,9 @@ export function BlogSEO({
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: 'https://activemoverset.com' },
-    { name: 'Blog', url: 'https://activemoverset.com/blog' },
-    { name: title, url: `https://activemoverset.com${url}` },
+    { name: 'Home', url: 'https://www.activemoverset.com' },
+    { name: 'Blog', url: 'https://www.activemoverset.com/blog' },
+    { name: title, url: `https://www.activemoverset.com${url}` },
   ])
 
   return (

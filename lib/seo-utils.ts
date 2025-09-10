@@ -16,7 +16,7 @@ export interface SEOConfig {
   canonical?: string
 }
 
-const SITE_URL = 'https://activemoverset.com'
+const SITE_URL = 'https://www.activemoverset.com'
 const SITE_NAME = 'Active Movers & Packers'
 const DEFAULT_IMAGE = `${SITE_URL}/images/logo.jpg`
 

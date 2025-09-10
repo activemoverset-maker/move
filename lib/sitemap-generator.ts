@@ -22,7 +22,7 @@ export interface SitemapData {
   lastUpdated: string
 }
 
-const SITE_URL = 'https://activemoverset.com'
+const SITE_URL = 'https://www.activemoverset.com'
 
 // Helper function to escape XML entities
 function escapeXml(text: string): string {
@@ -35,7 +35,7 @@ function escapeXml(text: string): string {
 }
 
 export async function generateSitemap(): Promise<SitemapUrl[]> {
-  const baseUrl = 'https://activemoverset.com'
+  const baseUrl = 'https://www.activemoverset.com'
   
   // Get blog posts from database
   const dbBlogPosts = await prisma.blogPost.findMany({
@@ -109,7 +109,7 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
 }
 
 export async function generateNewsSitemap(): Promise<NewsSitemapUrl[]> {
-  const baseUrl = 'https://activemoverset.com'
+  const baseUrl = 'https://www.activemoverset.com'
   
   // Get blog posts from database
   const dbBlogPosts = await prisma.blogPost.findMany({

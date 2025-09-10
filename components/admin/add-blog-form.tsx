@@ -560,7 +560,7 @@ export function AddBlogForm() {
                       id="featuredImage"
                       value={formData.featuredImage}
                       onChange={(e) => handleInputChange('featuredImage', e.target.value)}
-                                              placeholder="https://activemoverset.com/images/blog-image.jpg"
+                                              placeholder="https://www.activemoverset.com/images/blog-image.jpg"
                       className="mt-1"
                     />
                   </div>
@@ -830,7 +830,7 @@ export function AddBlogForm() {
                       id="canonicalUrl"
                       value={formData.canonicalUrl}
                       onChange={(e) => handleInputChange('canonicalUrl', e.target.value)}
-                      placeholder="https://activemoverset.com/blog/your-post-slug"
+                      placeholder="https://www.activemoverset.com/blog/your-post-slug"
                       className="mt-1"
                     />
                     <div className="text-xs text-gray-500 mt-1">
