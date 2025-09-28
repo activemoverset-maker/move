@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://www.activemoverset.com/sitemap-index.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas and private pages
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_vercel/
+
+# Allow important pages
+Allow: /blog/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /booking/
+Allow: /privacy-policy/
+Allow: /terms-of-service/
+
+# Additional important pages
+Allow: /sitemap.xml
+Allow: /sitemap-images.xml
+Allow: /sitemap-news.xml
+Allow: /robots.txt
+Allow: /humans.txt
+
+# Block sensitive files
+Disallow: /.env
+Disallow: /.git
+Disallow: /package.json
+Disallow: /package-lock.json
