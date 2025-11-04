@@ -215,6 +215,18 @@ export function Footer() {
             <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left break-words">
               © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
             </p>
+
+                <a
+      href="https://familymoversethio.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 hover:text-primary transition-colors text-xs sm:text-sm text-center sm:text-left break-words"
+      onClick={() => handleFooterLinkClick('Partners', 'Family Movers')}
+    >
+      Family Movers — <span className="underline">familyMoversethio.com</span>
+    </a>
+
+            
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-xs sm:text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-center sm:text-left break-words" onClick={() => handleFooterLinkClick('Legal', 'Privacy Policy')}>
                 {t('footer.legal.privacy')}
