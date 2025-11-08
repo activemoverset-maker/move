@@ -14,8 +14,8 @@ import {
 } from 'lucide-react'
 
 export const SITE_CONFIG = {
-  name: 'Active Movers & Packers',
-  description: 'Professional moving and packing services in Addis Ababa, Ethiopia',
+  name: 'Movers in Addis Ababa - Active Movers & Packers',
+  description: 'Professional movers in Addis Ababa, Ethiopia',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.activemoverset.com',
   links: {
       phone: process.env.PHONE_NUMBER || '+251982260000',
@@ -38,7 +38,7 @@ export const SERVICES = [
     id: 'local-moving',
     title: 'Local Moving',
     titleAm: 'አካባቢያዊ መጓጓዣ',
-    description: 'Professional local moving services within Addis Ababa and surrounding areas.',
+    description: 'Professional movers in Addis Ababa, Ethiopia',
     descriptionAm: 'አዲስ አበባ እና አካባቢዎች ውስጥ የሙያ አካባቢያዊ መጓጓዣ አገልግሎቶች።',
     icon: Truck,
     features: [
