@@ -10,8 +10,8 @@ import { GallerySection } from '@/components/sections/gallery-section'
 import { HomepageSEO } from '@/components/seo/homepage-seo'
 
 export const metadata: Metadata = {
-  title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa, Ethiopia',
-  description: 'Professional moving and packing services in Addis Ababa. Local moving, office relocation, packaging, and storage solutions. Trusted by thousands of customers.',
+  title: 'Movers in Addis Ababa - Active Movers & Packers Ethiopia',
+  description: 'Movers in Addis Ababa. Local moving, office relocation, packaging, and storage solutions. Trusted by thousands of customers.',
   keywords: [
     'moving services Addis Ababa', 'professional movers Ethiopia', 'packing services',
     'office relocation Addis Ababa', 'residential moving', 'furniture moving',
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     'home relocation services', 'commercial moving', 'Ethiopian moving company'
   ],
   openGraph: {
-    title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa, Ethiopia',
-    description: 'Active Movers & Packers provides professional moving, packaging, and storage services in Addis Ababa, Ethiopia.',
+    title: 'Movers in Addis Ababa - Active Movers & Packers Ethiopia',
+    description: 'Movers in Addis Ababa. Local moving, office relocation, packaging, and storage solutions. Trusted by thousands of customers.',
     type: 'website',
     url: 'https://www.activemoverset.com',
     images: [
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
-    description: 'Professional moving and packing services in Addis Ababa, Ethiopia.',
+    title: 'Movers in Addis Ababa - Active Movers & Packers Ethiopia',
+    description: 'Movers in Addis Ababa. Local moving, office relocation, packaging, and storage solutions. Trusted by thousands of customers.',
     images: ['/og-image.jpg'],
     creator: '@activemoverset',
     site: '@activemoverset',
