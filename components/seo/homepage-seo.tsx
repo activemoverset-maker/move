@@ -2,6 +2,7 @@
 
 import Script from 'next/script'
 import { generateFAQSchema } from '@/lib/seo-utils'
+import { SITE_CONFIG } from '@/constants/site'
 
 export function HomepageSEO() {
   const faqs = [
@@ -60,7 +61,7 @@ export function HomepageSEO() {
         "addressLocality": "Addis Ababa",
         "addressCountry": "Ethiopia"
       },
-      "telephone": "+251982260000"
+      "telephone": SITE_CONFIG.links.phone
     },
     "areaServed": {
       "@type": "City",

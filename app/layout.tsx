@@ -5,7 +5,7 @@ import { Toaster } from '@/components/ui/toaster'
 import { Suspense } from 'react'
 import { FloatingButtons } from '@/components/floating-buttons'
 import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
+import { ConditionalFooter } from '@/components/conditional-footer'
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@/components/google-analytics'
 import { LanguageProvider } from '@/contexts/language-context'
@@ -122,7 +122,7 @@ export default function RootLayout({
                 <main className="flex-1">
                   {children}
                 </main>
-                <Footer />
+                <ConditionalFooter />
               </div>
               <FloatingButtons />
               <Toaster />
