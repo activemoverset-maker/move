@@ -184,13 +184,13 @@ export function BoleBulbulaPage() {
           </motion.p>
           <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mt-4" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
             <Button asChild size="lg" variant="secondary" className="shadow-xl text-lg px-8 py-4 animate-glow" onClick={() => handleContactClick('phone')}>
-              <a href={generateCallLink("+251926445600")} className="flex items-center gap-2">
+              <a href={generateCallLink("+251982260000")} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
 Call Now
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="shadow-xl text-lg px-8 py-4 animate-glow" onClick={() => handleContactClick('whatsapp')}>
-              <a href={generateWhatsAppLink("+251926445600", 'Hello! I would like to know more about your Bole Bulbula branch services.')} className="flex items-center gap-2">
+              <a href={generateWhatsAppLink("+251982260000", 'Hello! I would like to know more about your Bole Bulbula branch services.')} className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 WhatsApp
               </a>
@@ -503,7 +503,7 @@ Call Now
                 className="text-lg px-8 py-4"
                 onClick={() => handleContactClick('phone')}
               >
-                <a href={generateCallLink("+251926445600")} className="flex items-center gap-2">
+                <a href={generateCallLink("+251982260000")} className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
   Call Now
                 </a>
@@ -514,7 +514,7 @@ Call Now
                 variant="outline"
                 onClick={() => handleContactClick('whatsapp')}
               >
-                <a href={generateWhatsAppLink("+251926445600", 'Hello! I would like to get a quote for moving services in Bole Bulbula.')} className="flex items-center gap-2">
+                <a href={generateWhatsAppLink("+251982260000", 'Hello! I would like to get a quote for moving services in Bole Bulbula.')} className="flex items-center gap-2">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp
                 </a>

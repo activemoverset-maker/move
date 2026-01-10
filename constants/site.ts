@@ -18,8 +18,8 @@ export const SITE_CONFIG = {
   description: 'Professional movers in Addis Ababa, Ethiopia',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.activemoverset.com',
   links: {
-      phone: process.env.PHONE_NUMBER || '+251926445600',
-  whatsapp: process.env.WHATSAPP_NUMBER || '+251926445600',
+      phone: process.env.PHONE_NUMBER || '+251982260000',
+  whatsapp: process.env.WHATSAPP_NUMBER || '+251982260000',
     telegram: process.env.TELEGRAM_USERNAME || 'activemovers',
     email: process.env.EMAIL || 'activemoverset@gmail.com',
       address: 'Beka Building, Addis Ababa, Ethiopia',

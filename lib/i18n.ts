@@ -371,7 +371,7 @@ export const translations: Record<Language, Translations> = {
       title: 'Ready to Move?',
       subtitle: 'Get your free quote today and experience stress-free moving with our professional team.',
       getFreeQuote: 'Get Free Quote',
-      callNow: 'Call Now: +251926445600',
+      callNow: 'Call Now: +251982260000',
       whyChooseUs: 'Why Choose Us?',
       benefits: {
         licensed: 'Licensed & Insured',
@@ -558,7 +558,7 @@ export const translations: Record<Language, Translations> = {
       title: 'መጓጓዣ ለመጀመር ዝግጁ ነዎት?',
       subtitle: 'ዛሬ ነፃ ዋጋ ያግኙ እና ከሙያ ቡድናችን ጋር ያለ ግፍ የመጓጓዣ ስራ ያድርጉ።',
       getFreeQuote: 'ነፃ ዋጋ ያግኙ',
-      callNow: 'አሁን ይደውሉ: +251926445600',
+      callNow: 'አሁን ይደውሉ: +251982260000',
       whyChooseUs: 'ለምን እንደምንመርጥ?',
       benefits: {
         licensed: 'የተፈቀደ እና የተጣራ',

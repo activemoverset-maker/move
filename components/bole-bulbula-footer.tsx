@@ -156,11 +156,11 @@ export function BoleBulbulaFooter() {
               <div className="flex items-center space-x-2.5 sm:space-x-3">
                 <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                 <a
-                  href={generateCallLink('+251926445600')}
+                  href={generateCallLink('+251982260000')}
                   className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base py-1 break-all"
                   onClick={handlePhoneClick}
                 >
-                  +251926445600
+                  +251982260000
                 </a>
               </div>
               <div className="flex items-start space-x-2.5 sm:space-x-3">
