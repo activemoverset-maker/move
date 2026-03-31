@@ -34,66 +34,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   })
 }
 
-  if (!post) {
-    return {
-      title: 'Post Not Found - Active Movers & Packers',
-      description: 'The requested blog post could not be found.'
-    }
-  }
-
-  const postUrl = `/blog/${slug}`
-  
-  return generateSEO({
-    title: post.title,
-    description: post.excerpt,
-    url: postUrl,
-    type: 'article',
-    publishedTime: post.publishedAt.toISOString(),
-    modifiedTime: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
-    author: post.author,
-    section: post.category,
-    tags: post.tags,
-    image: post.featuredImage || undefined
-  })
-}
-
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
-  
-  // Try to get post from database first
-  let post = null
 
-  let jsonPost = null
-
- 
-    jsonPost = getBlogPostBySlug(slug)
-    if (jsonPost) {
-      post = {
-        ...jsonPost,
-        videos: [],
-        id: jsonPost.id,
-        title: jsonPost.title,
-        titleAm: jsonPost.titleAm,
-        excerpt: jsonPost.excerpt,
-        excerptAm: jsonPost.excerptAm,
-        content: jsonPost.content,
-        contentAm: jsonPost.contentAm,
-        author: jsonPost.author,
-        category: jsonPost.category,
-        tags: jsonPost.tags,
-        tagsAm: jsonPost.tagsAm,
-        readTime: jsonPost.readTime,
-        featuredImage: jsonPost.featuredImage,
-        images: jsonPost.images,
-        status: jsonPost.status,
-        publishedAt: jsonPost.publishedAt,
-        slug: jsonPost.slug,
-        views: jsonPost.views,
-        createdAt: jsonPost.createdAt || jsonPost.publishedAt,
-        updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
-      }
-    
-  }
+  const post = getBlogPostBySlug(slug)
 
   if (!post) {
     notFound()
@@ -101,23 +45,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const postUrl = `/blog/${slug}`
 
-  // Get related posts from both sources
-  let relatedPosts = []
-  
-  // Try to get related posts from database
-  const dbRelatedPosts = null
-
-  // Get related posts from JSON files
-  const jsonRelatedPosts = getRelatedBlogPosts(post, 6)
-
-  // Combine and deduplicate related posts
-  const allRelatedPosts = jsonRelatedPosts
-  const uniqueRelatedPosts = allRelatedPosts.filter((relatedPost, index, self) => 
-    index === self.findIndex(p => p.id === relatedPost.id)
-  ).slice(0, 3)
-
-  // Increment view count if post is from database
- 
+  const relatedPosts = getRelatedBlogPosts(post, 3)
 
   return (
     <>
@@ -125,8 +53,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         title={post.title}
         description={post.excerpt}
         author={post.author}
-        publishedTime={post.publishedAt.toISOString()}
-        modifiedTime={post.updatedAt?.toISOString() || post.publishedAt.toISOString()}
+        publishedTime={new Date(post.publishedAt).toISOString()}
+        modifiedTime={new Date(post.updatedAt || post.publishedAt).toISOString()}
         url={postUrl}
         section={post.category}
         tags={post.tags}
@@ -134,11 +62,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         image={post.featuredImage || undefined}
       />
       <div className="pt-16">
-        <BlogPost post={post} relatedPosts={uniqueRelatedPosts} />
+        <BlogPost post={post} relatedPosts={relatedPosts} />
       </div>
     </>
   )
-} 
- 
- 
- 
+}
