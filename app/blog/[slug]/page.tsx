@@ -19,24 +19,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (jsonPost) {
     post = {
       ...jsonPost,
-      id: jsonPost.id,
-      title: jsonPost.title,
-      titleAm: jsonPost.titleAm,
-      excerpt: jsonPost.excerpt,
-      excerptAm: jsonPost.excerptAm,
-      content: jsonPost.content,
-      contentAm: jsonPost.contentAm,
-      author: jsonPost.author,
-      category: jsonPost.category,
-      tags: jsonPost.tags,
-      tagsAm: jsonPost.tagsAm,
-      readTime: jsonPost.readTime,
-      featuredImage: jsonPost.featuredImage,
-      images: jsonPost.images,
-      status: jsonPost.status,
-      publishedAt: jsonPost.publishedAt,
-      slug: jsonPost.slug,
-      views: jsonPost.views,
+      // Fallback for dates if they don't exist in the JSON
       createdAt: jsonPost.createdAt || jsonPost.publishedAt,
       updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
     }
@@ -75,24 +58,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (jsonPost) {
     post = {
       ...jsonPost,
-      id: jsonPost.id,
-      title: jsonPost.title,
-      titleAm: jsonPost.titleAm,
-      excerpt: jsonPost.excerpt,
-      excerptAm: jsonPost.excerptAm,
-      content: jsonPost.content,
-      contentAm: jsonPost.contentAm,
-      author: jsonPost.author,
-      category: jsonPost.category,
-      tags: jsonPost.tags,
-      tagsAm: jsonPost.tagsAm,
-      readTime: jsonPost.readTime,
-      featuredImage: jsonPost.featuredImage,
-      images: jsonPost.images,
-      status: jsonPost.status,
-      publishedAt: jsonPost.publishedAt,
-      slug: jsonPost.slug,
-      views: jsonPost.views,
+      // Fallback for dates if they don't exist in the JSON
       createdAt: jsonPost.createdAt || jsonPost.publishedAt,
       updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
     }
