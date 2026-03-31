@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { prisma } from '@/lib/prisma'
 import { getBlogPostBySlug, getRelatedBlogPosts } from '@/lib/blog-data'
 import { BlogPost } from '@/components/pages/blog-post'
 import { BlogSEO } from '@/components/seo/blog-seo'
@@ -14,13 +13,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const { slug } = await params
   
   // Try to get post from database first
-  let post = await prisma.blogPost.findFirst({
-    where: { slug: slug, status: 'published' },
-    include: { videos: true }
-  })
+  let post = null
 
   // If not found in database, try JSON files
-  if (!post) {
+  
     const jsonPost = getBlogPostBySlug(slug)
     if (jsonPost) {
       post = {
@@ -47,7 +43,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
         createdAt: jsonPost.createdAt || jsonPost.publishedAt,
         updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
       }
-    }
+    
   }
 
   if (!post) {
@@ -77,15 +73,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
   
   // Try to get post from database first
-  let post = await prisma.blogPost.findFirst({
-    where: { slug: slug, status: 'published' },
-    include: { videos: true }
-  })
+  let post = null
 
   let jsonPost = null
 
-  // If not found in database, try JSON files
-  if (!post) {
+ 
     jsonPost = getBlogPostBySlug(slug)
     if (jsonPost) {
       post = {
@@ -112,7 +104,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         createdAt: jsonPost.createdAt || jsonPost.publishedAt,
         updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
       }
-    }
+    
   }
 
   if (!post) {
@@ -125,37 +117,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   let relatedPosts = []
   
   // Try to get related posts from database
-  const dbRelatedPosts = await prisma.blogPost.findMany({
-    where: {
-      status: 'published',
-      id: { not: post.id },
-      OR: [{ category: post.category }, { tags: { hasSome: post.tags } }]
-    },
-    select: {
-      id: true, title: true, titleAm: true, slug: true, excerpt: true, excerptAm: true,
-      publishedAt: true, category: true, tags: true, tagsAm: true, readTime: true,
-      featuredImage: true, views: true, author: true
-    },
-    orderBy: { publishedAt: 'desc' },
-    take: 3
-  })
+  const dbRelatedPosts = null
 
   // Get related posts from JSON files
-  const jsonRelatedPosts = getRelatedBlogPosts(post, 3)
+  const jsonRelatedPosts = getRelatedBlogPosts(post, 6)
 
   // Combine and deduplicate related posts
-  const allRelatedPosts = [...dbRelatedPosts, ...jsonRelatedPosts]
+  const allRelatedPosts = jsonRelatedPosts
   const uniqueRelatedPosts = allRelatedPosts.filter((relatedPost, index, self) => 
     index === self.findIndex(p => p.id === relatedPost.id)
   ).slice(0, 3)
 
   // Increment view count if post is from database
-  if (post.id && !jsonPost) {
-    await prisma.blogPost.update({ 
-      where: { id: post.id }, 
-      data: { views: { increment: 1 } } 
-    })
-  }
+ 
 
   return (
     <>
