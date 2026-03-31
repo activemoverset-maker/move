@@ -11,7 +11,37 @@ interface BlogPostPageProps {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
-  const post = getBlogPostBySlug(slug)
+  
+  let post = null
+
+  // Get post solely from JSON files
+  const jsonPost = getBlogPostBySlug(slug)
+  if (jsonPost) {
+    post = {
+      ...jsonPost,
+      videos: [],
+      id: jsonPost.id,
+      title: jsonPost.title,
+      titleAm: jsonPost.titleAm,
+      excerpt: jsonPost.excerpt,
+      excerptAm: jsonPost.excerptAm,
+      content: jsonPost.content,
+      contentAm: jsonPost.contentAm,
+      author: jsonPost.author,
+      category: jsonPost.category,
+      tags: jsonPost.tags,
+      tagsAm: jsonPost.tagsAm,
+      readTime: jsonPost.readTime,
+      featuredImage: jsonPost.featuredImage,
+      images: jsonPost.images,
+      status: jsonPost.status,
+      publishedAt: jsonPost.publishedAt,
+      slug: jsonPost.slug,
+      views: jsonPost.views,
+      createdAt: jsonPost.createdAt || jsonPost.publishedAt,
+      updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
+    }
+  }
 
   if (!post) {
     return {
@@ -20,13 +50,15 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     }
   }
 
+  const postUrl = `/blog/${slug}`
+  
   return generateSEO({
     title: post.title,
     description: post.excerpt,
-    url: `/blog/${slug}`,
+    url: postUrl,
     type: 'article',
-    publishedTime: new Date(post.publishedAt).toISOString(),
-    modifiedTime: new Date(post.updatedAt || post.publishedAt).toISOString(),
+    publishedTime: post.publishedAt.toISOString(),
+    modifiedTime: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
     author: post.author,
     section: post.category,
     tags: post.tags,
@@ -36,8 +68,37 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
+  
+  let post = null
 
-  const post = getBlogPostBySlug(slug)
+  // Get post solely from JSON files
+  const jsonPost = getBlogPostBySlug(slug)
+  if (jsonPost) {
+    post = {
+      ...jsonPost,
+      videos: [],
+      id: jsonPost.id,
+      title: jsonPost.title,
+      titleAm: jsonPost.titleAm,
+      excerpt: jsonPost.excerpt,
+      excerptAm: jsonPost.excerptAm,
+      content: jsonPost.content,
+      contentAm: jsonPost.contentAm,
+      author: jsonPost.author,
+      category: jsonPost.category,
+      tags: jsonPost.tags,
+      tagsAm: jsonPost.tagsAm,
+      readTime: jsonPost.readTime,
+      featuredImage: jsonPost.featuredImage,
+      images: jsonPost.images,
+      status: jsonPost.status,
+      publishedAt: jsonPost.publishedAt,
+      slug: jsonPost.slug,
+      views: jsonPost.views,
+      createdAt: jsonPost.createdAt || jsonPost.publishedAt,
+      updatedAt: jsonPost.updatedAt || jsonPost.publishedAt
+    }
+  }
 
   if (!post) {
     notFound()
@@ -45,7 +106,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   const postUrl = `/blog/${slug}`
 
-  const relatedPosts = getRelatedBlogPosts(post, 3)
+  // Get related posts solely from JSON files
+  const uniqueRelatedPosts = getRelatedBlogPosts(post, 3)
 
   return (
     <>
@@ -53,8 +115,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         title={post.title}
         description={post.excerpt}
         author={post.author}
-        publishedTime={new Date(post.publishedAt).toISOString()}
-        modifiedTime={new Date(post.updatedAt || post.publishedAt).toISOString()}
+        publishedTime={post.publishedAt.toISOString()}
+        modifiedTime={post.updatedAt?.toISOString() || post.publishedAt.toISOString()}
         url={postUrl}
         section={post.category}
         tags={post.tags}
@@ -62,7 +124,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         image={post.featuredImage || undefined}
       />
       <div className="pt-16">
-        <BlogPost post={post} relatedPosts={relatedPosts} />
+        <BlogPost post={post} relatedPosts={uniqueRelatedPosts} />
       </div>
     </>
   )
