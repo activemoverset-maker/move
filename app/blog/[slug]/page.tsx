@@ -19,7 +19,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (jsonPost) {
     post = {
       ...jsonPost,
-      videos: [],
       id: jsonPost.id,
       title: jsonPost.title,
       titleAm: jsonPost.titleAm,
@@ -76,7 +75,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   if (jsonPost) {
     post = {
       ...jsonPost,
-      videos: [],
       id: jsonPost.id,
       title: jsonPost.title,
       titleAm: jsonPost.titleAm,
