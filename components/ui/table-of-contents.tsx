@@ -63,9 +63,9 @@ export function TableOfContents({ className }: TableOfContentsProps) {
         Table of Contents
       </h3>
       <nav className="space-y-1">
-        {headings.map((heading) => (
+        {headings.map((heading, index) => (
           <motion.button
-            key={heading.id}
+            key={heading.id ? `${heading.id}-${index}` : `toc-${index}`}
             onClick={() => scrollToHeading(heading.id)}
             className={`w-full text-left px-2 py-1 rounded text-sm transition-colors duration-200 flex items-center gap-2 ${
               activeId === heading.id
