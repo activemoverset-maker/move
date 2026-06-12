@@ -73,12 +73,38 @@ module.exports = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(0)" },
         },
+        "addis-streak": {
+          "0%": { opacity: "0", transform: "translateX(-30%) scaleX(0.6)" },
+          "15%": { opacity: "0.9" },
+          "100%": { opacity: "0", transform: "translateX(180%) scaleX(1)" },
+        },
+        "addis-float-y": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "addis-glow-pulse": {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(234, 88, 12, 0)" },
+          "50%": { boxShadow: "0 0 40px 0 rgba(234, 88, 12, 0.25)" },
+        },
+        "addis-ambient": {
+          "0%, 100%": { opacity: "0.35", transform: "scale(1) translate(0, 0)" },
+          "50%": { opacity: "0.55", transform: "scale(1.08) translate(2%, -1%)" },
+        },
+        "addis-shimmer-bg": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
         "slide-in": "slide-in 0.3s ease-out",
+        "addis-streak": "addis-streak 9s ease-in-out infinite",
+        "addis-float-y": "addis-float-y 5.5s ease-in-out infinite",
+        "addis-glow-pulse": "addis-glow-pulse 3.5s ease-in-out infinite",
+        "addis-ambient": "addis-ambient 14s ease-in-out infinite",
+        "addis-shimmer-bg": "addis-shimmer-bg 10s linear infinite",
       },
     },
   },

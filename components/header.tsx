@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Phone } from 'lucide-react'
@@ -11,9 +12,14 @@ import { useLanguage } from '@/contexts/language-context'
 import { LanguageSwitcher } from '@/components/language-switcher'
 
 export function Header() {
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { t } = useLanguage()
+
+  if (pathname?.startsWith('/addis-active-movers')) {
+    return null
+  }
 
   useEffect(() => {
     const handleScroll = () => {

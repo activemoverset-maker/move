@@ -11,6 +11,11 @@ export function ConditionalFooter() {
     return null
   }
 
+  // Premium landing includes its own footer
+  if (pathname.startsWith('/addis-active-movers')) {
+    return null
+  }
+
   return <Footer />
 }
 

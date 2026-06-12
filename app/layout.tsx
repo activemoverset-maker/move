@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { inter } from './fonts/fonts'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { Suspense } from 'react'
@@ -12,8 +12,6 @@ import { LanguageProvider } from '@/contexts/language-context'
 import { LoadingProvider } from '@/contexts/loading-context'
 import { GlobalLoadingScreen } from '@/components/global-loading-screen'
 import { GlobalSEO } from '@/components/seo/global-seo'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {

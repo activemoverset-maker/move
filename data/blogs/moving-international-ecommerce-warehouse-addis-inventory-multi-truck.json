@@ -1,0 +1,19 @@
+{
+  "id": "blog-ecommerce-warehouse-multi-truck-coordination",
+  "title": "Moving an International E-Commerce Warehouse in Addis: Inventory Flow and Multi-Truck Coordination",
+  "titleAm": "",
+  "excerpt": "E-commerce warehouse move Addis: international inventory flow, multi-truck coordination, SKU logistics, commercial relocation, fulfillment center transition Ethiopia.",
+  "excerptAm": "",
+  "content": "<h2>Moving an international e-commerce warehouse in Addis: inventory flow and multi-truck coordination</h2>\n<p>International e-commerce warehouses are living databases—thousands of SKUs, pick-path logic, and fulfillment SLAs that cannot pause because lease ended. Relocating warehouse operations in Addis demands inventory flow discipline, multi-truck choreography, and cutover planning that keeps orders shipping while pallets cross town.</p>\n<p>This guide covers warehouse moves with inventory flow and multi-truck coordination.</p>\n\n<h2>Pre-move inventory architecture</h2>\n<ul>\n<li>Export WMS snapshot—SKU, bin, quantity, lot if applicable.</li>\n<li>ABC classify: A-tier ships through move window from buffer stock.</li>\n<li>Dead stock liquidate before truck—volume cost honesty.</li>\n<li>Barcode or QR relabel plan if bin schema changes destination.</li>\n</ul>\n\n<h2>Multi-truck coordination model</h2>\n<h3>Wave planning</h3>\n<p>Truck 1 bulk palletized slow movers; Truck 2 pick-face essentials; Truck 3 IT and packing stations. Stagger departures thirty minutes—avoid origin dock chaos.</p>\n<h3>Radio and lead roles</h3>\n<p>One warehouse lead origin, one destination, one dispatch—three-point command. Plate numbers broadcast to security both sites.</p>\n\n<h2>Dock and compound access</h2>\n<p>Book loading bays both ends; forklift hours aligned; pallet jack count sufficient. Addis industrial zones—freight truck parking pre-cleared with management.</p>\n\n<h2>Inventory custody during transit</h2>\n<p>Seal numbers logged per truck; manifest signed load and unload; spot-check SKU count high-value lines. CCTV handoff at destination before put-away.</p>\n\n<h2>IT and order cutover</h2>\n<p>Freeze pick window announced; redirect orders to alternate micro-fulfillment if exists; WMS location update before reopen pick. DNS and API endpoints for international platforms—parallel run until smoke test.</p>\n\n<h2>Staff shifts</h2>\n<p>Overtime crew destination put-away same day—empty truck useless if pallets sit dock overnight theft risk.</p>\n\n<h2>Active Movers commercial warehouse tier</h2><p>Multi-truck quote with wave schedule annex; forklift crew optional line item.</p>\n\n<h2>Conclusion</h2>\n<p>E-commerce warehouse moves succeed with WMS-driven waves, sealed multi-truck manifests, dock booking both ends, and IT cutover parallelism—inventory flow continues when coordination beats single-truck hope.</p>",
+  "contentAm": "",
+  "author": "Active Movers Team",
+  "category": "moving-tips",
+  "tags": ["e-commerce", "warehouse", "multi-truck", "inventory", "commercial move", "Addis Ababa"],
+  "tagsAm": [],
+  "readTime": 62,
+  "featuredImage": "https://www.activemoverset.com/images/gallary/qua643.jpeg",
+  "images": ["https://www.activemoverset.com/images/gallary/qua644.jpeg", "https://www.activemoverset.com/images/gallary/qua645.jpeg"],
+  "status": "published",
+  "publishedAt": "2026-11-28T09:00:00.000Z",
+  "slug": "moving-international-ecommerce-warehouse-addis-inventory-multi-truck"
+}

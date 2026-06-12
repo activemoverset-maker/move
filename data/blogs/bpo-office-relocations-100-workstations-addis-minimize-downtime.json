@@ -1,0 +1,19 @@
+{
+  "id": "blog-bpo-office-relocation-100-workstations",
+  "title": "BPO Office Relocations: Minimizing Downtime When Moving 100+ Workstations in Addis Ababa",
+  "titleAm": "",
+  "excerpt": "BPO office moves in Addis: 100+ workstations, phased migration, cable labeling, overnight loads, SLA continuity, headset logistics, and minimizing downtime for call centers.",
+  "excerptAm": "",
+  "content": "<h2>BPO office relocations: minimizing downtime when moving 100+ workstations in Addis Ababa</h2>\n<p>BPO floors live on SLA clocks—if headsets go silent, revenue evaporates. Moving a hundred-plus workstations is a migration project with trucks attached: phased cutovers, labeled cabling, overnight windows, and rollback plans when elevators or ISPs betray the schedule.</p>\n<p>This guide outlines how Addis BPO operators minimize downtime during large office relocations.</p>\n\n<h2>Phased migration beats big-bang</h2>\n<ul>\n<li><strong>Wave A:</strong> Pilot floor or team validates new site.</li>\n<li><strong>Wave B–C:</strong> Parallel teams staggered by business unit.</li>\n<li><strong>Stragglers:</strong> QA, training, and admin last—with hot desks ready.</li>\n</ul>\n<p>Big-bang moves look brave on slides; phased waves keep phones answered.</p>\n\n<h2>Workstation labeling standard</h2>\n<p>Asset tag, user ID, CPU port map, dual monitor orientation—photograph under-desk before disconnect. Color zip ties by row; bags screws per desk. Rebuild scripts beat heroic memory.</p>\n\n<h2>Network and ISP cutover</h2>\n<p>Circuits must light before chairs roll. Align mover window with ISP install plus four-hour burn-in. Backup LTE paths for payment and dialer continuity during cutover hour.</p>\n\n<h2>Overnight and Sunday loads</h2>\n<p>BPO moves often use night freight elevators and Sunday handover for Monday shift. Security manifests, lighting rigs, and meal breaks for crews—tired techs mislabel cables.</p>\n\n<h2>Acoustic and floor planning</h2>\n<p>New sites need acoustic panels and desk spacing validated before agents return—moving is not only cartons, it is decibel maps.</p>\n\n<h2>Rollback crates</h2>\n<p>Keep one wave of critical spares—keyboards, headsets, patch cables—on wheeled cages that never leave the building until sign-off.</p>\n\n<h2>Vendor RACI</h2>\n<p>Movers, IT integrator, furniture vendor, ISP—one RACI chart with named phones. BPO downtime is multiplied blame when roles blur.</p>\n\n<h2>Choosing BPO-experienced movers</h2>\n<p>Ask for 100+ seat references with measured downtime metrics, not only desk counts.</p>\n\n<h2>Conclusion</h2>\n<p>BPO relocations in Addis succeed with phased waves, obsessive labeling, ISP-aligned cutovers, and rollback discipline. Minimize downtime by planning like IT—execute like logistics.</p>",
+  "contentAm": "",
+  "author": "Active Movers Team",
+  "category": "moving-tips",
+  "tags": ["BPO", "office relocation", "workstations", "downtime", "commercial move", "Addis Ababa"],
+  "tagsAm": [],
+  "readTime": 51,
+  "featuredImage": "https://www.activemoverset.com/images/gallary/qua214.jpeg",
+  "images": ["https://www.activemoverset.com/images/gallary/qua215.jpeg", "https://www.activemoverset.com/images/gallary/qua216.jpeg"],
+  "status": "published",
+  "publishedAt": "2026-07-08T09:00:00.000Z",
+  "slug": "bpo-office-relocations-100-workstations-addis-minimize-downtime"
+}

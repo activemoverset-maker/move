@@ -1,0 +1,19 @@
+{
+  "id": "blog-inventory-digital-spreadsheet-household-moves",
+  "title": "Inventory Management 101: Creating a Digital Spreadsheet Checklist for Large Household Moves",
+  "titleAm": "",
+  "excerpt": "Digital spreadsheet inventory for large household moves: room-by-room checklist, box numbering, insurance documentation, mover quotes, Excel Google Sheets moving template logic.",
+  "excerptAm": "",
+  "content": "<h2>Inventory management 101: creating a digital spreadsheet checklist for large household moves</h2>\n<p>Large household moves fail memory—four bedrooms, storage, garage, and kitchen each hide items quoted wrong and insurance cannot trace. Digital spreadsheet inventory turns chaos into rows: room, item, condition, box number, value, and destination color code. Movers quote accurately; claims resolve faster; unpack finds wedding china without opening nineteen cartons marked \"misc.\"</p>\n<p>This guide builds a digital spreadsheet checklist for large household moves.</p>\n\n<h2>Spreadsheet column structure</h2>\n<ul>\n<li><strong>Room:</strong> Kitchen, MBR, etc.</li>\n<li><strong>Item description:</strong> Samsung 55\" TV, oak dining table.</li>\n<li><strong>Quantity:</strong> 12 dining chairs.</li>\n<li><strong>Condition notes:</strong> Scratch left leg pre-existing.</li>\n<li><strong>Box ID:</strong> K-014 color blue.</li>\n<li><strong>Declared value:</strong> For insurance tier items.</li>\n<li><strong>Fragile Y/N:</strong> Flags special pack.</li>\n<li><strong>Status:</strong> Not packed / Packed / Loaded / Delivered.</li>\n</ul>\n\n<h2>Room-by-room capture workflow</h2>\n<p>Walk each room with phone photos linked in sheet (Google Drive path in cell). Dictate items into sheet on tablet—faster than post-hoc memory. Include closets and balcony—volume hides there.</p>\n\n<h2>Box numbering integration</h2>\n<p>Filter sheet by Box ID when labeling—print room summary for crew. OPEN FIRST items flagged separate tab: medications, documents, kettle.</p>\n\n<h2>Mover quote attachment</h2>\n<p>Export room cubic summary—some movers accept spreadsheet instead of survey if detailed. High-value tab shared for declared value endorsement.</p>\n\n<h2>Insurance and claims</h2>\n<p>Pre-move condition photos referenced by row ID. Post-damage: note row, photo damage, box ID—claim packet assembles in minutes.</p>\n\n<h2>Shared access for family</h2>\n<p>Google Sheets multi-user—spouse packs garage, you pack office; no duplicate items. Kids' room delegated with supervision.</p>\n\n<h2>Templates and formulas</h2>\n<p>COUNTIF packed per room shows progress bar. SUM declared value for insurance ceiling check. Pivot table by room for unload priority.</p>\n\n<h2>After move archive</h2>\n<p>Keep sheet one year—warranty and claim window. Update status column Delivered with checkmarks unpack complete.</p>\n\n<h2>Active Movers integration</h2><p>Email inventory export at booking—survey time shortened, quote precision improved.</p>\n\n<h2>Conclusion</h2>\n<p>Large household moves need digital spreadsheet discipline—structured columns, box IDs, photo links, and status tracking turn inventory management from guesswork into move-day command center.</p>",
+  "contentAm": "",
+  "author": "Active Movers Team",
+  "category": "moving-tips",
+  "tags": ["inventory", "spreadsheet", "checklist", "large household", "organization", "moving tips"],
+  "tagsAm": [],
+  "readTime": 57,
+  "featuredImage": "https://www.activemoverset.com/images/gallary/qua514.jpeg",
+  "images": ["https://www.activemoverset.com/images/gallary/qua515.jpeg", "https://www.activemoverset.com/images/gallary/qua516.jpeg"],
+  "status": "published",
+  "publishedAt": "2026-10-16T09:00:00.000Z",
+  "slug": "inventory-management-digital-spreadsheet-large-household-moves"
+}

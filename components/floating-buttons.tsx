@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, MessageCircle, Send } from 'lucide-react'
 import { generateCallLink, generateWhatsAppLink, generateTelegramLink } from '@/lib/utils'
@@ -9,6 +10,7 @@ import { useLanguage } from '@/contexts/language-context'
 import { SITE_CONFIG } from '@/constants/site'
 
 export function FloatingButtons() {
+  const pathname = usePathname()
   const [isVisible, setIsVisible] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
   const { t } = useLanguage()
@@ -30,6 +32,10 @@ export function FloatingButtons() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
+
+  if (pathname?.startsWith('/addis-active-movers')) {
+    return null
+  }
 
   const handleCallClick = () => {
     trackEvent({ 
