@@ -19,6 +19,7 @@ import {
 import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
 import { formatDate, generateSlug } from '@/lib/utils'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 interface BlogPost {
   id: string
@@ -297,6 +298,8 @@ export function BlogList({ posts }: BlogListProps) {
           )}
         </div>
       </section>
+
+      <TikTokTeaserSection placement="blog" variant="muted" />
     </>
   )
 } 

@@ -8,6 +8,7 @@ export interface Translations {
     services: string
     blog: string
     contact: string
+    watch: string
   }
   header: {
     contact: string
@@ -164,6 +165,15 @@ export interface Translations {
     videoDescription: string
     viewOnTiktok: string
     share: string
+    followOnTiktok: string
+    viewAll: string
+    emptyState: string
+    bookFromVideo: string
+    pageTitle: string
+    pageSubtitle: string
+    featured: string
+    ctaTitle: string
+    ctaSubtitle: string
     embedTitle: string
     embedDescription: string
     embedExample: string
@@ -215,6 +225,7 @@ export const translations: Record<Language, Translations> = {
     services: 'Services',
     blog: 'Blog',
     contact: 'Contact',
+    watch: 'Watch',
   },
     header: {
       contact: 'Contact',
@@ -348,15 +359,24 @@ export const translations: Record<Language, Translations> = {
       quickContact: 'Quick Contact',
     },
     tiktok: {
-      badge: 'Social Media',
-      title: 'See Us in Action',
-      subtitle: 'Watch our team at work and see why customers choose Active Movers & Packers for their moving needs.',
-      username: '@activemovers',
+      badge: 'Active Movers ET',
+      title: 'See Us Move',
+      subtitle: 'Watch @activemoverset — real moves, packing tips, and our crew in action across Addis Ababa.',
+      username: '@activemoverset',
       tagline: 'Professional Moving Services',
-      watchVideo: 'Watch Our Latest Video',
+      watchVideo: 'Watch Our Videos',
       videoDescription: 'See our team in action during a recent move',
-      viewOnTiktok: 'View on TikTok',
+      viewOnTiktok: 'Open on TikTok',
       share: 'Share',
+      followOnTiktok: 'Follow on TikTok',
+      viewAll: 'View all videos',
+      emptyState: 'New videos coming soon. Follow us on TikTok to see our latest moves.',
+      bookFromVideo: 'Book a Move',
+      pageTitle: 'Watch Active Movers ET',
+      pageSubtitle: 'Browse our TikTok feed — moves, packing, office relocations, and behind-the-scenes from @activemoverset.',
+      featured: 'Featured',
+      ctaTitle: 'Ready to move?',
+      ctaSubtitle: 'Get a free quote after watching — we handle packing, transport, and delivery.',
       embedTitle: 'Want to embed your TikTok video?',
       embedDescription: 'Add your TikTok video embed code to showcase your moving services',
       embedExample: 'Example TikTok Embed Code:',
@@ -402,6 +422,7 @@ export const translations: Record<Language, Translations> = {
       services: 'አገልግሎቶች',
       blog: 'ዜናዎች',
       contact: 'አድራሻ',
+      watch: 'ቪዲዮ',
     },
     header: {
       contact: 'አድራሻ',
@@ -535,15 +556,24 @@ export const translations: Record<Language, Translations> = {
       quickContact: 'ፈጣን መገናኛ',
     },
     tiktok: {
-      badge: 'ማህበራዊ ሚዲያ',
-      title: 'በስራ ላይ ይመልከቱን',
-      subtitle: 'ቡድናችንን በስራ ላይ ይመልከቱ እና ደንበኞች ለመጓጓዣ ፍላጎታቸው አክቲቭ ሞቨርስ እና ፓከርስ ለምን እንደሚመርጡ ይመልከቱ።',
-      username: '@activemovers',
+      badge: 'Active Movers ET',
+      title: 'መጓጓዣችንን ይመልከቱ',
+      subtitle: '@activemoverset በቲክቶክ — እውነተኛ መጓጓዣዎች፣ የመጠን ምክሮች እና ቡድናችን በአዲስ አበባ።',
+      username: '@activemoverset',
       tagline: 'የሙያ መጓጓዣ አገልግሎቶች',
-      watchVideo: 'የቅርቡን ቪዲዮ ይመልከቱ',
+      watchVideo: 'ቪዲዮዎቻችንን ይመልከቱ',
       videoDescription: 'ቡድናችንን በቅርቡ በመጓጓዣ ላይ በስራ ላይ ይመልከቱ',
-      viewOnTiktok: 'በቲክቶክ ላይ ይመልከቱ',
+      viewOnTiktok: 'በቲክቶክ ላይ ክፈት',
       share: 'ያጋራ',
+      followOnTiktok: 'በቲክቶክ ይከተሉን',
+      viewAll: 'ሁሉንም ቪዲዮዎች',
+      emptyState: 'አዲስ ቪዲዮዎች በቅርቡ። የቅርብ ጊዜ መጓጓዣዎቻችንን ለማየት በቲክቶክ ይከተሉን።',
+      bookFromVideo: 'መጓጓዣ ያስያዙ',
+      pageTitle: 'Active Movers ET ይመልከቱ',
+      pageSubtitle: 'የቲክቶክ ፊድያችንን ይመልከቱ — መጓጓዣ፣ መጠን፣ ቢሮ እና ከስራ በስተጀርባ ከ @activemoverset።',
+      featured: 'ተመራጭ',
+      ctaTitle: 'መጓጓዣ ለመጀመር ዝግጁ ነዎት?',
+      ctaSubtitle: 'ከመመልከት በኋላ ነፃ ዋጋ ያግኙ — መጠን፣ መጓጓዣ እና አድራሻ እንደምንሰጥ።',
       embedTitle: 'ቲክቶክ ቪዲዮዎን ማስገባት ይፈልጋሉ?',
       embedDescription: 'የመጓጓዣ አገልግሎቶችዎን ለማሳየት የቲክቶክ ቪዲዮ አስገባ ኮድዎን ያክሉ',
       embedExample: 'የቲክቶክ አስገባ ኮድ ምሳሌ:',

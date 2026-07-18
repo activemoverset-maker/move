@@ -16,6 +16,7 @@ import { AddisPremiumTestimonials } from './testimonials'
 import { AddisPremiumAreas } from './areas'
 import { AddisPremiumCta } from './cta'
 import { AddisPremiumSiteFooter } from './site-footer'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 function AmbientLayer() {
   const reduce = useReducedMotion()
@@ -66,6 +67,7 @@ export function AddisPremiumLanding() {
         <AddisPremiumShowcase />
         <AddisPremiumProcess />
         <AddisPremiumTestimonials />
+        <TikTokTeaserSection placement="addis-active-movers" variant="dark" />
         <AddisPremiumAreas />
         <AddisPremiumCta />
         <AddisPremiumSiteFooter />

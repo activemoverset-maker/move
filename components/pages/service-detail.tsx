@@ -29,6 +29,8 @@ import { SITE_CONFIG } from '@/constants/site'
 import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
 import { generateCallLink, generateWhatsAppLink } from '@/lib/utils'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
+import { getServicePlacement } from '@/lib/tiktok/placements'
 
 interface ServiceDetailProps {
   serviceId: string
@@ -65,6 +67,8 @@ export function ServiceDetail({ serviceId }: ServiceDetailProps) {
       label: service.title 
     })
   }
+
+  const tiktokPlacement = getServicePlacement(serviceId)
 
   const benefits = [
     { icon: Shield, text: t('cta.benefits.licensed'), color: "text-green-500" },
@@ -298,6 +302,10 @@ export function ServiceDetail({ serviceId }: ServiceDetailProps) {
           </div>
         </div>
       </section>
+
+      {tiktokPlacement && (
+        <TikTokTeaserSection placement={tiktokPlacement} variant="muted" />
+      )}
 
       {/* CTA Section */}
       <section className="section-padding bg-gray-50">

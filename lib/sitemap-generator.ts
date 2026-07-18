@@ -78,6 +78,12 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
       priority: 0.7
     },
     {
+      loc: `${baseUrl}/tiktok`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'weekly',
+      priority: 0.8
+    },
+    {
       loc: `${baseUrl}/gallery`,
       lastmod: new Date().toISOString(),
       changefreq: 'weekly',

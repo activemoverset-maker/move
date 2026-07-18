@@ -28,6 +28,7 @@ import { trackEvent } from '@/lib/analytics'
 import { generateCallLink, generateWhatsAppLink } from '@/lib/utils'
 import Link from 'next/link'
 import { BoleBulbulaFooter } from '../bole-bulbula-footer'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 export function BoleBulbulaPage() {
   const { t, language } = useLanguage()
@@ -477,6 +478,8 @@ Call Now
           </div>
         </div>
       </section>
+
+      <TikTokTeaserSection placement="bole-bulbula" variant="light" />
 
       {/* CTA Section */}
       <section className="section-padding bg-gray-900 text-white">

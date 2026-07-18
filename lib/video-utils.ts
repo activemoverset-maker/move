@@ -1,3 +1,6 @@
+import { SOCIAL } from '@/lib/social'
+import { extractTikTokVideoId as parseTikTokVideoId } from '@/lib/tiktok/parse'
+
 export interface VideoEmbed {
   type: 'youtube' | 'tiktok' | 'vimeo' | 'custom'
   url: string
@@ -22,17 +25,7 @@ export function extractYouTubeVideoId(url: string): string | null {
 }
 
 export function extractTikTokVideoId(url: string): string | null {
-  const patterns = [
-    /tiktok\.com\/@[^\/]+\/video\/(\d+)/,
-    /vm\.tiktok\.com\/([^\/\?]+)/
-  ]
-  
-  for (const pattern of patterns) {
-    const match = url.match(pattern)
-    if (match) return match[1]
-  }
-  
-  return null
+  return parseTikTokVideoId(url)
 }
 
 export function generateYouTubeEmbed(videoId: string, title: string): string {
@@ -57,11 +50,11 @@ export function generateTikTokEmbed(videoId: string, title: string): string {
     <div class="video-container my-6">
       <blockquote
         class="tiktok-embed"
-        cite="https://www.tiktok.com/@activemoverset/video/${videoId}"
+        cite="https://www.tiktok.com/@${SOCIAL.tiktok.username}/video/${videoId}"
         data-video-id="${videoId}"
       >
         <section>
-          <a target="_blank" href="https://www.tiktok.com/@activemoverset">@activemoverset</a>
+          <a target="_blank" href="${SOCIAL.tiktok.profileUrl}">${SOCIAL.tiktok.handle}</a>
         </section>
       </blockquote>
       <script async src="https://www.tiktok.com/embed.js"></script>

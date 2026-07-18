@@ -35,6 +35,7 @@ export function Header() {
     { href: '/bole-bulbula', label: 'Bole Bulbula' },
     { href: '/about', label: t('nav.about') },
     { href: '/services', label: t('nav.services') },
+    { href: '/tiktok', label: t('nav.watch') },
     { href: '/blog', label: t('nav.blog') },
     { href: '/contact', label: t('nav.contact') },
   ]

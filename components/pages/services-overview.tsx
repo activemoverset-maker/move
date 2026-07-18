@@ -25,6 +25,7 @@ import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
 import { generateCallLink, generateWhatsAppLink } from '@/lib/utils'
 import { SITE_CONFIG } from '@/constants/site'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 export function ServicesOverview() {
   const { t, language } = useLanguage()
@@ -74,6 +75,8 @@ export function ServicesOverview() {
           </motion.div>
         </div>
       </section>
+
+      <TikTokTeaserSection placement="services-overview" variant="light" />
 
       {/* Services Grid */}
       <section className="section-padding bg-gray-50">

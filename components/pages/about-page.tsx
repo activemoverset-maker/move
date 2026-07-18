@@ -26,6 +26,7 @@ import { useLanguage } from '@/contexts/language-context'
 import { trackEvent } from '@/lib/analytics'
 import { generateCallLink, generateWhatsAppLink } from '@/lib/utils'
 import Link from 'next/link'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 export function AboutPage() {
   const { t, language } = useLanguage()
@@ -275,6 +276,8 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+
+      <TikTokTeaserSection placement="about" variant="muted" />
 
       {/* Services */}
       <section className="section-padding bg-gray-50">

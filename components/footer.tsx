@@ -109,6 +109,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tiktok" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base py-1 block break-words" onClick={() => handleFooterLinkClick('Quick Links', 'TikTok')}>
+                  {t('nav.watch')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base py-1 block break-words" onClick={() => handleFooterLinkClick('Quick Links', 'Contact')}>
                   {t('nav.contact')}
                 </Link>

@@ -31,7 +31,8 @@ import {
   CheckCircle,
   AlertCircle,
   DollarSign,
-  ImageIcon
+  ImageIcon,
+  Video
 } from 'lucide-react'
 import { BLOG_POSTS } from '@/constants/site'
 import { useLanguage } from '@/contexts/language-context'
@@ -265,6 +266,14 @@ export function AdminDashboard() {
       href: '/admin/gallery',
       color: 'bg-indigo-500 hover:bg-indigo-600',
       action: 'manage_gallery'
+    },
+    {
+      title: language === 'am' ? 'ቲክቶክ ፊድ' : 'TikTok Feed',
+      description: language === 'am' ? '@activemoverset ቪዲዮዎችን ያስተዳድሩ' : 'Manage @activemoverset videos for the website',
+      icon: Video,
+      href: '/admin/tiktok',
+      color: 'bg-pink-500 hover:bg-pink-600',
+      action: 'manage_tiktok'
     }
   ]
 

@@ -14,6 +14,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.activemoverset.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'p16-sign-sg.tiktokcdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'p16.muscdn.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'p19-sign.tiktokcdn-us.com',
+      },
     ],
   },
 }

@@ -31,6 +31,7 @@ import { trackEvent } from '@/lib/analytics'
 import { useToast } from '@/hooks/use-toast'
 import Link from 'next/link'
 import { BookingCalendar } from '@/components/calendar/booking-calendar'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 // Form validation schema
 const bookingFormSchema = z.object({
@@ -224,6 +225,7 @@ export function BookingPage() {
   }
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-4 py-20">
         {/* Header */}
@@ -599,5 +601,8 @@ export function BookingPage() {
         </motion.div>
       </div>
     </div>
+
+    <TikTokTeaserSection placement="booking" variant="light" />
+    </>
   )
 } 

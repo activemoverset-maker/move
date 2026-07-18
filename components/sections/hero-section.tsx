@@ -165,6 +165,25 @@ export function HeroSection() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* Ambient gradient orbs */}
+      <div className="pointer-events-none absolute inset-0 z-[5] overflow-hidden">
+        <motion.div
+          animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+          className="animate-mesh-drift absolute -left-20 top-1/4 h-96 w-96 rounded-full bg-primary/25 blur-[100px]"
+        />
+        <motion.div
+          animate={{ x: [0, -50, 0], y: [0, 40, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute -right-16 bottom-1/4 h-80 w-80 rounded-full bg-green-400/20 blur-[90px]"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
+          transition={{ duration: 10, repeat: Infinity }}
+          className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-lime-400/15 blur-[80px]"
+        />
+      </div>
+
       {/* Animated Background */}
       <motion.div 
         className="absolute inset-0 z-0"
@@ -228,8 +247,10 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
         >
-          <span className="block">{t('hero.title')}</span>
-          <span className="block text-primary">{t('hero.subtitle')}</span>
+          <span className="block drop-shadow-lg">{t('hero.title')}</span>
+          <span className="block bg-gradient-to-r from-green-300 via-primary to-lime-300 bg-clip-text text-transparent animate-shimmer drop-shadow-sm">
+            {t('hero.subtitle')}
+          </span>
         </motion.h1>
 
         {/* Description */}
@@ -297,9 +318,11 @@ export function HeroSection() {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
+              className="text-center bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8 + index * 0.1, duration: 0.5 }}
+              whileHover={{ scale: 1.06, y: -6, backgroundColor: 'rgba(255,255,255,0.15)' }}
             >
               <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
               <div className="text-2xl font-bold">{stat.value}</div>

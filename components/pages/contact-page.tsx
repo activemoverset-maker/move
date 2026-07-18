@@ -29,6 +29,7 @@ import { SITE_CONFIG } from '@/constants/site'
 import { generateCallLink, generateWhatsAppLink, generateTelegramLink } from '@/lib/utils'
 import { trackEvent } from '@/lib/analytics'
 import { useToast } from '@/hooks/use-toast'
+import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 
 // Form validation schema
 const contactFormSchema = z.object({
@@ -110,6 +111,7 @@ export function ContactPage() {
   }
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-4 py-20">
         {/* Header Section */}
@@ -411,5 +413,8 @@ export function ContactPage() {
         </div>
       </div>
     </div>
+
+    <TikTokTeaserSection placement="contact" variant="muted" />
+    </>
   )
 } 

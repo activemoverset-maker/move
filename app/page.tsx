@@ -1,12 +1,17 @@
 import { Metadata } from 'next'
 import { HeroSection } from '@/components/sections/hero-section'
+import { MarqueeTrustBar } from '@/components/sections/marquee-trust-bar'
 import { ServicesSection } from '@/components/sections/services-section'
+import { HowItWorksSection } from '@/components/sections/how-it-works-section'
+import { BentoFeaturesSection } from '@/components/sections/bento-features-section'
 import { ImageShowcase } from '@/components/sections/image-showcase'
+import { AnimatedStatsBand } from '@/components/sections/animated-stats-band'
 import { TestimonialsSection } from '@/components/sections/testimonials-section'
 import { TikTokSection } from '@/components/sections/tiktok-section'
 import { CTASection } from '@/components/sections/cta-section'
 import { CalendarSection } from '@/components/sections/calendar-section'
 import { GallerySection } from '@/components/sections/gallery-section'
+import { ServiceAreasSection } from '@/components/sections/service-areas-section'
 import { HomepageSEO } from '@/components/seo/homepage-seo'
 
 export const metadata: Metadata = {
@@ -50,15 +55,20 @@ export default function HomePage() {
     <>
       <div className="pt-16">
         <HeroSection />
+        <MarqueeTrustBar />
         <div className="section-spacing">
           <ServicesSection />
         </div>
+        <HowItWorksSection />
+        <BentoFeaturesSection />
         <div className="section-spacing">
           <ImageShowcase />
         </div>
+        <AnimatedStatsBand />
         <div className="section-spacing">
           <CalendarSection />
         </div>
+        <ServiceAreasSection />
         <div className="section-spacing">
           <TestimonialsSection />
         </div>
