@@ -33,45 +33,51 @@ export function TikTokFilters({
   return (
     <div
       className={cn(
-        'flex flex-wrap gap-2 rounded-2xl p-1.5',
-        isDark
-          ? 'bg-white/5 ring-1 ring-white/10 backdrop-blur-md'
-          : 'bg-gray-100/80 ring-1 ring-gray-200/80',
+        'overflow-x-auto scrollbar-hide',
         className
       )}
     >
-      {chips.map((chip) => {
-        const active = value === chip.id
-        return (
-          <button
-            key={chip.id}
-            type="button"
-            onClick={() => onChange(chip.id)}
-            className={cn(
-              'relative rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors',
-              active
-                ? 'text-white'
-                : isDark
-                  ? 'text-gray-400 hover:text-white'
-                  : 'text-gray-600 hover:text-gray-900'
-            )}
-          >
-            {active && (
-              <motion.span
-                layoutId="tiktok-filter-pill"
-                className={cn(
-                  'absolute inset-0 rounded-xl shadow-lg',
-                  isDark
-                    ? 'bg-gradient-to-r from-primary via-emerald-500 to-cyan-500'
-                    : 'bg-gradient-to-r from-primary to-green-600'
-                )}
-                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-              />
-            )}
-            <span className="relative z-10">{chip.label}</span>
-          </button>
-        )
-      })}
+      <div
+        className={cn(
+          'flex w-max min-w-full gap-2 rounded-2xl p-1.5 sm:flex-wrap sm:w-auto',
+          isDark
+            ? 'bg-white/5 ring-1 ring-white/10 backdrop-blur-md'
+            : 'bg-gray-100/80 ring-1 ring-gray-200/80'
+        )}
+      >
+        {chips.map((chip) => {
+          const active = value === chip.id
+          return (
+            <button
+              key={chip.id}
+              type="button"
+              onClick={() => onChange(chip.id)}
+              className={cn(
+                'relative shrink-0 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors',
+                active
+                  ? 'text-white'
+                  : isDark
+                    ? 'text-gray-400 hover:text-white'
+                    : 'text-gray-600 hover:text-gray-900'
+              )}
+            >
+              {active && (
+                <motion.span
+                  layoutId="tiktok-filter-pill"
+                  className={cn(
+                    'absolute inset-0 rounded-xl shadow-lg',
+                    isDark
+                      ? 'bg-gradient-to-r from-primary via-emerald-500 to-cyan-500'
+                      : 'bg-gradient-to-r from-primary to-green-600'
+                  )}
+                  transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10 whitespace-nowrap">{chip.label}</span>
+            </button>
+          )
+        })}
+      </div>
     </div>
   )
 }

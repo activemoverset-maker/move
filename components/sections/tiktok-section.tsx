@@ -1,5 +1,5 @@
-import { TikTokCinemaStrip } from '@/components/marketing/tiktok-cinema-strip'
+import { TikTokHomeSection } from '@/components/sections/tiktok-home-section'
 
 export function TikTokSection() {
-  return <TikTokCinemaStrip limit={6} />
+  return <TikTokHomeSection />
 }

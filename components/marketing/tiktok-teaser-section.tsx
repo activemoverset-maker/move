@@ -155,8 +155,10 @@ export function TikTokTeaserSection({
 
       <TikTokWatchModal
         video={activeVideo}
+        videos={videos}
         open={!!activeVideo}
         onClose={() => setActiveVideo(null)}
+        onVideoChange={setActiveVideo}
       />
     </section>
   )
