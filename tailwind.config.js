@@ -94,6 +94,23 @@ module.exports = {
           "0%": { backgroundPosition: "0% 50%" },
           "100%": { backgroundPosition: "200% 50%" },
         },
+        "maled-streak": {
+          "0%": { opacity: "0", transform: "translateX(-30%) scaleX(0.6)" },
+          "15%": { opacity: "0.9" },
+          "100%": { opacity: "0", transform: "translateX(180%) scaleX(1)" },
+        },
+        "maled-shimmer": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
+        "maled-float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "maled-marquee": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -105,6 +122,9 @@ module.exports = {
         "addis-glow-pulse": "addis-glow-pulse 3.5s ease-in-out infinite",
         "addis-ambient": "addis-ambient 14s ease-in-out infinite",
         "addis-shimmer-bg": "addis-shimmer-bg 10s linear infinite",
+        "maled-streak": "maled-streak 9s ease-in-out infinite",
+        "maled-shimmer": "maled-shimmer 10s linear infinite",
+        "maled-marquee": "maled-marquee 35s linear infinite",
       },
     },
   },

@@ -1,30 +1,36 @@
 import type { Metadata } from 'next'
 import { inter } from './fonts/fonts'
 import './globals.css'
-import { Toaster } from '@/components/ui/toaster'
-import { Suspense } from 'react'
-import { FloatingButtons } from '@/components/floating-buttons'
-import { Header } from '@/components/header'
-import { ConditionalFooter } from '@/components/conditional-footer'
-import { Analytics } from '@vercel/analytics/react'
-import { GoogleAnalytics } from '@/components/google-analytics'
-import { LanguageProvider } from '@/contexts/language-context'
-import { LoadingProvider } from '@/contexts/loading-context'
-import { GlobalLoadingScreen } from '@/components/global-loading-screen'
-import { GlobalSEO } from '@/components/seo/global-seo'
+import { SiteChrome } from '@/components/site-chrome'
 
 export const metadata: Metadata = {
   title: {
     default: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
-    template: '%s | Active Movers & Packers'
+    template: '%s | Active Movers & Packers',
   },
-  description: 'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
+  description:
+    'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
   keywords: [
-    'moving services', 'packing services', 'storage solutions', 'office relocation', 
-    'Addis Ababa', 'Ethiopia', 'professional movers', 'local moving', 'residential moving',
-    'commercial moving', 'furniture moving', 'safe moving', 'reliable movers', 
-    'moving company', 'packaging services', 'home relocation', 'office moving',
-    'Ethiopian moving services', 'Addis Ababa movers', 'moving and packing'
+    'moving services',
+    'packing services',
+    'storage solutions',
+    'office relocation',
+    'Addis Ababa',
+    'Ethiopia',
+    'professional movers',
+    'local moving',
+    'residential moving',
+    'commercial moving',
+    'furniture moving',
+    'safe moving',
+    'reliable movers',
+    'moving company',
+    'packaging services',
+    'home relocation',
+    'office moving',
+    'Ethiopian moving services',
+    'Addis Ababa movers',
+    'moving and packing',
   ],
   authors: [{ name: 'Active Movers & Packers' }],
   creator: 'Active Movers & Packers',
@@ -38,8 +44,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     languages: {
-      'en': '/',
-      'am': '/?lang=am',
+      en: '/',
+      am: '/?lang=am',
     },
   },
   manifest: '/manifest.json',
@@ -49,9 +55,7 @@ export const metadata: Metadata = {
       { url: '/images/logotr.png', sizes: '16x16', type: 'image/png' },
       { url: '/images/logotr.png', sizes: '32x32', type: 'image/png' },
     ],
-    apple: [
-      { url: '/images/logotr.png', sizes: '180x180', type: 'image/png' },
-    ],
+    apple: [{ url: '/images/logotr.png', sizes: '180x180', type: 'image/png' }],
     shortcut: '/images/logotr.png',
   },
   openGraph: {
@@ -59,7 +63,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
-    description: 'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
+    description:
+      'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
     siteName: 'Active Movers & Packers',
     images: [
       {
@@ -94,11 +99,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
@@ -109,28 +110,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
-        <LoadingProvider>
-          <Suspense fallback={null}>
-            <LanguageProvider>
-              <Suspense fallback={null}>
-                <GlobalLoadingScreen />
-              </Suspense>
-              <div className="min-h-screen flex flex-col">
-                <Header />
-                <main className="flex-1">
-                  {children}
-                </main>
-                <ConditionalFooter />
-              </div>
-              <FloatingButtons />
-              <Toaster />
-              <GoogleAnalytics />
-              <Analytics />
-              <GlobalSEO />
-            </LanguageProvider>
-          </Suspense>
-        </LoadingProvider>
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   )
-} 
+}

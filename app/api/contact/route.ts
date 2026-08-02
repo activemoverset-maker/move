@@ -5,15 +5,25 @@ import { prisma } from '@/lib/prisma'
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID
 
-async function sendToTelegram(data: any) {
+async function sendToTelegram(data: {
+  name: string
+  email: string
+  phone: string
+  subject: string
+  message: string
+  site?: string
+}) {
   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
     console.warn('Telegram bot token or chat ID not configured')
     return false
   }
 
+  const siteLabel = data.site === 'maledactive' ? 'Maled Active' : 'Active Movers'
+
   try {
     const message = `
 🆕 *New Contact Form Submission*
+🏢 *Site:* ${siteLabel}
 
 👤 *Name:* ${data.name}
 📧 *Email:* ${data.email}
@@ -52,7 +62,7 @@ ${data.message}
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, phone, subject, message } = body
+    const { name, email, phone, subject, message, site } = body
 
     // Validate required fields
     if (!name || !email || !phone || !subject || !message) {
@@ -81,6 +91,7 @@ export async function POST(request: NextRequest) {
       phone,
       subject,
       message,
+      site,
     })
 
     return NextResponse.json({
