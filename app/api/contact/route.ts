@@ -18,7 +18,7 @@ async function sendToTelegram(data: {
     return false
   }
 
-  const siteLabel = data.site === 'maledactive' ? 'Maled Active' : 'Active Movers'
+  const siteLabel = data.site === 'maledactive' ? 'Maledactive' : 'Active Movers'
 
   try {
     const message = `

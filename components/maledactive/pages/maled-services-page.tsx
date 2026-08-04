@@ -16,7 +16,7 @@ export function MaledServicesPage() {
               Complete moving solutions
             </h1>
             <p className="mt-4 text-slate-400">
-              Whether you&apos;re moving home or relocating your office, Maled Active provides end-to-end
+              Whether you&apos;re moving home or relocating your office, Maledactive provides end-to-end
               support with a professional crew and transparent pricing.
             </p>
           </MaledReveal>

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Maled Active Movers — your trusted moving partner in Addis Ababa, Ethiopia.',
+  description: 'Learn about Maledactive Movers — your trusted moving partner in Addis Ababa, Ethiopia.',
   alternates: { canonical: '/about' },
 }
 

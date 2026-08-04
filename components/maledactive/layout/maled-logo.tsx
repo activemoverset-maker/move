@@ -21,7 +21,7 @@ export function MaledLogo({
     <Link href={maledPath('/')} className={cn('group inline-flex items-center', className)}>
       <Image
         src={MALED_ASSETS.logo}
-        alt="Maled Active Movers"
+        alt="Maledactive Movers"
         width={180}
         height={48}
         priority={priority}

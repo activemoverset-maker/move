@@ -91,7 +91,7 @@ export const MALED_TESTIMONIALS = [
     name: 'Daniel T.',
     service: 'Local Moving',
     quote:
-      'Maled Active handled our apartment move flawlessly. Professional crew, on time, and nothing was damaged.',
+      'Maledactive handled our apartment move flawlessly. Professional crew, on time, and nothing was damaged.',
     rating: 5,
   },
   {

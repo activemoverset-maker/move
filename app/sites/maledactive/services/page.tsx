@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Local moving, packing, office relocation, and storage services from Maled Active Movers.',
+  description: 'Local moving, packing, office relocation, and storage services from Maledactive Movers.',
   alternates: { canonical: '/services' },
 }
 

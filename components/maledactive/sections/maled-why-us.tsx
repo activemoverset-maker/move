@@ -45,9 +45,9 @@ export function MaledWhyUs() {
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
           <MaledSectionHeader
             id="maled-why-heading"
-            eyebrow="Why Maled Active"
+            eyebrow="Why Maledactive"
             title="A moving company that shows up prepared"
-            description="We built Maled Active around what customers care about most: reliability, careful handling, and communication you can count on from the first call to the last box."
+            description="We built Maledactive around what customers care about most: reliability, careful handling, and communication you can count on from the first call to the last box."
           />
 
           <MaledStagger className="grid gap-4 sm:grid-cols-2">

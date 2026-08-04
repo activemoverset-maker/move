@@ -180,7 +180,7 @@ export function MaledHero() {
                 <motion.div style={{ scale: imageScale }} className="relative aspect-[5/4] sm:aspect-[4/3]">
                   <Image
                     src={MALED_ASSETS.hero}
-                    alt="Maled Active Movers truck"
+                    alt="Maledactive Movers truck"
                     fill
                     priority
                     className="object-cover object-center"

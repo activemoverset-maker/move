@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Maled Active Movers for a moving quote. Call 0912 111 714 or send us a message.',
+  description: 'Contact Maledactive Movers for a moving quote. Call 0912 111 714 or send us a message.',
   alternates: { canonical: '/contact' },
 }
 

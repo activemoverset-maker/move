@@ -1,9 +1,9 @@
 export const MALED_SITE = {
-  name: 'Maled Active Movers',
-  shortName: 'Maled Active',
+  name: 'Maledactive Movers',
+  shortName: 'Maledactive',
   tagline: 'Professional moving services you can trust',
   description:
-    'Maled Active Movers delivers reliable residential and commercial moving, packing, and relocation services across Addis Ababa and Ethiopia.',
+    'Maledactive Movers delivers reliable residential and commercial moving, packing, and relocation services across Addis Ababa and Ethiopia.',
   url: process.env.NEXT_PUBLIC_MALEDACTIVE_URL || 'https://www.maledactive.homes',
   contact: {
     phone: process.env.MALED_PHONE_NUMBER || '+251912111714',
@@ -29,7 +29,7 @@ export const MALED_ASSETS = {
 
 export const MALED_WHATSAPP_MESSAGES = {
   quote: encodeURIComponent(
-    'Hello — I would like a moving quote from Maled Active Movers.',
+    'Hello — I would like a moving quote from Maledactive Movers.',
   ),
   contact: encodeURIComponent(
     'Hello — I have a question about your moving services.',
