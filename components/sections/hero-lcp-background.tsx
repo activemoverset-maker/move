@@ -14,9 +14,10 @@ export function HeroLcpBackground() {
     sizes: '100vw',
   })
 
-  // getImageProps sets fetchpriority on the img but does not emit <link rel="preload">.
-  // Next's Image component is what calls ReactDOM.preload. Match that so the
-  // request starts in the head, in parallel with render-blocking CSS.
+  // getImageProps does not emit <link rel="preload">. Next's Image component is
+  // what calls ReactDOM.preload. Match that so the request starts in the head.
+  // decoding stays async: sync decode waits for a free main thread, which is
+  // after homepage hydration, so the already-downloaded image paints late.
   if (imgProps.src) {
     preload(imgProps.src, {
       as: 'image',
@@ -34,7 +35,7 @@ export function HeroLcpBackground() {
         alt=""
         className="object-cover"
         fetchPriority="high"
-        decoding="sync"
+        decoding="async"
       />
     </div>
   )

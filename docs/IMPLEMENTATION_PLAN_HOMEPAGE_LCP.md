@@ -259,3 +259,27 @@ Lighthouse confirmed the new node (`div.pointer-events-none > div.absolute > img
 The long task in `5964-….js` starts at **2.6 s** (149 ms). LCP is **2.9 s**. The image is already downloaded; hydration of the client homepage sections holds the paint. CSS splitting and gtag stay out of scope.
 
 Follow-up in code: `preload()` from `react-dom` in `HeroLcpBackground`, same `src` / `srcSet` / `sizes` as the `<img>`, `fetchPriority: 'high'`. Do not preload the raw PNG. Re-test mobile PageSpeed. If LCP is still above 2.5 s, stop. The remaining lever is less client hydration on `/`, which is a separate pass.
+
+### Result (29 Oct 2026 1:37 PM, after the head preload)
+
+Preload worked. LCP did not.
+
+| | 1:07 | 1:37 |
+|--|------|------|
+| Performance | 91 | **86** |
+| LCP | 2.9 s | **2.9 s** |
+| FCP | 1.5 s | 1.6 s |
+| TBT | 130 ms | **290 ms** |
+| Resource load delay | 780 ms | **250 ms** |
+| Download | 30 ms | 170 ms |
+| Element render delay | 1,570 ms | **2,000 ms** |
+
+Load delay fell because the request starts with the HTML. Render delay grew by about the same amount, so the paint stayed at 2.9 s. The image is ready around 0.4 s. Text paints at 1.6 s. The image is counted at 2.9 s, after a 214 ms task in `5964-….js` at 2.74 s. `decoding="sync"` cannot present the image until that main thread is free. The score drop is the noisier TBT on this run.
+
+### Pass 4 — let the image paint during hydration
+
+1. `decoding="async"` on the LCP `<img>` so decode does not wait for the hydration task.
+2. Remove Framer Motion from `hero-section.tsx` (scroll springs and mesh `motion.div`s). The hero no longer measures layout on hydrate. Truck and scroll FX stay behind `showFx`.
+3. Code-split below-fold client sections from `app/(main)/page.tsx` with `next/dynamic` (marquee, services, how-it-works, bento, service areas, deferred blocks). They still server-render. Their JS is not in the hero hydration chunk.
+
+Re-test mobile PageSpeed. Target LCP **≤ 2.5 s**. If it is still 2.9 s, record the four subparts and stop. Do not split CSS or defer gtag from that result.

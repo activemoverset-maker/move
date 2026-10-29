@@ -1,10 +1,9 @@
 "use client"
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -40,21 +39,8 @@ const HERO_IMAGES = [
 
 export function HeroSection() {
   const { t, language } = useLanguage()
-  const containerRef = useRef<HTMLDivElement>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [showFx, setShowFx] = useState(false)
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  })
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100])
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -50])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3])
-
-  const springBackgroundY = useSpring(backgroundY, { stiffness: 100, damping: 30 })
-  const springTextY = useSpring(textY, { stiffness: 50, damping: 20 })
 
   useEffect(() => {
     let cancelled = false
@@ -111,30 +97,16 @@ export function HeroSection() {
   ]
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {showFx && (
         <div className="pointer-events-none absolute inset-0 z-[5] overflow-hidden">
-          <motion.div
-            animate={{ x: [0, 40, 0], y: [0, -30, 0] }}
-            transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-            className="animate-mesh-drift absolute -left-20 top-1/4 h-96 w-96 rounded-full bg-primary/25 blur-[100px]"
-          />
-          <motion.div
-            animate={{ x: [0, -50, 0], y: [0, 40, 0] }}
-            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-            className="absolute -right-16 bottom-1/4 h-80 w-80 rounded-full bg-green-400/20 blur-[90px]"
-          />
+          <div className="animate-mesh-drift absolute -left-20 top-1/4 h-96 w-96 rounded-full bg-primary/25 blur-[100px]" />
+          <div className="absolute -right-16 bottom-1/4 h-80 w-80 rounded-full bg-green-400/20 blur-[90px]" />
         </div>
       )}
 
       <div className="absolute inset-0 z-0">
-        <motion.div
-          className="absolute inset-0"
-          style={{ y: springBackgroundY }}
-        >
+        <div className="absolute inset-0">
           {currentImageIndex > 0 ? (
             <div className="absolute inset-0 opacity-60">
               <Image
@@ -149,7 +121,7 @@ export function HeroSection() {
           ) : null}
           <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-primary/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-        </motion.div>
+        </div>
       </div>
 
       {showFx && (
@@ -165,10 +137,7 @@ export function HeroSection() {
 
       <div className="absolute inset-0 z-18 bg-black/50 pointer-events-none" />
 
-      <motion.div
-        className="relative z-20 container-max text-center text-white px-4"
-        style={{ y: springTextY, opacity }}
-      >
+      <div className="relative z-20 container-max text-center text-white px-4">
         <Badge variant="secondary" className="mb-6 text-sm px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm">
           {t('hero.badge')}
         </Badge>
@@ -239,7 +208,7 @@ export function HeroSection() {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
         <div className="flex flex-col items-center text-white/70">

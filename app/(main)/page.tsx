@@ -1,15 +1,32 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import { HeroSection } from '@/components/sections/hero-section'
 import { HeroLcpBackground } from '@/components/sections/hero-lcp-background'
-import { MarqueeTrustBar } from '@/components/sections/marquee-trust-bar'
-import { ServicesSection } from '@/components/sections/services-section'
-import { HowItWorksSection } from '@/components/sections/how-it-works-section'
-import { BentoFeaturesSection } from '@/components/sections/bento-features-section'
-import { ServiceAreasSection } from '@/components/sections/service-areas-section'
 import { MovingGuidesSection } from '@/components/sections/moving-guides-section'
 import { HomePricingSection } from '@/components/sections/home-pricing-section'
-import { DeferredHomeMiddle, DeferredHomeBottom } from '@/components/sections/deferred-home-sections'
 import { HomepageSEO } from '@/components/seo/homepage-seo'
+
+const MarqueeTrustBar = dynamic(() =>
+  import('@/components/sections/marquee-trust-bar').then((m) => m.MarqueeTrustBar)
+)
+const ServicesSection = dynamic(() =>
+  import('@/components/sections/services-section').then((m) => m.ServicesSection)
+)
+const HowItWorksSection = dynamic(() =>
+  import('@/components/sections/how-it-works-section').then((m) => m.HowItWorksSection)
+)
+const BentoFeaturesSection = dynamic(() =>
+  import('@/components/sections/bento-features-section').then((m) => m.BentoFeaturesSection)
+)
+const ServiceAreasSection = dynamic(() =>
+  import('@/components/sections/service-areas-section').then((m) => m.ServiceAreasSection)
+)
+const DeferredHomeMiddle = dynamic(() =>
+  import('@/components/sections/deferred-home-sections').then((m) => m.DeferredHomeMiddle)
+)
+const DeferredHomeBottom = dynamic(() =>
+  import('@/components/sections/deferred-home-sections').then((m) => m.DeferredHomeBottom)
+)
 
 export const revalidate = 3600
 
