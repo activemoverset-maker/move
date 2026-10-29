@@ -130,26 +130,28 @@ export function HeroSection({ lcpBackground }: { lcpBackground?: React.ReactNode
         </div>
       )}
 
-      <motion.div
-        className="absolute inset-0 z-0"
-        style={{ y: springBackgroundY }}
-      >
-        <div className="absolute inset-0 opacity-60">
-          {lcpBackground}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 opacity-60">{lcpBackground}</div>
+        <motion.div
+          className="absolute inset-0"
+          style={{ y: springBackgroundY }}
+        >
           {currentImageIndex > 0 ? (
-            <Image
-              src={HERO_IMAGES[currentImageIndex]}
-              alt=""
-              fill
-              quality={70}
-              sizes="100vw"
-              className="object-cover"
-            />
+            <div className="absolute inset-0 opacity-60">
+              <Image
+                src={HERO_IMAGES[currentImageIndex]}
+                alt=""
+                fill
+                quality={70}
+                sizes="100vw"
+                className="object-cover"
+              />
+            </div>
           ) : null}
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-primary/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-      </motion.div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-primary/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        </motion.div>
+      </div>
 
       {showFx && (
         <>
