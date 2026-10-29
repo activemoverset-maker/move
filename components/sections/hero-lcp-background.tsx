@@ -1,17 +1,28 @@
-import Image from 'next/image'
+import { getImageProps } from 'next/image'
 
-/** Static LCP hero background — server-rendered so Next emits preload + fetchpriority. */
+const HERO_LCP_SRC = '/images/qua1.png'
+
+/** Server-only LCP layer — not passed into the client HeroSection. */
 export function HeroLcpBackground() {
+  const { props: imgProps } = getImageProps({
+    alt: '',
+    src: HERO_LCP_SRC,
+    fill: true,
+    priority: true,
+    quality: 70,
+    sizes: '100vw',
+  })
+
   return (
-    <Image
-      src="/images/qua1.png"
-      alt=""
-      fill
-      priority
-      fetchPriority="high"
-      quality={70}
-      sizes="100vw"
-      className="object-cover"
-    />
+    <div className="absolute inset-0">
+      {/* eslint-disable-next-line @next/next/no-img-element -- intentional LCP path via getImageProps */}
+      <img
+        {...imgProps}
+        alt=""
+        className="object-cover"
+        fetchPriority="high"
+        decoding="sync"
+      />
+    </div>
   )
 }

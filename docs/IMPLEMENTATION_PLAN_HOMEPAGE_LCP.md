@@ -97,7 +97,8 @@ That class is `components/animations/advanced-truck-3d.tsx` (truck decal). Heade
 | 2 | Rebuild, deploy, re-run mobile PageSpeed | Code | **Done** — commit `907d3e0`. Lab 12:20: Performance **89**, LCP **2.9 s**, FCP 1.6 s, TBT 210 ms, CLS 0, SI 4.5 s. Image has `fetchpriority="high"`. `logo.jpg` did not return. |
 | 3 | Truck logo only if step 2 still lists `logo.jpg` | Code | **Done** — `advanced-truck-3d.tsx` uses `next/image` + `/images/logotr.png` |
 | 4 | Menu/pin names, price contrast, “Learn More” text | Later UI pass | Open — still the a11y 87 / SEO 92 findings on the 12:20 run |
-| 5 | Pull LCP image out of the motion wrapper (§6) | Code | **Done** — static `lcpBackground` layer outside `springBackgroundY` |
+| 5 | Pull LCP image out of the motion wrapper (§6) | Code | **Done in code, metric unchanged** — commit `bfe2b48`. Lab 12:43: LCP still **2.9 s**, element render delay **1,560 ms**. See §6 result. |
+| 6 | Server-sibling LCP image + matching preload (§7) | Code | **Done** — sibling wrapper in `page.tsx`, `getImageProps` + `decoding="sync"` in `hero-lcp-background.tsx` |
 
 ---
 
@@ -170,3 +171,69 @@ After the static move, view source of `/`. If there is still no `<link rel="prel
 - Slideshow still waits ~8 s, then advances. H1, CTAs, and the dimmed hero look unchanged.
 - `npm run build` succeeds.
 - Mobile PageSpeed on the production URL: LCP **≤ 2.5 s**. Element render delay should fall from ~1.4 s to a few hundred milliseconds. If LCP is still above 2.5 s and render delay is already low, do the preload check above and stop. Do not open a CSS-split project for the leftover.
+
+### Result (29 Oct 2026 12:43, after `bfe2b48`)
+
+The structure change landed. The metric did not.
+
+| | 12:20 | 12:43 |
+|--|-------|-------|
+| Performance | 89 | **91** |
+| LCP | 2.9 s | **2.9 s** |
+| FCP | 1.6 s | 1.5 s |
+| TBT | 210 ms | **120 ms** |
+| CLS | 0 | 0 |
+| Speed Index | 4.5 s | 4.5 s |
+| Resource load delay | 700 ms | 690 ms |
+| Download | 160 ms | **30 ms** |
+| Element render delay | 1,440 ms | **1,560 ms** |
+
+The score rise is TBT, not LCP. The LCP node is still `section.relative > div.absolute > div.absolute > img.object-cover` for `/_next/image?url=%2Fimages%2Fqua1.png&w=750&q=70`, with `fetchpriority="high"` and `decoding="async"`. Field CWV is still **No Data**.
+
+`HeroLcpBackground` is a Server Component, but it is passed as `lcpBackground` into `HeroSection`, and `hero-section.tsx` starts with `"use client"`. The image is therefore composed inside the client hero tree. Taking it off `springBackgroundY` did not change when Chrome counts the paint. The ~690 ms load delay is unchanged because the image is still absent from the critical-request chain (document + two CSS files, max **550 ms**). Pass 3 treats both of those as the remaining work. The “preload only if render delay drops” rule in this section is retired; both stay high, so preload ships with the server sibling.
+
+---
+
+## 7. Pass 3 — LCP image is a server sibling, and its URL is preloaded
+
+**Source:** Mobile Lighthouse 13.5.0, Slow 4G, Moto G Power, 29 Oct 2026 12:43 GMT+3, `https://activemoverset.com/`, after `bfe2b48`.
+
+### Change
+
+**Files:** `app/(main)/page.tsx`, `components/sections/hero-lcp-background.tsx`, `components/sections/hero-section.tsx`
+
+1. Stop passing the image into the client hero. `HeroSection` is `"use client"` for the whole module, so a server `children` slot is still painted as part of that client tree. Render the LCP layer as a **sibling** that the server owns:
+
+```tsx
+<div className="relative">
+  <div className="pointer-events-none absolute inset-0 z-0 opacity-60" aria-hidden>
+    <HeroLcpBackground />
+  </div>
+  <HeroSection />
+</div>
+```
+
+The wrapper’s height comes from `HeroSection` (`min-h-screen` in normal flow). The absolute layer covers that box only. Do not wrap the rest of the homepage.
+
+2. Remove the `lcpBackground` prop and the `{lcpBackground}` node from `hero-section.tsx`. Leave gradients, the `z-18` veil, text parallax, `showFx`, and slides 1–4. Slides still mount only when `currentImageIndex > 0`, still without `priority`, and still sit above the static image so the slideshow covers `qua1` after ~8 s. Do not render a second copy of `qua1` inside the client hero.
+
+3. In `HeroLcpBackground`, build the img with `getImageProps` from `next/image` (same `src`, `fill`, `quality={70}`, `sizes="100vw"`, `priority`) and set `fetchPriority="high"` and `decoding="sync"` on that element. `priority` on a Server Component is what lets Next emit `<link rel="preload" as="image">`. The preload `href` must be the same `/_next/image?url=/images/qua1.png&w=750&q=70` URL as the img `src`. Do not also preload `/images/qua1.png`.
+
+4. Keep `opacity-60` on the server layer so the hero stays dimmed. Do not remove the black veil or the gradients in this pass. Do not compress `qua1.png`. Download is already 30 ms.
+
+### Do not chase
+
+| Finding (12:43) | Why skip |
+|-----------------|----------|
+| Render-blocking CSS, est. savings 140 ms | Discovery is handled by the preload. Splitting Tailwind is a different project. |
+| Unused CSS ~22 KiB, legacy polyfills ~12 KiB | Same as §3. |
+| gtag ~178 KiB, tasks at ~4.4 s | After LCP. TBT is already 120 ms. |
+| 35 non-composited animations | Deferred `showFx`. CLS is 0. |
+| Accessibility 87, SEO 92, Agentic browsing 1/2 | Menu button, map pins, icon `/contact` link, `text-primary` contrast, six “Learn More” links. UI pass. |
+
+### Done when
+
+- View source of `/` shows the `qua1` img **and** a preload for the same `/_next/image` URL, with `fetchpriority="high"`, and that img is not produced by `hero-section.tsx`.
+- Slideshow still waits ~8 s. Hero copy and dimming look the same. One hero image on first paint, not two.
+- `npm run build` succeeds.
+- Mobile PageSpeed on production: LCP **≤ 2.5 s**. Expect load delay and render delay both to fall. If LCP is still above 2.5 s, record the four LCP subparts in this section and stop. Do not open a CSS-split or gtag project off this result. Field CWV stays empty until Chrome has traffic; [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) still owns GBP and the day-28 review.

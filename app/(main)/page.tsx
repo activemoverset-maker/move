@@ -53,7 +53,15 @@ export default function HomePage() {
   return (
     <>
       <div className="pt-16">
-        <HeroSection lcpBackground={<HeroLcpBackground />} />
+        <div className="relative">
+          <div
+            className="pointer-events-none absolute inset-0 z-0 opacity-60"
+            aria-hidden
+          >
+            <HeroLcpBackground />
+          </div>
+          <HeroSection />
+        </div>
         <MarqueeTrustBar />
         <div className="section-spacing">
           <ServicesSection />

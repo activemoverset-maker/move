@@ -38,7 +38,7 @@ const HERO_IMAGES = [
   '/images/qua5.png',
 ]
 
-export function HeroSection({ lcpBackground }: { lcpBackground?: React.ReactNode }) {
+export function HeroSection() {
   const { t, language } = useLanguage()
   const containerRef = useRef<HTMLDivElement>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -131,7 +131,6 @@ export function HeroSection({ lcpBackground }: { lcpBackground?: React.ReactNode
       )}
 
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 opacity-60">{lcpBackground}</div>
         <motion.div
           className="absolute inset-0"
           style={{ y: springBackgroundY }}
