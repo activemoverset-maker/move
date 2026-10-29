@@ -1,0 +1,106 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Active Movers & Packers",
+    "identifier": "did:web:www.activemoverset.com",
+    "documentationUrl": "https://www.activemoverset.com/llms.txt",
+    "logoUrl": "https://www.activemoverset.com/images/logotr.png"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:www.activemoverset.com:service:booking",
+      "displayName": "Book a move",
+      "type": "text/html",
+      "url": "https://www.activemoverset.com/booking",
+      "description": "Online booking and quote request for residential and office moves in Addis Ababa.",
+      "tags": ["moving", "booking", "quote", "addis-ababa", "ethiopia"],
+      "capabilities": ["BookingRequest", "QuoteRequest"],
+      "representativeQueries": [
+        "book movers in Addis Ababa",
+        "schedule a house move online",
+        "get a moving quote Active Movers"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:www.activemoverset.com:service:local-moving",
+      "displayName": "Local moving",
+      "type": "text/html",
+      "url": "https://www.activemoverset.com/services/local-moving",
+      "description": "Residential local moving in Addis Ababa for apartments, condos, and villas.",
+      "tags": ["residential", "local-moving", "house-moving"],
+      "capabilities": ["ResidentialMoving", "LocalMoving"],
+      "representativeQueries": [
+        "local movers Addis Ababa",
+        "apartment moving service Bole CMC",
+        "house relocation in Ethiopia"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:www.activemoverset.com:service:office-relocation",
+      "displayName": "Office relocation",
+      "type": "text/html",
+      "url": "https://www.activemoverset.com/services/office-relocation",
+      "description": "Office and commercial relocation services in Addis Ababa.",
+      "tags": ["office-moving", "commercial", "relocation"],
+      "capabilities": ["OfficeRelocation", "CommercialMoving"],
+      "representativeQueries": [
+        "office relocation Addis Ababa",
+        "commercial movers Kazanchis",
+        "business move Ethiopia"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:www.activemoverset.com:service:packaging",
+      "displayName": "Packaging services",
+      "type": "text/html",
+      "url": "https://www.activemoverset.com/services/packaging",
+      "description": "Professional packing, wrapping, and materials for home and office moves.",
+      "tags": ["packing", "packaging", "materials"],
+      "capabilities": ["PackingServices", "FragileHandling"],
+      "representativeQueries": [
+        "packing services Addis Ababa",
+        "movers with packing supplies",
+        "wrap furniture for move"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:www.activemoverset.com:service:storage",
+      "displayName": "Storage solutions",
+      "type": "text/html",
+      "url": "https://www.activemoverset.com/services/storage",
+      "description": "Storage options for households and businesses in Addis Ababa.",
+      "tags": ["storage", "warehouse", "moving"],
+      "capabilities": ["StorageServices"],
+      "representativeQueries": [
+        "moving storage Addis Ababa",
+        "store furniture during relocation",
+        "short term storage Ethiopia"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    },
+    {
+      "identifier": "urn:air:www.activemoverset.com:docs:llms-txt",
+      "displayName": "AI agent guidance (llms.txt)",
+      "type": "text/markdown",
+      "url": "https://www.activemoverset.com/llms.txt",
+      "description": "Machine-readable site index and business reference for AI agents crawling Active Movers & Packers.",
+      "tags": ["llms-txt", "ai-agent", "documentation"],
+      "capabilities": ["AgentNavigation", "SiteIndex"],
+      "representativeQueries": [
+        "Active Movers site map for LLMs",
+        "moving company Addis Ababa agent guide"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-10-29T00:00:00Z"
+    }
+  ]
+}

@@ -103,6 +103,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="describedby" href="https://www.activemoverset.com/llms.txt" />
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         {children}
       </body>

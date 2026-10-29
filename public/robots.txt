@@ -29,8 +29,10 @@ Allow: /sitemap-images.xml
 Allow: /sitemap-news.xml
 Allow: /robots.txt
 Allow: /humans.txt
+Allow: /llms.txt
+Allow: /ai-catalog.json
 
-# Block sensitive files
+# LLM guidance: https://www.activemoverset.com/llms.txt
 Disallow: /.env
 Disallow: /.git
 Disallow: /package.json

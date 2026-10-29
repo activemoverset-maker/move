@@ -111,6 +111,12 @@ export function ServiceAreasSection() {
                 onClick={() => setActive(active === area.id ? null : area.id)}
                 className="absolute z-20 -translate-x-1/2 -translate-y-1/2"
                 style={{ left: area.x, top: area.y }}
+                aria-label={
+                  isAm
+                    ? `${area.am} — አካባቢ በካርታ ላይ`
+                    : `Show ${area.en} on the map`
+                }
+                aria-pressed={active === area.id}
               >
                 <motion.span
                   animate={
