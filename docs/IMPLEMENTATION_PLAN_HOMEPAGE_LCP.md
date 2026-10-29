@@ -98,7 +98,7 @@ That class is `components/animations/advanced-truck-3d.tsx` (truck decal). Heade
 | 3 | Truck logo only if step 2 still lists `logo.jpg` | Code | **Done** — `advanced-truck-3d.tsx` uses `next/image` + `/images/logotr.png` |
 | 4 | Menu/pin names, price contrast, “Learn More” text | Later UI pass | Open — still the a11y 87 / SEO 92 findings on the 12:20 run |
 | 5 | Pull LCP image out of the motion wrapper (§6) | Code | **Done in code, metric unchanged** — commit `bfe2b48`. Lab 12:43: LCP still **2.9 s**, element render delay **1,560 ms**. See §6 result. |
-| 6 | Server-sibling LCP image + matching preload (§7) | Code | **Done** — sibling wrapper in `page.tsx`, `getImageProps` + `decoding="sync"` in `hero-lcp-background.tsx` |
+| 6 | Server-sibling LCP image + matching preload (§7) | Code | **Sibling landed, preload missing on 1:07 lab** — `getImageProps` does not call `ReactDOM.preload`. Head preload added in `hero-lcp-background.tsx`. |
 
 ---
 
@@ -237,3 +237,25 @@ The wrapper’s height comes from `HeroSection` (`min-h-screen` in normal flow).
 - Slideshow still waits ~8 s. Hero copy and dimming look the same. One hero image on first paint, not two.
 - `npm run build` succeeds.
 - Mobile PageSpeed on production: LCP **≤ 2.5 s**. Expect load delay and render delay both to fall. If LCP is still above 2.5 s, record the four LCP subparts in this section and stop. Do not open a CSS-split or gtag project off this result. Field CWV stays empty until Chrome has traffic; [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) still owns GBP and the day-28 review.
+
+### Result (29 Oct 2026 1:07 PM, after `222a285`)
+
+The sibling is live. LCP did not move.
+
+| | 12:43 | 1:07 |
+|--|-------|------|
+| Performance | 91 | **91** |
+| LCP | 2.9 s | **2.9 s** |
+| FCP | 1.5 s | 1.5 s |
+| TBT | 120 ms | 130 ms |
+| CLS | 0 | 0 |
+| Speed Index | 4.5 s | 4.6 s |
+| Resource load delay | 690 ms | **780 ms** |
+| Download | 30 ms | 30 ms |
+| Element render delay | 1,560 ms | **1,570 ms** |
+
+Lighthouse confirmed the new node (`div.pointer-events-none > div.absolute > img`), `fetchpriority="high"`, `decoding="sync"`, and “discoverable in initial document.” The critical-request chain was still only the document and two CSS files (max **536 ms**). `getImageProps` does not call `ReactDOM.preload`; only `next/image`'s `Image` component does. The body `<img>` is discoverable, but the parser does not reach it until render-blocking CSS finishes, which matches the **780 ms** load delay.
+
+The long task in `5964-….js` starts at **2.6 s** (149 ms). LCP is **2.9 s**. The image is already downloaded; hydration of the client homepage sections holds the paint. CSS splitting and gtag stay out of scope.
+
+Follow-up in code: `preload()` from `react-dom` in `HeroLcpBackground`, same `src` / `srcSet` / `sizes` as the `<img>`, `fetchPriority: 'high'`. Do not preload the raw PNG. Re-test mobile PageSpeed. If LCP is still above 2.5 s, stop. The remaining lever is less client hydration on `/`, which is a separate pass.
