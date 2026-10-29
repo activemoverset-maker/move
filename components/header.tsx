@@ -17,7 +17,7 @@ export function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
   const isPremiumLanding = pathname?.startsWith('/addis-active-movers')
 
   useEffect(() => {
@@ -135,6 +135,17 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
+            aria-label={
+              language === 'am'
+                ? isOpen
+                  ? 'ምናሌ ዝጋ'
+                  : 'ምናሌ ክፈት'
+                : isOpen
+                  ? 'Close menu'
+                  : 'Open menu'
+            }
+            aria-expanded={isOpen}
             onClick={() => {
               setIsOpen(!isOpen)
               trackEvent({ 

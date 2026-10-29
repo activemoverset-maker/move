@@ -350,7 +350,11 @@ export function ServicesSection() {
                         onClick={() => handleServiceClick(service.title)}
                       >
                         <Link href={`/services/${service.id}`} className="flex items-center justify-center gap-3 py-3">
-                          <span className="font-semibold">{t('services.learnMore')}</span>
+                          <span className="font-semibold">
+                            {language === 'am'
+                              ? service.titleAm
+                              : `Learn about ${service.title}`}
+                          </span>
                           <div className="flex items-center gap-1">
                             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                             <div className="w-2 h-2 bg-white rounded-full group-hover/btn:scale-150 transition-transform duration-300" />

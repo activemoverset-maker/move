@@ -262,7 +262,7 @@ export const translations: Record<Language, Translations> = {
       bottomCTA: {
         title: 'Ready to Start Your Move?',
         subtitle: 'Get a free quote and let us handle your relocation with care and professionalism.',
-        learnMore: 'Learn More',
+        learnMore: 'View all services',
         bookNow: 'Book Now',
         contactUs: 'Contact Us',
       },
@@ -460,7 +460,7 @@ export const translations: Record<Language, Translations> = {
       bottomCTA: {
         title: 'መጓጓዣዎን ለመጀመር ዝግጁ ነዎት?',
         subtitle: 'ነፃ ዋጋ ያግኙ እና መጓጓዣዎን በጥንቃቄ እና በሙያ እንደምንሰጥ።',
-        learnMore: 'ተጨማሪ ይወቁ',
+        learnMore: 'ሁሉንም አገልግሎቶች ይመልከቱ',
         bookNow: 'አሁን ያስያዙ',
         contactUs: 'አስተያየቶች እንደምንሰጥ',
       },

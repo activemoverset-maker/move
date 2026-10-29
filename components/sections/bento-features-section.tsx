@@ -128,7 +128,7 @@ export function BentoFeaturesSection() {
               href="/services/packaging"
               className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary"
             >
-              {isAm ? 'ተጨማሪ' : 'Learn more'}
+              {isAm ? 'የመጠን አገልግሎቶች' : 'Learn about packaging'}
               <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </motion.div>
@@ -210,8 +210,10 @@ export function BentoFeaturesSection() {
               <Link
                 href="/contact"
                 className="shrink-0 rounded-full border border-primary/20 bg-primary/5 p-3 text-primary transition hover:bg-primary hover:text-white"
+                aria-label={isAm ? 'አግኙን' : 'Contact us'}
               >
-                <ArrowUpRight className="h-5 w-5" />
+                <span className="sr-only">{isAm ? 'አግኙን' : 'Contact us'}</span>
+                <ArrowUpRight className="h-5 w-5" aria-hidden />
               </Link>
             </div>
             <div className="pointer-events-none absolute -bottom-8 -right-8 h-32 w-32 rounded-full bg-primary/5" />
