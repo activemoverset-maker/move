@@ -17,7 +17,7 @@
     "residential move"
   ],
   "tagsAm": [],
-  "readTime": 32,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua25.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua26.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-11T08:45:00.000Z",
-  "slug": "summit-area-movers-best-practices-relocation"
+  "slug": "summit-area-movers-best-practices-relocation",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.734Z",
+  "enrichedAt": "2026-10-29T07:23:44.366Z",
+  "quality": "enriched"
 }

@@ -17,7 +17,7 @@
     "relocation guide"
   ],
   "tagsAm": [],
-  "readTime": 55,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua40.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua41.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-08-10T08:30:00.000Z",
-  "slug": "ultimate-guide-settling-diplomatic-hub-old-airport"
+  "slug": "ultimate-guide-settling-diplomatic-hub-old-airport",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.873Z",
+  "enrichedAt": "2026-10-29T07:23:44.465Z",
+  "quality": "enriched"
 }

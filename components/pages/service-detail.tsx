@@ -31,6 +31,7 @@ import { trackEvent } from '@/lib/analytics'
 import { generateCallLink, generateWhatsAppLink } from '@/lib/utils'
 import { TikTokTeaserSection } from '@/components/marketing/tiktok-teaser-section'
 import { getServicePlacement } from '@/lib/tiktok/placements'
+import { MovingPriceTable } from '@/components/pricing/moving-price-table'
 
 interface ServiceDetailProps {
   serviceId: string
@@ -206,6 +207,15 @@ export function ServiceDetail({ serviceId }: ServiceDetailProps) {
                       </div>
                     </div>
                   </div>
+
+                  {(serviceId === 'local-moving' || serviceId === 'office-relocation') && (
+                    <div className="mb-8">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                        {language === 'am' ? 'የመጀመሪያ ዋጋ ገሠገሽ' : 'Starting prices (2026)'}
+                      </h3>
+                      <MovingPriceTable showOfficeRow={serviceId === 'office-relocation' || serviceId === 'local-moving'} />
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </div>

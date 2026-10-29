@@ -17,7 +17,7 @@
     "tower"
   ],
   "tagsAm": [],
-  "readTime": 52,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua10.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua11.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-09-02T09:00:00.000Z",
-  "slug": "moving-business-nani-building-why-need-commercial-movers"
+  "slug": "moving-business-nani-building-why-need-commercial-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.263Z",
+  "enrichedAt": "2026-10-29T07:23:41.757Z",
+  "quality": "enriched"
 }

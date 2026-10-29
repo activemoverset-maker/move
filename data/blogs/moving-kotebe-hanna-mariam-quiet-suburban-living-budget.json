@@ -18,7 +18,7 @@
     "relocation"
   ],
   "tagsAm": [],
-  "readTime": 46,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua169.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua170.jpeg",
@@ -26,5 +26,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-23T09:00:00.000Z",
-  "slug": "moving-kotebe-hanna-mariam-quiet-suburban-living-budget"
+  "slug": "moving-kotebe-hanna-mariam-quiet-suburban-living-budget",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.342Z",
+  "enrichedAt": "2026-10-29T07:23:42.144Z",
+  "quality": "enriched"
 }

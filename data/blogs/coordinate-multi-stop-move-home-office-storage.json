@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["multi-stop move", "storage", "office move", "coordination", "inventory", "Addis Ababa"],
+  "tags": [
+    "multi-stop move",
+    "storage",
+    "office move",
+    "coordination",
+    "inventory",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 57,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua274.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua275.jpeg", "https://www.activemoverset.com/images/gallary/qua276.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua275.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua276.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-28T09:00:00.000Z",
-  "slug": "coordinate-multi-stop-move-home-office-storage"
+  "slug": "coordinate-multi-stop-move-home-office-storage",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.859Z",
+  "enrichedAt": "2026-10-29T07:23:40.836Z",
+  "quality": "enriched"
 }

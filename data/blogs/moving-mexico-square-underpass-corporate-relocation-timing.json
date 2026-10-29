@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Mexico Square", "underpass", "corporate move", "office relocation", "traffic timing", "Addis Ababa"],
+  "tags": [
+    "Mexico Square",
+    "underpass",
+    "corporate move",
+    "office relocation",
+    "traffic timing",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua280.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua281.jpeg", "https://www.activemoverset.com/images/gallary/qua282.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua281.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua282.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-30T09:00:00.000Z",
-  "slug": "moving-mexico-square-underpass-corporate-relocation-timing"
+  "slug": "moving-mexico-square-underpass-corporate-relocation-timing",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.364Z",
+  "enrichedAt": "2026-10-29T07:23:42.205Z",
+  "quality": "enriched"
 }

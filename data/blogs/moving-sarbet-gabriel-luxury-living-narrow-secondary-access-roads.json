@@ -17,7 +17,7 @@
     "high-end move"
   ],
   "tagsAm": [],
-  "readTime": 48,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua172.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua173.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-24T09:00:00.000Z",
-  "slug": "moving-sarbet-gabriel-luxury-living-narrow-secondary-access-roads"
+  "slug": "moving-sarbet-gabriel-luxury-living-narrow-secondary-access-roads",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.419Z",
+  "enrichedAt": "2026-10-29T07:23:42.468Z",
+  "quality": "enriched"
 }

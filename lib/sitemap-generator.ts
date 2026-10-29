@@ -1,6 +1,7 @@
 import { generateSlug } from '@/lib/utils'
 import { prisma } from '@/lib/prisma'
-import { getAllBlogPosts } from '@/lib/blog-data'
+import { getIndexableBlogPosts } from '@/lib/blog-data'
+import { getIndexableGuides } from '@/lib/guide-data'
 
 export interface SitemapUrl {
   loc: string
@@ -43,8 +44,9 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
     select: { slug: true, updatedAt: true, publishedAt: true }
   })
 
-  // Get blog posts from JSON files
-  const jsonBlogPosts = getAllBlogPosts()
+  // Get blog posts from JSON files (indexable only)
+  const jsonBlogPosts = getIndexableBlogPosts()
+  const seenBlogSlugs = new Set<string>()
 
   const sitemap: SitemapUrl[] = [
     {
@@ -72,6 +74,12 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
       priority: 0.9
     },
     {
+      loc: `${baseUrl}/guides`,
+      lastmod: new Date().toISOString(),
+      changefreq: 'weekly',
+      priority: 0.9
+    },
+    {
       loc: `${baseUrl}/contact`,
       lastmod: new Date().toISOString(),
       changefreq: 'monthly',
@@ -91,8 +99,10 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
     }
   ]
 
-  // Add database blog posts
+  // Add database blog posts (skip if same slug exists in JSON)
   dbBlogPosts.forEach(post => {
+    if (seenBlogSlugs.has(post.slug)) return
+    seenBlogSlugs.add(post.slug)
     sitemap.push({
       loc: `${baseUrl}/blog/${post.slug}`,
       lastmod: post.updatedAt.toISOString(),
@@ -103,11 +113,23 @@ export async function generateSitemap(): Promise<SitemapUrl[]> {
 
   // Add JSON blog posts
   jsonBlogPosts.forEach(post => {
+    if (seenBlogSlugs.has(post.slug)) return
+    seenBlogSlugs.add(post.slug)
     sitemap.push({
       loc: `${baseUrl}/blog/${post.slug}`,
       lastmod: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
       changefreq: 'monthly',
       priority: 0.7
+    })
+  })
+
+  const jsonGuides = getIndexableGuides()
+  jsonGuides.forEach(post => {
+    sitemap.push({
+      loc: `${baseUrl}/guides/${post.slug}`,
+      lastmod: post.updatedAt?.toISOString() || post.publishedAt.toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8
     })
   })
 
@@ -124,7 +146,7 @@ export async function generateNewsSitemap(): Promise<NewsSitemapUrl[]> {
   })
 
   // Get blog posts from JSON files
-  const jsonBlogPosts = getAllBlogPosts()
+  const jsonBlogPosts = getIndexableBlogPosts()
 
   const newsSitemap: NewsSitemapUrl[] = []
 

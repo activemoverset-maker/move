@@ -1,11 +1,10 @@
-import type { Metadata } from 'next'
-import { inter } from './fonts/fonts'
+import type { Metadata, Viewport } from 'next'
+import { inter } from './fonts/inter'
 import './globals.css'
-import { SiteChrome } from '@/components/site-chrome'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
+    default: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
     template: '%s | Active Movers & Packers',
   },
   description:
@@ -43,10 +42,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.activemoverset.com'),
   alternates: {
     canonical: '/',
-    languages: {
-      en: '/',
-      am: '/?lang=am',
-    },
   },
   manifest: '/manifest.json',
   icons: {
@@ -62,7 +57,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
+    title: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
     description:
       'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
     siteName: 'Active Movers & Packers',
@@ -77,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Active Movers & Packers - Professional Moving Services in Addis Ababa',
+    title: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
     description: 'Professional moving and packing services in Addis Ababa, Ethiopia.',
     images: ['/og-image.jpg'],
     creator: '@activemoverset',
@@ -99,18 +94,17 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#16a34a',
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="theme-color" content="#16a34a" />
-        <meta name="msapplication-TileColor" content="#16a34a" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      </head>
       <body className={inter.className} suppressHydrationWarning>
-        <SiteChrome>{children}</SiteChrome>
+        {children}
       </body>
     </html>
   )

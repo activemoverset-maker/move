@@ -8,9 +8,25 @@
   "contentAm": "<h2>ወደ ሲ.ኤም.ሲ መጓጓዣ: እውነተኛውን ወጪ መረዳት</h2><p>ሲ.ኤም.ሲ (የቸርነት የሕክምና ማዕከል) አካባቢ በአዲስ አበባ ለቤተሰቦች እና ለሙያ ባለሞያዎች የሚፈለግ ምርጫ ነው፣ የመኖሪያ ቤት ምቾት እና የከተማ ምቾት ድብልል ያቀርባል። ሆኖም፣ ብዙ ሰዎች ወደዚህ ሰፈር መጓጓዣ ውስጥ የሚደርሱ የተደበቁ ወጪዎች ያስደነግጣሉ። ይህ መመሪያ ሁሉንም ወጪዎች እንዲረዱ እና እንዲያበጀቱ ያግዛችኋል።</p><h3>የመጀመሪያ የመጓጓዣ ወጪዎች</h3><p>ከግልጽ የመጓጓዣ አገልግሎት ክፍያዎች በተጨማሪ፣ እነዚህን ተጨማሪ ወጪዎች ያስቡ:</p><ul><li><strong>የጥበቃ ተጠሪዎች:</strong> አብዛኛው የሲ.ኤም.ሲ ንብረቶች 2-3 ወር የኪራይ ክፍያ እንደ ጥበቃ ተጠሪ ያስፈልጋሉ</li><li><strong>የአገልግሎት ክፍያዎች:</strong> የሪል እስቴት ወኪል ኮሚሽኖች (በተለመደው 1-2 ወር የኪራይ ክፍያ)</li><li><strong>የሕግ ክፍያዎች:</strong> የኮንትራት ግምገማ እና የመመዝገቢያ ወጪዎች</li><li><strong>የመጠበቂያ ክፍያ:</strong> የንብረት እና የይዘት መጠበቂያ መስፈርቶች</li><li><strong>የጽረጊያ አገልግሎቶች:</strong> ከመግቢያ በፊት የሚደረግ የሙያ ጽረጊያ</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["CMC", "Addis Ababa", "hidden costs", "moving expenses", "budget planning", "utility costs", "security deposits"],
-  "tagsAm": ["ሲ.ኤም.ሲ", "አዲስ አበባ", "የተደበቁ ወጪዎች", "የመጓጓዣ ወጪዎች", "የበጀት ዕቅድ", "የመጠቀሚያ ነገሮች ወጪዎች", "የጥበቃ ተጠሪዎች"],
-  "readTime": 15,
+  "tags": [
+    "CMC",
+    "Addis Ababa",
+    "hidden costs",
+    "moving expenses",
+    "budget planning",
+    "utility costs",
+    "security deposits"
+  ],
+  "tagsAm": [
+    "ሲ.ኤም.ሲ",
+    "አዲስ አበባ",
+    "የተደበቁ ወጪዎች",
+    "የመጓጓዣ ወጪዎች",
+    "የበጀት ዕቅድ",
+    "የመጠቀሚያ ነገሮች ወጪዎች",
+    "የጥበቃ ተጠሪዎች"
+  ],
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua10.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua11.jpeg",
@@ -18,5 +34,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-01-30T11:15:00.000Z",
-  "slug": "hidden-costs-moving-to-cmc-you-should-know"
+  "slug": "hidden-costs-moving-to-cmc-you-should-know",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.837Z",
+  "enrichedAt": "2026-10-29T07:23:40.787Z",
+  "quality": "enriched"
 }

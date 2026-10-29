@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከመጓዝ በኋላ ተመጣጣኝ ዋጋ ያላቸው መጋረጃዎች የት እንደሚገዙ</h2><p>ከመጓዝ በኋላ ወደ አዲሱ ቤትዎ በአዲስ አበባ፣ የመጀመሪያዎቹ ነገሮች አንዱ የግላዊነት፣ የብርሃን ቁጥጥር እና የቦታዎን ዘዴ ለመጨመር መጋረጃዎች ነው። ከባህላዊ ገበያዎች እስከ ዘመናዊ ሱቆች በርካታ አማራጮች ከመኖራቸው፣ ተመጣጣኝ ዋጋ ያላቸው ግን ጥራት ያላቸው መጋረጃዎችን ማግኘት አስቸጋሪ ሊሆን ይችላል። ይህ ሁለገብ መምሪያ የጀርባዎን እና የዘዴ ምርጫዎችን የሚስማማ ተመጣጣኝ ዋጋ ያላቸው መጋረጃዎችን ለመግዛት የተሻሉ ቦታዎችን ለማሰራር ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["affordable curtains addis ababa", "curtain shopping addis", "home decor addis ababa", "curtain stores addis", "budget curtains addis", "curtain installation addis", "home furnishing addis", "curtain prices addis"],
-  "tagsAm": ["ተመጣጣኝ ዋጋ ያላቸው መጋረጃዎች አዲስ አበባ", "የመጋረጃ ግዢ አዲስ አበባ", "የቤት ዲዛይን አዲስ አበባ", "የመጋረጃ ሱቆች አዲስ አበባ", "የጀርባ መጋረጃዎች አዲስ አበባ", "የመጋረጃ መጫኛ አዲስ አበባ", "የቤት ዕቃዎች አዲስ አበባ", "የመጋረጃ ዋጋዎች አዲስ አበባ"],
-  "readTime": "14-17 minutes",
+  "tags": [
+    "affordable curtains addis ababa",
+    "curtain shopping addis",
+    "home decor addis ababa",
+    "curtain stores addis",
+    "budget curtains addis",
+    "curtain installation addis",
+    "home furnishing addis",
+    "curtain prices addis"
+  ],
+  "tagsAm": [
+    "ተመጣጣኝ ዋጋ ያላቸው መጋረጃዎች አዲስ አበባ",
+    "የመጋረጃ ግዢ አዲስ አበባ",
+    "የቤት ዲዛይን አዲስ አበባ",
+    "የመጋረጃ ሱቆች አዲስ አበባ",
+    "የጀርባ መጋረጃዎች አዲስ አበባ",
+    "የመጋረጃ መጫኛ አዲስ አበባ",
+    "የቤት ዕቃዎች አዲስ አበባ",
+    "የመጋረጃ ዋጋዎች አዲስ አበባ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "where-to-buy-affordable-curtains-after-moving",
   "featuredImage": "https://www.activemoverset.com/images/affordable-curtains-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/home-decor-addis.jpg"
   ],
   "publishedAt": "2025-08-29T10:20:00.000Z",
-  "updatedAt": "2025-08-29T10:20:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.995Z",
   "seo": {
     "title": "Where to Buy Affordable Curtains After Moving in Addis Ababa | Complete Guide 2025",
     "description": "Find the best places to buy affordable curtains in Addis Ababa after your move. From traditional markets to modern stores, discover where to get quality curtains at great prices.",
@@ -36,5 +54,8 @@
       "home furnishing addis ababa",
       "curtain prices addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:44.533Z",
+  "quality": "enriched"
 }

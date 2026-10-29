@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Chirkos", "parking", "high-density", "residential corridors", "Addis Ababa", "local movers"],
+  "tags": [
+    "Chirkos",
+    "parking",
+    "high-density",
+    "residential corridors",
+    "Addis Ababa",
+    "local movers"
+  ],
   "tagsAm": [],
-  "readTime": 61,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua430.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua431.jpeg", "https://www.activemoverset.com/images/gallary/qua432.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua431.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua432.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-09-18T09:00:00.000Z",
-  "slug": "moving-chirkos-tight-parking-high-density-corridors"
+  "slug": "moving-chirkos-tight-parking-high-density-corridors",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.276Z",
+  "enrichedAt": "2026-10-29T07:23:41.877Z",
+  "quality": "enriched"
 }

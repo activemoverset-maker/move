@@ -17,7 +17,7 @@
     "wood furniture"
   ],
   "tagsAm": [],
-  "readTime": 39,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua31.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua32.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-05-02T09:00:00.000Z",
-  "slug": "furniture-movers-addis-ababa-safe-transport-tips"
+  "slug": "furniture-movers-addis-ababa-safe-transport-tips",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.983Z",
+  "enrichedAt": "2026-10-29T07:23:41.156Z",
+  "quality": "enriched"
 }

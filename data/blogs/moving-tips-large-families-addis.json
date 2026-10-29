@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ ትልልቅ ቤተሰቦች የመጓጓዣ ምክሮች</h2><p>በአዲስ አበባ ትልልቅ ቤተሰቦችን መጓጓዣ የተለየ እቅድ፣ የተቆጣጠረ አስተባባሪነት እና የተለየ ግምት ይፈልጋል። ትልልቅ ቤተሰቦች ብዙውን ጊዜ በርካታ ትውልዶች፣ የተለያዩ የአድማ ቡድኖች እና ውስብስብ ፍላጎቶችን ያካተቱ ናቸው፣ እነዚህም በመጓጓዣ ሂደት ውስጥ መፍታት አለባቸው። ይህ ሁለገብ መምሪያ በአዲስ አበባ ትልልቅ ቤተሰቦችን መጓጓዣ ውስብስብነቶችን ለማሰራር እና የሁሉም ሰው ፍላጎቶች እንዲሟሉ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["large family moving addis ababa", "family moving tips addis", "big family moving addis", "family moving guide addis", "moving large families addis", "addis family moving", "family moving logistics addis", "addis family moving tips"],
-  "tagsAm": ["ትልልቅ ቤተሰብ መጓጓዣ አዲስ አበባ", "የቤተሰብ መጓጓዣ ምክሮች አዲስ አበባ", "ትልልቅ ቤተሰብ መጓጓዣ አዲስ አበባ", "የቤተሰብ መጓጓዣ መምሪያ አዲስ አበባ", "ትልልቅ ቤተሰቦችን መጓጓዣ አዲስ አበባ", "የአዲስ አበባ ቤተሰብ መጓጓዣ", "የቤተሰብ መጓጓዣ ሎጂስቲክስ አዲስ አበባ", "የአዲስ አበባ ቤተሰብ መጓጓዣ ምክሮች"],
-  "readTime": "28-35 minutes",
+  "tags": [
+    "large family moving addis ababa",
+    "family moving tips addis",
+    "big family moving addis",
+    "family moving guide addis",
+    "moving large families addis",
+    "addis family moving",
+    "family moving logistics addis",
+    "addis family moving tips"
+  ],
+  "tagsAm": [
+    "ትልልቅ ቤተሰብ መጓጓዣ አዲስ አበባ",
+    "የቤተሰብ መጓጓዣ ምክሮች አዲስ አበባ",
+    "ትልልቅ ቤተሰብ መጓጓዣ አዲስ አበባ",
+    "የቤተሰብ መጓጓዣ መምሪያ አዲስ አበባ",
+    "ትልልቅ ቤተሰቦችን መጓጓዣ አዲስ አበባ",
+    "የአዲስ አበባ ቤተሰብ መጓጓዣ",
+    "የቤተሰብ መጓጓዣ ሎጂስቲክስ አዲስ አበባ",
+    "የአዲስ አበባ ቤተሰብ መጓጓዣ ምክሮች"
+  ],
+  "readTime": 13,
   "status": "published",
   "slug": "moving-tips-large-families-addis",
   "featuredImage": "https://www.activemoverset.com/images/large-family-moving-addis-ababa.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-family-moving.jpg"
   ],
   "publishedAt": "2025-03-15T14:30:00.000Z",
-  "updatedAt": "2025-03-15T14:30:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.437Z",
   "seo": {
     "title": "Moving Tips for Large Families in Addis | Complete Guide 2025",
     "description": "Moving large families in Addis Ababa requires special planning and coordination. Learn expert strategies for managing multiple children, extended family members, and complex logistics during your move.",
@@ -36,5 +54,8 @@
       "family moving logistics addis ababa",
       "addis family moving tips"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:42.669Z",
+  "quality": "enriched"
 }

@@ -12,6 +12,8 @@
     "db:studio": "prisma studio",
     "setup-admin": "tsx scripts/setup-admin.ts",
     "seed:calendar": "tsx scripts/seed-calendar.ts",
+    "telegram:set-webhook": "tsx scripts/telegram-set-webhook.ts",
+    "test:intake": "node --import tsx --test lib/telegram/intake/intake-logic.test.ts",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -38,11 +40,13 @@
     "@tiptap/starter-kit": "^3.2.1",
     "@types/three": "^0.178.1",
     "@vercel/analytics": "^1.5.0",
+    "addisai": "https://github.com/Addis-AI-Org/addisai-js/releases/download/v0.6.0/addisai-0.6.0.tgz",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "gsap": "^3.13.0",
+    "jose": "^6.2.12",
     "jsonwebtoken": "^9.0.2",
     "lottie-react": "^2.4.1",
     "lucide-react": "^0.292.0",

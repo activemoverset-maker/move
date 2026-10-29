@@ -16,13 +16,17 @@
     "routing"
   ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua88.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua89.jpeg",
     "https://www.activemoverset.com/images/gallary/qua90.jpeg"
   ],
   "status": "published",
-  "publishedAt": "2027-08-21T09:00:00.000Z",
-  "slug": "how-addis-corridor-project-changing-routes-local-movers"
+  "publishedAt": "2026-09-20T09:00:00.000Z",
+  "slug": "how-addis-corridor-project-changing-routes-local-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.053Z",
+  "enrichedAt": "2026-10-29T07:23:41.282Z",
+  "quality": "enriched"
 }

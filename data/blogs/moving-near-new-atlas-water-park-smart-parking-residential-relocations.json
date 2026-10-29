@@ -17,7 +17,7 @@
     "moving tips"
   ],
   "tagsAm": [],
-  "readTime": 47,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua151.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua152.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-17T09:00:00.000Z",
-  "slug": "moving-near-new-atlas-water-park-smart-parking-residential-relocations"
+  "slug": "moving-near-new-atlas-water-park-smart-parking-residential-relocations",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.397Z",
+  "enrichedAt": "2026-10-29T07:23:42.421Z",
+  "quality": "enriched"
 }

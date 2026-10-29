@@ -8,9 +8,25 @@
   "contentAm": "<h2>በአዲስ አበባ የመጓጓዣ የእርስዎ ሁለገብ የመፈተሻ ዝርዝር</h2><p>በአዲስ አበባ የመጓጓዣ ስራ በጥንቃቄ ዕቅድ እና ትኩረት ይፈልጋል። ይህ ሁለገብ ደረጃ በደረጃ የመፈተሻ ዝርዝር በመጓጓዣዎ ሁሉንም ገጽ በማስተላለፍ ያስተላልፋል፣ ምንም ነገር እንዳይረሳ እና የመኖሪያ ቤት ለውጥዎ በጣም ለስላሳ እንዲሆን ያረጋግጣል። በከተማው ውስጥ እየዛወሩ ወይም ለመጀመሪያ ጊዜ ወደ አዲስ አበባ እየዛወሩ ቢሆንም፣ ይህ የመፈተሻ ዝርዝር የስኬት መንገድ ያስተላልፋል።</p><h3>ከመጓጓዣ ቀን 8 ሳምንታት በፊት</h3><p>የእቅድ ሂደትዎን በነዚህ ዋና ተግባራት ይጀምሩ:</p><h4>ምርምር እና ዕቅድ</h4><ul><li><strong>አዲሱን አካባቢ ምርምር:</strong> አዲሱን ሰፈርዎን በርካታ ጊዜ ይጎብኙ</li><li><strong>የጀርባ ዕቅድ:</strong> አጠቃላይ የመጓጓዣ ወጪዎችን እና የሕይወት ወጪዎችን ያሰሉ</li><li><strong>የጊዜ ሰሌዳ መፍጠር:</strong> ለሁሉም የመጓጓዣ ተግባራት ዝርዝር የጊዜ ሰሌዳ ይፍጠሩ</li><li><strong>የአገልግሎት ምርምር:</strong> የመጓጓዣ ኩባንያዎች፣ የመጠቀሚያ ነገሮች እና አካባቢ አገልግሎቶችን ይምረሙ</li><li><strong>ሰነዶች:</strong> ሁሉንም አስፈላጊ ወረቀቶች እና ሰነዶችን ይሰብስቡ</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Addis Ababa", "moving checklist", "step-by-step", "planning", "organization", "timeline", "preparation"],
-  "tagsAm": ["አዲስ አበባ", "የመጓጓዣ የመፈተሻ ዝርዝር", "ደረጃ በደረጃ", "ዕቅድ", "ድርጅት", "ጊዜ ሰሌዳ", "ዝግጅት"],
-  "readTime": 18,
+  "tags": [
+    "Addis Ababa",
+    "moving checklist",
+    "step-by-step",
+    "planning",
+    "organization",
+    "timeline",
+    "preparation"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ",
+    "የመጓጓዣ የመፈተሻ ዝርዝር",
+    "ደረጃ በደረጃ",
+    "ዕቅድ",
+    "ድርጅት",
+    "ጊዜ ሰሌዳ",
+    "ዝግጅት"
+  ],
+  "readTime": 13,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua34.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua35.jpeg",
@@ -18,5 +34,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-04-19T08:30:00.000Z",
-  "slug": "step-by-step-checklist-moving-addis-ababa"
+  "slug": "step-by-step-checklist-moving-addis-ababa",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.728Z",
+  "enrichedAt": "2026-10-29T07:23:44.356Z",
+  "quality": "enriched"
 }

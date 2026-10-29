@@ -17,7 +17,7 @@
     "relocation"
   ],
   "tagsAm": [],
-  "readTime": 37,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua43.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua44.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-04-02T09:00:00.000Z",
-  "slug": "save-money-hiring-movers-addis-ababa"
+  "slug": "save-money-hiring-movers-addis-ababa",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.666Z",
+  "enrichedAt": "2026-10-29T07:23:44.201Z",
+  "quality": "enriched"
 }

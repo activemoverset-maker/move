@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { plusJakartaSans } from '@/app/fonts/fonts'
+import { plusJakartaSans } from '@/app/fonts/plus-jakarta'
 import { MaledAmbientLayer } from '@/components/maledactive/motion/maled-ambient-layer'
 import { MaledFooter } from '@/components/maledactive/layout/maled-footer'
 import { MaledHeader } from '@/components/maledactive/layout/maled-header'
 import { MaledStickyCta } from '@/components/maledactive/layout/maled-sticky-cta'
 import { MALED_ASSETS, MALED_SITE } from '@/lib/maledactive-config'
+import { Toaster } from '@/components/ui/toaster'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: {
@@ -46,6 +48,8 @@ export default function MaledActiveLayout({ children }: { children: React.ReactN
       <div className="relative z-10">{children}</div>
       <MaledFooter />
       <MaledStickyCta />
+      <Toaster />
+      <Analytics />
     </div>
   )
 }

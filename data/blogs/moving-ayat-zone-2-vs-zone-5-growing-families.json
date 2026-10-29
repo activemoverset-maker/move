@@ -18,7 +18,7 @@
     "neighborhood comparison"
   ],
   "tagsAm": [],
-  "readTime": 51,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua157.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua158.jpeg",
@@ -26,5 +26,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-19T09:00:00.000Z",
-  "slug": "moving-ayat-zone-2-vs-zone-5-growing-families"
+  "slug": "moving-ayat-zone-2-vs-zone-5-growing-families",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.251Z",
+  "enrichedAt": "2026-10-29T07:23:41.728Z",
+  "quality": "enriched"
 }

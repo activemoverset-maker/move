@@ -18,7 +18,7 @@
     "movers"
   ],
   "tagsAm": [],
-  "readTime": 48,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua136.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua137.jpeg",
@@ -26,5 +26,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-12T09:00:00.000Z",
-  "slug": "moving-near-moenco-seare-mekonnen-street-expansion-truck-access"
+  "slug": "moving-near-moenco-seare-mekonnen-street-expansion-truck-access",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.394Z",
+  "enrichedAt": "2026-10-29T07:23:42.415Z",
+  "quality": "enriched"
 }

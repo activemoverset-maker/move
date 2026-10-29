@@ -8,12 +8,27 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "packing-guide",
-  "tags": ["jebena", "cini", "coffee ceremony", "ceramics", "packing", "fragile items", "Ethiopia"],
+  "tags": [
+    "jebena",
+    "cini",
+    "coffee ceremony",
+    "ceramics",
+    "packing",
+    "fragile items",
+    "Ethiopia"
+  ],
   "tagsAm": [],
-  "readTime": 55,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua265.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua266.jpeg", "https://www.activemoverset.com/images/gallary/qua267.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua266.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua267.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-25T09:00:00.000Z",
-  "slug": "master-packing-blueprint-jebena-cini-coffee-ceremony-sets"
+  "slug": "master-packing-blueprint-jebena-cini-coffee-ceremony-sets",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.170Z",
+  "enrichedAt": "2026-10-29T07:23:41.571Z",
+  "quality": "enriched"
 }

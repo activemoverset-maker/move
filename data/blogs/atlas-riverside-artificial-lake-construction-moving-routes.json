@@ -18,7 +18,7 @@
     "detours"
   ],
   "tagsAm": [],
-  "readTime": 50,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua133.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua134.jpeg",
@@ -26,5 +26,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-11T09:00:00.000Z",
-  "slug": "atlas-riverside-artificial-lake-construction-moving-routes"
+  "slug": "atlas-riverside-artificial-lake-construction-moving-routes",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.732Z",
+  "enrichedAt": "2026-10-29T07:23:40.671Z",
+  "quality": "enriched"
 }

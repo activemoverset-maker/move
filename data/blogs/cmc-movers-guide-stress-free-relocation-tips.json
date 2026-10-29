@@ -17,7 +17,7 @@
     "planning"
   ],
   "tagsAm": [],
-  "readTime": 32,
+  "readTime": 5,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua49.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua50.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-01-14T08:15:00.000Z",
-  "slug": "cmc-movers-guide-stress-free-relocation-tips"
+  "slug": "cmc-movers-guide-stress-free-relocation-tips",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.840Z",
+  "enrichedAt": "2026-10-29T07:23:40.791Z",
+  "quality": "enriched"
 }

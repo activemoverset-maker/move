@@ -812,6 +812,139 @@
   }
 }
 
+/* Moving guide content — reference manual (distinct from blog articles) */
+.guide-content {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.guide-content h1,
+.guide-content h2,
+.guide-content h3,
+.guide-content h4 {
+  scroll-margin-top: 100px;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.guide-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 2.25rem 0 1rem;
+  padding: 0.75rem 0 0.75rem 1rem;
+  border-left: 4px solid #0d9488;
+  background: linear-gradient(90deg, #f0fdfa 0%, transparent 100%);
+  border-radius: 0 0.375rem 0.375rem 0;
+}
+
+.guide-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.75rem;
+  color: #115e59;
+}
+
+.guide-content p {
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+.guide-content p:first-of-type {
+  font-size: 1.125rem;
+  color: #475569;
+}
+
+.guide-content ul,
+.guide-content ol {
+  margin: 1rem 0 1.25rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.guide-content ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.65rem;
+  line-height: 1.65;
+}
+
+.guide-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 2px;
+  background: #14b8a6;
+  box-shadow: 0 0 0 2px #ccfbf1;
+}
+
+.guide-content ol {
+  counter-reset: guide-step;
+  padding-left: 0;
+}
+
+.guide-content ol li {
+  counter-increment: guide-step;
+  position: relative;
+  padding-left: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.guide-content ol li::before {
+  content: counter(guide-step);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #fff;
+  background: #0f766e;
+  border-radius: 9999px;
+}
+
+.guide-content a {
+  color: #0d9488;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.guide-content a:hover {
+  color: #0f766e;
+}
+
+.guide-content strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.guide-content p strong:first-child {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #134e4a;
+}
+
+.guide-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: #78350f;
+}
+
+.guide-content img {
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
 /* Rich Text Editor Styles */
 .ProseMirror {
   outline: none;

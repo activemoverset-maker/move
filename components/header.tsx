@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
@@ -10,25 +11,28 @@ import { SITE_CONFIG } from '@/constants/site'
 import { trackEvent } from '@/lib/analytics'
 import { useLanguage } from '@/contexts/language-context'
 import { LanguageSwitcher } from '@/components/language-switcher'
+import { generateCallLink } from '@/lib/utils'
 
 export function Header() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { t } = useLanguage()
-
-  if (pathname?.startsWith('/addis-active-movers')) {
-    return null
-  }
+  const isPremiumLanding = pathname?.startsWith('/addis-active-movers')
 
   useEffect(() => {
+    if (isPremiumLanding) return
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [isPremiumLanding])
+
+  if (isPremiumLanding) {
+    return null
+  }
 
   const navItems = [
     { href: '/', label: t('nav.home') },
@@ -37,6 +41,7 @@ export function Header() {
     { href: '/services', label: t('nav.services') },
     { href: '/tiktok', label: t('nav.watch') },
     { href: '/blog', label: t('nav.blog') },
+    { href: '/guides', label: t('nav.guides') },
     { href: '/contact', label: t('nav.contact') },
   ]
 
@@ -57,10 +62,7 @@ export function Header() {
   }
 
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
         bg-black/60 backdrop-blur-md shadow-md
         ${isScrolled ? 'shadow-lg' : ''}
@@ -69,85 +71,70 @@ export function Header() {
       <div className="container-max">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-            className="flex items-center"
-          >
+          <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2 sm:gap-3" onClick={() => handleNavClick('Logo')}>
               <div className={`transition-all duration-300 ${
                 isScrolled ? 'scale-95' : 'scale-100'
               }`}>
-                <img 
-                  src="/images/logo.jpg" 
-                  alt="Active Movers & Packers Logo" 
-                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 object-contain"
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Active Movers & Packers Logo"
+                  width={64}
+                  height={64}
+                  priority
+                  sizes="(max-width: 640px) 40px, (max-width: 768px) 48px, 64px"
+                  className="h-10 w-10 object-contain sm:h-12 sm:w-12 md:h-14 md:w-14 lg:h-16 lg:w-16"
                 />
               </div>
               <div className="hidden sm:block">
-                <h1 className="font-extrabold text-base sm:text-lg md:text-xl text-white tracking-wider font-sans drop-shadow-md leading-tight">{SITE_CONFIG.name}</h1>
+                <p className="font-extrabold text-base sm:text-lg md:text-xl text-white tracking-wider font-sans drop-shadow-md leading-tight">{SITE_CONFIG.name}</p>
                 <p className="text-xs sm:text-sm md:text-base text-gray-200 font-medium tracking-wide font-sans">Moving & Packing</p>
               </div>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6">
-            {navItems.map((item, index) => (
-              <motion.div
+            {navItems.map((item) => (
+              <Link
                 key={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + index * 0.1, duration: 0.5 }}
+                href={item.href}
+                onClick={() => handleNavClick(item.label)}
+                className="relative font-semibold text-white hover:text-primary transition-all duration-300 tracking-wide font-sans drop-shadow-sm after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100"
               >
-                <Link
-                  href={item.href}
-                  onClick={() => handleNavClick(item.label)}
-                  className="relative font-semibold text-white hover:text-primary transition-all duration-300 tracking-wide font-sans drop-shadow-sm"
-                >
-                  {item.label}
-                  <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary origin-left"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </Link>
-              </motion.div>
+                {item.label}
+              </Link>
             ))}
           </nav>
 
           {/* Desktop CTA & Language Switcher */}
           <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+            <Button
+              asChild
+              variant="dark-outline"
+              size="sm"
+              className="border-2 border-white text-white hover:bg-white/10 hover:text-white font-semibold tracking-wide font-sans"
+              onClick={() => handleCTAClick('phone_click')}
             >
-              <Button asChild variant="dark-outline" size="sm" className="border-2 border-white text-white hover:bg-white/10 hover:text-white font-semibold tracking-wide font-sans" onClick={() => handleCTAClick('contact_click')}>
-                <Link href="/contact">
-                  <Phone className="w-3 h-3 mr-1.5" />
-                  {t('header.contact')}
-                </Link>
-              </Button>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
-            >
-              <Button asChild size="sm" className="bg-primary hover:bg-green-700 text-white font-bold tracking-wide font-sans" onClick={() => handleCTAClick('book_now_click')}>
-                <Link href="/booking">{t('header.bookNow')}</Link>
-              </Button>
-            </motion.div>
+              <a href={generateCallLink(SITE_CONFIG.links.phone)}>
+                <Phone className="w-3 h-3 mr-1.5" />
+                {SITE_CONFIG.links.phone.replace('+251', '0')}
+              </a>
+            </Button>
+            <Button asChild variant="dark-outline" size="sm" className="border-2 border-white text-white hover:bg-white/10 hover:text-white font-semibold tracking-wide font-sans" onClick={() => handleCTAClick('contact_click')}>
+              <Link href="/contact">
+                <Phone className="w-3 h-3 mr-1.5" />
+                {t('header.contact')}
+              </Link>
+            </Button>
+            <Button asChild size="sm" className="bg-primary hover:bg-green-700 text-white font-bold tracking-wide font-sans" onClick={() => handleCTAClick('book_now_click')}>
+              <Link href="/booking">{t('header.bookNow')}</Link>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+          <button
             onClick={() => {
               setIsOpen(!isOpen)
               trackEvent({ 
@@ -157,7 +144,6 @@ export function Header() {
               })
             }}
             className="lg:hidden p-1.5 rounded-lg text-white hover:bg-white/10 transition-all duration-300"
-            whileTap={{ scale: 0.95 }}
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
@@ -182,7 +168,7 @@ export function Header() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </motion.button>
+          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -249,6 +235,6 @@ export function Header() {
           )}
         </AnimatePresence>
       </div>
-    </motion.header>
+    </header>
   )
 } 

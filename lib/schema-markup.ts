@@ -1,3 +1,5 @@
+import { SITE_PHONE } from '@/constants/contact'
+
 export interface BlogPostSchema {
   title: string
   description: string
@@ -65,7 +67,7 @@ export function generateOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+251982260000",
+      "telephone": SITE_PHONE,
       "contactType": "customer service",
       "availableLanguage": ["English", "Amharic"]
     },

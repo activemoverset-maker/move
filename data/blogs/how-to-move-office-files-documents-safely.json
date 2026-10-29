@@ -8,9 +8,27 @@
   "contentAm": "<h2>የቢሮ ፋይሎች እና ሰነዶችን በደህንነት እንዴት እንደሚዛወር</h2><p>የቢሮ ፋይሎች እና ሰነዶች ማዛወር በአዲስ አበባ የማንኛውም የንግድ ማዛወር በጣም ወሳኝ ገጽታዎች አንዱ ነው። የንግድ ሰነዶችዎ ደህንነት፣ አደራጃ እና ተደራሽነት አሠራሮችዎን ሊያስቸግር ወይም ሊያስቸግር ይችላል። ይህ ሁለገብ መምሪያ የንግድ መረጃዎን ለመጠበቅ እና ወደ አዲሱ የቢሮ ቦታዎ ስላሳ ሽግግር እንዲሳክ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["office files moving", "document security addis ababa", "office relocation addis", "document moving guide", "file organization addis", "document backup addis", "office moving security", "document management addis"],
-  "tagsAm": ["የቢሮ ፋይሎች መጓጓዣ", "የሰነድ ደህንነት አዲስ አበባ", "የቢሮ ማዛወር አዲስ አበባ", "የሰነድ መጓጓዣ መምሪያ", "የፋይል አደራጃ አዲስ አበባ", "የሰነድ የመጀመሪያ ግቤት አዲስ አበባ", "የቢሮ መጓጓዣ ደህንነት", "የሰነድ አያያዝ አዲስ አበባ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "office files moving",
+    "document security addis ababa",
+    "office relocation addis",
+    "document moving guide",
+    "file organization addis",
+    "document backup addis",
+    "office moving security",
+    "document management addis"
+  ],
+  "tagsAm": [
+    "የቢሮ ፋይሎች መጓጓዣ",
+    "የሰነድ ደህንነት አዲስ አበባ",
+    "የቢሮ ማዛወር አዲስ አበባ",
+    "የሰነድ መጓጓዣ መምሪያ",
+    "የፋይል አደራጃ አዲስ አበባ",
+    "የሰነድ የመጀመሪያ ግቤት አዲስ አበባ",
+    "የቢሮ መጓጓዣ ደህንነት",
+    "የሰነድ አያያዝ አዲስ አበባ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "how-to-move-office-files-documents-safely",
   "featuredImage": "https://www.activemoverset.com/images/office-files-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/document-management.jpg"
   ],
   "publishedAt": "2025-06-30T14:40:00.000Z",
-  "updatedAt": "2025-06-30T14:40:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.100Z",
   "seo": {
     "title": "How to Move Office Files and Documents Safely in Addis Ababa | Complete Guide 2025",
     "description": "Complete guide to safely moving office files and documents in Addis Ababa. Learn about document security, organization, digital backup, and maintaining business continuity during office relocation.",
@@ -36,5 +54,8 @@
       "office moving security addis ababa",
       "document management addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.371Z",
+  "quality": "enriched"
 }

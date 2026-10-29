@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["decluttering", "donate", "sell", "moving checklist", "downsizing", "Addis Ababa"],
+  "tags": [
+    "decluttering",
+    "donate",
+    "sell",
+    "moving checklist",
+    "downsizing",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 60,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua277.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua278.jpeg", "https://www.activemoverset.com/images/gallary/qua279.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua278.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua279.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-29T09:00:00.000Z",
-  "slug": "ultimate-decluttering-checklist-before-moving-truck-arrives"
+  "slug": "ultimate-decluttering-checklist-before-moving-truck-arrives",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.866Z",
+  "enrichedAt": "2026-10-29T07:23:44.458Z",
+  "quality": "enriched"
 }

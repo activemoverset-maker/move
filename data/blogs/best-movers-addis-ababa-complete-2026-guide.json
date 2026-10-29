@@ -17,7 +17,7 @@
     "relocation tips"
   ],
   "tagsAm": [],
-  "readTime": 38,
+  "readTime": 9,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua40.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua41.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-01-08T09:00:00.000Z",
-  "slug": "best-movers-addis-ababa-complete-2026-guide"
+  "slug": "best-movers-addis-ababa-complete-2026-guide",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.766Z",
+  "enrichedAt": "2026-10-29T07:23:40.699Z",
+  "quality": "enriched"
 }

@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከመጓዝ በኋላ የማጽዳት አገልግሎት እንዴት እንደሚገኝ</h2><p>ከመጓዝ በኋላ ወደ አዲሱ ቤትዎ በአዲስ አበባ፣ የመጀመሪያዎቹ ቅድሚያዎች አንዱ አዲሱን ቦታዎን ንጹህ እና የተደራጁ ማድረግ ነው። አንድ ጊዜ ጥልቅ ማጽዳት፣ ተደጋጋሚ ጠባቂ ወይም ልዩ የማጽዳት አገልግሎቶች ቢፈልጉም፣ ትክክለኛውን የማጽዳት አገልግሎት ማግኘት የመሸጋገርዎን በጣም ለስላሳ ሊያደርግ ይችላል። ይህ ሁለገብ መምሪያ በአዲስ አበባ የሚገኙ የማጽዳት አገልግሎት አማራጮችን ለማሰራር እና ለእርስዎ ፍላጎቶች እና የጀርባ የተሻለ አገልግሎት ለመምረጥ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["cleaning service addis ababa", "house cleaning addis", "cleaning services addis", "home cleaning addis", "cleaning companies addis", "cleaning prices addis", "cleaning tips addis", "cleaning guide addis"],
-  "tagsAm": ["የማጽዳት አገልግሎት አዲስ አበባ", "የቤት ማጽዳት አዲስ አበባ", "የማጽዳት አገልግሎቶች አዲስ አበባ", "የቤት ማጽዳት አዲስ አበባ", "የማጽዳት ኩባንያዎች አዲስ አበባ", "የማጽዳት ዋጋዎች አዲስ አበባ", "የማጽዳት ምክሮች አዲስ አበባ", "የማጽዳት መምሪያ አዲስ አበባ"],
-  "readTime": "16-20 minutes",
+  "tags": [
+    "cleaning service addis ababa",
+    "house cleaning addis",
+    "cleaning services addis",
+    "home cleaning addis",
+    "cleaning companies addis",
+    "cleaning prices addis",
+    "cleaning tips addis",
+    "cleaning guide addis"
+  ],
+  "tagsAm": [
+    "የማጽዳት አገልግሎት አዲስ አበባ",
+    "የቤት ማጽዳት አዲስ አበባ",
+    "የማጽዳት አገልግሎቶች አዲስ አበባ",
+    "የቤት ማጽዳት አዲስ አበባ",
+    "የማጽዳት ኩባንያዎች አዲስ አበባ",
+    "የማጽዳት ዋጋዎች አዲስ አበባ",
+    "የማጽዳት ምክሮች አዲስ አበባ",
+    "የማጽዳት መምሪያ አዲስ አበባ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "how-to-find-cleaning-service-after-moving",
   "featuredImage": "https://www.activemoverset.com/images/cleaning-service-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/cleaning-guide-addis.jpg"
   ],
   "publishedAt": "2025-04-05T15:45:00.000Z",
-  "updatedAt": "2025-04-05T15:45:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.066Z",
   "seo": {
     "title": "How to Find a Cleaning Service After Moving in Addis Ababa | Complete Guide 2025",
     "description": "Complete guide to finding reliable cleaning services in Addis Ababa after your move. Learn about different types of cleaning services, pricing, and how to choose the right service for your needs.",
@@ -36,5 +54,8 @@
       "cleaning tips addis ababa",
       "cleaning guide addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.324Z",
+  "quality": "enriched"
 }

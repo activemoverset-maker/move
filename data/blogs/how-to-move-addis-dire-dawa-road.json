@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከአዲስ አበባ ወደ ድሬ ዳዋ በመንገድ እንዴት እንደሚዛወር</h2><p>ከአዲስ አበባ ወደ ድሬ ዳዋ በመንገድ መጓጓዣ ከኢትዮጵያ ዋና ከተማ ወደ በጣም አስፈላጊ የምሥራቅ ከተሞች አንዱ ትልቅ ጉዞን ያስተላልፋል። ድሬ ዳዋ፣ በስትራቴጂክ አካባቢ እና ባህላዊ የተለያዩነት የሚታወቅ፣ ለሚዛወሩ ሰዎች ልዩ እድሎችን ያቀርባል። ይህ ሁለገብ መምሪያ የመንገድ ጉዞን ለማሰራር፣ ወጪዎችን ለመረዳት እና ወደዚህ አስፈላጊ የምሥራቅ ኢትዮጵያ ከተማ ማዛወርዎን ለመዘጋጀት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["addis dire dawa moving", "addis dire dawa road", "ethiopia inter-city moving", "addis dire dawa guide", "ethiopia city moving", "addis dire dawa costs", "ethiopia moving logistics", "eastern ethiopia moving"],
-  "tagsAm": ["አዲስ አበባ ድሬ ዳዋ መጓጓዣ", "አዲስ አበባ ድሬ ዳዋ መንገድ", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ድሬ ዳዋ መምሪያ", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ድሬ ዳዋ ወጪዎች", "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ", "የምሥራቅ ኢትዮጵያ መጓጓዣ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "addis dire dawa moving",
+    "addis dire dawa road",
+    "ethiopia inter-city moving",
+    "addis dire dawa guide",
+    "ethiopia city moving",
+    "addis dire dawa costs",
+    "ethiopia moving logistics",
+    "eastern ethiopia moving"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ ድሬ ዳዋ መጓጓዣ",
+    "አዲስ አበባ ድሬ ዳዋ መንገድ",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ድሬ ዳዋ መምሪያ",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ድሬ ዳዋ ወጪዎች",
+    "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ",
+    "የምሥራቅ ኢትዮጵያ መጓጓዣ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "how-to-move-addis-dire-dawa-road",
   "featuredImage": "https://www.activemoverset.com/images/addis-dire-dawa-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-dire-dawa-costs.jpg"
   ],
   "publishedAt": "2025-12-15T07:40:00.000Z",
-  "updatedAt": "2025-12-15T07:40:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.078Z",
   "seo": {
     "title": "How to Move from Addis to Dire Dawa by Road | Complete Guide 2025",
     "description": "Complete guide for moving from Addis Ababa to Dire Dawa by road. Learn about route planning, transportation options, costs, and what to expect when relocating to this important eastern Ethiopian city.",
@@ -36,5 +54,8 @@
       "ethiopia moving logistics",
       "eastern ethiopia moving"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.333Z",
+  "quality": "enriched"
 }

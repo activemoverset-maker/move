@@ -8,9 +8,27 @@
   "contentAm": "<h2>ለአዲስ አሻሚዎች በአዲስ አበባ የተሻሉ የኢንተርኔት ተግባሮች</h2><p>በአዲስ አበባ አዲስ አሻሚዎች ለማግኘት አስተማማኝ የኢንተርኔት አገልግሎት አስፈላጊ ነው። በተለያዩ ጥቅሎች፣ ፍጥነቶች እና የዋጋ አማራጮች የሚሰጡ በርካታ አቅራቢዎች ከመኖራቸው፣ ትክክለኛውን የኢንተርኔት አገልግሎት መምረጥ አስቸጋሪ ሊሆን ይችላል። ይህ ሁለገብ መምሪያ የእርስዎን ፍላጎቶች እና የጀርባ የሚስማማ የተሻሉ የኢንተርኔት ተግባሮችን ለማግኘት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["internet deals addis ababa", "new tenants internet", "internet providers addis", "internet packages addis", "internet installation addis", "internet costs addis", "internet comparison addis", "internet service addis"],
-  "tagsAm": ["የኢንተርኔት ተግባሮች አዲስ አበባ", "አዲስ አሻሚዎች ኢንተርኔት", "የኢንተርኔት አቅራቢዎች አዲስ አበባ", "የኢንተርኔት ጥቅሎች አዲስ አበባ", "የኢንተርኔት መጫኛ አዲስ አበባ", "የኢንተርኔት ወጪዎች አዲስ አበባ", "የኢንተርኔት አወዳድር አዲስ አበባ", "የኢንተርኔት አገልግሎት አዲስ አበባ"],
-  "readTime": "15-18 minutes",
+  "tags": [
+    "internet deals addis ababa",
+    "new tenants internet",
+    "internet providers addis",
+    "internet packages addis",
+    "internet installation addis",
+    "internet costs addis",
+    "internet comparison addis",
+    "internet service addis"
+  ],
+  "tagsAm": [
+    "የኢንተርኔት ተግባሮች አዲስ አበባ",
+    "አዲስ አሻሚዎች ኢንተርኔት",
+    "የኢንተርኔት አቅራቢዎች አዲስ አበባ",
+    "የኢንተርኔት ጥቅሎች አዲስ አበባ",
+    "የኢንተርኔት መጫኛ አዲስ አበባ",
+    "የኢንተርኔት ወጪዎች አዲስ አበባ",
+    "የኢንተርኔት አወዳድር አዲስ አበባ",
+    "የኢንተርኔት አገልግሎት አዲስ አበባ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "best-internet-deals-new-tenants-addis",
   "featuredImage": "https://www.activemoverset.com/images/internet-deals-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/internet-setup-addis.jpg"
   ],
   "publishedAt": "2025-01-12T17:10:00.000Z",
-  "updatedAt": "2025-01-12T17:10:00.000Z",
+  "updatedAt": "2026-10-29T07:46:30.760Z",
   "seo": {
     "title": "Best Internet Deals for New Tenants in Addis Ababa | Complete Guide 2025",
     "description": "Find the best internet deals and providers for new tenants in Addis Ababa. Compare prices, speeds, and packages to get the most value for your money on reliable internet service.",
@@ -36,5 +54,8 @@
       "internet comparison addis ababa",
       "internet service addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:40.694Z",
+  "quality": "enriched"
 }

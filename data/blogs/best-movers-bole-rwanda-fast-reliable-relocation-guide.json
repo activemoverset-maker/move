@@ -17,7 +17,7 @@
     "professional movers"
   ],
   "tagsAm": [],
-  "readTime": 36,
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua1.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua2.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-18T09:30:00.000Z",
-  "slug": "best-movers-bole-rwanda-fast-reliable-relocation-guide"
+  "slug": "best-movers-bole-rwanda-fast-reliable-relocation-guide",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.768Z",
+  "enrichedAt": "2026-10-29T07:23:40.701Z",
+  "quality": "enriched"
 }

@@ -16,13 +16,17 @@
     "apartments"
   ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua61.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua62.jpeg",
     "https://www.activemoverset.com/images/gallary/qua63.jpeg"
   ],
   "status": "published",
-  "publishedAt": "2027-08-12T09:00:00.000Z",
-  "slug": "why-gotera-condominiums-top-destination-young-movers"
+  "publishedAt": "2026-09-20T09:00:00.000Z",
+  "slug": "why-gotera-condominiums-top-destination-young-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:32.044Z",
+  "enrichedAt": "2026-10-29T07:23:44.554Z",
+  "quality": "enriched"
 }

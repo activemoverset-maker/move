@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "packing-guide",
-  "tags": ["plants", "garden estate", "potted plants", "moving", "landscaping", "Addis Ababa"],
+  "tags": [
+    "plants",
+    "garden estate",
+    "potted plants",
+    "moving",
+    "landscaping",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 56,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua262.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua263.jpeg", "https://www.activemoverset.com/images/gallary/qua264.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua263.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua264.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-24T09:00:00.000Z",
-  "slug": "moving-large-potted-plants-garden-estates-greenery-alive"
+  "slug": "moving-large-potted-plants-garden-estates-greenery-alive",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.347Z",
+  "enrichedAt": "2026-10-29T07:23:42.153Z",
+  "quality": "enriched"
 }

@@ -17,7 +17,7 @@
     "relocation"
   ],
   "tagsAm": [],
-  "readTime": 36,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua19.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua20.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-03-08T14:00:00.000Z",
-  "slug": "mekanisa-movers-guide-move-without-stress"
+  "slug": "mekanisa-movers-guide-move-without-stress",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.185Z",
+  "enrichedAt": "2026-10-29T07:23:41.594Z",
+  "quality": "enriched"
 }

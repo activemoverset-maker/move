@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { GalleryManagement } from '../../../components/admin/gallery-management'
+import { GalleryManagement } from '@/components/admin/gallery-management'
 
 export const metadata: Metadata = {
   title: 'Active Movers & Packers - Gallery Management | Photo & Content Management',

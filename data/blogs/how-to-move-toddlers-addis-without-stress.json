@@ -8,9 +8,27 @@
   "contentAm": "<h2>አዲስ አበባ ውስጥ አራት እግር ልጆች ጭንቀት ሳያጣ እንዴት እንደሚዛወር</h2><p>በአዲስ አበባ አራት እግር ልጆች ጋር መጓጓዣ የሚፈልጉ የተለያዩ ተግሳጾችን ያስተላልፋል እና የተለየ ግምት ይፈልጋል። አራት እግር ልጆች በተለይ ለአካባቢያቸው እና ለመደበኛ ስራዎቻቸው ለውጦች በጣም ተገላጋይ ናቸው፣ ይህም መጓጓዣዎችን ለልጆች እና ለወላጆች በጣም ተገላጋይ ያደርጋል። ይህ ሁለገብ መምሪያ በአዲስ አበባ አራት እግር ልጆች ጋር መጓጓዣ ውስብስብነቶችን ለማሰራር እና ለጠቅላላው ቤተሰብ የጭንቀት ደረጃዎችን ዝቅ ለማድረግ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["moving toddlers addis ababa", "toddler moving tips addis", "family moving addis ababa", "children moving addis", "toddler moving guide addis", "moving with kids addis", "addis family moving", "toddler moving stress addis"],
-  "tagsAm": ["አራት እግር ልጆች መጓጓዣ አዲስ አበባ", "የአራት እግር ልጆች መጓጓዣ ምክሮች አዲስ አበባ", "የቤተሰብ መጓጓዣ አዲስ አበባ", "ልጆች መጓጓዣ አዲስ አበባ", "የአራት እግር ልጆች መጓጓዣ መምሪያ አዲስ አበባ", "ልጆች ጋር መጓጓዣ አዲስ አበባ", "የአዲስ አበባ ቤተሰብ መጓጓዣ", "የአራት እግር ልጆች መጓጓዣ ጭንቀት አዲስ አበባ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "moving toddlers addis ababa",
+    "toddler moving tips addis",
+    "family moving addis ababa",
+    "children moving addis",
+    "toddler moving guide addis",
+    "moving with kids addis",
+    "addis family moving",
+    "toddler moving stress addis"
+  ],
+  "tagsAm": [
+    "አራት እግር ልጆች መጓጓዣ አዲስ አበባ",
+    "የአራት እግር ልጆች መጓጓዣ ምክሮች አዲስ አበባ",
+    "የቤተሰብ መጓጓዣ አዲስ አበባ",
+    "ልጆች መጓጓዣ አዲስ አበባ",
+    "የአራት እግር ልጆች መጓጓዣ መምሪያ አዲስ አበባ",
+    "ልጆች ጋር መጓጓዣ አዲስ አበባ",
+    "የአዲስ አበባ ቤተሰብ መጓጓዣ",
+    "የአራት እግር ልጆች መጓጓዣ ጭንቀት አዲስ አበባ"
+  ],
+  "readTime": 18,
   "status": "published",
   "slug": "how-to-move-toddlers-addis-without-stress",
   "featuredImage": "https://www.activemoverset.com/images/moving-toddlers-addis-ababa.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/moving-with-kids-addis.jpg"
   ],
   "publishedAt": "2025-07-22T09:15:00.000Z",
-  "updatedAt": "2025-07-22T09:15:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.111Z",
   "seo": {
     "title": "How to Move With Toddlers in Addis Without Stress | Complete Guide 2025",
     "description": "Moving with toddlers in Addis Ababa can be challenging, but with the right strategies, it can be stress-free for the whole family. Learn expert tips for keeping your little ones happy and safe during the move.",
@@ -36,5 +54,8 @@
       "addis family moving",
       "toddler moving stress addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.390Z",
+  "quality": "enriched"
 }

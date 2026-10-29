@@ -17,7 +17,7 @@
     "logistics"
   ],
   "tagsAm": [],
-  "readTime": 33,
+  "readTime": 5,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua52.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua53.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-01-16T10:45:00.000Z",
-  "slug": "best-moving-services-sarbet-guide"
+  "slug": "best-moving-services-sarbet-guide",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.777Z",
+  "enrichedAt": "2026-10-29T07:23:40.707Z",
+  "quality": "enriched"
 }

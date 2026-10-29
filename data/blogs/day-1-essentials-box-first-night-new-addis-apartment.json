@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "packing-guide",
-  "tags": ["essentials box", "first night", "packing", "moving tips", "Addis Ababa", "apartment move"],
+  "tags": [
+    "essentials box",
+    "first night",
+    "packing",
+    "moving tips",
+    "Addis Ababa",
+    "apartment move"
+  ],
   "tagsAm": [],
-  "readTime": 54,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua268.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua269.jpeg", "https://www.activemoverset.com/images/gallary/qua270.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua269.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua270.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-26T09:00:00.000Z",
-  "slug": "day-1-essentials-box-first-night-new-addis-apartment"
+  "slug": "day-1-essentials-box-first-night-new-addis-apartment",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.880Z",
+  "enrichedAt": "2026-10-29T07:23:41.017Z",
+  "quality": "enriched"
 }

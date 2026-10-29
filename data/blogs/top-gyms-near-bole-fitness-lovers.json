@@ -8,9 +8,27 @@
   "contentAm": "<h2>ለፊትነስ ወዳጆች በቦሌ አጠገብ የተሻሉ የፊትነስ ማዕከሎች</h2><p>በአዲስ አበባ በቦሌ አካባቢ ከከተማው የተሻሉ የፊትነስ ተቋማት አንዱ ቤት ነው፣ ከዘመናዊ መሳሪያዎች እስከ ልዩ የስልጠና ፕሮግራሞች ሁሉንም ነገር ያቀርባል። ፊትነስ ተከታታይ፣ ጀማሪ ወይም ሙያዊ አትሌት ቢሆንም፣ ቦሌ ለእያንዳንዱ የፊትነስ ደረጃ እና የጀርባ የሚስማማ የፊትነስ ማዕከሎች አሉ። ይህ ሁለገብ መምሪያ በዚህ ተለዋዋጭ ሰፈር የፊትነስ ግቦችዎን ለማሳካት ትክክለኛውን የፊትነስ ማዕከል ለማግኘት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["gyms bole addis ababa", "fitness centers bole", "gym membership bole", "fitness bole addis", "gym prices bole", "fitness facilities bole", "gym guide bole", "fitness options bole"],
-  "tagsAm": ["የፊትነስ ማዕከሎች ቦሌ አዲስ አበባ", "የፊትነስ ማዕከሎች ቦሌ", "የፊትነስ ማዕከል አባልነት ቦሌ", "ፊትነስ ቦሌ አዲስ አበባ", "የፊትነስ ማዕከል ዋጋዎች ቦሌ", "የፊትነስ ተቋማት ቦሌ", "የፊትነስ ማዕከል መምሪያ ቦሌ", "የፊትነስ አማራጮች ቦሌ"],
-  "readTime": "18-22 minutes",
+  "tags": [
+    "gyms bole addis ababa",
+    "fitness centers bole",
+    "gym membership bole",
+    "fitness bole addis",
+    "gym prices bole",
+    "fitness facilities bole",
+    "gym guide bole",
+    "fitness options bole"
+  ],
+  "tagsAm": [
+    "የፊትነስ ማዕከሎች ቦሌ አዲስ አበባ",
+    "የፊትነስ ማዕከሎች ቦሌ",
+    "የፊትነስ ማዕከል አባልነት ቦሌ",
+    "ፊትነስ ቦሌ አዲስ አበባ",
+    "የፊትነስ ማዕከል ዋጋዎች ቦሌ",
+    "የፊትነስ ተቋማት ቦሌ",
+    "የፊትነስ ማዕከል መምሪያ ቦሌ",
+    "የፊትነስ አማራጮች ቦሌ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "top-gyms-near-bole-fitness-lovers",
   "featuredImage": "https://www.activemoverset.com/images/gyms-bole-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/fitness-facilities-bole.jpg"
   ],
   "publishedAt": "2025-02-18T13:05:00.000Z",
-  "updatedAt": "2025-02-18T13:05:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.782Z",
   "seo": {
     "title": "Top Gyms Near Bole for Fitness Lovers in Addis Ababa | Complete Guide 2025",
     "description": "Discover the best gyms and fitness centers near Bole area in Addis Ababa. From modern facilities to budget-friendly options, find the perfect gym for your fitness journey.",
@@ -36,5 +54,8 @@
       "gym guide bole addis ababa",
       "fitness options bole addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:44.405Z",
+  "quality": "enriched"
 }

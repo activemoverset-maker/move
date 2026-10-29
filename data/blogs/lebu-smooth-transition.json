@@ -8,9 +8,25 @@
   "contentAm": "<h2>ወደ ለቡ የመጓጓዣ የእርስዎ ሁለገብ መመሪያ</h2><p>ለቡ፣ ከአዲስ አበባ በጣም የሚያምሩ እና በደንብ የተመሰረቱ የመኖሪያ ሰፈሮች አንዱ፣ የጸጥታ እና የምቾት ፍጹም ድብልል ያቀርባል። በዛፎች የተሸፈኑ መንገዶች፣ የቤተሰብ ተስማሚ አየር እና በጣም የተሻለ አገልግሎቶች በሚታወቅ፣ ለቡ ለቤተሰቦች እና ለሙያ ባለሞያዎች የሚፈልጉት የጸጥታ ነገር ግን የተገናኘ የሕይወት መንገድ ምርጫ ሆኗል። ይህ ሁለገብ መመሪያ ወደ ለቡ የአዲስ ቤትዎ ለስላሳ ለውጥ እንዲያቅዱ እና እንዲፈጽሙ ያግዛችኋል።</p><h3>ለምን ለቡ ፍጹም ምርጫ ነው</h3><p>ለቡ ምን እንደሚያደርገው ልዩ እንደሆነ ያውቁ:</p><ul><li><strong>የተመሰረተ ማህበረሰብ:</strong> በደንብ የተመሰረተ ሰፈር ከዛግ የመሰረተ ልማት ጋር</li><li><strong>የቤተሰብ ተስማሚ:</strong> ለልጆች ያላቸው ቤተሰቦች ፍጹም የሚሆን ደህንነቱ የተጠበቀ አየር</li><li><strong>የአረንጓዴ አየር:</strong> በዛፎች የተሸፈኑ መንገዶች እና ብዙ የአረንጓዴ ቦታዎች</li><li><strong>በጣም የተሻለ ትምህርት ቤቶች:</strong> ከጥሩ የትምህርት ተቋማት ቅርብ</li><li><strong>የጤና አገልግሎት መድረሻ:</strong> አጠገብ ያሉ ሆስፒታሎች እና የሕክምና ተቋማት</li><li><strong>የግዢ ምቾት:</strong> አካባቢ ገበያዎች እና የግዢ ማዕከሎች</li><li><strong>የመጓጓዣ አገናኞች:</strong> ወደ ከተማው ሌሎች ክፍሎች ጥሩ የመጓጓዣ አውድ</li><li><strong>የንብረት እሴት:</strong> የተረጋጋ እና የሚያድጉ የንብረት እሴቶች</li><li><strong>የማህበረሰብ መንፈስ:</strong> የማህበረሰብ እና የጎረቤት ግንኙነት ጠንካራ ስሜት</li><li><strong>የጸጥታ መኖሪያ:</strong> ከከተማ ድምፅ የራቀ የጸጥታ የመኖሪያ ቤት አየር</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Lebu", "Addis Ababa", "smooth transition", "family-friendly", "residential", "community", "planning"],
-  "tagsAm": ["ለቡ", "አዲስ አበባ", "ለስላሳ ለውጥ", "የቤተሰብ ተስማሚ", "የመኖሪያ ቤት", "ማህበረሰብ", "ዕቅድ"],
-  "readTime": 13,
+  "tags": [
+    "Lebu",
+    "Addis Ababa",
+    "smooth transition",
+    "family-friendly",
+    "residential",
+    "community",
+    "planning"
+  ],
+  "tagsAm": [
+    "ለቡ",
+    "አዲስ አበባ",
+    "ለስላሳ ለውጥ",
+    "የቤተሰብ ተስማሚ",
+    "የመኖሪያ ቤት",
+    "ማህበረሰብ",
+    "ዕቅድ"
+  ],
+  "readTime": 6,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua22.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua23.jpeg",
@@ -18,5 +34,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-10-15T09:30:00.000Z",
-  "slug": "moving-to-lebu-smooth-transition-planning-guide"
+  "slug": "moving-to-lebu-smooth-transition-planning-guide",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.143Z",
+  "enrichedAt": "2026-10-29T07:23:41.460Z",
+  "quality": "enriched"
 }

@@ -8,9 +8,27 @@
   "contentAm": "<h2>በመስቀል ወቅት ያለ መዘግየት እንዴት እንደሚዛወር</h2><p>በኢትዮጵያ በመስቀል (የእውነተኛ መስቀል ማግኘት) በዓላት ጊዜ መጓጓዣ በጥንቃቄ ዕቅድ እና የባህል ተጋላጭነት ይፈልጋል። መስቀል በኢትዮጵያ በጣም አስፈላጊ የሃይማኖት በዓላት አንዱ ነው፣ በታላቅ ተጋላጭነት ይከበራል እና ትልቅ የሕዝብ ስብሰቦች፣ ስርዓተ በዓላት እና የባህል ዝግጅቶችን ያካተተ ነው። ይህ ሁለገብ መምሪያ በዚህ አስፈላጊ ጊዜ የባህል ልማዶችን በማክበር እና የሎጂስቲክ ተግሳጾችን በማስተዳደር የመጓጓዣ ውስብስብነቶችን ለማሰራር ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["meskel season moving", "meskel festival moving", "religious festival moving ethiopia", "cultural moving tips", "meskel moving guide", "festival moving addis ababa", "cultural moving considerations", "religious season moving"],
-  "tagsAm": ["የመስቀል ወቅት መጓጓዣ", "የመስቀል በዓል መጓጓዣ", "የሃይማኖት በዓል መጓጓዣ ኢትዮጵያ", "የባህል መጓጓዣ ምክሮች", "የመስቀል መጓጓዣ መምሪያ", "የበዓል መጓጓዣ አዲስ አበባ", "የባህል መጓጓዣ ግምቶች", "የሃይማኖት ወቅት መጓጓዣ"],
-  "readTime": "22-28 minutes",
+  "tags": [
+    "meskel season moving",
+    "meskel festival moving",
+    "religious festival moving ethiopia",
+    "cultural moving tips",
+    "meskel moving guide",
+    "festival moving addis ababa",
+    "cultural moving considerations",
+    "religious season moving"
+  ],
+  "tagsAm": [
+    "የመስቀል ወቅት መጓጓዣ",
+    "የመስቀል በዓል መጓጓዣ",
+    "የሃይማኖት በዓል መጓጓዣ ኢትዮጵያ",
+    "የባህል መጓጓዣ ምክሮች",
+    "የመስቀል መጓጓዣ መምሪያ",
+    "የበዓል መጓጓዣ አዲስ አበባ",
+    "የባህል መጓጓዣ ግምቶች",
+    "የሃይማኖት ወቅት መጓጓዣ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "how-to-move-during-meskel-without-delays",
   "featuredImage": "https://www.activemoverset.com/images/meskel-season-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/festival-moving-addis.jpg"
   ],
   "publishedAt": "2025-09-26T15:10:00.000Z",
-  "updatedAt": "2025-09-26T15:10:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.094Z",
   "seo": {
     "title": "How to Move During Meskel Without Delays in Ethiopia | Complete Guide 2025",
     "description": "Complete guide for moving during Meskel (Finding of the True Cross) celebrations in Ethiopia. Learn about festival timing, traffic management, and cultural respect for a smooth move during this important religious period.",
@@ -36,5 +54,8 @@
       "cultural moving considerations ethiopia",
       "religious season moving ethiopia"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.346Z",
+  "quality": "enriched"
 }

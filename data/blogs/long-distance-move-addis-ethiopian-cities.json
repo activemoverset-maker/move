@@ -29,8 +29,8 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-06-12T14:50:00.000Z",
-  "updatedAt": "2025-06-12T14:50:00.000Z",
-  "readTime": "30-35 minutes",
+  "updatedAt": "2026-10-29T07:46:31.165Z",
+  "readTime": 5,
   "status": "published",
   "slug": "how-to-prepare-long-distance-move-addis-ethiopian-cities",
   "seo": {
@@ -89,5 +89,8 @@
     "articleSection": "Moving Guides",
     "wordCount": 15000,
     "inLanguage": "en"
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.514Z",
+  "quality": "enriched"
 }

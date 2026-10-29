@@ -1,0 +1,12 @@
+[
+  { "id": "bed", "labelEn": "Bed", "labelAm": "አልጋ" },
+  { "id": "sofa", "labelEn": "Sofa", "labelAm": "ሶፋ" },
+  { "id": "fridge", "labelEn": "Fridge", "labelAm": "ፍሪጅ" },
+  { "id": "washer", "labelEn": "Washing machine", "labelAm": "የልብስ ማጠቢያ" },
+  { "id": "tv", "labelEn": "TV", "labelAm": "ቴሌቪዥን" },
+  { "id": "desk", "labelEn": "Desk / table", "labelAm": "ጠረጴዛ" },
+  { "id": "wardrobe", "labelEn": "Wardrobe", "labelAm": "የልብስ አሰራ" },
+  { "id": "dining", "labelEn": "Dining set", "labelAm": "የመመገቢያ ማዕድ" },
+  { "id": "boxes", "labelEn": "Boxes only", "labelAm": "ሳጥኖች" },
+  { "id": "office", "labelEn": "Office furniture", "labelAm": "የቢሮ እቃ" }
+]

@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከአዲስ አበባ ወደ ጅማ መጓጓዣ: ወጪዎች እና እቅድ</h2><p>ከአዲስ አበባ ወደ ጅማ መጓጓዣ ከኢትዮጵያ ዋና ከተማ ወደ በጣም አስፈላጊ የደቡብ ምዕራብ ከተሞች አንዱ ትልቅ ማዛወርን ያስተላልፋል። ጅማ፣ በቡና ቅርስ እና ባህላዊ አስፈላጊነት የሚታወቅ፣ ለሚዛወሩ ሰዎች ልዩ እድሎች እና ተግሳጾችን ያቀርባል። ይህ ሁለገብ መምሪያ ወደ ጅማ መጓጓዣ ወጪዎች፣ የእቅድ መስፈርቶች እና የተግባራዊ ግምቶችን በመረዳት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["addis jimma moving", "addis jimma costs", "ethiopia inter-city moving", "addis jimma planning", "ethiopia city moving", "addis jimma guide", "ethiopia moving logistics", "southwestern ethiopia moving"],
-  "tagsAm": ["አዲስ አበባ ጅማ መጓጓዣ", "አዲስ አበባ ጅማ ወጪዎች", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ጅማ እቅድ", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ጅማ መምሪያ", "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ", "የደቡብ ምዕራብ ኢትዮጵያ መጓጓዣ"],
-  "readTime": "22-28 minutes",
+  "tags": [
+    "addis jimma moving",
+    "addis jimma costs",
+    "ethiopia inter-city moving",
+    "addis jimma planning",
+    "ethiopia city moving",
+    "addis jimma guide",
+    "ethiopia moving logistics",
+    "southwestern ethiopia moving"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ ጅማ መጓጓዣ",
+    "አዲስ አበባ ጅማ ወጪዎች",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ጅማ እቅድ",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ጅማ መምሪያ",
+    "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ",
+    "የደቡብ ምዕራብ ኢትዮጵያ መጓጓዣ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "moving-jimma-addis-costs-planning",
   "featuredImage": "https://www.activemoverset.com/images/addis-jimma-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-jimma-guide.jpg"
   ],
   "publishedAt": "2025-09-12T09:30:00.000Z",
-  "updatedAt": "2025-09-12T09:30:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.334Z",
   "seo": {
     "title": "Moving to Jimma from Addis: Costs & Planning | Complete Guide 2025",
     "description": "Complete guide for moving from Addis Ababa to Jimma. Learn about transportation costs, planning strategies, and what to expect when relocating to this important southwestern Ethiopian city.",
@@ -36,5 +54,8 @@
       "ethiopia moving logistics",
       "southwestern ethiopia moving"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:42.117Z",
+  "quality": "enriched"
 }

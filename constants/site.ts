@@ -12,14 +12,15 @@ import {
   MessageCircle,
   Send
 } from 'lucide-react'
+import { SITE_PHONE, SITE_WHATSAPP } from './contact'
 
 export const SITE_CONFIG = {
-  name: 'Movers in Addis Ababa - Active Movers & Packers',
+  name: 'Active Movers & Packers',
   description: 'Professional movers in Addis Ababa, Ethiopia',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.activemoverset.com',
   links: {
-      phone: process.env.PHONE_NUMBER || '+251982260000',
-  whatsapp: process.env.WHATSAPP_NUMBER || '+251982260000',
+      phone: SITE_PHONE,
+  whatsapp: SITE_WHATSAPP,
     telegram: process.env.TELEGRAM_USERNAME || 'activemovers',
     email: process.env.EMAIL || 'activemoverset@gmail.com',
       address: 'Beka Building, Addis Ababa, Ethiopia',

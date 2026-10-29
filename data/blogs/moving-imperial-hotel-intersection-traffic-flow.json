@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Imperial Hotel", "intersection", "traffic flow", "central Addis", "moving logistics", "diplomatic area"],
+  "tags": [
+    "Imperial Hotel",
+    "intersection",
+    "traffic flow",
+    "central Addis",
+    "moving logistics",
+    "diplomatic area"
+  ],
   "tagsAm": [],
-  "readTime": 57,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua286.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua287.jpeg", "https://www.activemoverset.com/images/gallary/qua288.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua287.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua288.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-01T09:00:00.000Z",
-  "slug": "moving-imperial-hotel-intersection-traffic-flow"
+  "slug": "moving-imperial-hotel-intersection-traffic-flow",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.330Z",
+  "enrichedAt": "2026-10-29T07:23:42.105Z",
+  "quality": "enriched"
 }

@@ -8,9 +8,27 @@
   "contentAm": "<h2>የምግብ ቤት ኩሽና ማዛወር ምክሮች</h2><p>የምግብ ቤት ኩሽና ማዛወር በጣም ውስብስብ የንግድ ማዛወር ነው፣ ለምግብ ደህንነት፣ የመሳሪያ አያያዝ እና የንግድ ቀጣይነት በጥንቃቄ ዕቅድ ይፈልጋል። በአዲስ አበባ ተወዳዳሪ የምግብ ቤት ኢንደስትሪ ውስጥ፣ የሚሳካ የኩሽና ማዛወር ንግድዎን ሊያስቸግር ወይም ሊያስቸግር ይችላል። ይህ ሁለገብ መምሪያ ተግሳጾችን ለማሰራር እና ወደ አዲሱ ቦታዎ ስላሳ ሽግግር እንዲሳክ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["restaurant kitchen relocation", "kitchen moving tips", "restaurant moving addis ababa", "kitchen equipment moving", "restaurant relocation guide", "kitchen moving logistics", "restaurant moving costs", "kitchen relocation planning"],
-  "tagsAm": ["የምግብ ቤት ኩሽና ማዛወር", "የኩሽና መጓጓዣ ምክሮች", "የምግብ ቤት መጓጓዣ አዲስ አበባ", "የኩሽና መሳሪያ መጓጓዣ", "የምግብ ቤት ማዛወር መምሪያ", "የኩሽና መጓጓዣ ሎጂስቲክስ", "የምግብ ቤት መጓጓዣ ወጪዎች", "የኩሽና ማዛወር እቅድ"],
-  "readTime": "22-28 minutes",
+  "tags": [
+    "restaurant kitchen relocation",
+    "kitchen moving tips",
+    "restaurant moving addis ababa",
+    "kitchen equipment moving",
+    "restaurant relocation guide",
+    "kitchen moving logistics",
+    "restaurant moving costs",
+    "kitchen relocation planning"
+  ],
+  "tagsAm": [
+    "የምግብ ቤት ኩሽና ማዛወር",
+    "የኩሽና መጓጓዣ ምክሮች",
+    "የምግብ ቤት መጓጓዣ አዲስ አበባ",
+    "የኩሽና መሳሪያ መጓጓዣ",
+    "የምግብ ቤት ማዛወር መምሪያ",
+    "የኩሽና መጓጓዣ ሎጂስቲክስ",
+    "የምግብ ቤት መጓጓዣ ወጪዎች",
+    "የኩሽና ማዛወር እቅድ"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "tips-for-relocating-restaurant-kitchen",
   "featuredImage": "https://www.activemoverset.com/images/restaurant-kitchen-relocation.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/kitchen-moving-costs.jpg"
   ],
   "publishedAt": "2025-03-27T11:50:00.000Z",
-  "updatedAt": "2025-03-27T11:50:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.760Z",
   "seo": {
     "title": "Tips for Relocating a Restaurant Kitchen in Addis Ababa | Complete Guide 2025",
     "description": "Essential guide to relocating a restaurant kitchen in Addis Ababa. Learn about equipment handling, food safety, permits, and maintaining business continuity during your restaurant move.",
@@ -36,5 +54,8 @@
       "restaurant moving costs addis ababa",
       "kitchen relocation planning addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:44.392Z",
+  "quality": "enriched"
 }

@@ -8,9 +8,27 @@
   "contentAm": "<h2>የሱቅ ከመርካቶ ወደ ሌላ አካባቢ እንዴት እንደሚዛወር</h2><p>የሱቅ ከመርካቶ፣ የአፍሪካ ትልቁ ገበያ፣ ወደ አዲስ አበባ ሌላ አካባቢ ማዛወር በጥንቃቄ ዕቅድ፣ ትክክለኛ ሰነዶች እና ስትራቴጂክ አፈጻጸም የሚፈልግ ውስብስብ ሂደት ነው። ወደ ዘመናዊ ቦታ፣ ንግድዎን ማስፋፋት ወይም የተሻለ ተደራሽነት ቢፈልጉም፣ ይህ ሁለገብ መምሪያ ተግሳጾችን ለማሰራር እና የሱቅ ማዛወር እንዲሳክ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["shop relocation mercato", "business moving addis ababa", "shop moving guide", "mercato relocation", "business relocation addis", "shop moving tips", "commercial moving addis", "business moving guide"],
-  "tagsAm": ["የሱቅ ማዛወር መርካቶ", "የንግድ መጓጓዣ አዲስ አበባ", "የሱቅ መጓጓዣ መምሪያ", "የመርካቶ ማዛወር", "የንግድ ማዛወር አዲስ አበባ", "የሱቅ መጓጓዣ ምክሮች", "የንግድ መጓጓዣ አዲስ አበባ", "የንግድ መጓጓዣ መምሪያ"],
-  "readTime": "20-25 minutes",
+  "tags": [
+    "shop relocation mercato",
+    "business moving addis ababa",
+    "shop moving guide",
+    "mercato relocation",
+    "business relocation addis",
+    "shop moving tips",
+    "commercial moving addis",
+    "business moving guide"
+  ],
+  "tagsAm": [
+    "የሱቅ ማዛወር መርካቶ",
+    "የንግድ መጓጓዣ አዲስ አበባ",
+    "የሱቅ መጓጓዣ መምሪያ",
+    "የመርካቶ ማዛወር",
+    "የንግድ ማዛወር አዲስ አበባ",
+    "የሱቅ መጓጓዣ ምክሮች",
+    "የንግድ መጓጓዣ አዲስ አበባ",
+    "የንግድ መጓጓዣ መምሪያ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "how-to-move-shop-from-mercato-to-another-area",
   "featuredImage": "https://www.activemoverset.com/images/shop-relocation-mercato.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/business-moving-guide.jpg"
   ],
   "publishedAt": "2025-11-14T16:30:00.000Z",
-  "updatedAt": "2025-11-14T16:30:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.103Z",
   "seo": {
     "title": "How to Move a Shop from Mercato to Another Area in Addis Ababa | Complete Guide 2025",
     "description": "Complete guide to relocating your shop from Mercato to another area in Addis Ababa. Learn about permits, logistics, inventory management, and customer communication for a successful business move.",
@@ -36,5 +54,8 @@
       "commercial moving addis ababa",
       "business moving guide addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.377Z",
+  "quality": "enriched"
 }

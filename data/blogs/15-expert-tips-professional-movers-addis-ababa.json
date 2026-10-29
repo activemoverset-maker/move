@@ -17,7 +17,7 @@
     "checklist"
   ],
   "tagsAm": [],
-  "readTime": 38,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua28.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua29.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-03-18T09:00:00.000Z",
-  "slug": "15-expert-tips-professional-movers-addis-ababa"
+  "slug": "15-expert-tips-professional-movers-addis-ababa",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.702Z",
+  "enrichedAt": "2026-10-29T07:23:40.641Z",
+  "quality": "enriched"
 }

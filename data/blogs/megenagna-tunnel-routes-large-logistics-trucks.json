@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Megenagna", "tunnel", "logistics trucks", "route optimization", "commercial move", "Addis Ababa"],
+  "tags": [
+    "Megenagna",
+    "tunnel",
+    "logistics trucks",
+    "route optimization",
+    "commercial move",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 56,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua298.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua299.jpeg", "https://www.activemoverset.com/images/gallary/qua300.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua299.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua300.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-05T09:00:00.000Z",
-  "slug": "megenagna-tunnel-routes-large-logistics-trucks"
+  "slug": "megenagna-tunnel-routes-large-logistics-trucks",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.183Z",
+  "enrichedAt": "2026-10-29T07:23:41.592Z",
+  "quality": "enriched"
 }

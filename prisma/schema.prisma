@@ -145,7 +145,82 @@ model GalleryImage {
   uploadedAt  DateTime @default(now())
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-} 
- 
- 
+}
+
+model TelegramUpdate {
+  id        String   @id @default(cuid())
+  updateId  String   @unique
+  createdAt DateTime @default(now())
+}
+
+model TelegramUser {
+  id              String            @id @default(cuid())
+  telegramUserId  String            @unique
+  chatId          String
+  username        String?
+  firstName       String?
+  lastName        String?
+  displayName     String?
+  awaitingName    Boolean           @default(false)
+  awaitingPhone   Boolean           @default(false)
+  isBlocked       Boolean           @default(false)
+  preferredLocale String            @default("am") // am | en
+  welcomeVoiceSent Boolean          @default(false)
+  processingUntil DateTime?
+  createdAt       DateTime          @default(now())
+  lastSeenAt      DateTime          @default(now())
+  sessions        TelegramSession[]
+  messages        TelegramMessage[]
+}
+
+model TelegramSession {
+  id             String            @id @default(cuid())
+  userId         String
+  user           TelegramUser      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status         String            @default("active") // active | closed
+  fromAddress    String?
+  toAddress      String?
+  moveDate       String?
+  serviceType    String?
+  notes          String?           @db.Text
+  phone          String?
+  handoffReason  String? // needs_quote | asked_for_human | limit_reached | intake_complete
+  handoffAt      DateTime?
+  staffMessageId String?
+  lastMediaAt    DateTime?
+  mediaAckSent   Boolean           @default(false)
+  intakeStep     String?
+  intakeData     Json?
+  intakeStartedAt DateTime?
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+  messages       TelegramMessage[]
+
+  @@index([userId, status])
+}
+
+model TelegramMessage {
+  id                 String          @id @default(cuid())
+  userId             String
+  user               TelegramUser    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId          String
+  session            TelegramSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  telegramMessageId  String
+  mediaGroupId       String?
+  role               String // user | assistant | system
+  kind               String // text | voice | photo | video | contact | command
+  text               String?         @db.Text
+  fileId             String?
+  countsTowardLimit  Boolean         @default(false)
+  promptTokens       Int?
+  completionTokens   Int?
+  sttCharacters      Int?
+  ttsSeconds         Float?
+  createdAt          DateTime        @default(now())
+
+  @@unique([userId, telegramMessageId])
+  @@index([userId, countsTowardLimit, createdAt])
+  @@index([sessionId, createdAt])
+}
+
  

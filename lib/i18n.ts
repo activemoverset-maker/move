@@ -7,6 +7,7 @@ export interface Translations {
     about: string
     services: string
     blog: string
+    guides: string
     contact: string
     watch: string
   }
@@ -224,6 +225,7 @@ export const translations: Record<Language, Translations> = {
     about: 'About',
     services: 'Services',
     blog: 'Blog',
+    guides: 'Guides',
     contact: 'Contact',
     watch: 'Watch',
   },
@@ -233,8 +235,8 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: 'Serving Addis Ababa & Surrounding Areas',
-      title: 'Professional Moving Services',
-      subtitle: 'in Addis Ababa',
+      title: 'Movers and Packers in Addis Ababa',
+      subtitle: '',
       description: 'Experience stress-free moving with our professional team. We handle everything from packing to delivery with care and efficiency.',
       bookMove: 'Book Your Move',
       viewServices: 'View Services',
@@ -421,6 +423,7 @@ export const translations: Record<Language, Translations> = {
       about: 'ስለ እኛ',
       services: 'አገልግሎቶች',
       blog: 'ዜናዎች',
+      guides: 'መመሪያዎች',
       contact: 'አድራሻ',
       watch: 'ቪዲዮ',
     },

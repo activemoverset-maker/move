@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -232,11 +233,12 @@ export function ImageShowcase() {
                 >
                   {/* Image Container */}
                   <div className="relative h-64 overflow-hidden">
-                    <img
+                    <Image
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
+                      fill
+                      sizes="320px"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     
                     {/* Overlay */}
@@ -298,10 +300,12 @@ export function ImageShowcase() {
 
                 {/* Image */}
                 <div className="relative h-96 md:h-[500px]">
-                  <img
+                  <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 896px"
+                    className="object-cover"
                   />
                 </div>
 

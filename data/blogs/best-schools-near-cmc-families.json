@@ -29,8 +29,8 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-08-07T10:55:00.000Z",
-  "updatedAt": "2025-08-07T10:55:00.000Z",
-  "readTime": "25-30 minutes",
+  "updatedAt": "2026-10-29T07:46:30.799Z",
+  "readTime": 4,
   "status": "published",
   "slug": "best-schools-near-cmc-families",
   "seo": {
@@ -89,5 +89,8 @@
     "articleSection": "Moving Guides",
     "wordCount": 11000,
     "inLanguage": "en"
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:40.725Z",
+  "quality": "enriched"
 }

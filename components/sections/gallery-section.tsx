@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Download, Share2, Filter, Eye, Heart, Sparkles, Zap, Star, Shuffle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -774,11 +775,8 @@ export function GallerySection() {
                   )}
                   
                   <div className="relative w-full h-full overflow-hidden">
-                    <motion.img
-                      src={image.src}
-                      alt={image.alt}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
+                    <motion.div
+                      className="relative h-full w-full"
                       variants={isMobile ? mobileImageVariants : imageSwapVariants}
                       initial={isMobile ? "offscreen" : "initial"}
                       whileInView={isMobile ? "onscreen" : undefined}
@@ -790,7 +788,15 @@ export function GallerySection() {
                         transition: { duration: isMobile ? 0.4 : 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
                       }}
                       onClick={() => handleImageClick(image)}
-                    />
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover"
+                      />
+                    </motion.div>
                     
                     {/* Mobile-specific shimmer effect */}
                     {isMobile && (
@@ -1001,12 +1007,14 @@ export function GallerySection() {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="flex-1 relative"
+                  className="relative min-h-[20rem] flex-1 lg:min-h-[28rem]"
                 >
-                  <img
+                  <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </motion.div>
 

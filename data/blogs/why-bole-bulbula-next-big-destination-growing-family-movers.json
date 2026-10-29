@@ -17,7 +17,7 @@
     "neighborhood guide"
   ],
   "tagsAm": [],
-  "readTime": 50,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua43.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua44.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-08-13T10:00:00.000Z",
-  "slug": "why-bole-bulbula-next-big-destination-growing-family-movers"
+  "slug": "why-bole-bulbula-next-big-destination-growing-family-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:32.014Z",
+  "enrichedAt": "2026-10-29T07:23:44.541Z",
+  "quality": "enriched"
 }

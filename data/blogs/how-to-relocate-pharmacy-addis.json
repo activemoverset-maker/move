@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ የፋርማሲ እንዴት እንደሚዛወር</h2><p>በአዲስ አበባ የፋርማሲ ማዛወር በጣም የተደነገገ እና ውስብስብ የንግድ መጓጓዣ ነው፣ በፋርማሲ ደንቦች ጥብቅ ተገዢነት፣ የመድሃኒት ትክክለኛ አያያዝ እና የፋርማሲ ደረጃዎችን መጠበቅ ይፈልጋል። ይህ ሁለገብ መምሪያ የደንብ መስፈርቶችን ለማሰራር እና የታማሚ ደህንነት እና የደንብ ተገዢነትን በመጠበቅ የሚሳካ የፋርማሲ ማዛወር እንዲሳክ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["pharmacy relocation addis ababa", "pharmacy moving guide", "pharmaceutical moving addis", "pharmacy equipment moving", "pharmacy relocation costs", "pharmacy moving tips", "pharmaceutical compliance addis", "pharmacy moving logistics"],
-  "tagsAm": ["የፋርማሲ ማዛወር አዲስ አበባ", "የፋርማሲ መጓጓዣ መምሪያ", "የፋርማሲ መጓጓዣ አዲስ አበባ", "የፋርማሲ መሳሪያ መጓጓዣ", "የፋርማሲ ማዛወር ወጪዎች", "የፋርማሲ መጓጓዣ ምክሮች", "የፋርማሲ ተገዢነት አዲስ አበባ", "የፋርማሲ መጓጓዣ ሎጂስቲክስ"],
-  "readTime": "28-35 minutes",
+  "tags": [
+    "pharmacy relocation addis ababa",
+    "pharmacy moving guide",
+    "pharmaceutical moving addis",
+    "pharmacy equipment moving",
+    "pharmacy relocation costs",
+    "pharmacy moving tips",
+    "pharmaceutical compliance addis",
+    "pharmacy moving logistics"
+  ],
+  "tagsAm": [
+    "የፋርማሲ ማዛወር አዲስ አበባ",
+    "የፋርማሲ መጓጓዣ መምሪያ",
+    "የፋርማሲ መጓጓዣ አዲስ አበባ",
+    "የፋርማሲ መሳሪያ መጓጓዣ",
+    "የፋርማሲ ማዛወር ወጪዎች",
+    "የፋርማሲ መጓጓዣ ምክሮች",
+    "የፋርማሲ ተገዢነት አዲስ አበባ",
+    "የፋርማሲ መጓጓዣ ሎጂስቲክስ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "how-to-relocate-pharmacy-addis",
   "featuredImage": "https://www.activemoverset.com/images/pharmacy-relocation-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/pharmacy-moving-logistics.jpg"
   ],
   "publishedAt": "2025-10-22T09:25:00.000Z",
-  "updatedAt": "2025-10-22T09:25:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.117Z",
   "seo": {
     "title": "How to Relocate a Pharmacy in Addis Ababa | Complete Guide 2025",
     "description": "Complete guide to relocating a pharmacy in Addis Ababa. Learn about regulatory requirements, medication handling, equipment moving, and maintaining pharmaceutical standards during your pharmacy relocation.",
@@ -36,5 +54,8 @@
       "pharmaceutical compliance addis ababa",
       "pharmacy moving logistics addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.400Z",
+  "quality": "enriched"
 }

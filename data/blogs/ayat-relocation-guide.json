@@ -8,9 +8,25 @@
   "contentAm": "<h2>ወደ አያት እንኳን በደህና መጡ: በአዲስ አበባ የእርስዎ አዲስ ቤት</h2><p>አያት፣ ከአዲስ አበባ በጣም ተለዋዋጭ እና በፍጥነት የሚያድግ ሰፈሮች አንዱ፣ ዘመናዊ መኖሪያ ቤት እና የባህላዊ ኢትዮጵያ ውበት ፍጹም ድብልል ያቀርባል። በዚህ ተለዋዋጭ ማህበረሰብ ውስጥ ጉዞዎን ስትጀምሩ፣ በመጀመሪያው 30 ቀን ውስጥ ምን እንደሚጠብቁ እነሆ።</p><h3>1ኛ ሳምንት: መተማመኛ</h3><p>የመጀመሪያው ሳምንትዎ በአያት አዲሱን የቤት መሰረትዎን ማመቻቸት ላይ ያተኩራል:</p><ul><li><strong>ቀን 1-2: ማሰራጨት እና ማዘጋጀት</strong><br>መጀመሪያ በመሰረታዊ ነገሮች ላይ ያተኩሩ - የምግብ ቤት፣ የመጸዳጃ ቤት እና የመታጠቢያ ቤት። ሁሉንም ነገር በአንድ ጊዜ ማሰራጨት አትቸኩሉ።</li><li><strong>ቀን 3-4: የመጠቀሚያ ነገሮች እና አገልግሎቶች</strong><br>ኤሌክትሪክ፣ ውሃ፣ ኢንተርኔት እና የስልክ አገልግሎቶች በደንብ እንደተገናኙ እና እንደሚሰሩ ያረጋግጡ።</li><li><strong>ቀን 5-7: አካባቢ ማሰስ</strong><br>አጠገብ ያሉ ሱቆች፣ ምግብ ቤቶች እና አገልግሎቶችን ለማወቅ በሰፈርዎ ዙሪያ ይራመዱ።</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Ayat", "Addis Ababa", "relocation", "first 30 days", "settling in", "community", "expat life"],
-  "tagsAm": ["አያት", "አዲስ አበባ", "የመኖሪያ ቤት ለውጥ", "መጀመሪያው 30 ቀን", "መተማመኛ", "ማህበረሰብ", "የውጭ ሀገር ሰው ሕይወት"],
-  "readTime": 10,
+  "tags": [
+    "Ayat",
+    "Addis Ababa",
+    "relocation",
+    "first 30 days",
+    "settling in",
+    "community",
+    "expat life"
+  ],
+  "tagsAm": [
+    "አያት",
+    "አዲስ አበባ",
+    "የመኖሪያ ቤት ለውጥ",
+    "መጀመሪያው 30 ቀን",
+    "መተማመኛ",
+    "ማህበረሰብ",
+    "የውጭ ሀገር ሰው ሕይወት"
+  ],
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua4.png",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua5.png",
@@ -18,5 +34,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-05-14T17:20:00.000Z",
-  "slug": "relocating-to-ayat-what-to-expect-first-30-days"
+  "slug": "relocating-to-ayat-what-to-expect-first-30-days",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.746Z",
+  "enrichedAt": "2026-10-29T07:23:40.683Z",
+  "quality": "enriched"
 }

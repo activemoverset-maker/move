@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "packing-guide",
-  "tags": ["Habesha kemis", "traditional clothing", "artifacts", "packing", "cultural items", "Ethiopia"],
+  "tags": [
+    "Habesha kemis",
+    "traditional clothing",
+    "artifacts",
+    "packing",
+    "cultural items",
+    "Ethiopia"
+  ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua256.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua257.jpeg", "https://www.activemoverset.com/images/gallary/qua258.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua257.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua258.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-22T09:00:00.000Z",
-  "slug": "packing-habesha-kemis-traditional-clothing-artifacts-move"
+  "slug": "packing-habesha-kemis-traditional-clothing-artifacts-move",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.511Z",
+  "enrichedAt": "2026-10-29T07:23:43.413Z",
+  "quality": "enriched"
 }

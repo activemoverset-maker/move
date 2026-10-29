@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ ከመጓጓዣ በኋላ ወጣቶች እንዲላመዱ እንዴት እንደሚረዳ</h2><p>መጓጓዣ ለወጣቶች በተለይ ተገላጋይ ሊሆን ይችላል፣ እነዚህም ቀድሞውኑ የጎርፍ ዕድሜ ውስብስብነቶችን ያስተላልፋሉ። ወደ አዲስ አበባ ያሉ አዲስ ከተማ እንደመጓጓዣ ካለ ጭንቀት ጋር በሚጣመር ጊዜ፣ ወጣቶች ልዩ የስሜታዊ፣ የማህበራዊ እና የትምህርት ተግሳጾችን ሊገጥሙ ይችላሉ። ይህ ሁለገብ መምሪያ ወጣቶችዎን በማስተካከያ ጊዜ ለመደገፍ እና በአዲሱ አካባቢ እንዲያድጉ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["teenagers moving addis ababa", "teen adjustment addis", "teenagers after moving addis", "teen support addis ababa", "teenagers moving guide addis", "teen moving tips addis", "addis teenager support", "teenagers moving addis"],
-  "tagsAm": ["ወጣቶች መጓጓዣ አዲስ አበባ", "ወጣት ማስተካከያ አዲስ አበባ", "ከመጓጓዣ በኋላ ወጣቶች አዲስ አበባ", "ወጣት ድጋፍ አዲስ አበባ", "ወጣቶች መጓጓዣ መምሪያ አዲስ አበባ", "ወጣት መጓጓዣ ምክሮች አዲስ አበባ", "የአዲስ አበባ ወጣት ድጋፍ", "ወጣቶች መጓጓዣ አዲስ አበባ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "teenagers moving addis ababa",
+    "teen adjustment addis",
+    "teenagers after moving addis",
+    "teen support addis ababa",
+    "teenagers moving guide addis",
+    "teen moving tips addis",
+    "addis teenager support",
+    "teenagers moving addis"
+  ],
+  "tagsAm": [
+    "ወጣቶች መጓጓዣ አዲስ አበባ",
+    "ወጣት ማስተካከያ አዲስ አበባ",
+    "ከመጓጓዣ በኋላ ወጣቶች አዲስ አበባ",
+    "ወጣት ድጋፍ አዲስ አበባ",
+    "ወጣቶች መጓጓዣ መምሪያ አዲስ አበባ",
+    "ወጣት መጓጓዣ ምክሮች አዲስ አበባ",
+    "የአዲስ አበባ ወጣት ድጋፍ",
+    "ወጣቶች መጓጓዣ አዲስ አበባ"
+  ],
+  "readTime": 12,
   "status": "published",
   "slug": "how-to-help-teenagers-adjust-after-move-addis",
   "featuredImage": "https://www.activemoverset.com/images/teenagers-moving-addis-ababa.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/teen-moving-tips-addis.jpg"
   ],
   "publishedAt": "2025-09-27T10:00:00.000Z",
-  "updatedAt": "2025-09-27T10:00:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.070Z",
   "seo": {
     "title": "How to Help Teenagers Adjust After a Move in Addis | Complete Guide 2025",
     "description": "Moving can be particularly challenging for teenagers. Learn effective strategies to help your teens adjust to their new life in Addis Ababa, including social integration, academic support, and emotional well-being.",
@@ -36,5 +54,8 @@
       "addis teenager support",
       "teenagers moving addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.330Z",
+  "quality": "enriched"
 }

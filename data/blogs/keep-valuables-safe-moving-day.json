@@ -29,8 +29,8 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-02-12T11:20:00.000Z",
-  "updatedAt": "2025-02-12T11:20:00.000Z",
-  "readTime": "25-30 minutes",
+  "updatedAt": "2026-10-29T07:46:31.125Z",
+  "readTime": 11,
   "status": "published",
   "slug": "keep-valuables-safe-moving-day",
   "seo": {
@@ -89,5 +89,8 @@
     "articleSection": "Moving Guides",
     "wordCount": 12000,
     "inLanguage": "en"
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.422Z",
+  "quality": "enriched"
 }

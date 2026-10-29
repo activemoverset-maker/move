@@ -29,8 +29,8 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-11-30T13:15:00.000Z",
-  "updatedAt": "2025-11-30T13:15:00.000Z",
-  "readTime": "22-28 minutes",
+  "updatedAt": "2026-10-29T07:46:30.752Z",
+  "readTime": 7,
   "status": "published",
   "slug": "ayat-vs-summit-neighborhood-comparison",
   "seo": {
@@ -89,5 +89,8 @@
     "articleSection": "Moving Guides",
     "wordCount": 12000,
     "inLanguage": "en"
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:40.688Z",
+  "quality": "enriched"
 }

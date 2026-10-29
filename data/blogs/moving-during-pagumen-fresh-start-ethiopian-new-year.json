@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Pagumen", "Ethiopian New Year", "Enkutatash", "seasonal moving", "Addis Ababa", "fresh start"],
+  "tags": [
+    "Pagumen",
+    "Ethiopian New Year",
+    "Enkutatash",
+    "seasonal moving",
+    "Addis Ababa",
+    "fresh start"
+  ],
   "tagsAm": [],
-  "readTime": 56,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua247.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua248.jpeg", "https://www.activemoverset.com/images/gallary/qua249.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua248.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua249.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-19T09:00:00.000Z",
-  "slug": "moving-during-pagumen-fresh-start-ethiopian-new-year"
+  "slug": "moving-during-pagumen-fresh-start-ethiopian-new-year",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.293Z",
+  "enrichedAt": "2026-10-29T07:23:41.955Z",
+  "quality": "enriched"
 }

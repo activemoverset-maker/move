@@ -18,7 +18,7 @@
     "infrastructure"
   ],
   "tagsAm": [],
-  "readTime": 51,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua139.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua140.jpeg",
@@ -26,5 +26,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-13T09:00:00.000Z",
-  "slug": "granite-walkways-bicycle-lanes-load-moving-truck-60-meter-boulevards"
+  "slug": "granite-walkways-bicycle-lanes-load-moving-truck-60-meter-boulevards",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.003Z",
+  "enrichedAt": "2026-10-29T07:23:41.180Z",
+  "quality": "enriched"
 }

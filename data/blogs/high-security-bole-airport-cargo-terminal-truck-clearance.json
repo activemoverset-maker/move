@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Bole Airport", "cargo terminal", "truck clearance", "aviation security", "high security", "Addis Ababa"],
+  "tags": [
+    "Bole Airport",
+    "cargo terminal",
+    "truck clearance",
+    "aviation security",
+    "high security",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 63,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua343.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua344.jpeg", "https://www.activemoverset.com/images/gallary/qua345.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua344.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua345.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-20T09:00:00.000Z",
-  "slug": "high-security-bole-airport-cargo-terminal-truck-clearance"
+  "slug": "high-security-bole-airport-cargo-terminal-truck-clearance",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.037Z",
+  "enrichedAt": "2026-10-29T07:23:41.240Z",
+  "quality": "enriched"
 }

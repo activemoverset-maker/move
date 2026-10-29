@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Lebu Mebrat Hail", "Lebu", "residential zone", "relocation guide", "Addis Ababa", "southwest"],
+  "tags": [
+    "Lebu Mebrat Hail",
+    "Lebu",
+    "residential zone",
+    "relocation guide",
+    "Addis Ababa",
+    "southwest"
+  ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua304.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua305.jpeg", "https://www.activemoverset.com/images/gallary/qua306.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua305.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua306.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-07T09:00:00.000Z",
-  "slug": "moving-lebu-mebrat-hail-fast-growing-residential-zone"
+  "slug": "moving-lebu-mebrat-hail-fast-growing-residential-zone",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.351Z",
+  "enrichedAt": "2026-10-29T07:23:42.182Z",
+  "quality": "enriched"
 }

@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከአዲስ አበባ ወደ መቀሌ እንዴት እንደሚዛወር</h2><p>ከአዲስ አበባ ወደ መቀሌ ማዛወር ከኢትዮጵያ ዋና ከተማ ወደ በጣም አስፈላጊ የሰሜን ከተሞች አንዱ ትልቅ መጓጓዣን ያስተላልፋል። መቀሌ፣ የትግራይ ክልል ዋና ከተማ፣ የባህል ቅርስ፣ የኢኮኖሚ እድሎች እና የክልል አስፈላጊነት ልዩ ድብልል ያቀርባል። ይህ ሁለገብ መምሪያ ወደ መቀሌ መጓጓዣ ውስብስብነቶችን ለማሰራር እና የባህል፣ የሎጂስቲክ እና የተግባራዊ ግምቶችን በመረዳት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["addis mekelle moving", "addis mekelle relocation", "ethiopia inter-city moving", "addis mekelle guide", "ethiopia city moving", "addis mekelle costs", "ethiopia moving logistics", "northern ethiopia moving"],
-  "tagsAm": ["አዲስ አበባ መቀሌ መጓጓዣ", "አዲስ አበባ መቀሌ ማዛወር", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ መቀሌ መምሪያ", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ መቀሌ ወጪዎች", "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ", "የሰሜን ኢትዮጵያ መጓጓዣ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "addis mekelle moving",
+    "addis mekelle relocation",
+    "ethiopia inter-city moving",
+    "addis mekelle guide",
+    "ethiopia city moving",
+    "addis mekelle costs",
+    "ethiopia moving logistics",
+    "northern ethiopia moving"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ መቀሌ መጓጓዣ",
+    "አዲስ አበባ መቀሌ ማዛወር",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ መቀሌ መምሪያ",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ መቀሌ ወጪዎች",
+    "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ",
+    "የሰሜን ኢትዮጵያ መጓጓዣ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "how-to-relocate-addis-mekelle",
   "featuredImage": "https://www.activemoverset.com/images/addis-mekelle-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-mekelle-costs.jpg"
   ],
   "publishedAt": "2025-05-31T16:50:00.000Z",
-  "updatedAt": "2025-05-31T16:50:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.115Z",
   "seo": {
     "title": "How to Relocate from Addis to Mekelle | Complete Guide 2025",
     "description": "Complete guide for relocating from Addis Ababa to Mekelle. Learn about transportation options, costs, cultural considerations, and what to expect when moving to this important northern Ethiopian city.",
@@ -36,5 +54,8 @@
       "ethiopia moving logistics",
       "northern ethiopia moving"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.397Z",
+  "quality": "enriched"
 }

@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Gotera", "interchange", "ring road", "peak hours", "traffic", "Addis Ababa"],
+  "tags": [
+    "Gotera",
+    "interchange",
+    "ring road",
+    "peak hours",
+    "traffic",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 55,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua292.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua293.jpeg", "https://www.activemoverset.com/images/gallary/qua294.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua293.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua294.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-03T09:00:00.000Z",
-  "slug": "moving-gotera-interchange-ring-road-peak-hours"
+  "slug": "moving-gotera-interchange-ring-road-peak-hours",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.318Z",
+  "enrichedAt": "2026-10-29T07:23:42.019Z",
+  "quality": "enriched"
 }

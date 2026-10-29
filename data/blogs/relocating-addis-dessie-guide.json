@@ -8,9 +8,27 @@
   "contentAm": "<h2>ከአዲስ አበባ ወደ ደሴ ማዛወር: መምሪያ</h2><p>ከአዲስ አበባ ወደ ደሴ ማዛወር ከኢትዮጵያ ዋና ከተማ ወደ በጣም አስፈላጊ የሰሜን ከተሞች አንዱ ትልቅ መጓጓዣን ያስተላልፋል። ደሴ፣ በታሪካዊ አስፈላጊነት እና ባህላዊ ቅርስ የሚታወቅ፣ ለሚዛወሩ ሰዎች ልዩ እድሎችን ያቀርባል። ይህ ሁለገብ መምሪያ ወደ ደሴ መጓጓዣ ውስብስብነቶችን ለማሰራር እና የባህል፣ የሎጂስቲክ እና የተግባራዊ ግምቶችን በመረዳት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["addis dessie moving", "addis dessie relocation", "ethiopia inter-city moving", "addis dessie guide", "ethiopia city moving", "addis dessie costs", "ethiopia moving logistics", "northern ethiopia moving"],
-  "tagsAm": ["አዲስ አበባ ደሴ መጓጓዣ", "አዲስ አበባ ደሴ ማዛወር", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ደሴ መምሪያ", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ደሴ ወጪዎች", "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ", "የሰሜን ኢትዮጵያ መጓጓዣ"],
-  "readTime": "22-28 minutes",
+  "tags": [
+    "addis dessie moving",
+    "addis dessie relocation",
+    "ethiopia inter-city moving",
+    "addis dessie guide",
+    "ethiopia city moving",
+    "addis dessie costs",
+    "ethiopia moving logistics",
+    "northern ethiopia moving"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ ደሴ መጓጓዣ",
+    "አዲስ አበባ ደሴ ማዛወር",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ደሴ መምሪያ",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ደሴ ወጪዎች",
+    "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ",
+    "የሰሜን ኢትዮጵያ መጓጓዣ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "relocating-addis-dessie-guide",
   "featuredImage": "https://www.activemoverset.com/images/addis-dessie-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-dessie-costs.jpg"
   ],
   "publishedAt": "2025-03-03T14:20:00.000Z",
-  "updatedAt": "2025-03-03T14:20:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.566Z",
   "seo": {
     "title": "Relocating from Addis to Dessie: A Guide | Complete Guide 2025",
     "description": "Complete guide for relocating from Addis Ababa to Dessie. Learn about transportation options, costs, cultural considerations, and what to expect when moving to this important northern Ethiopian city.",
@@ -36,5 +54,8 @@
       "ethiopia moving logistics",
       "northern ethiopia moving"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:43.841Z",
+  "quality": "enriched"
 }

@@ -17,7 +17,7 @@
     "moving tips"
   ],
   "tagsAm": [],
-  "readTime": 35,
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua13.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua14.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-05T11:00:00.000Z",
-  "slug": "trusted-movers-gerji-avoid-scams"
+  "slug": "trusted-movers-gerji-avoid-scams",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.863Z",
+  "enrichedAt": "2026-10-29T07:23:44.451Z",
+  "quality": "enriched"
 }

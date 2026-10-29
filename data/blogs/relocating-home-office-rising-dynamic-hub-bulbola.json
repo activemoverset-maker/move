@@ -17,7 +17,7 @@
     "commercial move"
   ],
   "tagsAm": [],
-  "readTime": 49,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua163.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua164.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-21T09:00:00.000Z",
-  "slug": "relocating-home-office-rising-dynamic-hub-bulbola"
+  "slug": "relocating-home-office-rising-dynamic-hub-bulbola",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.605Z",
+  "enrichedAt": "2026-10-29T07:23:44.083Z",
+  "quality": "enriched"
 }

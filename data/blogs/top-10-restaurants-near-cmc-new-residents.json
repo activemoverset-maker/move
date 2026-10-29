@@ -8,9 +8,27 @@
   "contentAm": "<h2>ለአዲስ ነዋሪዎች በሲኤምሲ አጠገብ የተሻሉ 10 የምግብ ቤቶች</h2><p>ወደ አዲስ አበባ በሲኤምሲ አካባቢ መጓዝ የምግብ ዓለም የሚያስደናቅ ነገሮችን ይከፍታል። ይህ ተለዋዋጭ ሰፈር የባህላዊ የኢትዮጵያ የምግብ ቤቶች፣ ዓለም አቀፍ ምግብ እና ዘመናዊ የምግብ ቤት ልምዶች በጣም የተሻለ ድብልል ያቀርባል። እውነተኛ እንጀራ እና ወጥ፣ ዓለም አቀፍ ጣውላዎች ወይም ተለዋዋጭ የምግብ ቤት አማራጮች ቢፈልጉም፣ ሲኤምሲ ለእያንዳንዱ ጣውላ የሚስማማ ነገር አለው። ይህ በአካባቢው የተሻሉ የምግብ ቤቶች ሙሉ መምሪያዎ ነው።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["CMC restaurants", "Addis Ababa dining", "new residents", "restaurant guide", "CMC area", "dining options", "food guide", "local restaurants"],
-  "tagsAm": ["ሲኤምሲ የምግብ ቤቶች", "አዲስ አበባ የምግብ ቤት", "አዲስ ነዋሪዎች", "የምግብ ቤት መምሪያ", "ሲኤምሲ አካባቢ", "የምግብ ቤት አማራጮች", "የምግብ መምሪያ", "አካባቢ የምግብ ቤቶች"],
-  "readTime": "12-15 minutes",
+  "tags": [
+    "CMC restaurants",
+    "Addis Ababa dining",
+    "new residents",
+    "restaurant guide",
+    "CMC area",
+    "dining options",
+    "food guide",
+    "local restaurants"
+  ],
+  "tagsAm": [
+    "ሲኤምሲ የምግብ ቤቶች",
+    "አዲስ አበባ የምግብ ቤት",
+    "አዲስ ነዋሪዎች",
+    "የምግብ ቤት መምሪያ",
+    "ሲኤምሲ አካባቢ",
+    "የምግብ ቤት አማራጮች",
+    "የምግብ መምሪያ",
+    "አካባቢ የምግብ ቤቶች"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "top-10-restaurants-near-cmc-new-residents",
   "featuredImage": "https://www.activemoverset.com/images/cmc-restaurants-guide.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/cmc-garden-restaurant.jpg"
   ],
   "publishedAt": "2025-07-16T11:35:00.000Z",
-  "updatedAt": "2025-07-16T11:35:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.775Z",
   "seo": {
     "title": "Top 10 Restaurants Near CMC for New Residents | Complete Dining Guide 2025",
     "description": "Discover the best restaurants near CMC area in Addis Ababa. From traditional Ethiopian cuisine to international dining, find the perfect places to eat as a new resident in this vibrant neighborhood.",
@@ -36,5 +54,8 @@
       "international dining CMC",
       "CMC food guide"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:44.400Z",
+  "quality": "enriched"
 }

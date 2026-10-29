@@ -17,7 +17,7 @@
     "apartment move"
   ],
   "tagsAm": [],
-  "readTime": 49,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua145.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua146.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-15T09:00:00.000Z",
-  "slug": "underground-utility-galleries-high-rise-moving-safer-bole"
+  "slug": "underground-utility-galleries-high-rise-moving-safer-bole",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.917Z",
+  "enrichedAt": "2026-10-29T07:23:44.472Z",
+  "quality": "enriched"
 }

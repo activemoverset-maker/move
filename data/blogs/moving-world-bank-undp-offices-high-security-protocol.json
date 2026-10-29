@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["World Bank", "UNDP", "high security", "diplomatic", "office move", "Addis Ababa"],
+  "tags": [
+    "World Bank",
+    "UNDP",
+    "high security",
+    "diplomatic",
+    "office move",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 61,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua331.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua332.jpeg", "https://www.activemoverset.com/images/gallary/qua333.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua332.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua333.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-16T09:00:00.000Z",
-  "slug": "moving-world-bank-undp-offices-high-security-protocol"
+  "slug": "moving-world-bank-undp-offices-high-security-protocol",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.465Z",
+  "enrichedAt": "2026-10-29T07:23:42.836Z",
+  "quality": "enriched"
 }

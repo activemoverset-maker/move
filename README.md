@@ -60,6 +60,10 @@ A modern Next.js 14+ website for Active Movers & Packers, a professional moving 
    # Telegram Bot Configuration
    TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
    TELEGRAM_CHAT_ID="your-telegram-chat-id"
+   TELEGRAM_WEBHOOK_SECRET="random-secret-A-Za-z0-9_-"
+   TELEGRAM_STAFF_GROUP_ID="-100xxxxxxxxxx"
+   ADDIS_API_KEY="your-addis-api-key"
+   ADDIS_VOICE_ID="am-hamen"
 
    # Admin Configuration
    ADMIN_EMAIL="admin@activemovers.com"
@@ -180,6 +184,10 @@ activemovers/
 - `JWT_SECRET` - Secret key for JWT authentication
 - `TELEGRAM_BOT_TOKEN` - Telegram bot token
 - `TELEGRAM_CHAT_ID` - Telegram chat ID for notifications
+- `TELEGRAM_WEBHOOK_SECRET` - Webhook `secret_token` (set via `npm run telegram:set-webhook`)
+- `TELEGRAM_STAFF_GROUP_ID` - Private staff group for bot handoff reports
+- `ADDIS_API_KEY` - Addis AI (chat, Scribe, Voices 2)
+- `ADDIS_VOICE_ID` - TTS voice (default `am-hamen`)
 
 ### Optional
 - `PHONE_NUMBER` - Contact phone number

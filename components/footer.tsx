@@ -1,7 +1,9 @@
 "use client"
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter } from 'lucide-react'
+import { LazyMap } from '@/components/lazy-map'
 import { SITE_CONFIG } from '@/constants/site'
 import { generateCallLink, generateWhatsAppLink, generateTelegramLink } from '@/lib/utils'
 import { trackEvent } from '@/lib/analytics'
@@ -45,21 +47,10 @@ export function Footer() {
               {t('footer.location')}
             </p>
           </div>
-          <div className="relative w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.8544868!3d9.0357937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b91000256c8f5%3A0x57e863a61e58fa35!2sBeka%20Building!5e0!3m2!1sen!2set!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Active Movers & Packers Location - Beka Building"
-              className="absolute inset-0"
-            />
-            {/* Map Overlay for better integration */}
-            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
-          </div>
+          <LazyMap
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.5!2d38.8544868!3d9.0357937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b91000256c8f5%3A0x57e863a61e58fa35!2sBeka%20Building!5e0!3m2!1sen!2set!4v1234567890"
+            title="Active Movers & Packers Location - Beka Building"
+          />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 py-8 sm:py-12">
@@ -67,10 +58,13 @@ export function Footer() {
           <div className="space-y-3 sm:space-y-4">
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="flex-shrink-0">
-                <img 
-                  src="/images/logo.jpg" 
-                  alt="Active Movers & Packers Logo" 
-                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Active Movers & Packers Logo"
+                  width={80}
+                  height={80}
+                  sizes="(max-width: 640px) 48px, 80px"
+                  className="h-12 w-12 object-contain sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-20 lg:w-20"
                 />
               </div>
               <div className="min-w-0 flex-1">
@@ -106,6 +100,11 @@ export function Footer() {
               <li>
                 <Link href="/blog" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base py-1 block break-words" onClick={() => handleFooterLinkClick('Quick Links', 'Blog')}>
                   {t('nav.blog')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/guides" className="text-gray-300 hover:text-white transition-colors text-sm sm:text-base py-1 block break-words" onClick={() => handleFooterLinkClick('Quick Links', 'Guides')}>
+                  {t('nav.guides')}
                 </Link>
               </li>
               <li>

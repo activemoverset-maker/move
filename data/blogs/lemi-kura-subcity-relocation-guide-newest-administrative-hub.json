@@ -17,7 +17,7 @@
     "new development"
   ],
   "tagsAm": [],
-  "readTime": 52,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua154.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua155.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-18T09:00:00.000Z",
-  "slug": "lemi-kura-subcity-relocation-guide-newest-administrative-hub"
+  "slug": "lemi-kura-subcity-relocation-guide-newest-administrative-hub",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.150Z",
+  "enrichedAt": "2026-10-29T07:23:41.469Z",
+  "quality": "enriched"
 }

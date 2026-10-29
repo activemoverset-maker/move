@@ -17,7 +17,7 @@
     "relocation"
   ],
   "tagsAm": [],
-  "readTime": 34,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua4.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua5.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-20T11:00:00.000Z",
-  "slug": "top-movers-old-airport-affordable-moving-solutions"
+  "slug": "top-movers-old-airport-affordable-moving-solutions",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.838Z",
+  "enrichedAt": "2026-10-29T07:23:44.412Z",
+  "quality": "enriched"
 }

@@ -17,7 +17,7 @@
     "relocation"
   ],
   "tagsAm": [],
-  "readTime": 35,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua7.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua8.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-22T14:00:00.000Z",
-  "slug": "hayahulet-movers-guide-stress-free-moving-tips"
+  "slug": "hayahulet-movers-guide-stress-free-moving-tips",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.022Z",
+  "enrichedAt": "2026-10-29T07:23:41.205Z",
+  "quality": "enriched"
 }

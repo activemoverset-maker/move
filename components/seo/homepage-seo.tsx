@@ -1,8 +1,7 @@
-"use client"
-
-import Script from 'next/script'
+import { JsonLd } from '@/components/json-ld'
 import { generateFAQSchema } from '@/lib/seo-utils'
-import { SITE_CONFIG } from '@/constants/site'
+import { HOME_PRICING_FAQ } from '@/constants/pricing'
+import { SITE_PHONE } from '@/constants/contact'
 
 export function HomepageSEO() {
   const faqs = [
@@ -29,11 +28,10 @@ export function HomepageSEO() {
     {
       question: "Do you offer same-day moving services?",
       answer: "Yes, we offer same-day moving services for local moves depending on availability. Contact us early in the day for the best chance of securing same-day service for your urgent moving needs."
-    }
+    },
+    HOME_PRICING_FAQ,
   ]
 
-  const faqSchema = generateFAQSchema(faqs)
-  
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -53,7 +51,7 @@ export function HomepageSEO() {
     "name": "Professional Moving Services",
     "description": "Comprehensive moving and packing services in Addis Ababa, Ethiopia",
     "provider": {
-      "@type": "LocalBusiness",
+      "@type": "MovingCompany",
       "name": "Active Movers & Packers",
       "address": {
         "@type": "PostalAddress",
@@ -61,7 +59,7 @@ export function HomepageSEO() {
         "addressLocality": "Addis Ababa",
         "addressCountry": "Ethiopia"
       },
-      "telephone": SITE_CONFIG.links.phone
+      "telephone": SITE_PHONE
     },
     "areaServed": {
       "@type": "City",
@@ -69,7 +67,7 @@ export function HomepageSEO() {
     },
     "serviceType": [
       "Local Moving",
-      "Office Relocation", 
+      "Office Relocation",
       "Packing Services",
       "Storage Solutions"
     ],
@@ -83,32 +81,9 @@ export function HomepageSEO() {
 
   return (
     <>
-      {/* FAQ Schema */}
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
-      
-      {/* Breadcrumb Schema */}
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbSchema),
-        }}
-      />
-
-      {/* Service Schema */}
-      <Script
-        id="service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(serviceSchema),
-        }}
-      />
+      <JsonLd id="faq-schema" data={generateFAQSchema(faqs)} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
+      <JsonLd id="service-schema" data={serviceSchema} />
     </>
   )
 }

@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["unpaved roads", "bumpy terrain", "gravel access", "Active Movers", "moving protection", "Addis Ababa"],
+  "tags": [
+    "unpaved roads",
+    "bumpy terrain",
+    "gravel access",
+    "Active Movers",
+    "moving protection",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua271.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua272.jpeg", "https://www.activemoverset.com/images/gallary/qua273.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua272.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua273.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-27T09:00:00.000Z",
-  "slug": "navigating-unpaved-secondary-roads-bumpy-terrain-active-movers"
+  "slug": "navigating-unpaved-secondary-roads-bumpy-terrain-active-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.483Z",
+  "enrichedAt": "2026-10-29T07:23:42.863Z",
+  "quality": "enriched"
 }

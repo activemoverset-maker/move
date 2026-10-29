@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ የመጓጓዣ ቀን በጣም የሚረሱ ነገሮች</h2><p>በአዲስ አበባ የመጓጓዣ ቀን ብዙ ዝርዝሮች ማስተዳደር እና የሚረዱ ነገሮች በጣም ተገላጋይ እና አስቸጋሪ ሊሆን ይችላል። በጥንቃቄ የተዘጋጀ ቢሆንም፣ የተወሰኑ ነገሮች በከተማው ውስጥ በተንቀሳቀሱ ሰዎች በተደጋጋሚ ይረሳሉ። እነዚህ የተረሱ ነገሮች በጣም ተገላጋይ በሆነ ጊዜ ተጨማሪ ወጪዎች፣ ጭንቀት እና ተጨማሪ ወጪዎች ሊያስከትሉ ይችላሉ። ይህ ሁለገብ መምሪያ በአዲስ አበባ የመጓጓዣ ቀን በጣም በተደጋጋሚ የሚረሱ ነገሮችን ለመለየት እና ለመከላከል ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["forgotten items moving addis", "moving checklist addis ababa", "moving day addis ababa", "moving preparation addis", "addis moving tips", "moving essentials addis", "moving day checklist addis", "addis moving guide"],
-  "tagsAm": ["የተረሱ ነገሮች መጓጓዣ አዲስ አበባ", "የመጓጓዣ ዝርዝር አዲስ አበባ", "የመጓጓዣ ቀን አዲስ አበባ", "የመጓጓዣ አዘጋጅነት አዲስ አበባ", "የአዲስ አበባ መጓጓዣ ምክሮች", "የመጓጓዣ አስፈላጊ ነገሮች አዲስ አበባ", "የመጓጓዣ ቀን ዝርዝር አዲስ አበባ", "የአዲስ አበባ መጓጓዣ መምሪያ"],
-  "readTime": "20-25 minutes",
+  "tags": [
+    "forgotten items moving addis",
+    "moving checklist addis ababa",
+    "moving day addis ababa",
+    "moving preparation addis",
+    "addis moving tips",
+    "moving essentials addis",
+    "moving day checklist addis",
+    "addis moving guide"
+  ],
+  "tagsAm": [
+    "የተረሱ ነገሮች መጓጓዣ አዲስ አበባ",
+    "የመጓጓዣ ዝርዝር አዲስ አበባ",
+    "የመጓጓዣ ቀን አዲስ አበባ",
+    "የመጓጓዣ አዘጋጅነት አዲስ አበባ",
+    "የአዲስ አበባ መጓጓዣ ምክሮች",
+    "የመጓጓዣ አስፈላጊ ነገሮች አዲስ አበባ",
+    "የመጓጓዣ ቀን ዝርዝር አዲስ አበባ",
+    "የአዲስ አበባ መጓጓዣ መምሪያ"
+  ],
+  "readTime": 9,
   "status": "published",
   "slug": "most-forgotten-items-moving-day-addis",
   "featuredImage": "https://www.activemoverset.com/images/forgotten-items-moving-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/moving-essentials-addis.jpg"
   ],
   "publishedAt": "2025-01-28T12:45:00.000Z",
-  "updatedAt": "2025-01-28T12:45:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.204Z",
   "seo": {
     "title": "The Most Forgotten Items on Moving Day in Addis | Complete Guide 2025",
     "description": "Don't let these commonly forgotten items ruin your moving day in Addis Ababa. Learn what items are most often left behind and how to create a comprehensive checklist to ensure nothing gets forgotten.",
@@ -36,5 +54,8 @@
       "moving day checklist addis ababa",
       "addis moving guide"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.666Z",
+  "quality": "enriched"
 }

@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Adey Abeba", "National Stadium", "weekend move", "event traffic", "Bole", "Addis Ababa"],
+  "tags": [
+    "Adey Abeba",
+    "National Stadium",
+    "weekend move",
+    "event traffic",
+    "Bole",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 57,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua301.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua302.jpeg", "https://www.activemoverset.com/images/gallary/qua303.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua302.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua303.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-06T09:00:00.000Z",
-  "slug": "moving-national-stadium-adey-abeba-weekend-schedules"
+  "slug": "moving-national-stadium-adey-abeba-weekend-schedules",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.368Z",
+  "enrichedAt": "2026-10-29T07:23:42.218Z",
+  "quality": "enriched"
 }

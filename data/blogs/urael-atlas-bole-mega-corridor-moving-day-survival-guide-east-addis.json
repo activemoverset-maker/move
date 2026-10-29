@@ -19,7 +19,7 @@
     "construction"
   ],
   "tagsAm": [],
-  "readTime": 52,
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua130.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua131.jpeg",
@@ -27,5 +27,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-10T09:00:00.000Z",
-  "slug": "urael-atlas-bole-mega-corridor-moving-day-survival-guide-east-addis"
+  "slug": "urael-atlas-bole-mega-corridor-moving-day-survival-guide-east-addis",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.936Z",
+  "enrichedAt": "2026-10-29T07:23:44.487Z",
+  "quality": "enriched"
 }

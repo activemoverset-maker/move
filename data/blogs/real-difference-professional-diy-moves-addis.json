@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ በሙያ እና በራስ የሚደረጉ መጓጓዣዎች መካከል እውነተኛ ልዩነት</h2><p>በአዲስ አበባ የመጓጓዣ እቅድ ሲያደርጉ፣ የሚያደርጉት በጣም አስፈላጊ ውሳኔዎች አንዱ የሙያ አዛውሪዎችን ማተው ወይም መጓጓዣውን በራስዎ ማስተዳደር ነው። ይህ ውሳኔ የመጓጓዣ ልምድዎን፣ ወጪዎችዎን እና ውጤቶችዎን በእጅጉ ሊጎዳ ይችላል። በአዲስ አበባ በሙያ እና በራስ የሚደረጉ መጓጓዣዎች መካከል እውነተኛ ልዩነቶችን መረዳት ለተለየ ሁኔታዎ የተሻለውን ምርጫ ለማድረግ ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["professional vs diy moving addis", "addis moving comparison", "professional moving addis ababa", "diy moving addis ababa", "moving costs addis ababa", "addis moving guide", "moving decision addis", "addis moving tips"],
-  "tagsAm": ["በሙያ እና በራስ መጓጓዣ አዲስ አበባ", "የአዲስ አበባ መጓጓዣ ማነጻጸሪያ", "በሙያ መጓጓዣ አዲስ አበባ", "በራስ መጓጓዣ አዲስ አበባ", "የመጓጓዣ ወጪዎች አዲስ አበባ", "የአዲስ አበባ መጓጓዣ መምሪያ", "የመጓጓዣ ውሳኔ አዲስ አበባ", "የአዲስ አበባ መጓጓዣ ምክሮች"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "professional vs diy moving addis",
+    "addis moving comparison",
+    "professional moving addis ababa",
+    "diy moving addis ababa",
+    "moving costs addis ababa",
+    "addis moving guide",
+    "moving decision addis",
+    "addis moving tips"
+  ],
+  "tagsAm": [
+    "በሙያ እና በራስ መጓጓዣ አዲስ አበባ",
+    "የአዲስ አበባ መጓጓዣ ማነጻጸሪያ",
+    "በሙያ መጓጓዣ አዲስ አበባ",
+    "በራስ መጓጓዣ አዲስ አበባ",
+    "የመጓጓዣ ወጪዎች አዲስ አበባ",
+    "የአዲስ አበባ መጓጓዣ መምሪያ",
+    "የመጓጓዣ ውሳኔ አዲስ አበባ",
+    "የአዲስ አበባ መጓጓዣ ምክሮች"
+  ],
+  "readTime": 9,
   "status": "published",
   "slug": "real-difference-professional-diy-moves-addis",
   "featuredImage": "https://www.activemoverset.com/images/professional-vs-diy-moving-addis.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/addis-moving-guide.jpg"
   ],
   "publishedAt": "2025-09-25T10:00:00.000Z",
-  "updatedAt": "2025-09-25T10:00:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.557Z",
   "seo": {
     "title": "The Real Difference Between Professional and DIY Moves in Addis | Complete Guide 2025",
     "description": "Understand the real differences between professional and DIY moves in Addis Ababa. Learn about costs, quality, time, stress levels, and outcomes to make the best decision for your move.",
@@ -36,5 +54,8 @@
       "moving decision addis ababa",
       "addis moving tips"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:43.804Z",
+  "quality": "enriched"
 }

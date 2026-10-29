@@ -17,7 +17,7 @@
     "security"
   ],
   "tagsAm": [],
-  "readTime": 34,
+  "readTime": 6,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua43.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua44.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-01-10T11:30:00.000Z",
-  "slug": "top-movers-bole-reliable-moving-services"
+  "slug": "top-movers-bole-reliable-moving-services",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.784Z",
+  "enrichedAt": "2026-10-29T07:23:44.409Z",
+  "quality": "enriched"
 }

@@ -17,7 +17,7 @@
     "downtime"
   ],
   "tagsAm": [],
-  "readTime": 54,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua31.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua32.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-08-07T14:00:00.000Z",
-  "slug": "relocating-office-kazanchis-professional-movers-minimize-downtime"
+  "slug": "relocating-office-kazanchis-professional-movers-minimize-downtime",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.624Z",
+  "enrichedAt": "2026-10-29T07:23:44.114Z",
+  "quality": "enriched"
 }

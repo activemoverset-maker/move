@@ -8,9 +8,27 @@
   "contentAm": "<h2>ለቡቲክ ሱቅ ባለቤቶች የመጓጓዣ ምክሮች</h2><p>በአዲስ አበባ የቡቲክ ሱቅ ማዛወር ለእቃ አያያዝ፣ የደንበኛ ግንኙነቶች እና የምርት ማህበረሰብ ማንነት በጥንቃቄ ትኩረት ይፈልጋል። ከሌሎች የችርቻሮ ንግዶች በተለየ፣ ቡቲኮች ብዙውን ጊዜ ከተመረጡ እቃዎቻቸው፣ የግል የደንበኛ አገልግሎት እና የተለያዩ የምርት ማህበረሰብ አቀማመጥ ጋር የተያያዙ ልዩ ተግሳጾች አሏቸው። ይህ ሁለገብ መምሪያ የቡቲክ ባለቤቶች የንግድ ልዩ ባህሪ እና የደንበኛ መሠረት እንዲጠብቁ በመጓጓዣ ውስብስብነቶችን ለማሰራር ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["boutique store moving", "boutique relocation addis ababa", "fashion store moving", "boutique moving tips", "retail store moving addis", "boutique moving guide", "fashion retail moving", "boutique moving costs"],
-  "tagsAm": ["የቡቲክ ሱቅ መጓጓዣ", "የቡቲክ ማዛወር አዲስ አበባ", "የፋሽን ሱቅ መጓጓዣ", "የቡቲክ መጓጓዣ ምክሮች", "የችርቻሮ ሱቅ መጓጓዣ አዲስ አበባ", "የቡቲክ መጓጓዣ መምሪያ", "የፋሽን ችርቻሮ መጓጓዣ", "የቡቲክ መጓጓዣ ወጪዎች"],
-  "readTime": "24-30 minutes",
+  "tags": [
+    "boutique store moving",
+    "boutique relocation addis ababa",
+    "fashion store moving",
+    "boutique moving tips",
+    "retail store moving addis",
+    "boutique moving guide",
+    "fashion retail moving",
+    "boutique moving costs"
+  ],
+  "tagsAm": [
+    "የቡቲክ ሱቅ መጓጓዣ",
+    "የቡቲክ ማዛወር አዲስ አበባ",
+    "የፋሽን ሱቅ መጓጓዣ",
+    "የቡቲክ መጓጓዣ ምክሮች",
+    "የችርቻሮ ሱቅ መጓጓዣ አዲስ አበባ",
+    "የቡቲክ መጓጓዣ መምሪያ",
+    "የፋሽን ችርቻሮ መጓጓዣ",
+    "የቡቲክ መጓጓዣ ወጪዎች"
+  ],
+  "readTime": 5,
   "status": "published",
   "slug": "moving-tips-boutique-store-owners",
   "featuredImage": "https://www.activemoverset.com/images/boutique-store-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/boutique-moving-guide.jpg"
   ],
   "publishedAt": "2025-07-08T12:15:00.000Z",
-  "updatedAt": "2025-07-08T12:15:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.432Z",
   "seo": {
     "title": "Moving Tips for Boutique Store Owners in Addis Ababa | Complete Guide 2025",
     "description": "Essential guide for boutique store owners relocating in Addis Ababa. Learn about inventory management, customer communication, display setup, and maintaining brand identity during your boutique move.",
@@ -36,5 +54,8 @@
       "fashion retail moving addis ababa",
       "boutique moving costs addis ababa"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:42.634Z",
+  "quality": "enriched"
 }

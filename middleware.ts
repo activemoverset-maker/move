@@ -6,10 +6,46 @@ import {
   MALED_INTERNAL_PREFIX,
   toMaledInternalPath,
 } from '@/lib/maledactive-host'
+import { ADMIN_COOKIE_NAME } from '@/lib/admin/constants'
+import { verifyAdminTokenEdge } from '@/lib/admin/auth-edge'
 
-export function middleware(request: NextRequest) {
+async function requireAdminAuth(request: NextRequest): Promise<NextResponse | null> {
+  const { pathname } = request.nextUrl
+  const isAdminArea =
+    pathname.startsWith('/admin') || pathname.startsWith('/api/admin')
+  const isPublicAdmin =
+    pathname === '/admin/login' || pathname === '/api/admin/login'
+  const isTelegramWebhook = pathname === '/api/telegram/webhook'
+
+  if (!isAdminArea || isPublicAdmin || isTelegramWebhook) {
+    return null
+  }
+
+  const token = request.cookies.get(ADMIN_COOKIE_NAME)?.value
+  const admin = token ? await verifyAdminTokenEdge(token) : null
+
+  if (admin) {
+    return null
+  }
+
+  if (pathname.startsWith('/api/admin')) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
+  const loginUrl = request.nextUrl.clone()
+  loginUrl.pathname = '/admin/login'
+  loginUrl.searchParams.set('from', pathname)
+  return NextResponse.redirect(loginUrl)
+}
+
+export async function middleware(request: NextRequest) {
   const host = request.headers.get('host')
   const { pathname } = request.nextUrl
+
+  const adminGate = await requireAdminAuth(request)
+  if (adminGate) {
+    return adminGate
+  }
 
   if (pathname.startsWith('/_next') || pathname.startsWith('/images') || pathname.startsWith('/fonts')) {
     return NextResponse.next()

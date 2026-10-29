@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ እና ጎንደር መካከል መጓጓዣ — ማወቅ ያለብዎት ነገሮች</h2><p>በአዲስ አበባ እና ጎንደር መካከል መጓጓዣ በኢትዮጵያ በጣም የተለመደ የከተማ ማዛወር አንዱ ነው። እነዚህ ሁለት ከተሞች የኢትዮጵያ ሕይወት የተለያዩ ገጽታዎችን ያስተላልፋሉ - አዲስ አበባ እንደ ዘመናዊ ዋና ከተማ እና ጎንደር እንደ ታሪካዊ የንጉሥ ከተማ። ይህ ሁለገብ መምሪያ በእነዚህ አስፈላጊ ከተሞች መካከል መጓጓዣ ውስብስብነቶችን ለማሰራር እና የባህል፣ የሎጂስቲክ እና የተግባራዊ ግምቶችን በመረዳት ያግዛችኋል።</p>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["addis gondar moving", "inter-city moving ethiopia", "addis gondar relocation", "ethiopia city moving", "addis gondar guide", "inter-city moving costs", "ethiopia moving logistics", "city to city moving"],
-  "tagsAm": ["አዲስ አበባ ጎንደር መጓጓዣ", "የከተማ መጓጓዣ ኢትዮጵያ", "አዲስ አበባ ጎንደር ማዛወር", "የኢትዮጵያ ከተማ መጓጓዣ", "አዲስ አበባ ጎንደር መምሪያ", "የከተማ መጓጓዣ ወጪዎች", "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ", "ከከተማ ወደ ከተማ መጓጓዣ"],
-  "readTime": "25-30 minutes",
+  "tags": [
+    "addis gondar moving",
+    "inter-city moving ethiopia",
+    "addis gondar relocation",
+    "ethiopia city moving",
+    "addis gondar guide",
+    "inter-city moving costs",
+    "ethiopia moving logistics",
+    "city to city moving"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ ጎንደር መጓጓዣ",
+    "የከተማ መጓጓዣ ኢትዮጵያ",
+    "አዲስ አበባ ጎንደር ማዛወር",
+    "የኢትዮጵያ ከተማ መጓጓዣ",
+    "አዲስ አበባ ጎንደር መምሪያ",
+    "የከተማ መጓጓዣ ወጪዎች",
+    "የኢትዮጵያ መጓጓዣ ሎጂስቲክስ",
+    "ከከተማ ወደ ከተማ መጓጓዣ"
+  ],
+  "readTime": 4,
   "status": "published",
   "slug": "moving-between-addis-gondar-what-you-need-know",
   "featuredImage": "https://www.activemoverset.com/images/addis-gondar-moving.jpg",
@@ -22,7 +40,7 @@
     "https://www.activemoverset.com/images/inter-city-moving-costs.jpg"
   ],
   "publishedAt": "2025-08-18T11:55:00.000Z",
-  "updatedAt": "2025-08-18T11:55:00.000Z",
+  "updatedAt": "2026-10-29T07:46:31.256Z",
   "seo": {
     "title": "Moving Between Addis and Gondar — What You Need to Know | Complete Guide 2025",
     "description": "Complete guide for moving between Addis Ababa and Gondar. Learn about transportation options, costs, logistics, and what to expect when relocating between these two important Ethiopian cities.",
@@ -36,5 +54,8 @@
       "ethiopia moving logistics",
       "city to city moving ethiopia"
     ]
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:41.734Z",
+  "quality": "enriched"
 }

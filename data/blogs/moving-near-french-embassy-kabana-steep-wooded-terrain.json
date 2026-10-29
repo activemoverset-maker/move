@@ -17,7 +17,7 @@
     "moving safety"
   ],
   "tagsAm": [],
-  "readTime": 52,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua166.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua167.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-06-22T09:00:00.000Z",
-  "slug": "moving-near-french-embassy-kabana-steep-wooded-terrain"
+  "slug": "moving-near-french-embassy-kabana-steep-wooded-terrain",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.386Z",
+  "enrichedAt": "2026-10-29T07:23:42.258Z",
+  "quality": "enriched"
 }

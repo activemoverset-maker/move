@@ -17,7 +17,7 @@
     "before you move"
   ],
   "tagsAm": [],
-  "readTime": 38,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua31.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua32.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-03-21T11:00:00.000Z",
-  "slug": "what-movers-wont-tell-you-before-moving"
+  "slug": "what-movers-wont-tell-you-before-moving",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.953Z",
+  "enrichedAt": "2026-10-29T07:23:44.525Z",
+  "quality": "enriched"
 }

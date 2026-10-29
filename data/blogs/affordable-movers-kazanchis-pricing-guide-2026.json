@@ -17,7 +17,7 @@
     "budget move"
   ],
   "tagsAm": [],
-  "readTime": 35,
+  "readTime": 6,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua46.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua47.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-01-12T14:00:00.000Z",
-  "slug": "affordable-movers-kazanchis-pricing-guide-2026"
+  "slug": "affordable-movers-kazanchis-pricing-guide-2026",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.716Z",
+  "enrichedAt": "2026-10-29T07:23:40.656Z",
+  "quality": "enriched"
 }

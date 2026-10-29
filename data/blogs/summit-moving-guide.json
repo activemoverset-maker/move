@@ -8,9 +8,25 @@
   "contentAm": "<h2>ለስራ ቤትዎ ሱሚት ለምን መምረጥ አለብዎት?</h2><p>ሱሚት፣ በአዲስ አበባ መሀል የሚገኝ፣ ለቤተሰቦች እና ለሙያ ባለሞያዎች ከሚፈለጉት ሰፈሮች አንዱ ሆኗል። በተራራማ አካባቢ፣ በተሻለ መሰረተ ልማት እና በተለያዩ ማህበረሰቦች ሱሚት የከተማ ምቾት እና የመኖሪያ ቤት ጸጥታ ፍጹም ድብልል ያቀርባል።</p><h3>በሱሚት የመኖሪያ ቤት አማራጮች</h3><p>ሱሚት ለእያንዳንዱ በጀት እና የሕይወት መንገድ የተለያዩ የመኖሪያ ቤት አማራጮችን ያቀርባል:</p><ul><li><strong>የኤሊት አፓርትመንቶች:</strong> ዘመናዊ ከፍታ ያላቸው ሕንፃዎች ከተሻለ አገልግሎቶች ጋር</li><li><strong>የቤተሰብ ቪላዎች:</strong> በግል የተራራ አትክልት ያላቸው ሰፊ ቤቶች</li><li><strong>የተዘጉ ማህበረሰቦች:</strong> በ24/7 ጥበቃ የተጠበቁ የመኖሪያ ቤት ውስብስቦች</li><li><strong>የተማሪ መኖሪያ ቤቶች:</strong> በትምህርት ተቋማት አጠገብ ያሉ ርካሽ አማራጮች</li></ul><h3>መጓጓዣ እና መድረሻ</h3><p>በሱሚት ዙሪያ መጓጓዣ በጣም ምቹ ነው:</p><ul><li><strong>የሕዝብ መጓጓዣ:</strong> ከከተማው ሁሉ ክፍል ጋር የሚያገኙ ብዙ የአውቶቡስ መስመሮች</li><li><strong>ቀላል ባቡር:</strong> ወደ አዲስ አበባ ቀላል ባቡር ትራንዚት ቀላል መድረሻ</li><li><strong>ዋና መንገዶች:</strong> ወደ ቦሌ፣ ሲ.ኤም.ሲ እና ሌሎች አካባቢዎች የሚያገኙ በደንብ የተጠበቁ መንገዶች</li><li><strong>የአውሮፕላን ማረፊያ መድረሻ:</strong> ከቦሌ ዓለም አቀፍ አውሮፕላን ማረፊያ በ15 ደቂቃ ብቻ</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Summit", "Addis Ababa", "moving guide", "neighborhood", "relocation", "housing", "transportation"],
-  "tagsAm": ["ሱሚት", "አዲስ አበባ", "የመጓጓዣ መመሪያ", "ሰፈር", "የመኖሪያ ቤት ለውጥ", "መኖሪያ ቤት", "መጓጓዣ"],
-  "readTime": 8,
+  "tags": [
+    "Summit",
+    "Addis Ababa",
+    "moving guide",
+    "neighborhood",
+    "relocation",
+    "housing",
+    "transportation"
+  ],
+  "tagsAm": [
+    "ሱሚት",
+    "አዲስ አበባ",
+    "የመጓጓዣ መመሪያ",
+    "ሰፈር",
+    "የመኖሪያ ቤት ለውጥ",
+    "መኖሪያ ቤት",
+    "መጓጓዣ"
+  ],
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua1.png",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua2.png",
@@ -18,5 +34,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-12-22T16:05:00.000Z",
-  "slug": "moving-to-summit-ultimate-neighborhood-survival-guide"
+  "slug": "moving-to-summit-ultimate-neighborhood-survival-guide",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.738Z",
+  "enrichedAt": "2026-10-29T07:23:44.371Z",
+  "quality": "enriched"
 }

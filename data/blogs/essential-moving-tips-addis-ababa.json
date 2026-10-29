@@ -8,9 +8,27 @@
   "contentAm": "<h2>በአዲስ አበባ የመጓጓዣ ስራን ያውቁ: የእርስዎ ዋና መመሪያ</h2><p>በአዲስ አበባ የመጓጓዣ ስራ እያንዳንዱ ነዋሪ ሊረዳው የሚገባ ልዩ ተግሳጾችን እና እድሎችን ያቀርባል። ከከተማው የመጓጓዣ ዘዴዎችን አሰራር እስከ የአካባቢ የመጓጓዣ ወጪዎች እና ደንቦች መረዳት፣ ስኬት የውስጥ እውቀት እና ተራራማ ዕቅድ ይፈልጋል። ይህ ሁለገብ መመሪያ 10 ዋና ምክሮችን ያቀርባል ይህም የመጓጓዣ ልምድዎን ከጫና የተሞላ ወደ ለስላሳ ይቀይራል፣ በከተማው ውስጥ እየዛወሩ ወይም ለመጀመሪያ ጊዜ ወደ አዲስ አበባ እየዛወሩ ቢሆንም።</p><h3>1. የአዲስ አበባ የመጓጓዣ ዘዴዎችን ያውቁ</h3><p>የከተማው የመጓጓዣ ፍሰት መረዳት ለተሳካ የመጓጓዣ ስራ ወሳኝ ነው:</p><h4>ማለፍ የሚገባ የጭንቅ ሰዓቶች</h4><ul><li><strong>የጠዋት ጭንቅ:</strong> 7:00 AM - 9:30 AM (ከፍተኛ ችግር)</li><li><strong>የምሽት ጭንቅ:</strong> 5:00 PM - 7:30 PM (ከፍተኛ የመጓጓዣ)</li><li><strong>የምሳ የመጓጓዣ:</strong> 12:00 PM - 2:00 PM (መካከለኛ ችግር)</li><li><strong>የሳንባት ግዢ:</strong> ቅዳሜ 10:00 AM - 6:00 PM</li></ul>",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Addis Ababa", "moving tips", "essential guide", "traffic", "budget", "packing", "regulations", "timeline"],
-  "tagsAm": ["አዲስ አበባ", "የመጓጓዣ ምክሮች", "ዋና መመሪያ", "መጓጓዣ", "ጀርባ", "መጠን", "ደንቦች", "ጊዜ ሰሌዳ"],
-  "readTime": 16,
+  "tags": [
+    "Addis Ababa",
+    "moving tips",
+    "essential guide",
+    "traffic",
+    "budget",
+    "packing",
+    "regulations",
+    "timeline"
+  ],
+  "tagsAm": [
+    "አዲስ አበባ",
+    "የመጓጓዣ ምክሮች",
+    "ዋና መመሪያ",
+    "መጓጓዣ",
+    "ጀርባ",
+    "መጠን",
+    "ደንቦች",
+    "ጊዜ ሰሌዳ"
+  ],
+  "readTime": 7,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua28.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua29.jpeg",
@@ -18,5 +36,9 @@
   ],
   "status": "published",
   "publishedAt": "2025-02-08T15:35:00.000Z",
-  "slug": "10-essential-moving-tips-addis-ababa-residents"
+  "slug": "10-essential-moving-tips-addis-ababa-residents",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.923Z",
+  "enrichedAt": "2026-10-29T07:23:41.084Z",
+  "quality": "enriched"
 }

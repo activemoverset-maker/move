@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 
 interface LoadingContextType {
   isLoading: boolean
@@ -11,34 +11,13 @@ interface LoadingContextType {
 const LoadingContext = createContext<LoadingContextType | undefined>(undefined)
 
 export function LoadingProvider({ children }: { children: ReactNode }) {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  useEffect(() => {
-    // Show initial loading for 3.5 seconds, then stop (gives time to see driving animation)
-    const timer = setTimeout(() => {
-      console.log('Initial loading complete')
-      setIsLoading(false)
-    }, 3500)
-
-    return () => clearTimeout(timer)
-  }, [])
-
-  const startLoading = () => {
-    console.log('Starting loading...')
-    setIsLoading(true)
-  }
-  
-  const stopLoading = () => {
-    console.log('Stopping loading...')
-    setIsLoading(false)
-  }
+  const startLoading = () => setIsLoading(true)
+  const stopLoading = () => setIsLoading(false)
 
   return (
-    <LoadingContext.Provider value={{ 
-      isLoading, 
-      startLoading, 
-      stopLoading 
-    }}>
+    <LoadingContext.Provider value={{ isLoading, startLoading, stopLoading }}>
       {children}
     </LoadingContext.Provider>
   )
@@ -50,4 +29,4 @@ export function useLoading() {
     throw new Error('useLoading must be used within a LoadingProvider')
   }
   return context
-} 
+}

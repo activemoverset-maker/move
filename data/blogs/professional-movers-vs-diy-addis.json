@@ -29,8 +29,8 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-10-08T16:25:00.000Z",
-  "updatedAt": "2025-10-08T16:25:00.000Z",
-  "readTime": "20-25 minutes",
+  "updatedAt": "2026-10-29T07:46:31.548Z",
+  "readTime": 7,
   "status": "published",
   "slug": "professional-movers-vs-diy-addis",
   "seo": {
@@ -89,5 +89,8 @@
     "articleSection": "Moving Guides",
     "wordCount": 7500,
     "inLanguage": "en"
-  }
+  },
+  "index": false,
+  "enrichedAt": "2026-10-29T07:23:43.691Z",
+  "quality": "enriched"
 }

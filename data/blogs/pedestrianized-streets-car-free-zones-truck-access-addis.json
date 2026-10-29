@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["car-free zones", "pedestrianized", "truck access", "urban planning", "Addis Ababa", "moving tips"],
+  "tags": [
+    "car-free zones",
+    "pedestrianized",
+    "truck access",
+    "urban planning",
+    "Addis Ababa",
+    "moving tips"
+  ],
   "tagsAm": [],
-  "readTime": 60,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua289.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua290.jpeg", "https://www.activemoverset.com/images/gallary/qua291.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua290.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua291.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-08-02T09:00:00.000Z",
-  "slug": "pedestrianized-streets-car-free-zones-truck-access-addis"
+  "slug": "pedestrianized-streets-car-free-zones-truck-access-addis",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.525Z",
+  "enrichedAt": "2026-10-29T07:23:43.524Z",
+  "quality": "enriched"
 }

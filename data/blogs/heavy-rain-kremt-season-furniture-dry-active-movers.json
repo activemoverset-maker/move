@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Kremt season", "rain", "furniture protection", "wet weather", "Active Movers", "Addis Ababa"],
+  "tags": [
+    "Kremt season",
+    "rain",
+    "furniture protection",
+    "wet weather",
+    "Active Movers",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 58,
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua244.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua245.jpeg", "https://www.activemoverset.com/images/gallary/qua246.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua245.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua246.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-18T09:00:00.000Z",
-  "slug": "heavy-rain-kremt-season-furniture-dry-active-movers"
+  "slug": "heavy-rain-kremt-season-furniture-dry-active-movers",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.029Z",
+  "enrichedAt": "2026-10-29T07:23:41.218Z",
+  "quality": "enriched"
 }

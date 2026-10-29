@@ -236,12 +236,28 @@ export function AdminDashboard() {
       action: 'manage_calendar'
     },
     {
+      title: 'Telegram bot',
+      description: 'Bot users, sessions, and handoffs',
+      icon: MessageSquare,
+      href: '/admin/telegram',
+      color: 'bg-sky-500 hover:bg-sky-600',
+      action: 'telegram_bot'
+    },
+    {
       title: language === 'am' ? 'አዲስ ብሎግ ፖስት' : 'New Blog Post',
       description: language === 'am' ? 'የድህረ ገጽ ይዘት ያክሉ' : 'Add website content',
       icon: Plus,
       href: '/admin/blog/add',
       color: 'bg-green-500 hover:bg-green-600',
       action: 'add_blog'
+    },
+    {
+      title: language === 'am' ? 'አዲስ መመሪያ' : 'New Moving Guide',
+      description: language === 'am' ? '/guides መመሪያ JSON' : 'Add /guides reference content',
+      icon: BookOpen,
+      href: '/admin/guides/add',
+      color: 'bg-teal-500 hover:bg-teal-600',
+      action: 'add_guide'
     },
     {
       title: language === 'am' ? 'የድህረ ገጽ ትንታኔ' : 'Website Analytics',

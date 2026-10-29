@@ -17,7 +17,7 @@
     "planning"
   ],
   "tagsAm": [],
-  "readTime": 33,
+  "readTime": 4,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua28.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua29.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-14T10:15:00.000Z",
-  "slug": "ayat-movers-checklist-before-moving-day"
+  "slug": "ayat-movers-checklist-before-moving-day",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.741Z",
+  "enrichedAt": "2026-10-29T07:23:40.680Z",
+  "quality": "enriched"
 }

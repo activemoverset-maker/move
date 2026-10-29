@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Piassa", "Arat Kilo", "walkway", "truck access", "urban renewal", "Addis Ababa"],
+  "tags": [
+    "Piassa",
+    "Arat Kilo",
+    "walkway",
+    "truck access",
+    "urban renewal",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 59,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua283.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua284.jpeg", "https://www.activemoverset.com/images/gallary/qua285.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua284.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua285.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-31T09:00:00.000Z",
-  "slug": "piassa-arat-kilo-walkway-project-moving-truck-access"
+  "slug": "piassa-arat-kilo-walkway-project-moving-truck-access",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.530Z",
+  "enrichedAt": "2026-10-29T07:23:43.557Z",
+  "quality": "enriched"
 }

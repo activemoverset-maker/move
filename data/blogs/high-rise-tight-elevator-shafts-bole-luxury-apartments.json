@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["high-rise", "elevator", "Bole", "luxury apartment", "moving logistics", "Addis Ababa"],
+  "tags": [
+    "high-rise",
+    "elevator",
+    "Bole",
+    "luxury apartment",
+    "moving logistics",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 57,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua259.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua260.jpeg", "https://www.activemoverset.com/images/gallary/qua261.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua260.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua261.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-23T09:00:00.000Z",
-  "slug": "high-rise-tight-elevator-shafts-bole-luxury-apartments"
+  "slug": "high-rise-tight-elevator-shafts-bole-luxury-apartments",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.036Z",
+  "enrichedAt": "2026-10-29T07:23:41.237Z",
+  "quality": "enriched"
 }

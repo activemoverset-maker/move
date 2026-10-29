@@ -17,7 +17,7 @@
     "families"
   ],
   "tagsAm": [],
-  "readTime": 33,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua31.jpeg",
   "images": [
     "https://www.activemoverset.com/images/gallary/qua32.jpeg",
@@ -25,5 +25,9 @@
   ],
   "status": "published",
   "publishedAt": "2026-02-24T08:45:00.000Z",
-  "slug": "best-movers-jemo-budget-friendly-relocation-options"
+  "slug": "best-movers-jemo-budget-friendly-relocation-options",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:30.773Z",
+  "enrichedAt": "2026-10-29T07:23:40.705Z",
+  "quality": "enriched"
 }

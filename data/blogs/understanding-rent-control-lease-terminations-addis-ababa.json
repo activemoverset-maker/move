@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["rent control", "lease termination", "tenant rights", "Addis Ababa", "housing law", "moving preparation"],
+  "tags": [
+    "rent control",
+    "lease termination",
+    "tenant rights",
+    "Addis Ababa",
+    "housing law",
+    "moving preparation"
+  ],
   "tagsAm": [],
-  "readTime": 60,
+  "readTime": 2,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua508.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua509.jpeg", "https://www.activemoverset.com/images/gallary/qua510.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua509.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua510.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-10-14T09:00:00.000Z",
-  "slug": "understanding-rent-control-lease-terminations-addis-ababa"
+  "slug": "understanding-rent-control-lease-terminations-addis-ababa",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.923Z",
+  "enrichedAt": "2026-10-29T07:23:44.475Z",
+  "quality": "enriched"
 }

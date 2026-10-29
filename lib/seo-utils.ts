@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { SITE_PHONE, openingHoursSpecificationForSchema } from '@/constants/contact'
 
 export interface SEOConfig {
   title: string
@@ -14,6 +15,8 @@ export interface SEOConfig {
   tags?: string[]
   readTime?: number
   canonical?: string
+  /** When false, emits noindex,follow */
+  index?: boolean
 }
 
 const SITE_URL = 'https://www.activemoverset.com'
@@ -34,7 +37,8 @@ export function generateSEO(config: SEOConfig): Metadata {
     section,
     tags = [],
     readTime,
-    canonical
+    canonical,
+    index: allowIndex = true,
   } = config
 
   // Handle title formatting - if title already includes company name, use as is
@@ -89,10 +93,10 @@ export function generateSEO(config: SEOConfig): Metadata {
       canonical: canonical || fullUrl,
     },
     robots: {
-      index: true,
+      index: allowIndex,
       follow: true,
       googleBot: {
-        index: true,
+        index: allowIndex,
         follow: true,
         'max-video-preview': -1,
         'max-image-preview': 'large',
@@ -181,7 +185,7 @@ export function generateOrganizationSchema() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+251982260000",
+      "telephone": SITE_PHONE,
       "contactType": "customer service",
       "availableLanguage": ["English", "Amharic"]
     },
@@ -240,12 +244,12 @@ export function generateOrganizationSchema() {
 export function generateLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "MovingCompany",
     "name": SITE_NAME,
     "image": DEFAULT_IMAGE,
     "description": "Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, office relocation, packaging, and storage solutions.",
     "url": SITE_URL,
-    "telephone": "+251982260000",
+    "telephone": SITE_PHONE,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Beka Building",
@@ -258,20 +262,7 @@ export function generateLocalBusinessSchema() {
       "latitude": 9.0357937,
       "longitude": 38.8544868
     },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday", 
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
+    "openingHoursSpecification": openingHoursSpecificationForSchema(),
     "priceRange": "$$",
     "currenciesAccepted": "ETB, USD",
     "paymentAccepted": "Cash, Credit Card, Bank Transfer",

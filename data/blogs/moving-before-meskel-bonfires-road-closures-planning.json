@@ -8,12 +8,26 @@
   "contentAm": "",
   "author": "Active Movers Team",
   "category": "moving-tips",
-  "tags": ["Meskel", "Demera", "bonfires", "road closures", "seasonal moving", "Addis Ababa"],
+  "tags": [
+    "Meskel",
+    "Demera",
+    "bonfires",
+    "road closures",
+    "seasonal moving",
+    "Addis Ababa"
+  ],
   "tagsAm": [],
-  "readTime": 59,
+  "readTime": 3,
   "featuredImage": "https://www.activemoverset.com/images/gallary/qua253.jpeg",
-  "images": ["https://www.activemoverset.com/images/gallary/qua254.jpeg", "https://www.activemoverset.com/images/gallary/qua255.jpeg"],
+  "images": [
+    "https://www.activemoverset.com/images/gallary/qua254.jpeg",
+    "https://www.activemoverset.com/images/gallary/qua255.jpeg"
+  ],
   "status": "published",
   "publishedAt": "2026-07-21T09:00:00.000Z",
-  "slug": "moving-before-meskel-bonfires-road-closures-planning"
+  "slug": "moving-before-meskel-bonfires-road-closures-planning",
+  "index": false,
+  "updatedAt": "2026-10-29T07:46:31.253Z",
+  "enrichedAt": "2026-10-29T07:23:41.731Z",
+  "quality": "enriched"
 }
