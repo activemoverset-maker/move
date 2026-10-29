@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState, useMemo } from 'react'
+import Image from 'next/image'
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
 import { Truck, Package, MapPin, Clock, Star, Shield, Zap, Navigation } from 'lucide-react'
 
@@ -197,10 +198,13 @@ export function AdvancedTruck3D({ className = "" }: AdvancedTruck3DProps) {
               style={{ transform: 'translateZ(50px)' }}
             >
               <div className="bg-white/20 backdrop-blur-sm rounded-xl p-2 border border-white/30 text-center shadow-lg">
-                <img 
-                  src="/images/logo.jpg" 
-                  alt="Active Movers Logo" 
-                  className="w-16 h-8 rounded-lg object-cover shadow-md"
+                <Image
+                  src="/images/logotr.png"
+                  alt="Active Movers"
+                  width={64}
+                  height={32}
+                  sizes="64px"
+                  className="h-8 w-16 rounded-lg object-contain shadow-md"
                 />
               </div>
             </motion.div>

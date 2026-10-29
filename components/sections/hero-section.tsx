@@ -28,15 +28,17 @@ const ScrollTriggeredAnimations = dynamic(
   { ssr: false }
 )
 
+const HERO_LCP_IMAGE = '/images/qua1.png'
+
 const HERO_IMAGES = [
-  '/images/qua1.png',
+  HERO_LCP_IMAGE,
   '/images/qua2.png',
   '/images/qua3.png',
   '/images/qua4.png',
   '/images/qua5.png',
 ]
 
-export function HeroSection() {
+export function HeroSection({ lcpBackground }: { lcpBackground?: React.ReactNode }) {
   const { t, language } = useLanguage()
   const containerRef = useRef<HTMLDivElement>(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -133,15 +135,17 @@ export function HeroSection() {
         style={{ y: springBackgroundY }}
       >
         <div className="absolute inset-0 opacity-60">
-          <Image
-            src={HERO_IMAGES[currentImageIndex]}
-            alt=""
-            fill
-            priority={currentImageIndex === 0}
-            quality={70}
-            sizes="100vw"
-            className="object-cover"
-          />
+          {lcpBackground}
+          {currentImageIndex > 0 ? (
+            <Image
+              src={HERO_IMAGES[currentImageIndex]}
+              alt=""
+              fill
+              quality={70}
+              sizes="100vw"
+              className="object-cover"
+            />
+          ) : null}
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-primary/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

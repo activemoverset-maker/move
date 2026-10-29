@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { HeroSection } from '@/components/sections/hero-section'
+import { HeroLcpBackground } from '@/components/sections/hero-lcp-background'
 import { MarqueeTrustBar } from '@/components/sections/marquee-trust-bar'
 import { ServicesSection } from '@/components/sections/services-section'
 import { HowItWorksSection } from '@/components/sections/how-it-works-section'
@@ -52,7 +53,7 @@ export default function HomePage() {
   return (
     <>
       <div className="pt-16">
-        <HeroSection />
+        <HeroSection lcpBackground={<HeroLcpBackground />} />
         <MarqueeTrustBar />
         <div className="section-spacing">
           <ServicesSection />

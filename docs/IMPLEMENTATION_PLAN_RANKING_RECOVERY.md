@@ -5,7 +5,7 @@
 **Status:** **Phases 1–3 + W0 complete in repo** (29 Oct 2026). **48** indexable URLs, audit **0**. **Next:** deploy + [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) (GBP, GSC, production `.env`). Optional: W2–W5 editorial on more slugs.  
 **Scope:** Organic and local ranking. Page-speed overlay work is landed. This plan covers identity, money pages, GBP, measurement, and **enriching** the existing blog/guide catalog.  
 **Benchmark:** [habeshamovers.com](https://www.habeshamovers.com/) — §4  
-**Related:** [GUIDES_CONTENT_CHECKLIST.md](./GUIDES_CONTENT_CHECKLIST.md)
+**Related:** [GUIDES_CONTENT_CHECKLIST.md](./GUIDES_CONTENT_CHECKLIST.md) · Homepage lab LCP: [IMPLEMENTATION_PLAN_HOMEPAGE_LCP.md](./IMPLEMENTATION_PLAN_HOMEPAGE_LCP.md)
 
 ---
 
