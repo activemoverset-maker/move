@@ -43,7 +43,7 @@ Core Web Vitals matter, but for movers in Addis Ababa rankings are driven by:
 | Schema = reality | `MovingCompany`, hours from `SITE_CONFIG`, phone from same source as UI |
 | Catalog stays; quality rises | All JSON files remain; prose reads like local operator knowledge |
 | Indexing tracks quality | Sitemap + homepage featured modules favor enriched URLs |
-| Query-matched homepage | Title + single H1: “Movers and Packers in Addis Ababa” |
+| Query-matched homepage | Title + single H1: “Movers in Addis Ababa” |
 | Price table on money pages | Bedroom tiers + stairs + office start (**Active Movers** ETB, not Habesha’s) |
 | GBP / map pack | Mover category, reviews, photos, NAP match site |
 
@@ -116,9 +116,9 @@ Do **before** enrichment so every URL shares one NAP and schema.
 | Location | Change |
 |----------|--------|
 | `constants/site.ts` | `name: 'Active Movers & Packers'` |
-| `app/(main)/page.tsx` | `title`: `Movers and Packers in Addis Ababa \| Active Movers & Packers` |
+| `app/(main)/page.tsx` | `title`: `Movers in Addis Ababa \| Active Movers & Packers` |
 | `app/layout.tsx` | Default title: brand + service + city (not keyword-stuffed) |
-| `lib/i18n.ts` | `hero.title` + `hero.subtitle` → **one logical H1** (e.g. title “Movers and Packers in Addis Ababa”, subtitle empty or moved to `<p>`) |
+| `lib/i18n.ts` | `hero.title` + `hero.subtitle` → **one logical H1** (e.g. title “Movers in Addis Ababa”, subtitle empty or moved to `<p>`) |
 | `components/footer.tsx` | Uses `SITE_CONFIG.name` — updates automatically after §5.1 |
 
 Keep city keywords in **titles and H1**, not in the legal/display company name string.

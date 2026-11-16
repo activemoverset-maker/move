@@ -235,7 +235,7 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: 'Serving Addis Ababa & Surrounding Areas',
-      title: 'Movers and Packers in Addis Ababa',
+      title: 'Movers in Addis Ababa',
       subtitle: '',
       description: 'Experience stress-free moving with our professional team. We handle everything from packing to delivery with care and efficiency.',
       bookMove: 'Book Your Move',
@@ -433,8 +433,8 @@ export const translations: Record<Language, Translations> = {
     },
     hero: {
       badge: 'አዲስ አበባ እና አካባቢዎችን እንደምንሰጥ',
-      title: 'የሙያ የመጓጓዣ አገልግሎቶች',
-      subtitle: 'በአዲስ አበባ',
+      title: 'በአዲስ አበባ መጓጓዣ',
+      subtitle: '',
       description: 'ከሙያ ቡድናችን ጋር ያለ ግፍ የመጓጓዣ ስራ ያድርጉ። ከመጠን እስከ አድራሻ ሁሉንም ነገር በጥንቃቄ እና በውጤታማነት እንደምንሰጥ።',
       bookMove: 'መጓጓዣዎን ያስያዙ',
       viewServices: 'አገልግሎቶችን ይመልከቱ',

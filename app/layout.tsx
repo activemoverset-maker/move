@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
+    default: 'Movers in Addis Ababa | Active Movers & Packers',
     template: '%s | Active Movers & Packers',
   },
   description:
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: '/',
-    title: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
+    title: 'Movers in Addis Ababa | Active Movers & Packers',
     description:
       'Professional moving and packing services in Addis Ababa, Ethiopia. Local moving, packaging, storage solutions, and office relocation services.',
     siteName: 'Active Movers & Packers',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Active Movers & Packers | Movers and Packers in Addis Ababa',
+    title: 'Movers in Addis Ababa | Active Movers & Packers',
     description: 'Professional moving and packing services in Addis Ababa, Ethiopia.',
     images: ['/og-image.jpg'],
     creator: '@activemoverset',

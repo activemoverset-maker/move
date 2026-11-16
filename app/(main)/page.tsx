@@ -31,7 +31,7 @@ const DeferredHomeBottom = dynamic(() =>
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Movers and Packers in Addis Ababa | Active Movers & Packers',
+  title: 'Movers in Addis Ababa | Active Movers & Packers',
   description: 'Professional movers and packers in Addis Ababa. Local moving, office relocation, packaging, and storage. Call +251982260000 or book online.',
   keywords: [
     'moving services Addis Ababa', 'professional movers Ethiopia', 'packing services',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     'home relocation services', 'commercial moving', 'Ethiopian moving company'
   ],
   openGraph: {
-    title: 'Movers and Packers in Addis Ababa | Active Movers & Packers',
+    title: 'Movers in Addis Ababa | Active Movers & Packers',
     description: 'Professional movers and packers in Addis Ababa. Local moving, office relocation, packaging, and storage.',
     type: 'website',
     url: 'https://www.activemoverset.com',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Movers and Packers in Addis Ababa | Active Movers & Packers',
+    title: 'Movers in Addis Ababa | Active Movers & Packers',
     description: 'Professional movers and packers in Addis Ababa. Local moving, office relocation, packaging, and storage.',
     images: ['/og-image.jpg'],
     creator: '@activemoverset',
