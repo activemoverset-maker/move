@@ -79,7 +79,7 @@ Measure with Search Console **field** CWV after deploy.
 | Item | Plan target | Repo state (Oct 2026) | Post-deploy check |
 |------|-------------|----------------------|-------------------|
 | Display name | `Active Movers & Packers` | `constants/site.ts` | View source chrome |
-| Homepage `<title>` | Movers and Packers… | `app/(main)/page.tsx` | GSC URL inspect |
+| Homepage `<title>` | Movers in Addis Ababa… | `app/(main)/page.tsx` | GSC URL inspect |
 | Hero H1 | One phrase + city | `lib/i18n.ts` → single title; subtitle empty | One `<h1>` on `/` |
 | Header logo | Not `<h1>` | `components/header.tsx` → `<p>` | Rich Results |
 | hreflang | None until `/am/` | No `?lang=am` in `app/layout.tsx` alternates | — |
