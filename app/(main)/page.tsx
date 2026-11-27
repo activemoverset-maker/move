@@ -31,7 +31,9 @@ const DeferredHomeBottom = dynamic(() =>
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Movers in Addis Ababa | Active Movers & Packers',
+  title: {
+    absolute: 'Movers in Addis Ababa | Active Movers & Packers',
+  },
   description: 'Professional movers and packers in Addis Ababa. Local moving, office relocation, packaging, and storage. Call +251982260000 or book online.',
   keywords: [
     'moving services Addis Ababa', 'professional movers Ethiopia', 'packing services',
