@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-16T09:00:00.000Z",
   "slug": "moving-world-bank-undp-offices-high-security-protocol",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.465Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:36.297Z",
   "enrichedAt": "2026-10-29T07:23:42.836Z",
   "quality": "enriched"
 }

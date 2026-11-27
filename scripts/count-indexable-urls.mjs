@@ -1,5 +1,5 @@
 /**
- * Count index:true published posts (guides + blogs). Expect 48 after W0 tier policy.
+ * Count published posts with index:true.
  * Usage: node scripts/count-indexable-urls.mjs
  */
 import fs from 'fs'
@@ -26,6 +26,6 @@ const total = guides.n + blogs.n
 console.log('Indexable guides:', guides.n)
 console.log('Indexable blogs:', blogs.n)
 console.log('Total indexable JSON posts:', total)
-if (total !== 48) {
-  console.warn('Expected 48 per implementation plan tier — re-run fix-guide-blog-metadata.mjs if intentional drift.')
+if (total < 100) {
+  console.warn('Total is still under 100. The allowlist branch may still be in effect.')
 }

@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-05-17T12:10:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.785Z",
+  "updatedAt": "2026-11-27T07:21:33.609Z",
   "readTime": 4,
   "status": "published",
   "slug": "best-moving-truck-sizes-addis-neighborhoods",
@@ -90,7 +90,7 @@
     "wordCount": 11000,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.712Z",
   "quality": "enriched"
 }

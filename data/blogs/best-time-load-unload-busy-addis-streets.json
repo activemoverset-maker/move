@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-07-03T14:20:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.801Z",
+  "updatedAt": "2026-11-27T07:21:33.665Z",
   "readTime": 3,
   "status": "published",
   "slug": "best-time-load-unload-busy-addis-streets",
@@ -90,7 +90,7 @@
     "wordCount": 9000,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.729Z",
   "quality": "enriched"
 }

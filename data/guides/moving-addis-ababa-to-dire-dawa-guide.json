@@ -19,9 +19,9 @@
   "images": [],
   "status": "published",
   "publishedAt": "2026-09-22T06:00:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.564Z",
+  "updatedAt": "2026-11-27T07:21:40.455Z",
   "slug": "moving-addis-ababa-to-dire-dawa-guide",
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.488Z",
   "quality": "enriched"
 }

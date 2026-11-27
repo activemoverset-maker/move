@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-04-14T15:30:00.000Z",
-  "updatedAt": "2026-10-29T07:46:31.161Z",
+  "updatedAt": "2026-11-27T07:21:34.880Z",
   "readTime": 7,
   "status": "published",
   "slug": "local-shopping-market-guide-piassa",
@@ -90,7 +90,7 @@
     "wordCount": 10000,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:41.509Z",
   "quality": "enriched"
 }

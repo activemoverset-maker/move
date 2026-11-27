@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-05T09:00:00.000Z",
   "slug": "megenagna-tunnel-routes-large-logistics-trucks",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.183Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:34.951Z",
   "enrichedAt": "2026-10-29T07:23:41.592Z",
   "quality": "enriched"
 }

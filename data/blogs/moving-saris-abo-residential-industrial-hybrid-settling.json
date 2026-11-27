@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-14T09:00:00.000Z",
   "slug": "moving-saris-abo-residential-industrial-hybrid-settling",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.422Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:36.115Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:42.472Z"
 }

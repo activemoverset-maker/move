@@ -27,7 +27,7 @@
   "publishedAt": "2026-09-20T09:00:00.000Z",
   "slug": "legal-firm-relocation-court-case-archives-chain-of-custody",
   "quality": "enriched",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.145Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:34.822Z",
   "enrichedAt": "2026-10-29T07:23:41.463Z"
 }

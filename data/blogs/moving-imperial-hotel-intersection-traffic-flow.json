@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-01T09:00:00.000Z",
   "slug": "moving-imperial-hotel-intersection-traffic-flow",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.330Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.561Z",
   "enrichedAt": "2026-10-29T07:23:42.105Z",
   "quality": "enriched"
 }

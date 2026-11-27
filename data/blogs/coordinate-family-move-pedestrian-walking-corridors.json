@@ -27,7 +27,7 @@
   "publishedAt": "2026-09-20T09:00:00.000Z",
   "slug": "coordinate-family-move-pedestrian-walking-corridors",
   "quality": "enriched",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:30.857Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:33.884Z",
   "enrichedAt": "2026-10-29T07:23:40.833Z"
 }

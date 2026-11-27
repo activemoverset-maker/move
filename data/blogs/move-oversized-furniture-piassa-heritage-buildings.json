@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-21T09:00:00.000Z",
   "slug": "move-oversized-furniture-piassa-heritage-buildings",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.212Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.033Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:41.672Z"
 }

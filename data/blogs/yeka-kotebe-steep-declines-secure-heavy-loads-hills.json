@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-09-19T09:00:00.000Z",
   "slug": "yeka-kotebe-steep-declines-secure-heavy-loads-hills",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:32.133Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:39.207Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:44.625Z"
 }

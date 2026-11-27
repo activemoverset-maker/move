@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-09-28T09:00:00.000Z",
   "slug": "fintech-headquarters-sengatera-security-confidential-hardware",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:30.950Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:34.181Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:41.125Z"
 }

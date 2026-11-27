@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-10-07T09:00:00.000Z",
   "slug": "german-embassy-area-heavy-cargo-trucks-secondary-roads",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:30.992Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:34.275Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:41.165Z"
 }

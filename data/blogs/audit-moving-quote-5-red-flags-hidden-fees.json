@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-07-15T09:00:00.000Z",
   "slug": "audit-moving-quote-5-red-flags-hidden-fees",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:30.733Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:33.428Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:40.673Z"
 }

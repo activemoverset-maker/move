@@ -19,9 +19,9 @@
   "images": [],
   "status": "published",
   "publishedAt": "2026-09-19T18:00:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.635Z",
+  "updatedAt": "2026-11-27T07:21:40.825Z",
   "slug": "restaurant-kitchen-relocation-addis-guide",
   "quality": "enriched",
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.566Z"
 }

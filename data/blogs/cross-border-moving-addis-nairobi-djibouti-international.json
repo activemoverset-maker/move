@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-10-06T09:00:00.000Z",
   "slug": "cross-border-moving-addis-nairobi-djibouti-international",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:30.872Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:33.954Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:40.996Z"
 }

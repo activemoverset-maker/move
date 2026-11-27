@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-10T09:00:00.000Z",
   "slug": "moving-ferensay-legasion-quiet-hilly-district",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.306Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.356Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:41.974Z"
 }

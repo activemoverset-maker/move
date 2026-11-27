@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-05-08T16:45:00.000Z",
-  "updatedAt": "2026-10-29T07:46:31.753Z",
+  "updatedAt": "2026-11-27T07:21:38.271Z",
   "readTime": 18,
   "status": "published",
   "slug": "things-to-do-gerji-after-move",
@@ -90,7 +90,7 @@
     "wordCount": 9500,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:44.389Z",
   "quality": "enriched"
 }

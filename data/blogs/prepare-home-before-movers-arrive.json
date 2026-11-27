@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-04-14T10:30:00.000Z",
   "slug": "prepare-home-before-movers-arrive",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.545Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:36.680Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:43.685Z"
 }

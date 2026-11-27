@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-06-27T09:00:00.000Z",
   "slug": "moving-saris-abo-saris-dafrique-industrial-residential-border",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.424Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:36.124Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:42.479Z"
 }

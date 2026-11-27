@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-08-03T13:10:00.000Z",
-  "updatedAt": "2026-10-29T07:46:31.957Z",
+  "updatedAt": "2026-11-27T07:21:38.772Z",
   "readTime": 9,
   "status": "published",
   "slug": "what-to-eat-drink-moving-day-addis",
@@ -90,7 +90,7 @@
     "wordCount": 8000,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:44.529Z",
   "quality": "enriched"
 }

@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-10-08T09:00:00.000Z",
   "slug": "moving-heritage-orthodox-manuscripts-crosses",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.324Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.444Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:42.031Z"
 }

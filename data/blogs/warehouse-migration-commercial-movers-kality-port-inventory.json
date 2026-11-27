@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-07-11T09:00:00.000Z",
   "slug": "warehouse-migration-commercial-movers-kality-port-inventory",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.947Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:38.730Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:44.515Z"
 }

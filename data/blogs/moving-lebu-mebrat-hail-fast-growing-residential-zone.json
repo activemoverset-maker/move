@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-08-07T09:00:00.000Z",
   "slug": "moving-lebu-mebrat-hail-fast-growing-residential-zone",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.351Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.721Z",
   "enrichedAt": "2026-10-29T07:23:42.182Z",
   "quality": "enriched"
 }

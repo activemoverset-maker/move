@@ -1,5 +1,8 @@
 /**
- * W0 metadata fixes: readTime, future dates, broken featured images, index holds for very thin posts.
+ * Metadata hygiene plus indexing.
+ * Published posts of at least 400 words are indexable.
+ * Drafts, short posts, and NOINDEX_SLUGS stay noindex.
+ * FLAGSHIP_SLUGS always win over the denylist.
  * Usage:
  *   node scripts/fix-guide-blog-metadata.mjs           # dry run summary
  *   node scripts/fix-guide-blog-metadata.mjs --write   # apply
@@ -47,34 +50,13 @@ const FLAGSHIP_SLUGS = new Set([
   'yeka-subcity-moving-overview-guide',
 ])
 
-/** Secondary guides: index when published and ≥400w (not full flagships) */
-const SECONDARY_INDEX_SLUGS = new Set([
-  'addis-ketema-moving-guide',
-  'broker-delala-vs-professional-movers-addis-guide',
-  'bpo-call-center-office-relocation-addis-guide',
-  'ngo-office-relocation-addis-guide',
-  'friendship-city-condo-moving-guide',
-  'end-of-month-moving-rush-addis-guide',
-  'same-day-emergency-moving-addis-guide',
-  'long-distance-moving-ethiopia-cities-guide',
-  'move-out-handover-checklist-addis-renters',
-  'holiday-moving-calendar-addis-ababa-timket-meskel',
-  'packaging-service-addis-materials-guide',
-  'office-relocation-minimal-downtime-checklist',
-  'moving-addis-ababa-to-bishoftu-sululta-guide',
-  'moving-addis-ababa-to-adama-guide',
-  'moving-addis-ababa-to-hawassa-guide',
-  'fragile-packing-electronics-addis-cobblestone-guide',
-  'first-night-essentials-box-moving-guide',
-])
-
-const BLOG_INDEX_SLUGS = new Set([
-  'group-moving-discounts-neighbors-same-condo-active-movers',
-  'same-day-movers-addis-ababa-worth-it',
-  'active-movers-prevents-price-creep-written-contract-addis',
-  'why-hiring-movers-better-than-diy-moving',
-  'what-makes-moving-company-reliable-addis-ababa',
-  'why-active-movers-highest-rated-addis-ababa',
+/**
+ * Blogs that repeat a stronger guide. Flagship guides are never listed here.
+ * The 2026 pricing guide is the canonical cost URL.
+ */
+const NOINDEX_SLUGS = new Set([
+  'how-much-do-movers-cost-addis-ababa-2026-pricing-guide',
+  'moving-costs-addis-ababa-2025',
 ])
 
 function stripHtml(html) {
@@ -94,7 +76,6 @@ function sanitizeImageUrl(url) {
 function processFile(filePath) {
   const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'))
   const before = JSON.stringify(raw)
-  const isBlog = filePath.includes(`${path.sep}blogs${path.sep}`)
   const words = wordCount(raw.content)
   const expectedRead = Math.max(1, Math.round(words / 200))
 
@@ -113,24 +94,18 @@ function processFile(filePath) {
     raw.images = raw.images.map(sanitizeImageUrl).filter(Boolean)
   }
 
-  if (words < 400) {
-    raw.quality =
-      raw.quality === 'flagship' ? 'flagship' : raw.quality || 'needs-enrichment'
-    if (raw.quality !== 'flagship') raw.index = false
-  } else if (!raw.quality || raw.quality === 'needs-enrichment') {
-    raw.quality = 'enriched'
-  }
-
-  if (FLAGSHIP_SLUGS.has(raw.slug)) {
+  if (raw.status !== 'published') {
+    raw.index = false
+  } else if (FLAGSHIP_SLUGS.has(raw.slug)) {
     raw.quality = 'flagship'
     raw.index = true
-  } else if (isBlog) {
-    raw.index = BLOG_INDEX_SLUGS.has(raw.slug)
-  } else if (SECONDARY_INDEX_SLUGS.has(raw.slug) && words >= 400) {
-    raw.index = true
-    if (raw.quality !== 'flagship') raw.quality = 'enriched'
-  } else {
+  } else if (words < 400 || NOINDEX_SLUGS.has(raw.slug)) {
     raw.index = false
+  } else {
+    raw.index = true
+    if (!raw.quality || raw.quality === 'needs-enrichment') {
+      raw.quality = 'enriched'
+    }
   }
 
   const after = JSON.stringify(raw)

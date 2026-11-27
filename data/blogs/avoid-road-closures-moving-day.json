@@ -29,7 +29,7 @@
   "category": "moving-tips",
   "author": "Active Movers Team",
   "publishedAt": "2025-02-25T11:45:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.736Z",
+  "updatedAt": "2026-11-27T07:21:33.441Z",
   "readTime": 3,
   "status": "published",
   "slug": "avoid-road-closures-moving-day",
@@ -90,7 +90,7 @@
     "wordCount": 10000,
     "inLanguage": "en"
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.675Z",
   "quality": "enriched"
 }

@@ -2,7 +2,7 @@
 
 **Project:** Active Movers & Packers (`https://www.activemoverset.com`)  
 **Updated:** 29 October 2026 (phone locked to `+251982260000`)  
-**Status:** **Phases 1–3 + W0 complete in repo** (29 Oct 2026). **48** indexable URLs, audit **0**. **Next:** deploy + [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) (GBP, GSC, production `.env`). Optional: W2–W5 editorial on more slugs.  
+**Status:** Index flags restored in the repo on **27 Nov 2026** (**668** indexable JSON posts; two cost blogs remain `noindex`). Deploy, then submit the sitemap. GBP and production `.env` stay on [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md).  
 **Scope:** Organic and local ranking. Page-speed overlay work is landed. This plan covers identity, money pages, GBP, measurement, and **enriching** the existing blog/guide catalog.  
 **Benchmark:** [habeshamovers.com](https://www.habeshamovers.com/) — §4  
 **Related:** [GUIDES_CONTENT_CHECKLIST.md](./GUIDES_CONTENT_CHECKLIST.md) · Homepage lab LCP: [IMPLEMENTATION_PLAN_HOMEPAGE_LCP.md](./IMPLEMENTATION_PLAN_HOMEPAGE_LCP.md)
@@ -18,7 +18,7 @@ Core Web Vitals matter, but for movers in Addis Ababa rankings are driven by:
 3. **Money pages** — homepage, services, pricing FAQ, flagship area landings  
 4. **One business identity** — name, phone, hours, schema, H1 rules aligned everywhere  
 
-**Inventory:** **504** blog JSON files + **166** guides (**670** URLs). **W0:** all published posts ≥400 words, metadata audit **0** issues. **48** URLs indexed (25 flagship guides + 17 secondary + 6 blogs); **622** `index: false` with sitemap filter. Long-tail copy still uses shared expansion blocks—acceptable for holds; **W2–W5** editorial optional.
+**Inventory:** **504** blog JSON files + **166** guides (**670** URLs). **Indexing (27 Nov 2026):** published posts ≥400 words are `index: true` except two cost blogs on `NOINDEX_SLUGS` in `scripts/fix-guide-blog-metadata.mjs` (**668** indexable). The earlier **48-URL** allowlist is retired. See [IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md](./IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md).
 
 ### Product decisions (locked)
 
@@ -85,7 +85,7 @@ Measure with Search Console **field** CWV after deploy.
 | hreflang | None until `/am/` | No `?lang=am` in `app/layout.tsx` alternates | — |
 | Schema | `MovingCompany` + real hours | `lib/seo-utils.ts`, `constants/contact.ts` | Rich Results test |
 | Phone in UI/schema | **`+251982260000`** | `constants/contact.ts` → `SITE_CONFIG.links` | Footer + JSON-LD on live site |
-| Sitemap | Indexable only | `getIndexableBlogPosts` / `getIndexableGuides` | Live sitemap count ≈ static + **48** posts |
+| Sitemap | Indexable JSON posts | `getIndexableBlogPosts` / `getIndexableGuides` | Live sitemap includes the restored catalog (**668** posts as of 27 Nov 2026) plus static routes |
 | `index` / `quality` | On JSON + types | Loaders + `fix-guide-blog-metadata.mjs` | Spot-check `noindex` hold URL |
 | Detail robots | Respect `index: false` | `generateSEO` + `isIndexable()` on guide/blog pages | — |
 | Homepage guides | Indexable first | `getFeaturedGuides()` → indexable, flagship sort | Homepage module |
@@ -194,6 +194,8 @@ Avoid contradicting “legacy stays indexed” vs “hold until enriched”. Use
 | **Legacy (launch)** | Before W0 audit ships | All `published` (today’s behavior) | `index, follow` |
 | **W0 hold** | Metadata audit flags post | Omit URL | `noindex, follow` + `index: false` |
 | **Enriched** | Passes §6.3 checklist | Include URL | `index, follow` + `quality: enriched` or `flagship` |
+
+**Live rule (27 Nov 2026):** the W0 hold mode is historical. Published posts of at least 400 words are indexed unless listed in `NOINDEX_SLUGS`. See [IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md](./IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md).
 
 **Helper (implement once):**
 
@@ -344,7 +346,7 @@ Only if mobile field CWV **Poor** after Phases 1–3 deploy. Targets: LCP ≤ 2.
 | When | Check |
 |------|--------|
 | Day 0 | GSC baseline: “movers addis ababa”, “movers and packers…”, brand |
-| Week 1 | URL inspect `/`, one flagship guide, one `index: false` hold |
+| Week 1 | URL inspect `/`, one flagship guide, one restored former hold (`index, follow`), and one denylist URL (`moving-costs-addis-ababa-2025` should stay `noindex`) |
 | Week 2–4 | Sitemap size tracks enrichment; coverage errors down |
 | Day 28 | Field CWV not Poor |
 | Week 4–8 | Query stability; GBP calls/reviews |
@@ -423,7 +425,7 @@ Never mix Phase 1 with 500-file JSON edits.
 - [x] §3.5 identity, schema, sitemap policy, W0 audit **0**, **48** index tier  
 - [x] **`982270000`** not in tracked source (grep docs only for warnings); phone via `constants/contact.ts`  
 - [x] One hero `<h1>` on `/`; header logo not `<h1>`  
-- [x] Sitemap excludes `index: false` holds (not 670 post URLs)  
+- [x] Sitemap lists indexable posts. The 48-URL cap is retired; see [IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md](./IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md).  
 - [x] Homepage pricing + cost FAQ visible; `homepage-seo.tsx` uses `HOME_PRICING_FAQ`  
 - [x] W0 + curated secondary/indexed blogs; scripts in `scripts/` (see §6.5 bulk pass note)  
 
@@ -466,7 +468,7 @@ index: true
 
 ## Appendix C — Policy history
 
-Mass **noindex** of the catalog was an earlier draft default. **Current policy:** enrich-first, tiered indexing, narrow noindex for duplicates and pre-enrichment holds.
+Mass **noindex** of the catalog was an earlier draft default, then shipped as a **48-URL allowlist** (~622 `index: false`). That allowlist is what Search Console reports as **Excluded by ‘noindex’ tag**. **Superseded for indexing** by [IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md](./IMPLEMENTATION_PLAN_NOINDEX_RECOVERY.md): published posts at ≥400 words go back to `index: true` unless they are on an explicit duplicate denylist. Editorial quality waves still apply; they no longer gate the index bit.
 
 ---
 

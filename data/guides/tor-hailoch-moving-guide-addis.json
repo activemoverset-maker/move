@@ -19,9 +19,9 @@
   "images": [],
   "status": "published",
   "publishedAt": "2026-09-25T05:00:00.000Z",
-  "updatedAt": "2026-10-29T07:46:30.672Z",
+  "updatedAt": "2026-11-27T07:21:41.015Z",
   "slug": "tor-hailoch-moving-guide-addis",
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:40.608Z",
   "quality": "enriched"
 }

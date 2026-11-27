@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-06-16T09:00:00.000Z",
   "slug": "midnight-moves-late-night-loading-high-traffic-corridor-zones",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.198Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:35.002Z",
   "enrichedAt": "2026-10-29T07:23:41.659Z",
   "quality": "enriched"
 }

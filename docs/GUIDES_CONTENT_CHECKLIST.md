@@ -60,11 +60,11 @@ _Keep this table updated — it is the source of truth for “what we have.”_
 
 **Quick count:** Published: **166** guides · **504** blogs · **670** total JSON posts.
 
-**W0 bulk pass (29 Oct 2026):** `node scripts/bulk-finish-thin-content.mjs --write` — removed duplicate scaffold blocks, expanded all posts to **≥400 words**, audit **412 → 0** issues. **Index tier:** **48** URLs (`25` flagship guides + **17** secondary guides + **6** trust/pricing blogs) via `scripts/fix-guide-blog-metadata.mjs` allowlists; remaining **622** posts **`index: false`** (enriched, sitemap-filtered).
+**W0 bulk pass (29 Oct 2026):** `node scripts/bulk-finish-thin-content.mjs --write` — removed duplicate scaffold blocks, expanded all posts to **≥400 words**, audit **412 → 0** issues. The first index tier was **48** URLs. **27 Nov 2026:** that allowlist was retired. `node scripts/count-indexable-urls.mjs` → **668** indexable posts. Only `how-much-do-movers-cost-addis-ababa-2026-pricing-guide` and `moving-costs-addis-ababa-2025` stay `index: false`.
 
 **Curated secondary (29 Oct 2026):** `patch-curated-indexed-secondary-batch2.mjs` + `expand-indexed-curated-guides.mjs` — indexed secondary guides without generic bulk footers. **`getFeaturedGuides()`** surfaces indexable URLs first.
 
-**After deploy:** [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) · `node scripts/count-indexable-urls.mjs` (expect **48**).
+**After deploy:** [DEPLOY_AND_GBP_CHECKLIST.md](./DEPLOY_AND_GBP_CHECKLIST.md) · `node scripts/count-indexable-urls.mjs` (27 Nov 2026: **668**).
 
 **Batch 3 (Sep 2026):** `node scripts/generate-guides-batch-50-batch3.mjs` — 50 new guides (116 → 166).
 

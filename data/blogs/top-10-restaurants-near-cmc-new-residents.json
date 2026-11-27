@@ -40,7 +40,7 @@
     "https://www.activemoverset.com/images/cmc-garden-restaurant.jpg"
   ],
   "publishedAt": "2025-07-16T11:35:00.000Z",
-  "updatedAt": "2026-10-29T07:46:31.775Z",
+  "updatedAt": "2026-11-27T07:21:38.368Z",
   "seo": {
     "title": "Top 10 Restaurants Near CMC for New Residents | Complete Dining Guide 2025",
     "description": "Discover the best restaurants near CMC area in Addis Ababa. From traditional Ethiopian cuisine to international dining, find the perfect places to eat as a new resident in this vibrant neighborhood.",
@@ -55,7 +55,7 @@
       "CMC food guide"
     ]
   },
-  "index": false,
+  "index": true,
   "enrichedAt": "2026-10-29T07:23:44.400Z",
   "quality": "enriched"
 }

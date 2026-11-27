@@ -26,8 +26,8 @@
   "status": "published",
   "publishedAt": "2026-09-05T09:00:00.000Z",
   "slug": "new-neighborhood-iddir-introduction-after-move",
-  "index": false,
-  "updatedAt": "2026-10-29T07:46:31.487Z",
+  "index": true,
+  "updatedAt": "2026-11-27T07:21:36.399Z",
   "quality": "enriched",
   "enrichedAt": "2026-10-29T07:23:43.144Z"
 }
